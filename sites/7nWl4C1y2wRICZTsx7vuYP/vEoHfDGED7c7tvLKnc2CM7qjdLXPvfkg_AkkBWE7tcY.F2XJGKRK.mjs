@@ -1,0 +1,8763 @@
+import { a as W1 } from "./chunk-DOW4VQSK.mjs";
+import { a as v1, b as Y1, c as $1 } from "./chunk-W6LJ2MY7.mjs";
+import {
+  b as G1,
+  c as y2,
+  d as v2,
+  e as w2,
+  f as q2,
+  g as k2,
+  h as _2,
+} from "./chunk-KTDPASHZ.mjs";
+import { e as K1, m as A1, n as B1 } from "./chunk-DNFVZGMK.mjs";
+import "./chunk-42U43NKG.mjs";
+import {
+  $ as h,
+  Aa as X,
+  B as c2,
+  Ba as Z1,
+  D as u,
+  G as K,
+  I as O,
+  K as d2,
+  M as k1,
+  O as i1,
+  P as M,
+  Q as $,
+  S as e1,
+  T as p2,
+  U as h2,
+  Y as u2,
+  a as B,
+  aa as _1,
+  c as o,
+  da as g2,
+  e as Y,
+  ha as n1,
+  ia as x2,
+  qa as o1,
+  sa as b2,
+  v as C2,
+  va as x,
+  w as G,
+  wa as C,
+  ya as s1,
+  z as P1,
+  za as r1,
+} from "./chunk-NFQGW3GT.mjs";
+import {
+  d as n,
+  j as J,
+  n as H,
+  o as u1,
+  p as Q,
+  q as s2,
+  s as t1,
+  t as U,
+  x as e,
+  y as t,
+} from "./chunk-KQLRTPKK.mjs";
+import "./chunk-IFZZ74IO.mjs";
+import { c as V } from "./chunk-ELYU6EKT.mjs";
+function w1({ projectId: r }) {
+  let a = U(null);
+  return (
+    u1(() => {
+      let l = ["CANVAS", "PREVIEW"].includes(c2.current()),
+        m = (g) => {
+          if (
+            document.querySelector('script[src^="https://cdn.unicorn.studio"]')
+          )
+            g();
+          else {
+            let b = document.createElement("script");
+            ((b.src = "https://cdn.unicorn.studio/v1.2.3/unicornStudio.umd.js"),
+              (b.onload = g),
+              document.head.appendChild(b));
+          }
+        },
+        s = () => {
+          let g = l ? "?update=" + Math.random() : "";
+          (a.current.setAttribute("data-us-project", r + g),
+            V.UnicornStudio &&
+            (V.UnicornStudio.destroy(),
+              V.UnicornStudio.init().then((c) => {
+                console.log(c);
+              })));
+        };
+      r && (V.UnicornStudio ? s() : m(s));
+    }, [r]),
+    e("div", {
+      ref: a,
+      "data-us-dpi": "1",
+      "data-us-scale": "1",
+      "data-us-fps": "60",
+      style: { width: "100%", height: "100%" },
+    })
+  );
+}
+w1.displayName = "Chroma Background";
+K(w1, {
+  projectId: {
+    type: u.Enum,
+    title: "Style",
+    options: [
+      "lHlDvoJDIXCxxXVqTNOC",
+      "YnADGzDD7LGB9cUocyyN",
+      "ezEDNzFtrAgm8yCUWUeX",
+      "wYI4YirTR5lrja86ArSY",
+      "rJ39y9Nnyz3cJooDtmNM",
+      "HJKVa10sftexJ7OgsOnU",
+    ],
+    optionTitles: ["Liquid", "Folds", "Smoke", "Flow", "Pixel", "ASCII"],
+    description:
+      "More components at [Framer University](https://framer.university?utm_source=component).",
+  },
+});
+var D2 = ["gZC82I15b", "VxvDmSXOG", "Q_41M3WAg", "zFWgeprP1"],
+  V2 = "framer-yBsNx",
+  O2 = {
+    gZC82I15b: "framer-v-mdji0k",
+    Q_41M3WAg: "framer-v-iyddyk",
+    VxvDmSXOG: "framer-v-utw6h4",
+    zFWgeprP1: "framer-v-1n4dbay",
+  };
+function L1(r, ...a) {
+  let l = {};
+  return (a?.forEach((m) => m && Object.assign(l, r[m])), l);
+}
+var J2 = { damping: 60, delay: 0, mass: 1, stiffness: 500, type: "spring" },
+  H2 = (r, a) => `translateY(-50%) ${a}`,
+  e2 = (r) =>
+    typeof r == "object" && r !== null && typeof r.src == "string"
+      ? r
+      : typeof r == "string"
+        ? { src: r }
+        : void 0,
+  Q2 = ({ value: r, children: a }) => {
+    let l = H(B),
+      m = r ?? l.transition,
+      s = t1(() => ({ ...l, transition: m }), [JSON.stringify(m)]);
+    return e(B.Provider, { value: s, children: a });
+  },
+  Y2 = o(n),
+  G2 = {
+    "Close Small": "Q_41M3WAg",
+    "Open Small": "zFWgeprP1",
+    Close: "gZC82I15b",
+    Open: "VxvDmSXOG",
+  },
+  K2 = ({
+    answer: r,
+    answerVisible: a,
+    height: l,
+    iconClose: m,
+    iconOpen: s,
+    id: g,
+    question: c,
+    tap: b,
+    width: N,
+    ...i
+  }) => {
+    var F, I, _, y, q, f, k;
+    return {
+      ...i,
+      b1gPskFZn:
+        (F = s ?? i.b1gPskFZn) !== null && F !== void 0
+          ? F
+          : {
+            src: "https://framerusercontent.com/images/nvz8kMzYRBewS5zCsJBmI2NetBo.svg",
+          },
+      baxjXyJgE: b ?? i.baxjXyJgE,
+      C4FeBjQqd:
+        (I = c ?? i.C4FeBjQqd) !== null && I !== void 0
+          ? I
+          : "What is CloudPeak?",
+      dtpfKkxEc:
+        (_ = r ?? i.dtpfKkxEc) !== null && _ !== void 0
+          ? _
+          : "CloudPeak is a cloud-based platform that offers a suite of software as a service (SaaS) solutions designed to streamline business operations, enhance collaboration, and drive productivity.",
+      Iepd46w62:
+        (y = m ?? i.Iepd46w62) !== null && y !== void 0
+          ? y
+          : {
+            src: "https://framerusercontent.com/images/dDFnN7NQRlS8lCvI0dkVOJZAUnw.svg",
+          },
+      pXz6G8n4y: (q = a ?? i.pXz6G8n4y) !== null && q !== void 0 ? q : !0,
+      variant:
+        (k = (f = G2[i.variant]) !== null && f !== void 0 ? f : i.variant) !==
+          null && k !== void 0
+          ? k
+          : "gZC82I15b",
+    };
+  },
+  $2 = (r, a) =>
+    r.layoutDependency ? a.join("-") + r.layoutDependency : a.join("-"),
+  e4 = J(function (r, a) {
+    let { activeLocale: l, setLocale: m } = G(),
+      {
+        style: s,
+        className: g,
+        layoutId: c,
+        variant: b,
+        baxjXyJgE: N,
+        C4FeBjQqd: i,
+        dtpfKkxEc: F,
+        pXz6G8n4y: I,
+        Iepd46w62: _,
+        b1gPskFZn: y,
+        ...q
+      } = K2(r),
+      {
+        baseVariant: f,
+        classNames: k,
+        clearLoadingGesture: f1,
+        gestureHandlers: L,
+        gestureVariant: v,
+        isLoading: Z,
+        setGestureState: D,
+        setVariant: W,
+        variants: T,
+      } = o1({
+        cycleOrder: D2,
+        defaultVariant: "gZC82I15b",
+        variant: b,
+        variantClassNames: O2,
+      }),
+      p = $2(r, T),
+      { activeVariantCallback: j, delay: h1 } = n1(f),
+      a1 = j(async (...z) => {
+        if ((D({ isPressed: !1 }), N && (await N(...z)) === !1)) return !1;
+      }),
+      w = j(async (...z) => {
+        W("VxvDmSXOG");
+      }),
+      d = j(async (...z) => {
+        W("gZC82I15b");
+      }),
+      A = U(null),
+      C1 = () => !!["VxvDmSXOG", "zFWgeprP1"].includes(f),
+      l1 = (z) => (["VxvDmSXOG", "zFWgeprP1"].includes(f) ? !0 : z),
+      c1 = Q(),
+      x1 = [],
+      H1 = i1();
+    return e(Y, {
+      id: c ?? c1,
+      children: e(Y2, {
+        animate: T,
+        initial: !1,
+        children: e(Q2, {
+          value: J2,
+          children: e(o.div, {
+            ...q,
+            ...L,
+            className: O(V2, ...x1, "framer-mdji0k", g, k),
+            "data-framer-name": "Close",
+            "data-highlight": !0,
+            layoutDependency: p,
+            layoutId: "gZC82I15b",
+            onTap: a1,
+            ref: a ?? A,
+            style: {
+              borderBottomLeftRadius: 16,
+              borderBottomRightRadius: 16,
+              borderTopLeftRadius: 16,
+              borderTopRightRadius: 16,
+              ...s,
+            },
+            ...L1(
+              {
+                Q_41M3WAg: { "data-framer-name": "Close Small" },
+                VxvDmSXOG: { "data-framer-name": "Open" },
+                zFWgeprP1: { "data-framer-name": "Open Small" },
+              },
+              f,
+              v,
+            ),
+            children: e(o.div, {
+              className: "framer-v34jwr",
+              "data-framer-name": "Content & Icon",
+              "data-highlight": !0,
+              layoutDependency: p,
+              layoutId: "hl0aZyG0T",
+              onTap: w,
+              ...L1({ VxvDmSXOG: { onTap: d }, zFWgeprP1: { onTap: d } }, f, v),
+              children: t(o.div, {
+                className: "framer-19svttt",
+                "data-framer-name": "Content",
+                layoutDependency: p,
+                layoutId: "dq5g1hhDf",
+                children: [
+                  t(o.div, {
+                    className: "framer-1uvp5pd",
+                    "data-framer-name": "Question",
+                    layoutDependency: p,
+                    layoutId: "REIKGdusq",
+                    children: [
+                      e(C, {
+                        __fromCanvasComponent: !0,
+                        children: e(n, {
+                          children: e(o.p, {
+                            style: {
+                              "--framer-font-size": "20px",
+                              "--framer-line-height": "1.7em",
+                              "--framer-text-color":
+                                "var(--extracted-r6o4lv, var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10)))",
+                            },
+                            children: "What is CloudPeak?",
+                          }),
+                        }),
+                        className: "framer-1y9qvq0",
+                        "data-framer-name":
+                          "How many items are there in this list?",
+                        fonts: ["Inter"],
+                        layoutDependency: p,
+                        layoutId: "lXqfze0z5",
+                        style: {
+                          "--extracted-r6o4lv":
+                            "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                          "--framer-paragraph-spacing": "0px",
+                        },
+                        text: i,
+                        verticalAlignment: "top",
+                        withExternalLayout: !0,
+                      }),
+                      e(o.div, {
+                        className: "framer-dmmibx",
+                        "data-framer-name": "Icon",
+                        layoutDependency: p,
+                        layoutId: "aDyS0wmJW",
+                        style: {
+                          borderBottomLeftRadius: 100,
+                          borderBottomRightRadius: 100,
+                          borderTopLeftRadius: 100,
+                          borderTopRightRadius: 100,
+                        },
+                        ...L1({ Q_41M3WAg: { transformTemplate: H2 } }, f, v),
+                        children: e(x, {
+                          background: {
+                            alt: "",
+                            fit: "fill",
+                            pixelHeight: 24,
+                            pixelWidth: 24,
+                            sizes: "24px",
+                            ...e2(_),
+                          },
+                          className: "framer-1vtht6y",
+                          "data-framer-name": "Icon",
+                          layoutDependency: p,
+                          layoutId: "N99dNqJar",
+                          style: { rotate: 0 },
+                          variants: { VxvDmSXOG: { rotate: 180 } },
+                          ...L1(
+                            {
+                              VxvDmSXOG: {
+                                background: {
+                                  alt: "",
+                                  fit: "fill",
+                                  pixelHeight: 24,
+                                  pixelWidth: 24,
+                                  sizes: "24px",
+                                  ...e2(y),
+                                },
+                              },
+                              zFWgeprP1: {
+                                background: {
+                                  alt: "",
+                                  fit: "fill",
+                                  pixelHeight: 24,
+                                  pixelWidth: 24,
+                                  sizes: "24px",
+                                  ...e2(y),
+                                },
+                              },
+                            },
+                            f,
+                            v,
+                          ),
+                        }),
+                      }),
+                    ],
+                  }),
+                  C1() &&
+                  e(o.div, {
+                    className: "framer-3q7anq",
+                    "data-framer-name": "answer",
+                    layoutDependency: p,
+                    layoutId: "X3KOfwadt",
+                    style: {
+                      backgroundColor: "rgba(0, 0, 0, 0)",
+                      borderBottomLeftRadius: 0,
+                      borderBottomRightRadius: 0,
+                      borderTopLeftRadius: 0,
+                      borderTopRightRadius: 0,
+                    },
+                    variants: {
+                      VxvDmSXOG: {
+                        backgroundColor:
+                          "var(--token-f0403e72-01c7-4bda-8c7c-2c15b2d2da5e, rgb(240, 240, 240))",
+                        borderBottomLeftRadius: 16,
+                        borderBottomRightRadius: 16,
+                        borderTopLeftRadius: 16,
+                        borderTopRightRadius: 16,
+                      },
+                      zFWgeprP1: {
+                        backgroundColor:
+                          "var(--token-0a6023b7-956f-483f-b3b2-22ca5cf79ece, rgb(10, 14, 40))",
+                        borderBottomLeftRadius: 16,
+                        borderBottomRightRadius: 16,
+                        borderTopLeftRadius: 16,
+                        borderTopRightRadius: 16,
+                      },
+                    },
+                    children:
+                      l1(I) &&
+                      e(C, {
+                        __fromCanvasComponent: !0,
+                        children: e(n, {
+                          children: e(o.p, {
+                            style: {
+                              "--font-selector": "R0Y7RE0gU2Fucy1yZWd1bGFy",
+                              "--framer-font-family":
+                                '"DM Sans", "DM Sans Placeholder", sans-serif',
+                              "--framer-line-height": "1.7em",
+                              "--framer-text-color":
+                                "var(--extracted-r6o4lv, rgba(15, 15, 15, 0.7))",
+                            },
+                            children:
+                              "CloudPeak is a cloud-based platform that offers a suite of software as a service (SaaS) solutions designed to streamline business operations, enhance collaboration, and drive productivity.",
+                          }),
+                        }),
+                        className: "framer-1l4vine",
+                        fonts: ["GF;DM Sans-regular"],
+                        layoutDependency: p,
+                        layoutId: "Ju4dSKo6R",
+                        style: {
+                          "--extracted-r6o4lv": "rgba(15, 15, 15, 0.7)",
+                          "--framer-paragraph-spacing": "0px",
+                        },
+                        text: F,
+                        variants: {
+                          VxvDmSXOG: {
+                            "--extracted-r6o4lv":
+                              "var(--token-d5fe2bfd-826c-409b-8254-97e3c406c654, rgb(10, 11, 10))",
+                          },
+                          zFWgeprP1: {
+                            "--extracted-r6o4lv":
+                              "var(--token-ebfdfc6f-a0e8-414d-b30e-eeab99d6e438, rgb(158, 163, 191))",
+                          },
+                        },
+                        verticalAlignment: "top",
+                        withExternalLayout: !0,
+                        ...L1(
+                          {
+                            VxvDmSXOG: {
+                              children: e(n, {
+                                children: e(o.p, {
+                                  style: {
+                                    "--framer-line-height": "1.8em",
+                                    "--framer-text-color":
+                                      "var(--extracted-r6o4lv, var(--token-d5fe2bfd-826c-409b-8254-97e3c406c654, rgb(10, 11, 10)))",
+                                  },
+                                  children:
+                                    "CloudPeak is a cloud-based platform that offers a suite of software as a service (SaaS) solutions designed to streamline business operations, enhance collaboration, and drive productivity.",
+                                }),
+                              }),
+                              fonts: ["Inter"],
+                            },
+                            zFWgeprP1: {
+                              children: e(n, {
+                                children: e(o.p, {
+                                  style: {
+                                    "--font-selector": "R0Y7U29yYS1yZWd1bGFy",
+                                    "--framer-font-family":
+                                      '"Sora", "Sora Placeholder", sans-serif',
+                                    "--framer-line-height": "1.8em",
+                                    "--framer-text-color":
+                                      "var(--extracted-r6o4lv, var(--token-ebfdfc6f-a0e8-414d-b30e-eeab99d6e438, rgb(158, 163, 191)))",
+                                  },
+                                  children:
+                                    "CloudPeak is a cloud-based platform that offers a suite of software as a service (SaaS) solutions designed to streamline business operations, enhance collaboration, and drive productivity.",
+                                }),
+                              }),
+                              fonts: ["GF;Sora-regular"],
+                            },
+                          },
+                          f,
+                          v,
+                        ),
+                      }),
+                  }),
+                ],
+              }),
+            }),
+          }),
+        }),
+      }),
+    });
+  }),
+  r4 = [
+    "@supports (aspect-ratio: 1) { body { --framer-aspect-ratio-supported: auto; } }",
+    ".framer-yBsNx.framer-a3hzav, .framer-yBsNx .framer-a3hzav { display: block; }",
+    ".framer-yBsNx.framer-mdji0k { align-content: flex-start; align-items: flex-start; cursor: pointer; display: flex; flex-direction: column; flex-wrap: nowrap; gap: 0px; height: min-content; justify-content: center; overflow: hidden; padding: 32px 0px 32px 0px; position: relative; width: 1105px; will-change: var(--framer-will-change-override, transform); }",
+    ".framer-yBsNx .framer-v34jwr { align-content: flex-start; align-items: flex-start; cursor: pointer; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 16px; height: min-content; justify-content: center; overflow: visible; padding: 0px; position: relative; width: 100%; }",
+    ".framer-yBsNx .framer-19svttt { align-content: center; align-items: center; display: flex; flex: 1 0 0px; flex-direction: column; flex-wrap: nowrap; gap: 16px; height: min-content; justify-content: center; overflow: visible; padding: 0px; position: relative; width: 1px; }",
+    ".framer-yBsNx .framer-1uvp5pd { align-content: center; align-items: center; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 24px; height: min-content; justify-content: flex-start; overflow: visible; padding: 0px; position: relative; width: 100%; }",
+    ".framer-yBsNx .framer-1y9qvq0 { flex: 1 0 0px; height: auto; position: relative; white-space: pre-wrap; width: 1px; word-break: break-word; word-wrap: break-word; }",
+    ".framer-yBsNx .framer-dmmibx { align-content: center; align-items: center; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 0px; height: min-content; justify-content: center; overflow: hidden; padding: 4px 0px 0px 0px; position: relative; width: min-content; will-change: var(--framer-will-change-override, transform); }",
+    ".framer-yBsNx .framer-1vtht6y { flex: none; height: 24px; position: relative; width: 24px; }",
+    ".framer-yBsNx .framer-3q7anq { align-content: flex-start; align-items: flex-start; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 10px; height: min-content; justify-content: flex-end; overflow: visible; padding: 0px; position: relative; width: 100%; }",
+    ".framer-yBsNx .framer-1l4vine { flex: none; height: auto; position: relative; white-space: pre-wrap; width: 80%; word-break: break-word; word-wrap: break-word; }",
+    "@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) { .framer-yBsNx.framer-mdji0k, .framer-yBsNx .framer-v34jwr, .framer-yBsNx .framer-19svttt, .framer-yBsNx .framer-1uvp5pd, .framer-yBsNx .framer-dmmibx, .framer-yBsNx .framer-3q7anq { gap: 0px; } .framer-yBsNx.framer-mdji0k > * { margin: 0px; margin-bottom: calc(0px / 2); margin-top: calc(0px / 2); } .framer-yBsNx.framer-mdji0k > :first-child, .framer-yBsNx .framer-19svttt > :first-child { margin-top: 0px; } .framer-yBsNx.framer-mdji0k > :last-child, .framer-yBsNx .framer-19svttt > :last-child { margin-bottom: 0px; } .framer-yBsNx .framer-v34jwr > * { margin: 0px; margin-left: calc(16px / 2); margin-right: calc(16px / 2); } .framer-yBsNx .framer-v34jwr > :first-child, .framer-yBsNx .framer-1uvp5pd > :first-child, .framer-yBsNx .framer-dmmibx > :first-child, .framer-yBsNx .framer-3q7anq > :first-child { margin-left: 0px; } .framer-yBsNx .framer-v34jwr > :last-child, .framer-yBsNx .framer-1uvp5pd > :last-child, .framer-yBsNx .framer-dmmibx > :last-child, .framer-yBsNx .framer-3q7anq > :last-child { margin-right: 0px; } .framer-yBsNx .framer-19svttt > * { margin: 0px; margin-bottom: calc(16px / 2); margin-top: calc(16px / 2); } .framer-yBsNx .framer-1uvp5pd > * { margin: 0px; margin-left: calc(24px / 2); margin-right: calc(24px / 2); } .framer-yBsNx .framer-dmmibx > * { margin: 0px; margin-left: calc(0px / 2); margin-right: calc(0px / 2); } .framer-yBsNx .framer-3q7anq > * { margin: 0px; margin-left: calc(10px / 2); margin-right: calc(10px / 2); } }",
+    ".framer-yBsNx.framer-v-utw6h4.framer-mdji0k { padding: 32px 0px 24px 0px; }",
+    ".framer-yBsNx.framer-v-utw6h4 .framer-19svttt, .framer-yBsNx.framer-v-1n4dbay .framer-19svttt { gap: 24px; }",
+    ".framer-yBsNx.framer-v-utw6h4 .framer-1y9qvq0, .framer-yBsNx.framer-v-iyddyk .framer-1vtht6y, .framer-yBsNx.framer-v-1n4dbay .framer-1y9qvq0 { order: 0; }",
+    ".framer-yBsNx.framer-v-utw6h4 .framer-dmmibx, .framer-yBsNx.framer-v-1n4dbay .framer-dmmibx { order: 1; }",
+    ".framer-yBsNx.framer-v-utw6h4 .framer-3q7anq { justify-content: center; padding: 24px; }",
+    ".framer-yBsNx.framer-v-utw6h4 .framer-1l4vine, .framer-yBsNx.framer-v-1n4dbay .framer-1l4vine { flex: 1 0 0px; width: 1px; }",
+    "@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) { .framer-yBsNx.framer-v-utw6h4 .framer-19svttt { gap: 0px; } .framer-yBsNx.framer-v-utw6h4 .framer-19svttt > * { margin: 0px; margin-bottom: calc(24px / 2); margin-top: calc(24px / 2); } .framer-yBsNx.framer-v-utw6h4 .framer-19svttt > :first-child { margin-top: 0px; } .framer-yBsNx.framer-v-utw6h4 .framer-19svttt > :last-child { margin-bottom: 0px; } }",
+    ".framer-yBsNx.framer-v-iyddyk.framer-mdji0k { width: 385px; }",
+    ".framer-yBsNx.framer-v-iyddyk .framer-1uvp5pd { align-content: flex-start; align-items: flex-start; flex-direction: column; }",
+    ".framer-yBsNx.framer-v-iyddyk .framer-1y9qvq0 { flex: none; width: 91%; }",
+    ".framer-yBsNx.framer-v-iyddyk .framer-dmmibx { position: absolute; right: 6px; top: 52%; z-index: 1; }",
+    "@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) { .framer-yBsNx.framer-v-iyddyk .framer-1uvp5pd { gap: 0px; } .framer-yBsNx.framer-v-iyddyk .framer-1uvp5pd > * { margin: 0px; margin-bottom: calc(24px / 2); margin-top: calc(24px / 2); } .framer-yBsNx.framer-v-iyddyk .framer-1uvp5pd > :first-child { margin-top: 0px; } .framer-yBsNx.framer-v-iyddyk .framer-1uvp5pd > :last-child { margin-bottom: 0px; } }",
+    ".framer-yBsNx.framer-v-1n4dbay.framer-mdji0k { padding: 0px; width: 380px; }",
+    ".framer-yBsNx.framer-v-1n4dbay .framer-3q7anq { justify-content: center; padding: 20px; }",
+    "@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) { .framer-yBsNx.framer-v-1n4dbay .framer-19svttt { gap: 0px; } .framer-yBsNx.framer-v-1n4dbay .framer-19svttt > * { margin: 0px; margin-bottom: calc(24px / 2); margin-top: calc(24px / 2); } .framer-yBsNx.framer-v-1n4dbay .framer-19svttt > :first-child { margin-top: 0px; } .framer-yBsNx.framer-v-1n4dbay .framer-19svttt > :last-child { margin-bottom: 0px; } }",
+  ],
+  F1 = e1(e4, r4, "framer-yBsNx"),
+  T1 = F1;
+F1.displayName = "Single Faq Copy 4";
+F1.defaultProps = { height: 98, width: 1105 };
+K(F1, {
+  variant: {
+    options: ["gZC82I15b", "VxvDmSXOG", "Q_41M3WAg", "zFWgeprP1"],
+    optionTitles: ["Close", "Open", "Close Small", "Open Small"],
+    title: "Variant",
+    type: u.Enum,
+  },
+  baxjXyJgE: { title: "Tap", type: u.EventHandler },
+  C4FeBjQqd: {
+    defaultValue: "What is CloudPeak?",
+    displayTextArea: !1,
+    title: "Question",
+    type: u.String,
+  },
+  dtpfKkxEc: {
+    defaultValue:
+      "CloudPeak is a cloud-based platform that offers a suite of software as a service (SaaS) solutions designed to streamline business operations, enhance collaboration, and drive productivity.",
+    displayTextArea: !1,
+    title: "Answer",
+    type: u.String,
+  },
+  pXz6G8n4y: { defaultValue: !0, title: "Answer Visible", type: u.Boolean },
+  Iepd46w62: {
+    __defaultAssetReference:
+      "data:framer/asset-reference,dDFnN7NQRlS8lCvI0dkVOJZAUnw.svg?originalFilename=plus.svg&preferredSize=auto",
+    title: "Icon Close",
+    type: u.ResponsiveImage,
+  },
+  b1gPskFZn: {
+    __defaultAssetReference:
+      "data:framer/asset-reference,nvz8kMzYRBewS5zCsJBmI2NetBo.svg?originalFilename=minus.svg&preferredSize=auto",
+    title: "Icon Open",
+    type: u.ResponsiveImage,
+  },
+});
+r1(
+  F1,
+  [
+    {
+      explicitInter: !0,
+      fonts: [
+        {
+          family: "Inter",
+          source: "framer",
+          style: "normal",
+          unicodeRange:
+            "U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F",
+          url: "https://framerusercontent.com/assets/5vvr9Vy74if2I6bQbJvbw7SY1pQ.woff2",
+          weight: "400",
+        },
+        {
+          family: "Inter",
+          source: "framer",
+          style: "normal",
+          unicodeRange: "U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116",
+          url: "https://framerusercontent.com/assets/EOr0mi4hNtlgWNn9if640EZzXCo.woff2",
+          weight: "400",
+        },
+        {
+          family: "Inter",
+          source: "framer",
+          style: "normal",
+          unicodeRange: "U+1F00-1FFF",
+          url: "https://framerusercontent.com/assets/Y9k9QrlZAqio88Klkmbd8VoMQc.woff2",
+          weight: "400",
+        },
+        {
+          family: "Inter",
+          source: "framer",
+          style: "normal",
+          unicodeRange: "U+0370-03FF",
+          url: "https://framerusercontent.com/assets/OYrD2tBIBPvoJXiIHnLoOXnY9M.woff2",
+          weight: "400",
+        },
+        {
+          family: "Inter",
+          source: "framer",
+          style: "normal",
+          unicodeRange:
+            "U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF",
+          url: "https://framerusercontent.com/assets/JeYwfuaPfZHQhEG8U5gtPDZ7WQ.woff2",
+          weight: "400",
+        },
+        {
+          family: "Inter",
+          source: "framer",
+          style: "normal",
+          unicodeRange:
+            "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD",
+          url: "https://framerusercontent.com/assets/vQyevYAyHtARFwPqUzQGpnDs.woff2",
+          weight: "400",
+        },
+        {
+          family: "Inter",
+          source: "framer",
+          style: "normal",
+          unicodeRange:
+            "U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB",
+          url: "https://framerusercontent.com/assets/b6Y37FthZeALduNqHicBT6FutY.woff2",
+          weight: "400",
+        },
+        {
+          family: "DM Sans",
+          source: "google",
+          style: "normal",
+          url: "https://fonts.gstatic.com/s/dmsans/v15/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwAopxhS2f3ZGMZpg.woff2",
+          weight: "400",
+        },
+        {
+          family: "Sora",
+          source: "google",
+          style: "normal",
+          url: "https://fonts.gstatic.com/s/sora/v12/xMQOuFFYT72X5wkB_18qmnndmSdSnn-PIwNhBti0.woff2",
+          weight: "400",
+        },
+      ],
+    },
+  ],
+  { supportsExplicitInterCodegen: !0 },
+);
+var a4 = ["IKfa3pSle", "Yo9S4Z3B1", "cjXmsdB2o", "vqi1qSXeQ"],
+  t4 = "framer-00oab",
+  i4 = {
+    cjXmsdB2o: "framer-v-s3sh7u",
+    IKfa3pSle: "framer-v-9pvy5",
+    vqi1qSXeQ: "framer-v-10iwoy1",
+    Yo9S4Z3B1: "framer-v-1c2aesf",
+  };
+function I1(r, ...a) {
+  let l = {};
+  return (a?.forEach((m) => m && Object.assign(l, r[m])), l);
+}
+var n4 = { damping: 60, delay: 0, mass: 1, stiffness: 500, type: "spring" },
+  o4 = (r, a) => `translateY(-50%) ${a}`,
+  r2 = (r) =>
+    typeof r == "object" && r !== null && typeof r.src == "string"
+      ? r
+      : typeof r == "string"
+        ? { src: r }
+        : void 0,
+  m4 = ({ value: r, children: a }) => {
+    let l = H(B),
+      m = r ?? l.transition,
+      s = t1(() => ({ ...l, transition: m }), [JSON.stringify(m)]);
+    return e(B.Provider, { value: s, children: a });
+  },
+  f4 = o(n),
+  l4 = {
+    "Close Small": "cjXmsdB2o",
+    "Open Small": "vqi1qSXeQ",
+    Close: "IKfa3pSle",
+    Open: "Yo9S4Z3B1",
+  },
+  s4 = ({
+    answer: r,
+    answerVisible: a,
+    height: l,
+    iconClose: m,
+    iconOpen: s,
+    id: g,
+    question: c,
+    tap: b,
+    width: N,
+    ...i
+  }) => {
+    var F, I, _, y, q, f, k;
+    return {
+      ...i,
+      b1gPskFZn:
+        (F = s ?? i.b1gPskFZn) !== null && F !== void 0
+          ? F
+          : {
+            src: "https://framerusercontent.com/images/nvz8kMzYRBewS5zCsJBmI2NetBo.svg",
+          },
+      baxjXyJgE: b ?? i.baxjXyJgE,
+      C4FeBjQqd:
+        (I = c ?? i.C4FeBjQqd) !== null && I !== void 0
+          ? I
+          : "Who is eligible to apply for the Blockchain Security Research Bootcamp?",
+      dtpfKkxEc:
+        (_ = r ?? i.dtpfKkxEc) !== null && _ !== void 0
+          ? _
+          : "Applicants should have a background in Blockchain Development, computer science, or related fields and a strong interest in blockchain security.",
+      Iepd46w62:
+        (y = m ?? i.Iepd46w62) !== null && y !== void 0
+          ? y
+          : {
+            src: "https://framerusercontent.com/images/dDFnN7NQRlS8lCvI0dkVOJZAUnw.svg",
+          },
+      pXz6G8n4y: (q = a ?? i.pXz6G8n4y) !== null && q !== void 0 ? q : !0,
+      variant:
+        (k = (f = l4[i.variant]) !== null && f !== void 0 ? f : i.variant) !==
+          null && k !== void 0
+          ? k
+          : "IKfa3pSle",
+    };
+  },
+  C4 = (r, a) =>
+    r.layoutDependency ? a.join("-") + r.layoutDependency : a.join("-"),
+  c4 = J(function (r, a) {
+    let { activeLocale: l, setLocale: m } = G(),
+      {
+        style: s,
+        className: g,
+        layoutId: c,
+        variant: b,
+        baxjXyJgE: N,
+        C4FeBjQqd: i,
+        dtpfKkxEc: F,
+        pXz6G8n4y: I,
+        Iepd46w62: _,
+        b1gPskFZn: y,
+        ...q
+      } = s4(r),
+      {
+        baseVariant: f,
+        classNames: k,
+        clearLoadingGesture: f1,
+        gestureHandlers: L,
+        gestureVariant: v,
+        isLoading: Z,
+        setGestureState: D,
+        setVariant: W,
+        variants: T,
+      } = o1({
+        cycleOrder: a4,
+        defaultVariant: "IKfa3pSle",
+        variant: b,
+        variantClassNames: i4,
+      }),
+      p = C4(r, T),
+      { activeVariantCallback: j, delay: h1 } = n1(f),
+      a1 = j(async (...z) => {
+        if ((D({ isPressed: !1 }), N && (await N(...z)) === !1)) return !1;
+      }),
+      w = j(async (...z) => {
+        W("Yo9S4Z3B1");
+      }),
+      d = j(async (...z) => {
+        W("IKfa3pSle");
+      }),
+      A = U(null),
+      C1 = () => !!["Yo9S4Z3B1", "vqi1qSXeQ"].includes(f),
+      l1 = (z) => (["Yo9S4Z3B1", "vqi1qSXeQ"].includes(f) ? !0 : z),
+      c1 = Q(),
+      x1 = [],
+      H1 = i1();
+    return e(Y, {
+      id: c ?? c1,
+      children: e(f4, {
+        animate: T,
+        initial: !1,
+        children: e(m4, {
+          value: n4,
+          children: e(o.div, {
+            ...q,
+            ...L,
+            className: O(t4, ...x1, "framer-9pvy5", g, k),
+            "data-framer-name": "Close",
+            "data-highlight": !0,
+            layoutDependency: p,
+            layoutId: "IKfa3pSle",
+            onTap: a1,
+            ref: a ?? A,
+            style: {
+              borderBottomLeftRadius: 16,
+              borderBottomRightRadius: 16,
+              borderTopLeftRadius: 16,
+              borderTopRightRadius: 16,
+              ...s,
+            },
+            ...I1(
+              {
+                cjXmsdB2o: { "data-framer-name": "Close Small" },
+                vqi1qSXeQ: { "data-framer-name": "Open Small" },
+                Yo9S4Z3B1: { "data-framer-name": "Open" },
+              },
+              f,
+              v,
+            ),
+            children: e(o.div, {
+              className: "framer-83bpqv",
+              "data-framer-name": "Content & Icon",
+              "data-highlight": !0,
+              layoutDependency: p,
+              layoutId: "JC6zbisZf",
+              onTap: w,
+              ...I1({ vqi1qSXeQ: { onTap: d }, Yo9S4Z3B1: { onTap: d } }, f, v),
+              children: t(o.div, {
+                className: "framer-1a6m7h",
+                "data-framer-name": "Content",
+                layoutDependency: p,
+                layoutId: "wmWGGcdmd",
+                children: [
+                  t(o.div, {
+                    className: "framer-17jib2y",
+                    "data-framer-name": "Question",
+                    layoutDependency: p,
+                    layoutId: "hw3omSACx",
+                    children: [
+                      e(C, {
+                        __fromCanvasComponent: !0,
+                        children: e(n, {
+                          children: e(o.p, {
+                            style: {
+                              "--framer-font-size": "20px",
+                              "--framer-line-height": "1.7em",
+                              "--framer-text-color":
+                                "var(--extracted-r6o4lv, var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10)))",
+                            },
+                            children:
+                              "Who is eligible to apply for the Blockchain Security Research Bootcamp?",
+                          }),
+                        }),
+                        className: "framer-17vfmz4",
+                        "data-framer-name":
+                          "How many items are there in this list?",
+                        fonts: ["Inter"],
+                        layoutDependency: p,
+                        layoutId: "ZcxDXQoX6",
+                        style: {
+                          "--extracted-r6o4lv":
+                            "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                          "--framer-paragraph-spacing": "0px",
+                        },
+                        text: i,
+                        verticalAlignment: "top",
+                        withExternalLayout: !0,
+                      }),
+                      e(o.div, {
+                        className: "framer-gs5n1v",
+                        "data-framer-name": "Icon",
+                        layoutDependency: p,
+                        layoutId: "YBXIEYKNn",
+                        style: {
+                          borderBottomLeftRadius: 100,
+                          borderBottomRightRadius: 100,
+                          borderTopLeftRadius: 100,
+                          borderTopRightRadius: 100,
+                        },
+                        ...I1({ cjXmsdB2o: { transformTemplate: o4 } }, f, v),
+                        children: e(x, {
+                          background: {
+                            alt: "",
+                            fit: "fill",
+                            pixelHeight: 24,
+                            pixelWidth: 24,
+                            sizes: "24px",
+                            ...r2(_),
+                          },
+                          className: "framer-48f9jx",
+                          "data-framer-name": "Icon",
+                          layoutDependency: p,
+                          layoutId: "hX3rxf69C",
+                          style: { rotate: 0 },
+                          variants: { Yo9S4Z3B1: { rotate: 180 } },
+                          ...I1(
+                            {
+                              vqi1qSXeQ: {
+                                background: {
+                                  alt: "",
+                                  fit: "fill",
+                                  pixelHeight: 24,
+                                  pixelWidth: 24,
+                                  sizes: "24px",
+                                  ...r2(y),
+                                },
+                              },
+                              Yo9S4Z3B1: {
+                                background: {
+                                  alt: "",
+                                  fit: "fill",
+                                  pixelHeight: 24,
+                                  pixelWidth: 24,
+                                  sizes: "24px",
+                                  ...r2(y),
+                                },
+                              },
+                            },
+                            f,
+                            v,
+                          ),
+                        }),
+                      }),
+                    ],
+                  }),
+                  C1() &&
+                  e(o.div, {
+                    className: "framer-1eyali5",
+                    "data-framer-name": "answer",
+                    layoutDependency: p,
+                    layoutId: "iJ8afsyVj",
+                    style: {
+                      backgroundColor: "rgba(0, 0, 0, 0)",
+                      borderBottomLeftRadius: 0,
+                      borderBottomRightRadius: 0,
+                      borderTopLeftRadius: 0,
+                      borderTopRightRadius: 0,
+                    },
+                    variants: {
+                      vqi1qSXeQ: {
+                        backgroundColor:
+                          "var(--token-0a6023b7-956f-483f-b3b2-22ca5cf79ece, rgb(10, 14, 40))",
+                        borderBottomLeftRadius: 16,
+                        borderBottomRightRadius: 16,
+                        borderTopLeftRadius: 16,
+                        borderTopRightRadius: 16,
+                      },
+                      Yo9S4Z3B1: {
+                        backgroundColor:
+                          "var(--token-f0403e72-01c7-4bda-8c7c-2c15b2d2da5e, rgb(240, 240, 240))",
+                        borderBottomLeftRadius: 16,
+                        borderBottomRightRadius: 16,
+                        borderTopLeftRadius: 16,
+                        borderTopRightRadius: 16,
+                      },
+                    },
+                    children:
+                      l1(I) &&
+                      e(C, {
+                        __fromCanvasComponent: !0,
+                        children: e(n, {
+                          children: e(o.p, {
+                            style: {
+                              "--font-selector": "R0Y7RE0gU2Fucy1yZWd1bGFy",
+                              "--framer-font-family":
+                                '"DM Sans", "DM Sans Placeholder", sans-serif',
+                              "--framer-line-height": "1.7em",
+                              "--framer-text-color":
+                                "var(--extracted-r6o4lv, rgba(15, 15, 15, 0.7))",
+                            },
+                            children:
+                              "Applicants should have a background in Blockchain Development, computer science, or related fields and a strong interest in blockchain security.",
+                          }),
+                        }),
+                        className: "framer-1v3ky4c",
+                        fonts: ["GF;DM Sans-regular"],
+                        layoutDependency: p,
+                        layoutId: "J7xqG7FjF",
+                        style: {
+                          "--extracted-r6o4lv": "rgba(15, 15, 15, 0.7)",
+                          "--framer-paragraph-spacing": "0px",
+                        },
+                        text: F,
+                        variants: {
+                          vqi1qSXeQ: {
+                            "--extracted-r6o4lv":
+                              "var(--token-ebfdfc6f-a0e8-414d-b30e-eeab99d6e438, rgb(158, 163, 191))",
+                          },
+                          Yo9S4Z3B1: {
+                            "--extracted-r6o4lv":
+                              "var(--token-d5fe2bfd-826c-409b-8254-97e3c406c654, rgb(10, 11, 10))",
+                          },
+                        },
+                        verticalAlignment: "top",
+                        withExternalLayout: !0,
+                        ...I1(
+                          {
+                            vqi1qSXeQ: {
+                              children: e(n, {
+                                children: e(o.p, {
+                                  style: {
+                                    "--font-selector": "R0Y7U29yYS1yZWd1bGFy",
+                                    "--framer-font-family":
+                                      '"Sora", "Sora Placeholder", sans-serif',
+                                    "--framer-line-height": "1.8em",
+                                    "--framer-text-color":
+                                      "var(--extracted-r6o4lv, var(--token-ebfdfc6f-a0e8-414d-b30e-eeab99d6e438, rgb(158, 163, 191)))",
+                                  },
+                                  children:
+                                    "Applicants should have a background in Blockchain Development, computer science, or related fields and a strong interest in blockchain security.",
+                                }),
+                              }),
+                              fonts: ["GF;Sora-regular"],
+                            },
+                            Yo9S4Z3B1: {
+                              children: e(n, {
+                                children: e(o.p, {
+                                  style: {
+                                    "--framer-line-height": "1.8em",
+                                    "--framer-text-color":
+                                      "var(--extracted-r6o4lv, var(--token-d5fe2bfd-826c-409b-8254-97e3c406c654, rgb(10, 11, 10)))",
+                                  },
+                                  children:
+                                    "Applicants should have a background in Blockchain Development, computer science, or related fields and a strong interest in blockchain security.",
+                                }),
+                              }),
+                              fonts: ["Inter"],
+                            },
+                          },
+                          f,
+                          v,
+                        ),
+                      }),
+                  }),
+                ],
+              }),
+            }),
+          }),
+        }),
+      }),
+    });
+  }),
+  d4 = [
+    "@supports (aspect-ratio: 1) { body { --framer-aspect-ratio-supported: auto; } }",
+    ".framer-00oab.framer-1lzob4l, .framer-00oab .framer-1lzob4l { display: block; }",
+    ".framer-00oab.framer-9pvy5 { align-content: flex-start; align-items: flex-start; cursor: pointer; display: flex; flex-direction: column; flex-wrap: nowrap; gap: 0px; height: min-content; justify-content: center; overflow: hidden; padding: 32px 0px 32px 0px; position: relative; width: 1105px; will-change: var(--framer-will-change-override, transform); }",
+    ".framer-00oab .framer-83bpqv { align-content: flex-start; align-items: flex-start; cursor: pointer; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 16px; height: min-content; justify-content: center; overflow: visible; padding: 0px; position: relative; width: 100%; }",
+    ".framer-00oab .framer-1a6m7h { align-content: center; align-items: center; display: flex; flex: 1 0 0px; flex-direction: column; flex-wrap: nowrap; gap: 16px; height: min-content; justify-content: center; overflow: visible; padding: 0px; position: relative; width: 1px; }",
+    ".framer-00oab .framer-17jib2y { align-content: center; align-items: center; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 24px; height: min-content; justify-content: flex-start; overflow: visible; padding: 0px; position: relative; width: 100%; }",
+    ".framer-00oab .framer-17vfmz4 { flex: 1 0 0px; height: auto; position: relative; white-space: pre-wrap; width: 1px; word-break: break-word; word-wrap: break-word; }",
+    ".framer-00oab .framer-gs5n1v { align-content: center; align-items: center; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 0px; height: min-content; justify-content: center; overflow: hidden; padding: 4px 0px 0px 0px; position: relative; width: min-content; will-change: var(--framer-will-change-override, transform); }",
+    ".framer-00oab .framer-48f9jx { flex: none; height: 24px; position: relative; width: 24px; }",
+    ".framer-00oab .framer-1eyali5 { align-content: flex-start; align-items: flex-start; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 10px; height: min-content; justify-content: flex-end; overflow: visible; padding: 0px; position: relative; width: 100%; }",
+    ".framer-00oab .framer-1v3ky4c { flex: none; height: auto; position: relative; white-space: pre-wrap; width: 80%; word-break: break-word; word-wrap: break-word; }",
+    "@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) { .framer-00oab.framer-9pvy5, .framer-00oab .framer-83bpqv, .framer-00oab .framer-1a6m7h, .framer-00oab .framer-17jib2y, .framer-00oab .framer-gs5n1v, .framer-00oab .framer-1eyali5 { gap: 0px; } .framer-00oab.framer-9pvy5 > * { margin: 0px; margin-bottom: calc(0px / 2); margin-top: calc(0px / 2); } .framer-00oab.framer-9pvy5 > :first-child, .framer-00oab .framer-1a6m7h > :first-child { margin-top: 0px; } .framer-00oab.framer-9pvy5 > :last-child, .framer-00oab .framer-1a6m7h > :last-child { margin-bottom: 0px; } .framer-00oab .framer-83bpqv > * { margin: 0px; margin-left: calc(16px / 2); margin-right: calc(16px / 2); } .framer-00oab .framer-83bpqv > :first-child, .framer-00oab .framer-17jib2y > :first-child, .framer-00oab .framer-gs5n1v > :first-child, .framer-00oab .framer-1eyali5 > :first-child { margin-left: 0px; } .framer-00oab .framer-83bpqv > :last-child, .framer-00oab .framer-17jib2y > :last-child, .framer-00oab .framer-gs5n1v > :last-child, .framer-00oab .framer-1eyali5 > :last-child { margin-right: 0px; } .framer-00oab .framer-1a6m7h > * { margin: 0px; margin-bottom: calc(16px / 2); margin-top: calc(16px / 2); } .framer-00oab .framer-17jib2y > * { margin: 0px; margin-left: calc(24px / 2); margin-right: calc(24px / 2); } .framer-00oab .framer-gs5n1v > * { margin: 0px; margin-left: calc(0px / 2); margin-right: calc(0px / 2); } .framer-00oab .framer-1eyali5 > * { margin: 0px; margin-left: calc(10px / 2); margin-right: calc(10px / 2); } }",
+    ".framer-00oab.framer-v-1c2aesf.framer-9pvy5 { padding: 32px 0px 24px 0px; }",
+    ".framer-00oab.framer-v-1c2aesf .framer-1a6m7h, .framer-00oab.framer-v-10iwoy1 .framer-1a6m7h { gap: 24px; }",
+    ".framer-00oab.framer-v-1c2aesf .framer-17vfmz4, .framer-00oab.framer-v-s3sh7u .framer-48f9jx, .framer-00oab.framer-v-10iwoy1 .framer-17vfmz4 { order: 0; }",
+    ".framer-00oab.framer-v-1c2aesf .framer-gs5n1v, .framer-00oab.framer-v-10iwoy1 .framer-gs5n1v { order: 1; }",
+    ".framer-00oab.framer-v-1c2aesf .framer-1eyali5 { justify-content: center; padding: 24px; }",
+    ".framer-00oab.framer-v-1c2aesf .framer-1v3ky4c, .framer-00oab.framer-v-10iwoy1 .framer-1v3ky4c { flex: 1 0 0px; width: 1px; }",
+    "@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) { .framer-00oab.framer-v-1c2aesf .framer-1a6m7h { gap: 0px; } .framer-00oab.framer-v-1c2aesf .framer-1a6m7h > * { margin: 0px; margin-bottom: calc(24px / 2); margin-top: calc(24px / 2); } .framer-00oab.framer-v-1c2aesf .framer-1a6m7h > :first-child { margin-top: 0px; } .framer-00oab.framer-v-1c2aesf .framer-1a6m7h > :last-child { margin-bottom: 0px; } }",
+    ".framer-00oab.framer-v-s3sh7u.framer-9pvy5 { width: 385px; }",
+    ".framer-00oab.framer-v-s3sh7u .framer-17jib2y { align-content: flex-start; align-items: flex-start; flex-direction: column; }",
+    ".framer-00oab.framer-v-s3sh7u .framer-17vfmz4 { flex: none; width: 91%; }",
+    ".framer-00oab.framer-v-s3sh7u .framer-gs5n1v { position: absolute; right: 6px; top: 52%; z-index: 1; }",
+    "@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) { .framer-00oab.framer-v-s3sh7u .framer-17jib2y { gap: 0px; } .framer-00oab.framer-v-s3sh7u .framer-17jib2y > * { margin: 0px; margin-bottom: calc(24px / 2); margin-top: calc(24px / 2); } .framer-00oab.framer-v-s3sh7u .framer-17jib2y > :first-child { margin-top: 0px; } .framer-00oab.framer-v-s3sh7u .framer-17jib2y > :last-child { margin-bottom: 0px; } }",
+    ".framer-00oab.framer-v-10iwoy1.framer-9pvy5 { padding: 0px; width: 380px; }",
+    ".framer-00oab.framer-v-10iwoy1 .framer-1eyali5 { justify-content: center; padding: 20px; }",
+    "@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) { .framer-00oab.framer-v-10iwoy1 .framer-1a6m7h { gap: 0px; } .framer-00oab.framer-v-10iwoy1 .framer-1a6m7h > * { margin: 0px; margin-bottom: calc(24px / 2); margin-top: calc(24px / 2); } .framer-00oab.framer-v-10iwoy1 .framer-1a6m7h > :first-child { margin-top: 0px; } .framer-00oab.framer-v-10iwoy1 .framer-1a6m7h > :last-child { margin-bottom: 0px; } }",
+  ],
+  N1 = e1(c4, d4, "framer-00oab"),
+  X1 = N1;
+N1.displayName = "Single Faq";
+N1.defaultProps = { height: 98, width: 1105 };
+K(N1, {
+  variant: {
+    options: ["IKfa3pSle", "Yo9S4Z3B1", "cjXmsdB2o", "vqi1qSXeQ"],
+    optionTitles: ["Close", "Open", "Close Small", "Open Small"],
+    title: "Variant",
+    type: u.Enum,
+  },
+  baxjXyJgE: { title: "Tap", type: u.EventHandler },
+  C4FeBjQqd: {
+    defaultValue:
+      "Who is eligible to apply for the Blockchain Security Research Bootcamp?",
+    displayTextArea: !1,
+    title: "Question",
+    type: u.String,
+  },
+  dtpfKkxEc: {
+    defaultValue:
+      "Applicants should have a background in Blockchain Development, computer science, or related fields and a strong interest in blockchain security.",
+    displayTextArea: !1,
+    title: "Answer",
+    type: u.String,
+  },
+  pXz6G8n4y: { defaultValue: !0, title: "Answer Visible", type: u.Boolean },
+  Iepd46w62: {
+    __defaultAssetReference:
+      "data:framer/asset-reference,dDFnN7NQRlS8lCvI0dkVOJZAUnw.svg?originalFilename=plus.svg&preferredSize=auto",
+    title: "Icon Close",
+    type: u.ResponsiveImage,
+  },
+  b1gPskFZn: {
+    __defaultAssetReference:
+      "data:framer/asset-reference,nvz8kMzYRBewS5zCsJBmI2NetBo.svg?originalFilename=minus.svg&preferredSize=auto",
+    title: "Icon Open",
+    type: u.ResponsiveImage,
+  },
+});
+r1(
+  N1,
+  [
+    {
+      explicitInter: !0,
+      fonts: [
+        {
+          family: "Inter",
+          source: "framer",
+          style: "normal",
+          unicodeRange:
+            "U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F",
+          url: "https://framerusercontent.com/assets/5vvr9Vy74if2I6bQbJvbw7SY1pQ.woff2",
+          weight: "400",
+        },
+        {
+          family: "Inter",
+          source: "framer",
+          style: "normal",
+          unicodeRange: "U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116",
+          url: "https://framerusercontent.com/assets/EOr0mi4hNtlgWNn9if640EZzXCo.woff2",
+          weight: "400",
+        },
+        {
+          family: "Inter",
+          source: "framer",
+          style: "normal",
+          unicodeRange: "U+1F00-1FFF",
+          url: "https://framerusercontent.com/assets/Y9k9QrlZAqio88Klkmbd8VoMQc.woff2",
+          weight: "400",
+        },
+        {
+          family: "Inter",
+          source: "framer",
+          style: "normal",
+          unicodeRange: "U+0370-03FF",
+          url: "https://framerusercontent.com/assets/OYrD2tBIBPvoJXiIHnLoOXnY9M.woff2",
+          weight: "400",
+        },
+        {
+          family: "Inter",
+          source: "framer",
+          style: "normal",
+          unicodeRange:
+            "U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF",
+          url: "https://framerusercontent.com/assets/JeYwfuaPfZHQhEG8U5gtPDZ7WQ.woff2",
+          weight: "400",
+        },
+        {
+          family: "Inter",
+          source: "framer",
+          style: "normal",
+          unicodeRange:
+            "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD",
+          url: "https://framerusercontent.com/assets/vQyevYAyHtARFwPqUzQGpnDs.woff2",
+          weight: "400",
+        },
+        {
+          family: "Inter",
+          source: "framer",
+          style: "normal",
+          unicodeRange:
+            "U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB",
+          url: "https://framerusercontent.com/assets/b6Y37FthZeALduNqHicBT6FutY.woff2",
+          weight: "400",
+        },
+        {
+          family: "DM Sans",
+          source: "google",
+          style: "normal",
+          url: "https://fonts.gstatic.com/s/dmsans/v15/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwAopxhS2f3ZGMZpg.woff2",
+          weight: "400",
+        },
+        {
+          family: "Sora",
+          source: "google",
+          style: "normal",
+          url: "https://fonts.gstatic.com/s/sora/v12/xMQOuFFYT72X5wkB_18qmnndmSdSnn-PIwNhBti0.woff2",
+          weight: "400",
+        },
+      ],
+    },
+  ],
+  { supportsExplicitInterCodegen: !0 },
+);
+var p4 = ["XROUKiIFt", "kHzN7F26q", "J8b8KtFcu", "TvWwrqrER"],
+  h4 = "framer-ejOAl",
+  u4 = {
+    J8b8KtFcu: "framer-v-1m22h67",
+    kHzN7F26q: "framer-v-j5fcv",
+    TvWwrqrER: "framer-v-esuxpb",
+    XROUKiIFt: "framer-v-11fvg09",
+  };
+function M1(r, ...a) {
+  let l = {};
+  return (a?.forEach((m) => m && Object.assign(l, r[m])), l);
+}
+var g4 = { damping: 60, delay: 0, mass: 1, stiffness: 500, type: "spring" },
+  x4 = (r, a) => `translateY(-50%) ${a}`,
+  a2 = (r) =>
+    typeof r == "object" && r !== null && typeof r.src == "string"
+      ? r
+      : typeof r == "string"
+        ? { src: r }
+        : void 0,
+  b4 = ({ value: r, children: a }) => {
+    let l = H(B),
+      m = r ?? l.transition,
+      s = t1(() => ({ ...l, transition: m }), [JSON.stringify(m)]);
+    return e(B.Provider, { value: s, children: a });
+  },
+  y4 = o(n),
+  v4 = {
+    "Close Small": "J8b8KtFcu",
+    "Open Small": "TvWwrqrER",
+    Close: "XROUKiIFt",
+    Open: "kHzN7F26q",
+  },
+  w4 = ({
+    answer: r,
+    answerVisible: a,
+    height: l,
+    iconClose: m,
+    iconOpen: s,
+    id: g,
+    question: c,
+    tap: b,
+    width: N,
+    ...i
+  }) => {
+    var F, I, _, y, q, f, k;
+    return {
+      ...i,
+      b1gPskFZn:
+        (F = s ?? i.b1gPskFZn) !== null && F !== void 0
+          ? F
+          : {
+            src: "https://framerusercontent.com/images/nvz8kMzYRBewS5zCsJBmI2NetBo.svg",
+          },
+      baxjXyJgE: b ?? i.baxjXyJgE,
+      C4FeBjQqd:
+        (I = c ?? i.C4FeBjQqd) !== null && I !== void 0
+          ? I
+          : "What is CloudPeak?",
+      dtpfKkxEc:
+        (_ = r ?? i.dtpfKkxEc) !== null && _ !== void 0
+          ? _
+          : "CloudPeak is a cloud-based platform that offers a suite of software as a service (SaaS) solutions designed to streamline business operations, enhance collaboration, and drive productivity.",
+      Iepd46w62:
+        (y = m ?? i.Iepd46w62) !== null && y !== void 0
+          ? y
+          : {
+            src: "https://framerusercontent.com/images/dDFnN7NQRlS8lCvI0dkVOJZAUnw.svg",
+          },
+      pXz6G8n4y: (q = a ?? i.pXz6G8n4y) !== null && q !== void 0 ? q : !0,
+      variant:
+        (k = (f = v4[i.variant]) !== null && f !== void 0 ? f : i.variant) !==
+          null && k !== void 0
+          ? k
+          : "XROUKiIFt",
+    };
+  },
+  q4 = (r, a) =>
+    r.layoutDependency ? a.join("-") + r.layoutDependency : a.join("-"),
+  k4 = J(function (r, a) {
+    let { activeLocale: l, setLocale: m } = G(),
+      {
+        style: s,
+        className: g,
+        layoutId: c,
+        variant: b,
+        baxjXyJgE: N,
+        C4FeBjQqd: i,
+        dtpfKkxEc: F,
+        pXz6G8n4y: I,
+        Iepd46w62: _,
+        b1gPskFZn: y,
+        ...q
+      } = w4(r),
+      {
+        baseVariant: f,
+        classNames: k,
+        clearLoadingGesture: f1,
+        gestureHandlers: L,
+        gestureVariant: v,
+        isLoading: Z,
+        setGestureState: D,
+        setVariant: W,
+        variants: T,
+      } = o1({
+        cycleOrder: p4,
+        defaultVariant: "XROUKiIFt",
+        variant: b,
+        variantClassNames: u4,
+      }),
+      p = q4(r, T),
+      { activeVariantCallback: j, delay: h1 } = n1(f),
+      a1 = j(async (...z) => {
+        if ((D({ isPressed: !1 }), N && (await N(...z)) === !1)) return !1;
+      }),
+      w = j(async (...z) => {
+        W("kHzN7F26q");
+      }),
+      d = j(async (...z) => {
+        W("XROUKiIFt");
+      }),
+      A = U(null),
+      C1 = () => !!["kHzN7F26q", "TvWwrqrER"].includes(f),
+      l1 = (z) => (["kHzN7F26q", "TvWwrqrER"].includes(f) ? !0 : z),
+      c1 = Q(),
+      x1 = [],
+      H1 = i1();
+    return e(Y, {
+      id: c ?? c1,
+      children: e(y4, {
+        animate: T,
+        initial: !1,
+        children: e(b4, {
+          value: g4,
+          children: e(o.div, {
+            ...q,
+            ...L,
+            className: O(h4, ...x1, "framer-11fvg09", g, k),
+            "data-framer-name": "Close",
+            "data-highlight": !0,
+            layoutDependency: p,
+            layoutId: "XROUKiIFt",
+            onTap: a1,
+            ref: a ?? A,
+            style: {
+              borderBottomLeftRadius: 16,
+              borderBottomRightRadius: 16,
+              borderTopLeftRadius: 16,
+              borderTopRightRadius: 16,
+              ...s,
+            },
+            ...M1(
+              {
+                J8b8KtFcu: { "data-framer-name": "Close Small" },
+                kHzN7F26q: { "data-framer-name": "Open" },
+                TvWwrqrER: { "data-framer-name": "Open Small" },
+              },
+              f,
+              v,
+            ),
+            children: e(o.div, {
+              className: "framer-1c30xu6",
+              "data-framer-name": "Content & Icon",
+              "data-highlight": !0,
+              layoutDependency: p,
+              layoutId: "zQeKHtJrx",
+              onTap: w,
+              ...M1({ kHzN7F26q: { onTap: d }, TvWwrqrER: { onTap: d } }, f, v),
+              children: t(o.div, {
+                className: "framer-ghovdo",
+                "data-framer-name": "Content",
+                layoutDependency: p,
+                layoutId: "uOSUDjzb2",
+                children: [
+                  t(o.div, {
+                    className: "framer-sb82jm",
+                    "data-framer-name": "Question",
+                    layoutDependency: p,
+                    layoutId: "LK8IIQiOz",
+                    children: [
+                      e(C, {
+                        __fromCanvasComponent: !0,
+                        children: e(n, {
+                          children: e(o.p, {
+                            style: {
+                              "--framer-font-size": "20px",
+                              "--framer-line-height": "1.7em",
+                              "--framer-text-color":
+                                "var(--extracted-r6o4lv, var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10)))",
+                            },
+                            children: "What is CloudPeak?",
+                          }),
+                        }),
+                        className: "framer-113ge7e",
+                        "data-framer-name":
+                          "How many items are there in this list?",
+                        fonts: ["Inter"],
+                        layoutDependency: p,
+                        layoutId: "zqzrdTACn",
+                        style: {
+                          "--extracted-r6o4lv":
+                            "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                          "--framer-paragraph-spacing": "0px",
+                        },
+                        text: i,
+                        verticalAlignment: "top",
+                        withExternalLayout: !0,
+                      }),
+                      e(o.div, {
+                        className: "framer-1d811yj",
+                        "data-framer-name": "Icon",
+                        layoutDependency: p,
+                        layoutId: "eHjWokiXh",
+                        style: {
+                          borderBottomLeftRadius: 100,
+                          borderBottomRightRadius: 100,
+                          borderTopLeftRadius: 100,
+                          borderTopRightRadius: 100,
+                        },
+                        ...M1({ J8b8KtFcu: { transformTemplate: x4 } }, f, v),
+                        children: e(x, {
+                          background: {
+                            alt: "",
+                            fit: "fill",
+                            pixelHeight: 24,
+                            pixelWidth: 24,
+                            sizes: "24px",
+                            ...a2(_),
+                          },
+                          className: "framer-ef62dg",
+                          "data-framer-name": "Icon",
+                          layoutDependency: p,
+                          layoutId: "T_42JQhnB",
+                          style: { rotate: 0 },
+                          variants: { kHzN7F26q: { rotate: 180 } },
+                          ...M1(
+                            {
+                              kHzN7F26q: {
+                                background: {
+                                  alt: "",
+                                  fit: "fill",
+                                  pixelHeight: 24,
+                                  pixelWidth: 24,
+                                  sizes: "24px",
+                                  ...a2(y),
+                                },
+                              },
+                              TvWwrqrER: {
+                                background: {
+                                  alt: "",
+                                  fit: "fill",
+                                  pixelHeight: 24,
+                                  pixelWidth: 24,
+                                  sizes: "24px",
+                                  ...a2(y),
+                                },
+                              },
+                            },
+                            f,
+                            v,
+                          ),
+                        }),
+                      }),
+                    ],
+                  }),
+                  C1() &&
+                  e(o.div, {
+                    className: "framer-s3hh3n",
+                    "data-framer-name": "answer",
+                    layoutDependency: p,
+                    layoutId: "gX8FLg33L",
+                    style: {
+                      backgroundColor: "rgba(0, 0, 0, 0)",
+                      borderBottomLeftRadius: 0,
+                      borderBottomRightRadius: 0,
+                      borderTopLeftRadius: 0,
+                      borderTopRightRadius: 0,
+                    },
+                    variants: {
+                      kHzN7F26q: {
+                        backgroundColor:
+                          "var(--token-f0403e72-01c7-4bda-8c7c-2c15b2d2da5e, rgb(240, 240, 240))",
+                        borderBottomLeftRadius: 16,
+                        borderBottomRightRadius: 16,
+                        borderTopLeftRadius: 16,
+                        borderTopRightRadius: 16,
+                      },
+                      TvWwrqrER: {
+                        backgroundColor:
+                          "var(--token-0a6023b7-956f-483f-b3b2-22ca5cf79ece, rgb(10, 14, 40))",
+                        borderBottomLeftRadius: 16,
+                        borderBottomRightRadius: 16,
+                        borderTopLeftRadius: 16,
+                        borderTopRightRadius: 16,
+                      },
+                    },
+                    children:
+                      l1(I) &&
+                      e(C, {
+                        __fromCanvasComponent: !0,
+                        children: e(n, {
+                          children: e(o.p, {
+                            style: {
+                              "--font-selector": "R0Y7RE0gU2Fucy1yZWd1bGFy",
+                              "--framer-font-family":
+                                '"DM Sans", "DM Sans Placeholder", sans-serif',
+                              "--framer-line-height": "1.7em",
+                              "--framer-text-color":
+                                "var(--extracted-r6o4lv, rgba(15, 15, 15, 0.7))",
+                            },
+                            children:
+                              "CloudPeak is a cloud-based platform that offers a suite of software as a service (SaaS) solutions designed to streamline business operations, enhance collaboration, and drive productivity.",
+                          }),
+                        }),
+                        className: "framer-ac8bgh",
+                        fonts: ["GF;DM Sans-regular"],
+                        layoutDependency: p,
+                        layoutId: "svjfq76YL",
+                        style: {
+                          "--extracted-r6o4lv": "rgba(15, 15, 15, 0.7)",
+                          "--framer-paragraph-spacing": "0px",
+                        },
+                        text: F,
+                        variants: {
+                          kHzN7F26q: {
+                            "--extracted-r6o4lv":
+                              "var(--token-d5fe2bfd-826c-409b-8254-97e3c406c654, rgb(9, 227, 8))",
+                          },
+                          TvWwrqrER: {
+                            "--extracted-r6o4lv":
+                              "var(--token-ebfdfc6f-a0e8-414d-b30e-eeab99d6e438, rgb(158, 163, 191))",
+                          },
+                        },
+                        verticalAlignment: "top",
+                        withExternalLayout: !0,
+                        ...M1(
+                          {
+                            kHzN7F26q: {
+                              children: e(n, {
+                                children: e(o.p, {
+                                  style: {
+                                    "--framer-line-height": "1.8em",
+                                    "--framer-text-color":
+                                      "var(--extracted-r6o4lv, var(--token-d5fe2bfd-826c-409b-8254-97e3c406c654, rgb(9, 227, 8)))",
+                                  },
+                                  children:
+                                    "CloudPeak is a cloud-based platform that offers a suite of software as a service (SaaS) solutions designed to streamline business operations, enhance collaboration, and drive productivity.",
+                                }),
+                              }),
+                              fonts: ["Inter"],
+                            },
+                            TvWwrqrER: {
+                              children: e(n, {
+                                children: e(o.p, {
+                                  style: {
+                                    "--font-selector": "R0Y7U29yYS1yZWd1bGFy",
+                                    "--framer-font-family":
+                                      '"Sora", "Sora Placeholder", sans-serif',
+                                    "--framer-line-height": "1.8em",
+                                    "--framer-text-color":
+                                      "var(--extracted-r6o4lv, var(--token-ebfdfc6f-a0e8-414d-b30e-eeab99d6e438, rgb(158, 163, 191)))",
+                                  },
+                                  children:
+                                    "CloudPeak is a cloud-based platform that offers a suite of software as a service (SaaS) solutions designed to streamline business operations, enhance collaboration, and drive productivity.",
+                                }),
+                              }),
+                              fonts: ["GF;Sora-regular"],
+                            },
+                          },
+                          f,
+                          v,
+                        ),
+                      }),
+                  }),
+                ],
+              }),
+            }),
+          }),
+        }),
+      }),
+    });
+  }),
+  _4 = [
+    "@supports (aspect-ratio: 1) { body { --framer-aspect-ratio-supported: auto; } }",
+    ".framer-ejOAl.framer-d0nld4, .framer-ejOAl .framer-d0nld4 { display: block; }",
+    ".framer-ejOAl.framer-11fvg09 { align-content: flex-start; align-items: flex-start; cursor: pointer; display: flex; flex-direction: column; flex-wrap: nowrap; gap: 0px; height: min-content; justify-content: center; overflow: hidden; padding: 32px 0px 32px 0px; position: relative; width: 1105px; will-change: var(--framer-will-change-override, transform); }",
+    ".framer-ejOAl .framer-1c30xu6 { align-content: flex-start; align-items: flex-start; cursor: pointer; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 16px; height: min-content; justify-content: center; overflow: visible; padding: 0px; position: relative; width: 100%; }",
+    ".framer-ejOAl .framer-ghovdo { align-content: center; align-items: center; display: flex; flex: 1 0 0px; flex-direction: column; flex-wrap: nowrap; gap: 16px; height: min-content; justify-content: center; overflow: visible; padding: 0px; position: relative; width: 1px; }",
+    ".framer-ejOAl .framer-sb82jm { align-content: center; align-items: center; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 24px; height: min-content; justify-content: flex-start; overflow: visible; padding: 0px; position: relative; width: 100%; }",
+    ".framer-ejOAl .framer-113ge7e { flex: 1 0 0px; height: auto; position: relative; white-space: pre-wrap; width: 1px; word-break: break-word; word-wrap: break-word; }",
+    ".framer-ejOAl .framer-1d811yj { align-content: center; align-items: center; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 0px; height: min-content; justify-content: center; overflow: hidden; padding: 4px 0px 0px 0px; position: relative; width: min-content; will-change: var(--framer-will-change-override, transform); }",
+    ".framer-ejOAl .framer-ef62dg { flex: none; height: 24px; position: relative; width: 24px; }",
+    ".framer-ejOAl .framer-s3hh3n { align-content: flex-start; align-items: flex-start; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 10px; height: min-content; justify-content: flex-end; overflow: visible; padding: 0px; position: relative; width: 100%; }",
+    ".framer-ejOAl .framer-ac8bgh { flex: none; height: auto; position: relative; white-space: pre-wrap; width: 80%; word-break: break-word; word-wrap: break-word; }",
+    "@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) { .framer-ejOAl.framer-11fvg09, .framer-ejOAl .framer-1c30xu6, .framer-ejOAl .framer-ghovdo, .framer-ejOAl .framer-sb82jm, .framer-ejOAl .framer-1d811yj, .framer-ejOAl .framer-s3hh3n { gap: 0px; } .framer-ejOAl.framer-11fvg09 > * { margin: 0px; margin-bottom: calc(0px / 2); margin-top: calc(0px / 2); } .framer-ejOAl.framer-11fvg09 > :first-child, .framer-ejOAl .framer-ghovdo > :first-child { margin-top: 0px; } .framer-ejOAl.framer-11fvg09 > :last-child, .framer-ejOAl .framer-ghovdo > :last-child { margin-bottom: 0px; } .framer-ejOAl .framer-1c30xu6 > * { margin: 0px; margin-left: calc(16px / 2); margin-right: calc(16px / 2); } .framer-ejOAl .framer-1c30xu6 > :first-child, .framer-ejOAl .framer-sb82jm > :first-child, .framer-ejOAl .framer-1d811yj > :first-child, .framer-ejOAl .framer-s3hh3n > :first-child { margin-left: 0px; } .framer-ejOAl .framer-1c30xu6 > :last-child, .framer-ejOAl .framer-sb82jm > :last-child, .framer-ejOAl .framer-1d811yj > :last-child, .framer-ejOAl .framer-s3hh3n > :last-child { margin-right: 0px; } .framer-ejOAl .framer-ghovdo > * { margin: 0px; margin-bottom: calc(16px / 2); margin-top: calc(16px / 2); } .framer-ejOAl .framer-sb82jm > * { margin: 0px; margin-left: calc(24px / 2); margin-right: calc(24px / 2); } .framer-ejOAl .framer-1d811yj > * { margin: 0px; margin-left: calc(0px / 2); margin-right: calc(0px / 2); } .framer-ejOAl .framer-s3hh3n > * { margin: 0px; margin-left: calc(10px / 2); margin-right: calc(10px / 2); } }",
+    ".framer-ejOAl.framer-v-j5fcv.framer-11fvg09 { padding: 32px 0px 24px 0px; }",
+    ".framer-ejOAl.framer-v-j5fcv .framer-ghovdo, .framer-ejOAl.framer-v-esuxpb .framer-ghovdo { gap: 24px; }",
+    ".framer-ejOAl.framer-v-j5fcv .framer-113ge7e, .framer-ejOAl.framer-v-1m22h67 .framer-ef62dg, .framer-ejOAl.framer-v-esuxpb .framer-113ge7e { order: 0; }",
+    ".framer-ejOAl.framer-v-j5fcv .framer-1d811yj, .framer-ejOAl.framer-v-esuxpb .framer-1d811yj { order: 1; }",
+    ".framer-ejOAl.framer-v-j5fcv .framer-s3hh3n { justify-content: center; padding: 24px; }",
+    ".framer-ejOAl.framer-v-j5fcv .framer-ac8bgh, .framer-ejOAl.framer-v-esuxpb .framer-ac8bgh { flex: 1 0 0px; width: 1px; }",
+    "@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) { .framer-ejOAl.framer-v-j5fcv .framer-ghovdo { gap: 0px; } .framer-ejOAl.framer-v-j5fcv .framer-ghovdo > * { margin: 0px; margin-bottom: calc(24px / 2); margin-top: calc(24px / 2); } .framer-ejOAl.framer-v-j5fcv .framer-ghovdo > :first-child { margin-top: 0px; } .framer-ejOAl.framer-v-j5fcv .framer-ghovdo > :last-child { margin-bottom: 0px; } }",
+    ".framer-ejOAl.framer-v-1m22h67.framer-11fvg09 { width: 385px; }",
+    ".framer-ejOAl.framer-v-1m22h67 .framer-sb82jm { align-content: flex-start; align-items: flex-start; flex-direction: column; }",
+    ".framer-ejOAl.framer-v-1m22h67 .framer-113ge7e { flex: none; width: 91%; }",
+    ".framer-ejOAl.framer-v-1m22h67 .framer-1d811yj { position: absolute; right: 6px; top: 52%; z-index: 1; }",
+    "@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) { .framer-ejOAl.framer-v-1m22h67 .framer-sb82jm { gap: 0px; } .framer-ejOAl.framer-v-1m22h67 .framer-sb82jm > * { margin: 0px; margin-bottom: calc(24px / 2); margin-top: calc(24px / 2); } .framer-ejOAl.framer-v-1m22h67 .framer-sb82jm > :first-child { margin-top: 0px; } .framer-ejOAl.framer-v-1m22h67 .framer-sb82jm > :last-child { margin-bottom: 0px; } }",
+    ".framer-ejOAl.framer-v-esuxpb.framer-11fvg09 { padding: 0px; width: 380px; }",
+    ".framer-ejOAl.framer-v-esuxpb .framer-s3hh3n { justify-content: center; padding: 20px; }",
+    "@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) { .framer-ejOAl.framer-v-esuxpb .framer-ghovdo { gap: 0px; } .framer-ejOAl.framer-v-esuxpb .framer-ghovdo > * { margin: 0px; margin-bottom: calc(24px / 2); margin-top: calc(24px / 2); } .framer-ejOAl.framer-v-esuxpb .framer-ghovdo > :first-child { margin-top: 0px; } .framer-ejOAl.framer-v-esuxpb .framer-ghovdo > :last-child { margin-bottom: 0px; } }",
+  ],
+  z1 = e1(k4, _4, "framer-ejOAl"),
+  D1 = z1;
+z1.displayName = "Single Faq Copy";
+z1.defaultProps = { height: 98, width: 1105 };
+K(z1, {
+  variant: {
+    options: ["XROUKiIFt", "kHzN7F26q", "J8b8KtFcu", "TvWwrqrER"],
+    optionTitles: ["Close", "Open", "Close Small", "Open Small"],
+    title: "Variant",
+    type: u.Enum,
+  },
+  baxjXyJgE: { title: "Tap", type: u.EventHandler },
+  C4FeBjQqd: {
+    defaultValue: "What is CloudPeak?",
+    displayTextArea: !1,
+    title: "Question",
+    type: u.String,
+  },
+  dtpfKkxEc: {
+    defaultValue:
+      "CloudPeak is a cloud-based platform that offers a suite of software as a service (SaaS) solutions designed to streamline business operations, enhance collaboration, and drive productivity.",
+    displayTextArea: !1,
+    title: "Answer",
+    type: u.String,
+  },
+  pXz6G8n4y: { defaultValue: !0, title: "Answer Visible", type: u.Boolean },
+  Iepd46w62: {
+    __defaultAssetReference:
+      "data:framer/asset-reference,dDFnN7NQRlS8lCvI0dkVOJZAUnw.svg?originalFilename=plus.svg&preferredSize=auto",
+    title: "Icon Close",
+    type: u.ResponsiveImage,
+  },
+  b1gPskFZn: {
+    __defaultAssetReference:
+      "data:framer/asset-reference,nvz8kMzYRBewS5zCsJBmI2NetBo.svg?originalFilename=minus.svg&preferredSize=auto",
+    title: "Icon Open",
+    type: u.ResponsiveImage,
+  },
+});
+r1(
+  z1,
+  [
+    {
+      explicitInter: !0,
+      fonts: [
+        {
+          family: "Inter",
+          source: "framer",
+          style: "normal",
+          unicodeRange:
+            "U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F",
+          url: "https://framerusercontent.com/assets/5vvr9Vy74if2I6bQbJvbw7SY1pQ.woff2",
+          weight: "400",
+        },
+        {
+          family: "Inter",
+          source: "framer",
+          style: "normal",
+          unicodeRange: "U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116",
+          url: "https://framerusercontent.com/assets/EOr0mi4hNtlgWNn9if640EZzXCo.woff2",
+          weight: "400",
+        },
+        {
+          family: "Inter",
+          source: "framer",
+          style: "normal",
+          unicodeRange: "U+1F00-1FFF",
+          url: "https://framerusercontent.com/assets/Y9k9QrlZAqio88Klkmbd8VoMQc.woff2",
+          weight: "400",
+        },
+        {
+          family: "Inter",
+          source: "framer",
+          style: "normal",
+          unicodeRange: "U+0370-03FF",
+          url: "https://framerusercontent.com/assets/OYrD2tBIBPvoJXiIHnLoOXnY9M.woff2",
+          weight: "400",
+        },
+        {
+          family: "Inter",
+          source: "framer",
+          style: "normal",
+          unicodeRange:
+            "U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF",
+          url: "https://framerusercontent.com/assets/JeYwfuaPfZHQhEG8U5gtPDZ7WQ.woff2",
+          weight: "400",
+        },
+        {
+          family: "Inter",
+          source: "framer",
+          style: "normal",
+          unicodeRange:
+            "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD",
+          url: "https://framerusercontent.com/assets/vQyevYAyHtARFwPqUzQGpnDs.woff2",
+          weight: "400",
+        },
+        {
+          family: "Inter",
+          source: "framer",
+          style: "normal",
+          unicodeRange:
+            "U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB",
+          url: "https://framerusercontent.com/assets/b6Y37FthZeALduNqHicBT6FutY.woff2",
+          weight: "400",
+        },
+        {
+          family: "DM Sans",
+          source: "google",
+          style: "normal",
+          url: "https://fonts.gstatic.com/s/dmsans/v15/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwAopxhS2f3ZGMZpg.woff2",
+          weight: "400",
+        },
+        {
+          family: "Sora",
+          source: "google",
+          style: "normal",
+          url: "https://fonts.gstatic.com/s/sora/v12/xMQOuFFYT72X5wkB_18qmnndmSdSnn-PIwNhBti0.woff2",
+          weight: "400",
+        },
+      ],
+    },
+  ],
+  { supportsExplicitInterCodegen: !0 },
+);
+var L4 = ["EQ0DmFUJO", "Y75Dr2I5o", "N2nu9S8bo", "JPEHS0xvw"],
+  F4 = "framer-uIq81",
+  I4 = {
+    EQ0DmFUJO: "framer-v-16d6r8v",
+    JPEHS0xvw: "framer-v-1ssov9b",
+    N2nu9S8bo: "framer-v-1sru3qu",
+    Y75Dr2I5o: "framer-v-oxdtzm",
+  };
+function j1(r, ...a) {
+  let l = {};
+  return (a?.forEach((m) => m && Object.assign(l, r[m])), l);
+}
+var N4 = { damping: 60, delay: 0, mass: 1, stiffness: 500, type: "spring" },
+  M4 = (r, a) => `translateY(-50%) ${a}`,
+  t2 = (r) =>
+    typeof r == "object" && r !== null && typeof r.src == "string"
+      ? r
+      : typeof r == "string"
+        ? { src: r }
+        : void 0,
+  z4 = ({ value: r, children: a }) => {
+    let l = H(B),
+      m = r ?? l.transition,
+      s = t1(() => ({ ...l, transition: m }), [JSON.stringify(m)]);
+    return e(B.Provider, { value: s, children: a });
+  },
+  j4 = o(n),
+  S4 = {
+    "Close Small": "N2nu9S8bo",
+    "Open Small": "JPEHS0xvw",
+    Close: "EQ0DmFUJO",
+    Open: "Y75Dr2I5o",
+  },
+  R4 = ({
+    answer: r,
+    answerVisible: a,
+    height: l,
+    iconClose: m,
+    iconOpen: s,
+    id: g,
+    question: c,
+    tap: b,
+    width: N,
+    ...i
+  }) => {
+    var F, I, _, y, q, f, k;
+    return {
+      ...i,
+      b1gPskFZn:
+        (F = s ?? i.b1gPskFZn) !== null && F !== void 0
+          ? F
+          : {
+            src: "https://framerusercontent.com/images/nvz8kMzYRBewS5zCsJBmI2NetBo.svg",
+          },
+      baxjXyJgE: b ?? i.baxjXyJgE,
+      C4FeBjQqd:
+        (I = c ?? i.C4FeBjQqd) !== null && I !== void 0
+          ? I
+          : "What is CloudPeak?",
+      dtpfKkxEc:
+        (_ = r ?? i.dtpfKkxEc) !== null && _ !== void 0
+          ? _
+          : "CloudPeak is a cloud-based platform that offers a suite of software as a service (SaaS) solutions designed to streamline business operations, enhance collaboration, and drive productivity.",
+      Iepd46w62:
+        (y = m ?? i.Iepd46w62) !== null && y !== void 0
+          ? y
+          : {
+            src: "https://framerusercontent.com/images/dDFnN7NQRlS8lCvI0dkVOJZAUnw.svg",
+          },
+      pXz6G8n4y: (q = a ?? i.pXz6G8n4y) !== null && q !== void 0 ? q : !0,
+      variant:
+        (k = (f = S4[i.variant]) !== null && f !== void 0 ? f : i.variant) !==
+          null && k !== void 0
+          ? k
+          : "EQ0DmFUJO",
+    };
+  },
+  U4 = (r, a) =>
+    r.layoutDependency ? a.join("-") + r.layoutDependency : a.join("-"),
+  E4 = J(function (r, a) {
+    let { activeLocale: l, setLocale: m } = G(),
+      {
+        style: s,
+        className: g,
+        layoutId: c,
+        variant: b,
+        baxjXyJgE: N,
+        C4FeBjQqd: i,
+        dtpfKkxEc: F,
+        pXz6G8n4y: I,
+        Iepd46w62: _,
+        b1gPskFZn: y,
+        ...q
+      } = R4(r),
+      {
+        baseVariant: f,
+        classNames: k,
+        clearLoadingGesture: f1,
+        gestureHandlers: L,
+        gestureVariant: v,
+        isLoading: Z,
+        setGestureState: D,
+        setVariant: W,
+        variants: T,
+      } = o1({
+        cycleOrder: L4,
+        defaultVariant: "EQ0DmFUJO",
+        variant: b,
+        variantClassNames: I4,
+      }),
+      p = U4(r, T),
+      { activeVariantCallback: j, delay: h1 } = n1(f),
+      a1 = j(async (...z) => {
+        if ((D({ isPressed: !1 }), N && (await N(...z)) === !1)) return !1;
+      }),
+      w = j(async (...z) => {
+        W("Y75Dr2I5o");
+      }),
+      d = j(async (...z) => {
+        W("EQ0DmFUJO");
+      }),
+      A = U(null),
+      C1 = () => !!["Y75Dr2I5o", "JPEHS0xvw"].includes(f),
+      l1 = (z) => (["Y75Dr2I5o", "JPEHS0xvw"].includes(f) ? !0 : z),
+      c1 = Q(),
+      x1 = [],
+      H1 = i1();
+    return e(Y, {
+      id: c ?? c1,
+      children: e(j4, {
+        animate: T,
+        initial: !1,
+        children: e(z4, {
+          value: N4,
+          children: e(o.div, {
+            ...q,
+            ...L,
+            className: O(F4, ...x1, "framer-16d6r8v", g, k),
+            "data-framer-name": "Close",
+            "data-highlight": !0,
+            layoutDependency: p,
+            layoutId: "EQ0DmFUJO",
+            onTap: a1,
+            ref: a ?? A,
+            style: {
+              borderBottomLeftRadius: 16,
+              borderBottomRightRadius: 16,
+              borderTopLeftRadius: 16,
+              borderTopRightRadius: 16,
+              ...s,
+            },
+            ...j1(
+              {
+                JPEHS0xvw: { "data-framer-name": "Open Small" },
+                N2nu9S8bo: { "data-framer-name": "Close Small" },
+                Y75Dr2I5o: { "data-framer-name": "Open" },
+              },
+              f,
+              v,
+            ),
+            children: e(o.div, {
+              className: "framer-7w1m8t",
+              "data-framer-name": "Content & Icon",
+              "data-highlight": !0,
+              layoutDependency: p,
+              layoutId: "g2FismKcP",
+              onTap: w,
+              ...j1({ JPEHS0xvw: { onTap: d }, Y75Dr2I5o: { onTap: d } }, f, v),
+              children: t(o.div, {
+                className: "framer-ue7b5i",
+                "data-framer-name": "Content",
+                layoutDependency: p,
+                layoutId: "f7XJFk389",
+                children: [
+                  t(o.div, {
+                    className: "framer-kmrkiu",
+                    "data-framer-name": "Question",
+                    layoutDependency: p,
+                    layoutId: "MlUdZoDts",
+                    children: [
+                      e(C, {
+                        __fromCanvasComponent: !0,
+                        children: e(n, {
+                          children: e(o.p, {
+                            style: {
+                              "--framer-font-size": "20px",
+                              "--framer-line-height": "1.7em",
+                              "--framer-text-color":
+                                "var(--extracted-r6o4lv, var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10)))",
+                            },
+                            children: "What is CloudPeak?",
+                          }),
+                        }),
+                        className: "framer-154l2cv",
+                        "data-framer-name":
+                          "How many items are there in this list?",
+                        fonts: ["Inter"],
+                        layoutDependency: p,
+                        layoutId: "IX51avX6g",
+                        style: {
+                          "--extracted-r6o4lv":
+                            "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                          "--framer-paragraph-spacing": "0px",
+                        },
+                        text: i,
+                        verticalAlignment: "top",
+                        withExternalLayout: !0,
+                      }),
+                      e(o.div, {
+                        className: "framer-1a9io0z",
+                        "data-framer-name": "Icon",
+                        layoutDependency: p,
+                        layoutId: "y8XrhfFC5",
+                        style: {
+                          borderBottomLeftRadius: 100,
+                          borderBottomRightRadius: 100,
+                          borderTopLeftRadius: 100,
+                          borderTopRightRadius: 100,
+                        },
+                        ...j1({ N2nu9S8bo: { transformTemplate: M4 } }, f, v),
+                        children: e(x, {
+                          background: {
+                            alt: "",
+                            fit: "fill",
+                            pixelHeight: 24,
+                            pixelWidth: 24,
+                            sizes: "24px",
+                            ...t2(_),
+                          },
+                          className: "framer-1r0q80w",
+                          "data-framer-name": "Icon",
+                          layoutDependency: p,
+                          layoutId: "miiT6WsTM",
+                          style: { rotate: 0 },
+                          variants: { Y75Dr2I5o: { rotate: 180 } },
+                          ...j1(
+                            {
+                              JPEHS0xvw: {
+                                background: {
+                                  alt: "",
+                                  fit: "fill",
+                                  pixelHeight: 24,
+                                  pixelWidth: 24,
+                                  sizes: "24px",
+                                  ...t2(y),
+                                },
+                              },
+                              Y75Dr2I5o: {
+                                background: {
+                                  alt: "",
+                                  fit: "fill",
+                                  pixelHeight: 24,
+                                  pixelWidth: 24,
+                                  sizes: "24px",
+                                  ...t2(y),
+                                },
+                              },
+                            },
+                            f,
+                            v,
+                          ),
+                        }),
+                      }),
+                    ],
+                  }),
+                  C1() &&
+                  e(o.div, {
+                    className: "framer-8yw2fu",
+                    "data-framer-name": "answer",
+                    layoutDependency: p,
+                    layoutId: "X_PqjuTsg",
+                    style: {
+                      backgroundColor: "rgba(0, 0, 0, 0)",
+                      borderBottomLeftRadius: 0,
+                      borderBottomRightRadius: 0,
+                      borderTopLeftRadius: 0,
+                      borderTopRightRadius: 0,
+                    },
+                    variants: {
+                      JPEHS0xvw: {
+                        backgroundColor:
+                          "var(--token-0a6023b7-956f-483f-b3b2-22ca5cf79ece, rgb(10, 14, 40))",
+                        borderBottomLeftRadius: 16,
+                        borderBottomRightRadius: 16,
+                        borderTopLeftRadius: 16,
+                        borderTopRightRadius: 16,
+                      },
+                      Y75Dr2I5o: {
+                        backgroundColor:
+                          "var(--token-f0403e72-01c7-4bda-8c7c-2c15b2d2da5e, rgb(240, 240, 240))",
+                        borderBottomLeftRadius: 16,
+                        borderBottomRightRadius: 16,
+                        borderTopLeftRadius: 16,
+                        borderTopRightRadius: 16,
+                      },
+                    },
+                    children:
+                      l1(I) &&
+                      e(C, {
+                        __fromCanvasComponent: !0,
+                        children: e(n, {
+                          children: e(o.p, {
+                            style: {
+                              "--font-selector": "R0Y7RE0gU2Fucy1yZWd1bGFy",
+                              "--framer-font-family":
+                                '"DM Sans", "DM Sans Placeholder", sans-serif',
+                              "--framer-line-height": "1.7em",
+                              "--framer-text-color":
+                                "var(--extracted-r6o4lv, rgba(15, 15, 15, 0.7))",
+                            },
+                            children:
+                              "CloudPeak is a cloud-based platform that offers a suite of software as a service (SaaS) solutions designed to streamline business operations, enhance collaboration, and drive productivity.",
+                          }),
+                        }),
+                        className: "framer-2sndph",
+                        fonts: ["GF;DM Sans-regular"],
+                        layoutDependency: p,
+                        layoutId: "asBdRb2Iv",
+                        style: {
+                          "--extracted-r6o4lv": "rgba(15, 15, 15, 0.7)",
+                          "--framer-paragraph-spacing": "0px",
+                        },
+                        text: F,
+                        variants: {
+                          JPEHS0xvw: {
+                            "--extracted-r6o4lv":
+                              "var(--token-ebfdfc6f-a0e8-414d-b30e-eeab99d6e438, rgb(158, 163, 191))",
+                          },
+                          Y75Dr2I5o: {
+                            "--extracted-r6o4lv":
+                              "var(--token-d5fe2bfd-826c-409b-8254-97e3c406c654, rgb(10, 11, 10))",
+                          },
+                        },
+                        verticalAlignment: "top",
+                        withExternalLayout: !0,
+                        ...j1(
+                          {
+                            JPEHS0xvw: {
+                              children: e(n, {
+                                children: e(o.p, {
+                                  style: {
+                                    "--font-selector": "R0Y7U29yYS1yZWd1bGFy",
+                                    "--framer-font-family":
+                                      '"Sora", "Sora Placeholder", sans-serif',
+                                    "--framer-line-height": "1.8em",
+                                    "--framer-text-color":
+                                      "var(--extracted-r6o4lv, var(--token-ebfdfc6f-a0e8-414d-b30e-eeab99d6e438, rgb(158, 163, 191)))",
+                                  },
+                                  children:
+                                    "CloudPeak is a cloud-based platform that offers a suite of software as a service (SaaS) solutions designed to streamline business operations, enhance collaboration, and drive productivity.",
+                                }),
+                              }),
+                              fonts: ["GF;Sora-regular"],
+                            },
+                            Y75Dr2I5o: {
+                              children: e(n, {
+                                children: e(o.p, {
+                                  style: {
+                                    "--framer-line-height": "1.8em",
+                                    "--framer-text-color":
+                                      "var(--extracted-r6o4lv, var(--token-d5fe2bfd-826c-409b-8254-97e3c406c654, rgb(10, 11, 10)))",
+                                  },
+                                  children:
+                                    "CloudPeak is a cloud-based platform that offers a suite of software as a service (SaaS) solutions designed to streamline business operations, enhance collaboration, and drive productivity.",
+                                }),
+                              }),
+                              fonts: ["Inter"],
+                            },
+                          },
+                          f,
+                          v,
+                        ),
+                      }),
+                  }),
+                ],
+              }),
+            }),
+          }),
+        }),
+      }),
+    });
+  }),
+  P4 = [
+    "@supports (aspect-ratio: 1) { body { --framer-aspect-ratio-supported: auto; } }",
+    ".framer-uIq81.framer-vktkym, .framer-uIq81 .framer-vktkym { display: block; }",
+    ".framer-uIq81.framer-16d6r8v { align-content: flex-start; align-items: flex-start; cursor: pointer; display: flex; flex-direction: column; flex-wrap: nowrap; gap: 0px; height: min-content; justify-content: center; overflow: hidden; padding: 32px 0px 32px 0px; position: relative; width: 1105px; will-change: var(--framer-will-change-override, transform); }",
+    ".framer-uIq81 .framer-7w1m8t { align-content: flex-start; align-items: flex-start; cursor: pointer; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 16px; height: min-content; justify-content: center; overflow: visible; padding: 0px; position: relative; width: 100%; }",
+    ".framer-uIq81 .framer-ue7b5i { align-content: center; align-items: center; display: flex; flex: 1 0 0px; flex-direction: column; flex-wrap: nowrap; gap: 16px; height: min-content; justify-content: center; overflow: visible; padding: 0px; position: relative; width: 1px; }",
+    ".framer-uIq81 .framer-kmrkiu { align-content: center; align-items: center; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 24px; height: min-content; justify-content: flex-start; overflow: visible; padding: 0px; position: relative; width: 100%; }",
+    ".framer-uIq81 .framer-154l2cv { flex: 1 0 0px; height: auto; position: relative; white-space: pre-wrap; width: 1px; word-break: break-word; word-wrap: break-word; }",
+    ".framer-uIq81 .framer-1a9io0z { align-content: center; align-items: center; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 0px; height: min-content; justify-content: center; overflow: hidden; padding: 4px 0px 0px 0px; position: relative; width: min-content; will-change: var(--framer-will-change-override, transform); }",
+    ".framer-uIq81 .framer-1r0q80w { flex: none; height: 24px; position: relative; width: 24px; }",
+    ".framer-uIq81 .framer-8yw2fu { align-content: flex-start; align-items: flex-start; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 10px; height: min-content; justify-content: flex-end; overflow: visible; padding: 0px; position: relative; width: 100%; }",
+    ".framer-uIq81 .framer-2sndph { flex: none; height: auto; position: relative; white-space: pre-wrap; width: 80%; word-break: break-word; word-wrap: break-word; }",
+    "@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) { .framer-uIq81.framer-16d6r8v, .framer-uIq81 .framer-7w1m8t, .framer-uIq81 .framer-ue7b5i, .framer-uIq81 .framer-kmrkiu, .framer-uIq81 .framer-1a9io0z, .framer-uIq81 .framer-8yw2fu { gap: 0px; } .framer-uIq81.framer-16d6r8v > * { margin: 0px; margin-bottom: calc(0px / 2); margin-top: calc(0px / 2); } .framer-uIq81.framer-16d6r8v > :first-child, .framer-uIq81 .framer-ue7b5i > :first-child { margin-top: 0px; } .framer-uIq81.framer-16d6r8v > :last-child, .framer-uIq81 .framer-ue7b5i > :last-child { margin-bottom: 0px; } .framer-uIq81 .framer-7w1m8t > * { margin: 0px; margin-left: calc(16px / 2); margin-right: calc(16px / 2); } .framer-uIq81 .framer-7w1m8t > :first-child, .framer-uIq81 .framer-kmrkiu > :first-child, .framer-uIq81 .framer-1a9io0z > :first-child, .framer-uIq81 .framer-8yw2fu > :first-child { margin-left: 0px; } .framer-uIq81 .framer-7w1m8t > :last-child, .framer-uIq81 .framer-kmrkiu > :last-child, .framer-uIq81 .framer-1a9io0z > :last-child, .framer-uIq81 .framer-8yw2fu > :last-child { margin-right: 0px; } .framer-uIq81 .framer-ue7b5i > * { margin: 0px; margin-bottom: calc(16px / 2); margin-top: calc(16px / 2); } .framer-uIq81 .framer-kmrkiu > * { margin: 0px; margin-left: calc(24px / 2); margin-right: calc(24px / 2); } .framer-uIq81 .framer-1a9io0z > * { margin: 0px; margin-left: calc(0px / 2); margin-right: calc(0px / 2); } .framer-uIq81 .framer-8yw2fu > * { margin: 0px; margin-left: calc(10px / 2); margin-right: calc(10px / 2); } }",
+    ".framer-uIq81.framer-v-oxdtzm.framer-16d6r8v { padding: 32px 0px 24px 0px; }",
+    ".framer-uIq81.framer-v-oxdtzm .framer-ue7b5i, .framer-uIq81.framer-v-1ssov9b .framer-ue7b5i { gap: 24px; }",
+    ".framer-uIq81.framer-v-oxdtzm .framer-154l2cv, .framer-uIq81.framer-v-1sru3qu .framer-1r0q80w, .framer-uIq81.framer-v-1ssov9b .framer-154l2cv { order: 0; }",
+    ".framer-uIq81.framer-v-oxdtzm .framer-1a9io0z, .framer-uIq81.framer-v-1ssov9b .framer-1a9io0z { order: 1; }",
+    ".framer-uIq81.framer-v-oxdtzm .framer-8yw2fu { justify-content: center; padding: 24px; }",
+    ".framer-uIq81.framer-v-oxdtzm .framer-2sndph, .framer-uIq81.framer-v-1ssov9b .framer-2sndph { flex: 1 0 0px; width: 1px; }",
+    "@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) { .framer-uIq81.framer-v-oxdtzm .framer-ue7b5i { gap: 0px; } .framer-uIq81.framer-v-oxdtzm .framer-ue7b5i > * { margin: 0px; margin-bottom: calc(24px / 2); margin-top: calc(24px / 2); } .framer-uIq81.framer-v-oxdtzm .framer-ue7b5i > :first-child { margin-top: 0px; } .framer-uIq81.framer-v-oxdtzm .framer-ue7b5i > :last-child { margin-bottom: 0px; } }",
+    ".framer-uIq81.framer-v-1sru3qu.framer-16d6r8v { width: 385px; }",
+    ".framer-uIq81.framer-v-1sru3qu .framer-kmrkiu { align-content: flex-start; align-items: flex-start; flex-direction: column; }",
+    ".framer-uIq81.framer-v-1sru3qu .framer-154l2cv { flex: none; width: 91%; }",
+    ".framer-uIq81.framer-v-1sru3qu .framer-1a9io0z { position: absolute; right: 6px; top: 52%; z-index: 1; }",
+    "@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) { .framer-uIq81.framer-v-1sru3qu .framer-kmrkiu { gap: 0px; } .framer-uIq81.framer-v-1sru3qu .framer-kmrkiu > * { margin: 0px; margin-bottom: calc(24px / 2); margin-top: calc(24px / 2); } .framer-uIq81.framer-v-1sru3qu .framer-kmrkiu > :first-child { margin-top: 0px; } .framer-uIq81.framer-v-1sru3qu .framer-kmrkiu > :last-child { margin-bottom: 0px; } }",
+    ".framer-uIq81.framer-v-1ssov9b.framer-16d6r8v { padding: 0px; width: 380px; }",
+    ".framer-uIq81.framer-v-1ssov9b .framer-8yw2fu { justify-content: center; padding: 20px; }",
+    "@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) { .framer-uIq81.framer-v-1ssov9b .framer-ue7b5i { gap: 0px; } .framer-uIq81.framer-v-1ssov9b .framer-ue7b5i > * { margin: 0px; margin-bottom: calc(24px / 2); margin-top: calc(24px / 2); } .framer-uIq81.framer-v-1ssov9b .framer-ue7b5i > :first-child { margin-top: 0px; } .framer-uIq81.framer-v-1ssov9b .framer-ue7b5i > :last-child { margin-bottom: 0px; } }",
+  ],
+  S1 = e1(E4, P4, "framer-uIq81"),
+  i2 = S1;
+S1.displayName = "Single Faq Copy 2";
+S1.defaultProps = { height: 98, width: 1105 };
+K(S1, {
+  variant: {
+    options: ["EQ0DmFUJO", "Y75Dr2I5o", "N2nu9S8bo", "JPEHS0xvw"],
+    optionTitles: ["Close", "Open", "Close Small", "Open Small"],
+    title: "Variant",
+    type: u.Enum,
+  },
+  baxjXyJgE: { title: "Tap", type: u.EventHandler },
+  C4FeBjQqd: {
+    defaultValue: "What is CloudPeak?",
+    displayTextArea: !1,
+    title: "Question",
+    type: u.String,
+  },
+  dtpfKkxEc: {
+    defaultValue:
+      "CloudPeak is a cloud-based platform that offers a suite of software as a service (SaaS) solutions designed to streamline business operations, enhance collaboration, and drive productivity.",
+    displayTextArea: !1,
+    title: "Answer",
+    type: u.String,
+  },
+  pXz6G8n4y: { defaultValue: !0, title: "Answer Visible", type: u.Boolean },
+  Iepd46w62: {
+    __defaultAssetReference:
+      "data:framer/asset-reference,dDFnN7NQRlS8lCvI0dkVOJZAUnw.svg?originalFilename=plus.svg&preferredSize=auto",
+    title: "Icon Close",
+    type: u.ResponsiveImage,
+  },
+  b1gPskFZn: {
+    __defaultAssetReference:
+      "data:framer/asset-reference,nvz8kMzYRBewS5zCsJBmI2NetBo.svg?originalFilename=minus.svg&preferredSize=auto",
+    title: "Icon Open",
+    type: u.ResponsiveImage,
+  },
+});
+r1(
+  S1,
+  [
+    {
+      explicitInter: !0,
+      fonts: [
+        {
+          family: "Inter",
+          source: "framer",
+          style: "normal",
+          unicodeRange:
+            "U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F",
+          url: "https://framerusercontent.com/assets/5vvr9Vy74if2I6bQbJvbw7SY1pQ.woff2",
+          weight: "400",
+        },
+        {
+          family: "Inter",
+          source: "framer",
+          style: "normal",
+          unicodeRange: "U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116",
+          url: "https://framerusercontent.com/assets/EOr0mi4hNtlgWNn9if640EZzXCo.woff2",
+          weight: "400",
+        },
+        {
+          family: "Inter",
+          source: "framer",
+          style: "normal",
+          unicodeRange: "U+1F00-1FFF",
+          url: "https://framerusercontent.com/assets/Y9k9QrlZAqio88Klkmbd8VoMQc.woff2",
+          weight: "400",
+        },
+        {
+          family: "Inter",
+          source: "framer",
+          style: "normal",
+          unicodeRange: "U+0370-03FF",
+          url: "https://framerusercontent.com/assets/OYrD2tBIBPvoJXiIHnLoOXnY9M.woff2",
+          weight: "400",
+        },
+        {
+          family: "Inter",
+          source: "framer",
+          style: "normal",
+          unicodeRange:
+            "U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF",
+          url: "https://framerusercontent.com/assets/JeYwfuaPfZHQhEG8U5gtPDZ7WQ.woff2",
+          weight: "400",
+        },
+        {
+          family: "Inter",
+          source: "framer",
+          style: "normal",
+          unicodeRange:
+            "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD",
+          url: "https://framerusercontent.com/assets/vQyevYAyHtARFwPqUzQGpnDs.woff2",
+          weight: "400",
+        },
+        {
+          family: "Inter",
+          source: "framer",
+          style: "normal",
+          unicodeRange:
+            "U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB",
+          url: "https://framerusercontent.com/assets/b6Y37FthZeALduNqHicBT6FutY.woff2",
+          weight: "400",
+        },
+        {
+          family: "DM Sans",
+          source: "google",
+          style: "normal",
+          url: "https://fonts.gstatic.com/s/dmsans/v15/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwAopxhS2f3ZGMZpg.woff2",
+          weight: "400",
+        },
+        {
+          family: "Sora",
+          source: "google",
+          style: "normal",
+          url: "https://fonts.gstatic.com/s/sora/v12/xMQOuFFYT72X5wkB_18qmnndmSdSnn-PIwNhBti0.woff2",
+          weight: "400",
+        },
+      ],
+    },
+  ],
+  { supportsExplicitInterCodegen: !0 },
+);
+var Z4 = X(D1),
+  A4 = X(X1),
+  B4 = X(i2),
+  W4 = X(T1),
+  T4 = ["IzLDmX04P", "AJIWEJyfH", "y5o6RKnN3", "JBazWpgYH", "h5DqTGRJw"],
+  X4 = "framer-qA2oo",
+  D4 = {
+    AJIWEJyfH: "framer-v-1og7oug",
+    h5DqTGRJw: "framer-v-19ie168",
+    IzLDmX04P: "framer-v-1ge3kjm",
+    JBazWpgYH: "framer-v-kshuww",
+    y5o6RKnN3: "framer-v-1c2tse3",
+  };
+function R1(r, ...a) {
+  let l = {};
+  return (a?.forEach((m) => m && Object.assign(l, r[m])), l);
+}
+var V4 = { damping: 60, delay: 0, mass: 1, stiffness: 500, type: "spring" },
+  O4 = ({ value: r, children: a }) => {
+    let l = H(B),
+      m = r ?? l.transition,
+      s = t1(() => ({ ...l, transition: m }), [JSON.stringify(m)]);
+    return e(B.Provider, { value: s, children: a });
+  },
+  J4 = o(n),
+  H4 = {
+    "Variant 2": "AJIWEJyfH",
+    "Variant 3": "y5o6RKnN3",
+    "Variant 4": "JBazWpgYH",
+    "Variant 5": "h5DqTGRJw",
+    Desktop: "IzLDmX04P",
+  },
+  Q4 = ({ height: r, id: a, width: l, ...m }) => {
+    var s, g;
+    return {
+      ...m,
+      variant:
+        (g = (s = H4[m.variant]) !== null && s !== void 0 ? s : m.variant) !==
+          null && g !== void 0
+          ? g
+          : "IzLDmX04P",
+    };
+  },
+  Y4 = (r, a) =>
+    r.layoutDependency ? a.join("-") + r.layoutDependency : a.join("-"),
+  G4 = J(function (r, a) {
+    let { activeLocale: l, setLocale: m } = G(),
+      { style: s, className: g, layoutId: c, variant: b, ...N } = Q4(r),
+      {
+        baseVariant: i,
+        classNames: F,
+        clearLoadingGesture: I,
+        gestureHandlers: _,
+        gestureVariant: y,
+        isLoading: q,
+        setGestureState: f,
+        setVariant: k,
+        variants: f1,
+      } = o1({
+        cycleOrder: T4,
+        defaultVariant: "IzLDmX04P",
+        variant: b,
+        variantClassNames: D4,
+      }),
+      L = Y4(r, f1),
+      { activeVariantCallback: v, delay: Z } = n1(i),
+      D = v(async (...d) => {
+        k("AJIWEJyfH");
+      }),
+      W = v(async (...d) => {
+        k("IzLDmX04P");
+      }),
+      T = v(async (...d) => {
+        k("y5o6RKnN3");
+      }),
+      p = v(async (...d) => {
+        k("h5DqTGRJw");
+      }),
+      j = U(null),
+      h1 = Q(),
+      a1 = [],
+      w = i1();
+    return e(Y, {
+      id: c ?? h1,
+      children: e(J4, {
+        animate: f1,
+        initial: !1,
+        children: e(O4, {
+          value: V4,
+          children: t(o.div, {
+            ...N,
+            ..._,
+            className: O(X4, ...a1, "framer-1ge3kjm", g, F),
+            "data-framer-name": "Desktop",
+            layoutDependency: L,
+            layoutId: "IzLDmX04P",
+            ref: a ?? j,
+            style: { ...s },
+            ...R1(
+              {
+                AJIWEJyfH: { "data-framer-name": "Variant 2" },
+                h5DqTGRJw: { "data-framer-name": "Variant 5" },
+                JBazWpgYH: { "data-framer-name": "Variant 4" },
+                y5o6RKnN3: { "data-framer-name": "Variant 3" },
+              },
+              i,
+              y,
+            ),
+            children: [
+              e(o.div, {
+                className: "framer-mlqgg3",
+                "data-border": !0,
+                "data-framer-name": "SIngle FAQ",
+                layoutDependency: L,
+                layoutId: "QCbvs46n4",
+                style: {
+                  "--border-bottom-width": "1px",
+                  "--border-color":
+                    "var(--token-2a0d945c-6c28-40ba-9619-a9907f67d122, rgba(22, 22, 26, 0.56))",
+                  "--border-left-width": "0px",
+                  "--border-right-width": "0px",
+                  "--border-style": "solid",
+                  "--border-top-width": "1px",
+                },
+                children: e(M, {
+                  width: `max(${w?.width || "100vw"}, 1px)`,
+                  children: e(o.div, {
+                    className: "framer-1qjcru4-container",
+                    layoutDependency: L,
+                    layoutId: "YunXzDJ7c-container",
+                    children: e(D1, {
+                      baxjXyJgE: D,
+                      C4FeBjQqd: "What is a blockchain audit?",
+                      dtpfKkxEc:
+                        "A blockchain audit is a comprehensive evaluation of a blockchain project's security, focusing on identifying and mitigating vulnerabilities.",
+                      height: "100%",
+                      id: "YunXzDJ7c",
+                      layoutId: "YunXzDJ7c",
+                      pXz6G8n4y: !0,
+                      style: { width: "100%" },
+                      variant: "XROUKiIFt",
+                      width: "100%",
+                      ...R1({ AJIWEJyfH: { variant: "kHzN7F26q" } }, i, y),
+                    }),
+                  }),
+                }),
+              }),
+              e(o.div, {
+                className: "framer-t7uunz",
+                "data-border": !0,
+                "data-framer-name": "SIngle FAQ",
+                layoutDependency: L,
+                layoutId: "aAX7_kBYW",
+                style: {
+                  "--border-bottom-width": "1px",
+                  "--border-color":
+                    "var(--token-2a0d945c-6c28-40ba-9619-a9907f67d122, rgba(22, 22, 26, 0.28))",
+                  "--border-left-width": "0px",
+                  "--border-right-width": "0px",
+                  "--border-style": "solid",
+                  "--border-top-width": "0px",
+                },
+                children: e(M, {
+                  width: `max(${w?.width || "100vw"}, 1px)`,
+                  children: e(o.div, {
+                    className: "framer-1dinsy6-container",
+                    layoutDependency: L,
+                    layoutId: "YBy_f37gf-container",
+                    children: e(D1, {
+                      baxjXyJgE: D,
+                      C4FeBjQqd: "How do I apply for the hybrid bootcamp?",
+                      dtpfKkxEc:
+                        "You can apply for the bootcamp by filling out the online application form on our Education page.",
+                      height: "100%",
+                      id: "YBy_f37gf",
+                      layoutId: "YBy_f37gf",
+                      pXz6G8n4y: !0,
+                      style: { width: "100%" },
+                      variant: "XROUKiIFt",
+                      width: "100%",
+                    }),
+                  }),
+                }),
+              }),
+              e(o.div, {
+                className: "framer-25kxwl",
+                "data-border": !0,
+                "data-framer-name": "SIngle FAQ",
+                layoutDependency: L,
+                layoutId: "GqOhg6plg",
+                style: {
+                  "--border-bottom-width": "1px",
+                  "--border-color":
+                    "var(--token-2a0d945c-6c28-40ba-9619-a9907f67d122, rgba(22, 22, 26, 0.28))",
+                  "--border-left-width": "0px",
+                  "--border-right-width": "0px",
+                  "--border-style": "solid",
+                  "--border-top-width": "0px",
+                  borderTopLeftRadius: 16,
+                  borderTopRightRadius: 16,
+                },
+                children: e(M, {
+                  width: `max(${w?.width || "100vw"}, 1px)`,
+                  children: e(o.div, {
+                    className: "framer-1fdy0n5-container",
+                    layoutDependency: L,
+                    layoutId: "UJIIKxKko-container",
+                    children: e(X1, {
+                      baxjXyJgE: W,
+                      C4FeBjQqd:
+                        "What makes Guild Audits different from other audit firms?",
+                      dtpfKkxEc:
+                        "Our unique approach combines top-notch education, customized audit solutions, and a competitive audit process conducted by a diverse pool of experts.",
+                      height: "100%",
+                      id: "UJIIKxKko",
+                      layoutId: "UJIIKxKko",
+                      pXz6G8n4y: !0,
+                      style: { width: "100%" },
+                      variant: "IKfa3pSle",
+                      width: "100%",
+                    }),
+                  }),
+                }),
+              }),
+              e(o.div, {
+                className: "framer-94axgq",
+                "data-border": !0,
+                "data-framer-name": "SIngle FAQ",
+                layoutDependency: L,
+                layoutId: "JAodORwrU",
+                style: {
+                  "--border-bottom-width": "1px",
+                  "--border-color":
+                    "var(--token-2a0d945c-6c28-40ba-9619-a9907f67d122, rgba(22, 22, 26, 0.28))",
+                  "--border-left-width": "0px",
+                  "--border-right-width": "0px",
+                  "--border-style": "solid",
+                  "--border-top-width": "0px",
+                  borderTopLeftRadius: 16,
+                  borderTopRightRadius: 16,
+                },
+                children: e(M, {
+                  width: `max(${w?.width || "100vw"}, 1px)`,
+                  children: e(o.div, {
+                    className: "framer-14fckgu-container",
+                    layoutDependency: L,
+                    layoutId: "lFh8Uge5o-container",
+                    children: e(X1, {
+                      baxjXyJgE: W,
+                      C4FeBjQqd:
+                        "Who is eligible to apply for the hybrid bootcamp?",
+                      dtpfKkxEc:
+                        "Applicants should have a background in Blockchain Development, computer science, or related fields and a strong interest in blockchain security.",
+                      height: "100%",
+                      id: "lFh8Uge5o",
+                      layoutId: "lFh8Uge5o",
+                      pXz6G8n4y: !0,
+                      style: { width: "100%" },
+                      variant: "IKfa3pSle",
+                      width: "100%",
+                    }),
+                  }),
+                }),
+              }),
+              e(o.div, {
+                className: "framer-158iux2",
+                "data-border": !0,
+                "data-framer-name": "SIngle FAQ",
+                layoutDependency: L,
+                layoutId: "ADaG7f9f7",
+                style: {
+                  "--border-bottom-width": "1px",
+                  "--border-color":
+                    "var(--token-2a0d945c-6c28-40ba-9619-a9907f67d122, rgba(22, 22, 26, 0.28))",
+                  "--border-left-width": "0px",
+                  "--border-right-width": "0px",
+                  "--border-style": "solid",
+                  "--border-top-width": "0px",
+                },
+                children: e(M, {
+                  width: `max(${w?.width || "100vw"}, 1px)`,
+                  children: e(o.div, {
+                    className: "framer-1ru0awo-container",
+                    layoutDependency: L,
+                    layoutId: "uI8QZbF26-container",
+                    children: e(i2, {
+                      baxjXyJgE: T,
+                      C4FeBjQqd: "Are there networking opportunities?",
+                      dtpfKkxEc:
+                        "The bootcamp includes networking events, mentorship sessions, and interactions with industry experts to guide students.",
+                      height: "100%",
+                      id: "uI8QZbF26",
+                      layoutId: "uI8QZbF26",
+                      pXz6G8n4y: !0,
+                      style: { width: "100%" },
+                      variant: "EQ0DmFUJO",
+                      width: "100%",
+                      ...R1({ y5o6RKnN3: { variant: "Y75Dr2I5o" } }, i, y),
+                    }),
+                  }),
+                }),
+              }),
+              e(o.div, {
+                className: "framer-19civ1z",
+                "data-border": !0,
+                "data-framer-name": "SIngle FAQ",
+                layoutDependency: L,
+                layoutId: "oO3T8QArb",
+                style: {
+                  "--border-bottom-width": "1px",
+                  "--border-color":
+                    "var(--token-2a0d945c-6c28-40ba-9619-a9907f67d122, rgba(22, 22, 26, 0.28))",
+                  "--border-left-width": "0px",
+                  "--border-right-width": "0px",
+                  "--border-style": "solid",
+                  "--border-top-width": "0px",
+                },
+                children: e(M, {
+                  width: `max(${w?.width || "100vw"}, 1px)`,
+                  children: e(o.div, {
+                    className: "framer-xly6j5-container",
+                    layoutDependency: L,
+                    layoutId: "tZcH4yDyK-container",
+                    children: e(T1, {
+                      baxjXyJgE: p,
+                      C4FeBjQqd:
+                        "What partnerships are in place for the bootcamp?",
+                      dtpfKkxEc:
+                        "A down payment is the initial payment made by the homebuyer toward the purchase price of the property. The amount required for a down payment can vary depending on factors such as the type of mortgage and the lender's requirements.",
+                      height: "100%",
+                      id: "tZcH4yDyK",
+                      layoutId: "tZcH4yDyK",
+                      pXz6G8n4y: !0,
+                      style: { width: "100%" },
+                      variant: "gZC82I15b",
+                      width: "100%",
+                      ...R1({ h5DqTGRJw: { variant: "VxvDmSXOG" } }, i, y),
+                    }),
+                  }),
+                }),
+              }),
+              e(o.div, {
+                className: "framer-6vu6ak",
+                "data-border": !0,
+                "data-framer-name": "SIngle FAQ",
+                layoutDependency: L,
+                layoutId: "de9AX1SFv",
+                style: {
+                  "--border-bottom-width": "1px",
+                  "--border-color":
+                    "var(--token-2a0d945c-6c28-40ba-9619-a9907f67d122, rgba(22, 22, 26, 0.28))",
+                  "--border-left-width": "0px",
+                  "--border-right-width": "0px",
+                  "--border-style": "solid",
+                  "--border-top-width": "0px",
+                },
+                children: e(M, {
+                  width: `max(${w?.width || "100vw"}, 1px)`,
+                  children: e(o.div, {
+                    className: "framer-1a0ifgb-container",
+                    layoutDependency: L,
+                    layoutId: "DaXy93KGX-container",
+                    children: e(T1, {
+                      baxjXyJgE: p,
+                      C4FeBjQqd:
+                        "What facilities and support are provided during the bootcamp?",
+                      dtpfKkxEc:
+                        "Internet and Power Supply: 24-hour continuous and reliable internet and power supply., Accommodation: Shelter facilities for a safe and comfortable living environment. Meals: Three square meals per day to sustain energy and focus. Access to Instructors and Mentors: Experienced instructors and mentors in Ethereum technology, security, and mathematics.",
+                      height: "100%",
+                      id: "DaXy93KGX",
+                      layoutId: "DaXy93KGX",
+                      pXz6G8n4y: !0,
+                      style: { width: "100%" },
+                      variant: "gZC82I15b",
+                      width: "100%",
+                      ...R1({ h5DqTGRJw: { variant: "VxvDmSXOG" } }, i, y),
+                    }),
+                  }),
+                }),
+              }),
+            ],
+          }),
+        }),
+      }),
+    });
+  }),
+  K4 = [
+    "@supports (aspect-ratio: 1) { body { --framer-aspect-ratio-supported: auto; } }",
+    ".framer-qA2oo.framer-2rvg1j, .framer-qA2oo .framer-2rvg1j { display: block; }",
+    ".framer-qA2oo.framer-1ge3kjm { align-content: center; align-items: center; display: flex; flex-direction: column; flex-wrap: nowrap; gap: 0px; height: min-content; justify-content: center; overflow: hidden; padding: 0px; position: relative; width: 1105px; }",
+    ".framer-qA2oo .framer-mlqgg3, .framer-qA2oo .framer-t7uunz, .framer-qA2oo .framer-25kxwl, .framer-qA2oo .framer-94axgq, .framer-qA2oo .framer-158iux2, .framer-qA2oo .framer-19civ1z, .framer-qA2oo .framer-6vu6ak { align-content: center; align-items: center; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 10px; height: min-content; justify-content: center; overflow: visible; padding: 0px; position: relative; width: 100%; }",
+    ".framer-qA2oo .framer-1qjcru4-container, .framer-qA2oo .framer-1dinsy6-container, .framer-qA2oo .framer-1fdy0n5-container, .framer-qA2oo .framer-14fckgu-container, .framer-qA2oo .framer-1ru0awo-container, .framer-qA2oo .framer-xly6j5-container, .framer-qA2oo .framer-1a0ifgb-container { flex: 1 0 0px; height: auto; position: relative; width: 1px; }",
+    "@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) { .framer-qA2oo.framer-1ge3kjm, .framer-qA2oo .framer-mlqgg3, .framer-qA2oo .framer-t7uunz, .framer-qA2oo .framer-25kxwl, .framer-qA2oo .framer-94axgq, .framer-qA2oo .framer-158iux2, .framer-qA2oo .framer-19civ1z, .framer-qA2oo .framer-6vu6ak { gap: 0px; } .framer-qA2oo.framer-1ge3kjm > * { margin: 0px; margin-bottom: calc(0px / 2); margin-top: calc(0px / 2); } .framer-qA2oo.framer-1ge3kjm > :first-child { margin-top: 0px; } .framer-qA2oo.framer-1ge3kjm > :last-child { margin-bottom: 0px; } .framer-qA2oo .framer-mlqgg3 > *, .framer-qA2oo .framer-t7uunz > *, .framer-qA2oo .framer-25kxwl > *, .framer-qA2oo .framer-94axgq > *, .framer-qA2oo .framer-158iux2 > *, .framer-qA2oo .framer-19civ1z > *, .framer-qA2oo .framer-6vu6ak > * { margin: 0px; margin-left: calc(10px / 2); margin-right: calc(10px / 2); } .framer-qA2oo .framer-mlqgg3 > :first-child, .framer-qA2oo .framer-t7uunz > :first-child, .framer-qA2oo .framer-25kxwl > :first-child, .framer-qA2oo .framer-94axgq > :first-child, .framer-qA2oo .framer-158iux2 > :first-child, .framer-qA2oo .framer-19civ1z > :first-child, .framer-qA2oo .framer-6vu6ak > :first-child { margin-left: 0px; } .framer-qA2oo .framer-mlqgg3 > :last-child, .framer-qA2oo .framer-t7uunz > :last-child, .framer-qA2oo .framer-25kxwl > :last-child, .framer-qA2oo .framer-94axgq > :last-child, .framer-qA2oo .framer-158iux2 > :last-child, .framer-qA2oo .framer-19civ1z > :last-child, .framer-qA2oo .framer-6vu6ak > :last-child { margin-right: 0px; } }",
+    '.framer-qA2oo[data-border="true"]::after, .framer-qA2oo [data-border="true"]::after { content: ""; border-width: var(--border-top-width, 0) var(--border-right-width, 0) var(--border-bottom-width, 0) var(--border-left-width, 0); border-color: var(--border-color, none); border-style: var(--border-style, none); width: 100%; height: 100%; position: absolute; box-sizing: border-box; left: 0; top: 0; border-radius: inherit; pointer-events: none; }',
+  ],
+  U1 = e1(G4, K4, "framer-qA2oo"),
+  n2 = U1;
+U1.displayName = "Faq area";
+U1.defaultProps = { height: 686, width: 1105 };
+K(U1, {
+  variant: {
+    options: ["IzLDmX04P", "AJIWEJyfH", "y5o6RKnN3", "JBazWpgYH", "h5DqTGRJw"],
+    optionTitles: [
+      "Desktop",
+      "Variant 2",
+      "Variant 3",
+      "Variant 4",
+      "Variant 5",
+    ],
+    title: "Variant",
+    type: u.Enum,
+  },
+});
+r1(U1, [{ explicitInter: !0, fonts: [] }, ...Z4, ...A4, ...B4, ...W4], {
+  supportsExplicitInterCodegen: !0,
+});
+function L2(r) {
+  return (a) => {
+    u1(() => {
+      let g = document.createElement("style");
+      ((g.innerHTML = `
+              @keyframes maskShine {
+                0% { -webkit-mask-position: 200%; }
+                100% { -webkit-mask-position: -100%; }
+              }
+              .maskShine {
+                -webkit-mask-image: linear-gradient(to right, transparent 30%, #EEE 50%, transparent 70%);
+                -webkit-mask-size: 150% auto;
+                animation: maskShine 5s ease-in-out infinite;
+              }
+            `),
+        document.head.appendChild(g));
+    }, []);
+    let { className: l, ...m } = a,
+      s = [l, "maskShine"].filter(Boolean).join(" ");
+    return e(r, { ...m, className: s });
+  };
+}
+var $4 = (r) => (
+  u1(() => {
+    let a = document.createElement("style");
+    ((a.innerHTML = `
+@keyframes shine {
+0% { -webkit-mask-position: 200%; }
+100% { -webkit-mask-position: -100%; }
+}
+        .shine {
+            -webkit-mask-image: linear-gradient(to right, transparent 30%, #EEE 50%, transparent 70%);
+            -webkit-mask-size: 150% auto;
+            animation: shine 5s ease-in-out infinite;
+        }
+    `),
+      document.head.appendChild(a));
+  }, []),
+  {
+    ...r,
+    style: { ...r.style },
+    children: e("span", { className: "shine", children: r.children }),
+  }
+);
+function o2(r) {
+  return (a) => (H(d2), e(r, { ...a, ...$4(a) }));
+}
+o2.displayName = "TextShine";
+var e5 = L2(o.div),
+  r5 = X(K1),
+  m2 = o2(C),
+  a5 = ["OIFIDN6of", "PAIX1Hvqe", "UdidXiQq9"],
+  t5 = "framer-0bdCn",
+  i5 = {
+    OIFIDN6of: "framer-v-s7ib9h",
+    PAIX1Hvqe: "framer-v-1gmh8ar",
+    UdidXiQq9: "framer-v-1s21wrp",
+  };
+function n5(r, ...a) {
+  let l = {};
+  return (a?.forEach((m) => m && Object.assign(l, r[m])), l);
+}
+var o5 = {
+  delay: 0,
+  duration: 0.25,
+  ease: [0.12, 0.23, 0.5, 1],
+  type: "tween",
+},
+  V1 = (r, a) => `translate(-50%, -50%) ${a}`,
+  m5 = ({ value: r, children: a }) => {
+    let l = H(B),
+      m = r ?? l.transition,
+      s = t1(() => ({ ...l, transition: m }), [JSON.stringify(m)]);
+    return e(B.Provider, { value: s, children: a });
+  },
+  f5 = o(n),
+  l5 = { "Variant 3": "UdidXiQq9", Default: "OIFIDN6of", Hover: "PAIX1Hvqe" },
+  s5 = ({ height: r, id: a, link: l, text: m, width: s, ...g }) => {
+    var c, b, N;
+    return {
+      ...g,
+      meANpYlOk: l ?? g.meANpYlOk,
+      qS01XMJr8:
+        (c = m ?? g.qS01XMJr8) !== null && c !== void 0
+          ? c
+          : "Just launched on ProductHunt",
+      variant:
+        (N = (b = l5[g.variant]) !== null && b !== void 0 ? b : g.variant) !==
+          null && N !== void 0
+          ? N
+          : "OIFIDN6of",
+    };
+  },
+  C5 = (r, a) =>
+    r.layoutDependency ? a.join("-") + r.layoutDependency : a.join("-"),
+  c5 = J(function (r, a) {
+    let { activeLocale: l, setLocale: m } = G(),
+      {
+        style: s,
+        className: g,
+        layoutId: c,
+        variant: b,
+        meANpYlOk: N,
+        qS01XMJr8: i,
+        ...F
+      } = s5(r),
+      {
+        baseVariant: I,
+        classNames: _,
+        clearLoadingGesture: y,
+        gestureHandlers: q,
+        gestureVariant: f,
+        isLoading: k,
+        setGestureState: f1,
+        setVariant: L,
+        variants: v,
+      } = o1({
+        cycleOrder: a5,
+        defaultVariant: "OIFIDN6of",
+        variant: b,
+        variantClassNames: i5,
+      }),
+      Z = C5(r, v),
+      { activeVariantCallback: D, delay: W } = n1(I),
+      T = D(async (...d) => {
+        (f1({ isHovered: !0 }), L("PAIX1Hvqe"));
+      }),
+      p = D(async (...d) => {
+        (f1({ isHovered: !1 }), L("OIFIDN6of"));
+      }),
+      j = U(null),
+      h1 = Q(),
+      a1 = [],
+      w = i1();
+    return e(Y, {
+      id: c ?? h1,
+      children: e(f5, {
+        animate: v,
+        initial: !1,
+        children: e(m5, {
+          value: o5,
+          children: e(u2, {
+            href: N,
+            smoothScroll: !0,
+            children: t(o.a, {
+              ...F,
+              ...q,
+              className: `${O(t5, ...a1, "framer-s7ib9h", g, _)} framer-uv3oyx`,
+              "data-framer-name": "Default",
+              "data-highlight": !0,
+              layoutDependency: Z,
+              layoutId: "OIFIDN6of",
+              onMouseEnter: T,
+              ref: a ?? j,
+              style: {
+                borderBottomLeftRadius: 277,
+                borderBottomRightRadius: 277,
+                borderTopLeftRadius: 277,
+                borderTopRightRadius: 277,
+                boxShadow:
+                  "0px 0.7065919983928324px 0.7065919983928324px -0.625px rgba(0, 0, 0, 0.02215), 0px 1.8065619053231785px 1.8065619053231785px -1.25px rgba(0, 0, 0, 0.0216), 0px 3.6217592146567767px 3.6217592146567767px -1.875px rgba(0, 0, 0, 0.02069), 0px 6.8655999097303715px 6.8655999097303715px -2.5px rgba(0, 0, 0, 0.01907), 0px 13.646761411524492px 13.646761411524492px -3.125px rgba(0, 0, 0, 0.01568), 0px 30px 30px -3.75px rgba(0, 0, 0, 0.0075)",
+                ...s,
+              },
+              ...n5(
+                {
+                  PAIX1Hvqe: {
+                    "data-framer-name": "Hover",
+                    onMouseEnter: void 0,
+                    onMouseLeave: p,
+                  },
+                  UdidXiQq9: { "data-framer-name": "Variant 3" },
+                },
+                I,
+                f,
+              ),
+              children: [
+                e(o.div, {
+                  className: "framer-wvbh41",
+                  "data-framer-name": "Border",
+                  layoutDependency: Z,
+                  layoutId: "FkCPmyiJf",
+                  style: {
+                    backgroundColor:
+                      "var(--token-eeeebe0f-b246-4d8c-a158-74908ab2e2e3, rgb(217, 217, 217))",
+                  },
+                }),
+                e(e5, {
+                  className: "framer-1w69gox",
+                  "data-framer-name": "Border-Shine",
+                  layoutDependency: Z,
+                  layoutId: "v0E4q9cVh",
+                  style: {
+                    backgroundColor:
+                      "var(--token-86fbde63-233c-4753-b40a-3d7b7d8e1c94, rgb(90, 97, 101))",
+                  },
+                }),
+                e(o.div, {
+                  className: "framer-yuxuu1",
+                  "data-framer-name": "Fill",
+                  layoutDependency: Z,
+                  layoutId: "FO6LnVK8k",
+                  style: {
+                    backgroundColor:
+                      "var(--token-bf67c64f-8f7c-46f9-a0df-1068fffb3624, rgb(237, 237, 237))",
+                    borderBottomLeftRadius: 427,
+                    borderBottomRightRadius: 427,
+                    borderTopLeftRadius: 427,
+                    borderTopRightRadius: 427,
+                    opacity: 1,
+                  },
+                  variants: { PAIX1Hvqe: { opacity: 0.75 } },
+                }),
+                e(M, {
+                  children: e(o.div, {
+                    className: "framer-xeery1-container",
+                    layoutDependency: Z,
+                    layoutId: "LIaVT07Xt-container",
+                    children: e(K1, {
+                      color:
+                        "var(--token-d54f4ac6-1a80-4314-a087-e04460997977, rgba(77, 77, 77, 0.71))",
+                      height: "100%",
+                      iconSearch: "House",
+                      iconSelection: "LineSegment",
+                      id: "LIaVT07Xt",
+                      layoutId: "LIaVT07Xt",
+                      mirrored: !1,
+                      selectByList: !0,
+                      style: { height: "100%", width: "100%" },
+                      weight: "regular",
+                      width: "100%",
+                    }),
+                  }),
+                }),
+                t(o.div, {
+                  className: "framer-yvq964",
+                  "data-framer-name": "Message",
+                  layoutDependency: Z,
+                  layoutId: "cTY9DuG3N",
+                  children: [
+                    e(C, {
+                      __fromCanvasComponent: !0,
+                      children: e(n, {
+                        children: e(o.p, {
+                          style: {
+                            "--font-selector":
+                              "R0Y7UGx1cyBKYWthcnRhIFNhbnMtcmVndWxhcg==",
+                            "--framer-font-family":
+                              '"Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif',
+                            "--framer-font-size": "14px",
+                            "--framer-line-height": "1.7em",
+                            "--framer-text-color":
+                              "var(--extracted-r6o4lv, var(--token-7525b64e-974c-4950-bc8c-8adce6a025f4, rgb(173, 177, 184)))",
+                          },
+                          children: "Just launched on ProductHunt",
+                        }),
+                      }),
+                      className: "framer-1pl3efc",
+                      "data-framer-name": "Text",
+                      fonts: ["GF;Plus Jakarta Sans-regular"],
+                      layoutDependency: Z,
+                      layoutId: "j7DkkSoUU",
+                      style: {
+                        "--extracted-r6o4lv":
+                          "var(--token-7525b64e-974c-4950-bc8c-8adce6a025f4, rgb(173, 177, 184))",
+                        "--framer-link-text-color": "rgb(0, 153, 255)",
+                        "--framer-link-text-decoration": "underline",
+                        "--framer-paragraph-spacing": "0px",
+                      },
+                      text: i,
+                      transformTemplate: V1,
+                      verticalAlignment: "top",
+                      withExternalLayout: !0,
+                    }),
+                    e(m2, {
+                      __fromCanvasComponent: !0,
+                      children: e(n, {
+                        children: e(o.p, {
+                          style: {
+                            "--font-selector":
+                              "R0Y7UGx1cyBKYWthcnRhIFNhbnMtcmVndWxhcg==",
+                            "--framer-font-family":
+                              '"Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif',
+                            "--framer-font-size": "14px",
+                            "--framer-line-height": "1.7em",
+                            "--framer-text-color":
+                              "var(--extracted-r6o4lv, var(--token-bc155926-ecf5-47be-821b-d8b40d7c18e3, rgb(237, 238, 240)))",
+                          },
+                          children: "Just launched on ProductHunt",
+                        }),
+                      }),
+                      className: "framer-1g53w1z",
+                      "data-framer-name": "Glow",
+                      fonts: ["GF;Plus Jakarta Sans-regular"],
+                      layoutDependency: Z,
+                      layoutId: "YoNXq5L4w",
+                      style: {
+                        "--extracted-r6o4lv":
+                          "var(--token-bc155926-ecf5-47be-821b-d8b40d7c18e3, rgb(237, 238, 240))",
+                        "--framer-link-text-color": "rgb(0, 153, 255)",
+                        "--framer-link-text-decoration": "underline",
+                        "--framer-paragraph-spacing": "0px",
+                        filter: "blur(3px)",
+                        WebkitFilter: "blur(3px)",
+                      },
+                      text: i,
+                      transformTemplate: V1,
+                      verticalAlignment: "top",
+                      withExternalLayout: !0,
+                    }),
+                    e(m2, {
+                      __fromCanvasComponent: !0,
+                      children: e(n, {
+                        children: e(o.p, {
+                          style: {
+                            "--font-selector":
+                              "R0Y7UGx1cyBKYWthcnRhIFNhbnMtcmVndWxhcg==",
+                            "--framer-font-family":
+                              '"Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif',
+                            "--framer-font-size": "14px",
+                            "--framer-line-height": "1.7em",
+                            "--framer-text-color":
+                              "var(--extracted-r6o4lv, var(--token-bc155926-ecf5-47be-821b-d8b40d7c18e3, rgb(237, 238, 240)))",
+                          },
+                          children: "Just launched on ProductHunt",
+                        }),
+                      }),
+                      className: "framer-nolnkv",
+                      "data-framer-name": "Glow",
+                      fonts: ["GF;Plus Jakarta Sans-regular"],
+                      layoutDependency: Z,
+                      layoutId: "lfoLp9Ijg",
+                      style: {
+                        "--extracted-r6o4lv":
+                          "var(--token-bc155926-ecf5-47be-821b-d8b40d7c18e3, rgb(237, 238, 240))",
+                        "--framer-link-text-color": "rgb(0, 153, 255)",
+                        "--framer-link-text-decoration": "underline",
+                        "--framer-paragraph-spacing": "0px",
+                        filter: "blur(6px)",
+                        WebkitFilter: "blur(6px)",
+                      },
+                      text: i,
+                      transformTemplate: V1,
+                      verticalAlignment: "top",
+                      withExternalLayout: !0,
+                    }),
+                    e(m2, {
+                      __fromCanvasComponent: !0,
+                      children: e(n, {
+                        children: e(o.p, {
+                          style: {
+                            "--font-selector":
+                              "R0Y7UGx1cyBKYWthcnRhIFNhbnMtcmVndWxhcg==",
+                            "--framer-font-family":
+                              '"Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif',
+                            "--framer-font-size": "14px",
+                            "--framer-line-height": "1.7em",
+                            "--framer-text-color":
+                              "var(--extracted-r6o4lv, var(--token-d54f4ac6-1a80-4314-a087-e04460997977, rgba(77, 77, 77, 0.71)))",
+                          },
+                          children: "Just launched on ProductHunt",
+                        }),
+                      }),
+                      className: "framer-1dzm75",
+                      "data-framer-name": "Shine",
+                      fonts: ["GF;Plus Jakarta Sans-regular"],
+                      layoutDependency: Z,
+                      layoutId: "yLu_2FMnn",
+                      style: {
+                        "--extracted-r6o4lv":
+                          "var(--token-d54f4ac6-1a80-4314-a087-e04460997977, rgba(77, 77, 77, 0.71))",
+                        "--framer-link-text-color": "rgb(0, 153, 255)",
+                        "--framer-link-text-decoration": "underline",
+                        "--framer-paragraph-spacing": "0px",
+                      },
+                      text: i,
+                      transformTemplate: V1,
+                      verticalAlignment: "top",
+                      withExternalLayout: !0,
+                    }),
+                    e(C, {
+                      __fromCanvasComponent: !0,
+                      children: e(n, {
+                        children: e(o.p, {
+                          style: {
+                            "--font-selector":
+                              "R0Y7UGx1cyBKYWthcnRhIFNhbnMtcmVndWxhcg==",
+                            "--framer-font-family":
+                              '"Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif',
+                            "--framer-font-size": "14px",
+                            "--framer-line-height": "1.7em",
+                            "--framer-text-color":
+                              "var(--extracted-r6o4lv, var(--token-7525b64e-974c-4950-bc8c-8adce6a025f4, rgb(173, 177, 184)))",
+                          },
+                          children: "Just launched on ProductHunt",
+                        }),
+                      }),
+                      className: "framer-fp8yo9",
+                      "data-framer-name": "HELPER",
+                      fonts: ["GF;Plus Jakarta Sans-regular"],
+                      layoutDependency: Z,
+                      layoutId: "WR74nE1S7",
+                      style: {
+                        "--extracted-r6o4lv":
+                          "var(--token-7525b64e-974c-4950-bc8c-8adce6a025f4, rgb(173, 177, 184))",
+                        "--framer-link-text-color": "rgb(0, 153, 255)",
+                        "--framer-link-text-decoration": "underline",
+                        "--framer-paragraph-spacing": "0px",
+                        opacity: 0,
+                      },
+                      text: i,
+                      verticalAlignment: "top",
+                      withExternalLayout: !0,
+                    }),
+                  ],
+                }),
+              ],
+            }),
+          }),
+        }),
+      }),
+    });
+  }),
+  d5 = [
+    "@supports (aspect-ratio: 1) { body { --framer-aspect-ratio-supported: auto; } }",
+    ".framer-0bdCn.framer-uv3oyx, .framer-0bdCn .framer-uv3oyx { display: block; }",
+    ".framer-0bdCn.framer-s7ib9h { align-content: center; align-items: center; cursor: pointer; display: flex; flex-direction: row; flex-wrap: nowrap; gap: 10px; height: min-content; justify-content: center; overflow: hidden; padding: 6px 20px 6px 20px; position: relative; text-decoration: none; width: min-content; will-change: var(--framer-will-change-override, transform); }",
+    ".framer-0bdCn .framer-wvbh41, .framer-0bdCn .framer-1w69gox { bottom: 0px; flex: none; left: 0px; overflow: hidden; position: absolute; right: 0px; top: 0px; }",
+    ".framer-0bdCn .framer-yuxuu1 { bottom: 1px; flex: none; left: 1px; overflow: hidden; position: absolute; right: 1px; top: 1px; will-change: var(--framer-will-change-override, transform); }",
+    ".framer-0bdCn .framer-xeery1-container { flex: none; height: 24px; position: relative; width: 24px; }",
+    ".framer-0bdCn .framer-yvq964 { align-content: center; align-items: center; display: flex; flex: none; flex-direction: column; flex-wrap: nowrap; gap: 10px; height: min-content; justify-content: center; overflow: visible; padding: 0px; position: relative; width: min-content; }",
+    ".framer-0bdCn .framer-1pl3efc, .framer-0bdCn .framer-1g53w1z, .framer-0bdCn .framer-nolnkv { -webkit-user-select: none; flex: none; height: auto; left: 50%; position: absolute; top: 51%; user-select: none; white-space: pre; width: auto; z-index: 1; }",
+    ".framer-0bdCn .framer-1dzm75 { -webkit-user-select: none; flex: none; height: auto; left: 50%; position: absolute; top: 51%; user-select: none; white-space: pre; width: auto; z-index: 2; }",
+    ".framer-0bdCn .framer-fp8yo9 { -webkit-user-select: none; flex: none; height: auto; position: relative; user-select: none; white-space: pre; width: auto; }",
+    "@supports (background: -webkit-named-image(i)) and (not (font-palette:dark)) { .framer-0bdCn.framer-s7ib9h, .framer-0bdCn .framer-yvq964 { gap: 0px; } .framer-0bdCn.framer-s7ib9h > * { margin: 0px; margin-left: calc(10px / 2); margin-right: calc(10px / 2); } .framer-0bdCn.framer-s7ib9h > :first-child { margin-left: 0px; } .framer-0bdCn.framer-s7ib9h > :last-child { margin-right: 0px; } .framer-0bdCn .framer-yvq964 > * { margin: 0px; margin-bottom: calc(10px / 2); margin-top: calc(10px / 2); } .framer-0bdCn .framer-yvq964 > :first-child { margin-top: 0px; } .framer-0bdCn .framer-yvq964 > :last-child { margin-bottom: 0px; } }",
+    ".framer-0bdCn.framer-v-1s21wrp.framer-s7ib9h { justify-content: flex-start; padding: 8px 15px 8px 15px; }",
+  ],
+  E1 = e1(c5, d5, "framer-0bdCn"),
+  f2 = E1;
+E1.displayName = "Pill/Pill";
+E1.defaultProps = { height: 36, width: 272 };
+K(E1, {
+  variant: {
+    options: ["OIFIDN6of", "PAIX1Hvqe", "UdidXiQq9"],
+    optionTitles: ["Default", "Hover", "Variant 3"],
+    title: "Variant",
+    type: u.Enum,
+  },
+  meANpYlOk: { title: "Link", type: u.Link },
+  qS01XMJr8: {
+    defaultValue: "Just launched on ProductHunt",
+    displayTextArea: !1,
+    title: "Text",
+    type: u.String,
+  },
+});
+r1(
+  E1,
+  [
+    {
+      explicitInter: !0,
+      fonts: [
+        {
+          family: "Plus Jakarta Sans",
+          source: "google",
+          style: "normal",
+          url: "https://fonts.gstatic.com/s/plusjakartasans/v8/LDIbaomQNQcsA88c7O9yZ4KMCoOg4IA6-91aHEjcWuA_qU7NTxXUEKi4Rw.woff2",
+          weight: "400",
+        },
+      ],
+    },
+    ...r5,
+  ],
+  { supportsExplicitInterCodegen: !0 },
+);
+b2.loadFonts([
+  "GF;Plus Jakarta Sans-500",
+  "GF;Plus Jakarta Sans-700",
+  "GF;Plus Jakarta Sans-700italic",
+  "GF;Plus Jakarta Sans-500italic",
+]);
+var F2 = [
+  {
+    explicitInter: !0,
+    fonts: [
+      {
+        family: "Plus Jakarta Sans",
+        source: "google",
+        style: "normal",
+        url: "https://fonts.gstatic.com/s/plusjakartasans/v8/LDIbaomQNQcsA88c7O9yZ4KMCoOg4IA6-91aHEjcWuA_m07NTxXUEKi4Rw.woff2",
+        weight: "500",
+      },
+      {
+        family: "Plus Jakarta Sans",
+        source: "google",
+        style: "normal",
+        url: "https://fonts.gstatic.com/s/plusjakartasans/v8/LDIbaomQNQcsA88c7O9yZ4KMCoOg4IA6-91aHEjcWuA_TknNTxXUEKi4Rw.woff2",
+        weight: "700",
+      },
+      {
+        family: "Plus Jakarta Sans",
+        source: "google",
+        style: "italic",
+        url: "https://fonts.gstatic.com/s/plusjakartasans/v8/LDIZaomQNQcsA88c7O9yZ4KMCoOg4KozySKCdSNG9OcqYQ3CDh_VMq2oR82k.woff2",
+        weight: "700",
+      },
+      {
+        family: "Plus Jakarta Sans",
+        source: "google",
+        style: "italic",
+        url: "https://fonts.gstatic.com/s/plusjakartasans/v8/LDIZaomQNQcsA88c7O9yZ4KMCoOg4KozySKCdSNG9OcqYQ0XCR_VMq2oR82k.woff2",
+        weight: "500",
+      },
+    ],
+  },
+],
+  I2 = [
+    '.framer-OyBep .framer-styles-preset-xwk33z:not(.rich-text-wrapper), .framer-OyBep .framer-styles-preset-xwk33z.rich-text-wrapper h1 { --framer-font-family: "Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif; --framer-font-family-bold: "Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif; --framer-font-family-bold-italic: "Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif; --framer-font-family-italic: "Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif; --framer-font-open-type-features: normal; --framer-font-size: 72px; --framer-font-style: normal; --framer-font-style-bold: normal; --framer-font-style-bold-italic: italic; --framer-font-style-italic: italic; --framer-font-weight: 500; --framer-font-weight-bold: 700; --framer-font-weight-bold-italic: 700; --framer-font-weight-italic: 500; --framer-letter-spacing: -0.04em; --framer-line-height: 100%; --framer-paragraph-spacing: 40px; --framer-text-alignment: start; --framer-text-color: #ffffff; --framer-text-decoration: none; --framer-text-stroke-color: initial; --framer-text-stroke-width: initial; --framer-text-transform: none; }',
+    '@media (max-width: 1535px) and (min-width: 1280px) { .framer-OyBep .framer-styles-preset-xwk33z:not(.rich-text-wrapper), .framer-OyBep .framer-styles-preset-xwk33z.rich-text-wrapper h1 { --framer-font-family: "Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif; --framer-font-family-bold: "Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif; --framer-font-family-bold-italic: "Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif; --framer-font-family-italic: "Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif; --framer-font-open-type-features: normal; --framer-font-size: 72px; --framer-font-style: normal; --framer-font-style-bold: normal; --framer-font-style-bold-italic: italic; --framer-font-style-italic: italic; --framer-font-weight: 500; --framer-font-weight-bold: 700; --framer-font-weight-bold-italic: 700; --framer-font-weight-italic: 500; --framer-letter-spacing: -0.04em; --framer-line-height: 100%; --framer-paragraph-spacing: 40px; --framer-text-alignment: start; --framer-text-color: #ffffff; --framer-text-decoration: none; --framer-text-stroke-color: initial; --framer-text-stroke-width: initial; --framer-text-transform: none; } }',
+    '@media (max-width: 1279px) and (min-width: 768px) { .framer-OyBep .framer-styles-preset-xwk33z:not(.rich-text-wrapper), .framer-OyBep .framer-styles-preset-xwk33z.rich-text-wrapper h1 { --framer-font-family: "Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif; --framer-font-family-bold: "Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif; --framer-font-family-bold-italic: "Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif; --framer-font-family-italic: "Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif; --framer-font-open-type-features: normal; --framer-font-size: 56px; --framer-font-style: normal; --framer-font-style-bold: normal; --framer-font-style-bold-italic: italic; --framer-font-style-italic: italic; --framer-font-weight: 500; --framer-font-weight-bold: 700; --framer-font-weight-bold-italic: 700; --framer-font-weight-italic: 500; --framer-letter-spacing: -0.04em; --framer-line-height: 100%; --framer-paragraph-spacing: 40px; --framer-text-alignment: start; --framer-text-color: #ffffff; --framer-text-decoration: none; --framer-text-stroke-color: initial; --framer-text-stroke-width: initial; --framer-text-transform: none; } }',
+    '@media (max-width: 767px) and (min-width: 0px) { .framer-OyBep .framer-styles-preset-xwk33z:not(.rich-text-wrapper), .framer-OyBep .framer-styles-preset-xwk33z.rich-text-wrapper h1 { --framer-font-family: "Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif; --framer-font-family-bold: "Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif; --framer-font-family-bold-italic: "Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif; --framer-font-family-italic: "Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif; --framer-font-open-type-features: normal; --framer-font-size: 36px; --framer-font-style: normal; --framer-font-style-bold: normal; --framer-font-style-bold-italic: italic; --framer-font-style-italic: italic; --framer-font-weight: 500; --framer-font-weight-bold: 700; --framer-font-weight-bold-italic: 700; --framer-font-weight-italic: 500; --framer-letter-spacing: -0.04em; --framer-line-height: 100%; --framer-paragraph-spacing: 40px; --framer-text-alignment: start; --framer-text-color: #ffffff; --framer-text-decoration: none; --framer-text-stroke-color: initial; --framer-text-stroke-width: initial; --framer-text-transform: none; } }',
+  ],
+  N2 = "framer-OyBep";
+var h5 = X(B1),
+  u5 = X(f2),
+  M2 = k1($),
+  z2 = k1(C),
+  g5 = X($1),
+  x5 = X(A1),
+  b5 = X(w1),
+  S = k1(x),
+  j2 = g2(o.div),
+  y5 = X(v1),
+  v5 = X(n2),
+  w5 = X(Y1),
+  q5 = k1(o.div),
+  k5 = X(G1);
+var _5 = {
+  jeCnrh3kk: "(min-width: 1280px) and (max-width: 1518px)",
+  Q1XUigOVv: "(max-width: 767px)",
+  WQLkyLRf1: "(min-width: 1519px)",
+  XWGQJU3bM: "(min-width: 768px) and (max-width: 1279px)",
+},
+  b1 = () => typeof document < "u",
+  S2 = "framer-ui7q0",
+  L5 = {
+    jeCnrh3kk: "framer-v-1tai7yd",
+    Q1XUigOVv: "framer-v-xp04m8",
+    WQLkyLRf1: "framer-v-72rtr7",
+    XWGQJU3bM: "framer-v-180ph05",
+  },
+  l2 = {
+    opacity: 0,
+    rotate: 0,
+    rotateX: 0,
+    rotateY: 0,
+    scale: 1,
+    skewX: 0,
+    skewY: 0,
+    x: 0,
+    y: 16,
+  },
+  A2 = { damping: 60, delay: 0.1, mass: 1, stiffness: 250, type: "spring" },
+  F5 = {
+    opacity: 0,
+    rotate: 0,
+    rotateX: 0,
+    rotateY: 0,
+    scale: 1,
+    skewX: 0,
+    skewY: 0,
+    transition: A2,
+    x: 0,
+    y: 16,
+  },
+  B2 = { damping: 60, delay: 0.2, mass: 1, stiffness: 250, type: "spring" },
+  I5 = {
+    opacity: 0,
+    rotate: 0,
+    rotateX: 0,
+    rotateY: 0,
+    scale: 1,
+    skewX: 0,
+    skewY: 0,
+    transition: B2,
+    x: 0,
+    y: 16,
+  },
+  W2 = { damping: 60, delay: 0.3, mass: 1, stiffness: 250, type: "spring" },
+  N5 = {
+    opacity: 0,
+    rotate: 0,
+    rotateX: 0,
+    rotateY: 0,
+    scale: 1,
+    skewX: 0,
+    skewY: 0,
+    transition: W2,
+    x: 0,
+    y: 16,
+  },
+  R2 = { delay: 0, duration: 2.4, ease: [0, 0, 1, 1], type: "tween" },
+  R = {
+    opacity: 1,
+    rotate: 0,
+    rotateX: 0,
+    rotateY: 0,
+    scale: 1,
+    skewX: 0,
+    skewY: 0,
+    x: 0,
+    y: 12,
+  },
+  E = { bounceDamping: 4, bounceStiffness: 12, delay: 0, type: "inertia" },
+  P = (r) => r.preventDefault(),
+  g1 = { cursor: "grabbing" },
+  m1 = { delay: 0, duration: 3.4, ease: [0, 0, 1, 1], type: "tween" },
+  M5 = { delay: 0, duration: 5.3, ease: [0, 0, 1, 1], type: "tween" },
+  z5 = { delay: 0, duration: 5, ease: [0, 0, 1, 1], type: "tween" },
+  j5 = { delay: 0, duration: 4.5, ease: [0, 0, 1, 1], type: "tween" },
+  y1 = (r, a) => `translateX(-50%) ${a}`,
+  S5 = { delay: 0, duration: 5.1, ease: [0, 0, 1, 1], type: "tween" },
+  R5 = { delay: 0, duration: 6.4, ease: [0, 0, 1, 1], type: "tween" },
+  U5 = { delay: 0, duration: 5.8, ease: [0, 0, 1, 1], type: "tween" },
+  E5 = { delay: 0, duration: 0.3, ease: [0.12, 0.23, 0.5, 1], type: "tween" },
+  U2 = {
+    opacity: 1,
+    rotate: 0,
+    rotateX: 0,
+    rotateY: 0,
+    scale: 1,
+    skewX: 0,
+    skewY: 0,
+    transformPerspective: 1200,
+    transition: E5,
+    x: 0,
+    y: 0,
+  },
+  E2 = {
+    opacity: 0.001,
+    rotate: 0,
+    rotateX: 0,
+    rotateY: 0,
+    scale: 1,
+    skewX: 0,
+    skewY: 0,
+    transformPerspective: 1200,
+    x: 0,
+    y: 50,
+  },
+  P2 = (r, a) => `translateY(-50%) ${a}`,
+  Z2 = {
+    opacity: 0,
+    rotate: 0,
+    rotateX: 0,
+    rotateY: 0,
+    scale: 1,
+    skewX: 0,
+    skewY: 0,
+    transformPerspective: 1200,
+    x: 0,
+    y: 0,
+  },
+  T2 = { delay: 0, duration: 0.6, ease: [0.93, 0, 0.56, 1], type: "tween" },
+  P5 = {
+    opacity: 0,
+    rotate: 0,
+    rotateX: 0,
+    rotateY: 0,
+    scale: 1,
+    skewX: 0,
+    skewY: 0,
+    transformPerspective: 1200,
+    transition: T2,
+    x: 0,
+    y: 0,
+  },
+  X2 = { damping: 60, delay: 1.2, mass: 1, stiffness: 250, type: "spring" },
+  Z5 = {
+    opacity: 0,
+    rotate: 0,
+    rotateX: 0,
+    rotateY: 0,
+    scale: 1,
+    skewX: 0,
+    skewY: 0,
+    transformPerspective: 1200,
+    transition: X2,
+    x: 0,
+    y: 0,
+  },
+  O1 = W1(),
+  A5 = {
+    Desktop: "WQLkyLRf1",
+    Laptop: "jeCnrh3kk",
+    Phone: "Q1XUigOVv",
+    Tablet: "XWGQJU3bM",
+  },
+  B5 = ({ height: r, id: a, width: l, ...m }) => {
+    var s, g;
+    return {
+      ...m,
+      variant:
+        (g = (s = A5[m.variant]) !== null && s !== void 0 ? s : m.variant) !==
+          null && g !== void 0
+          ? g
+          : "WQLkyLRf1",
+    };
+  },
+  W5 = J(function (r, a) {
+    let { activeLocale: l, setLocale: m } = G(),
+      { style: s, className: g, layoutId: c, variant: b, ...N } = B5(r);
+    (u1(() => {
+      let d = W1(void 0, l);
+      if (d.robots) {
+        let A = document.querySelector('meta[name="robots"]');
+        A
+          ? A.setAttribute("content", d.robots)
+          : ((A = document.createElement("meta")),
+            A.setAttribute("name", "robots"),
+            A.setAttribute("content", d.robots),
+            document.head.appendChild(A));
+      }
+    }, [void 0, l]),
+      s2(() => {
+        let d = W1(void 0, l);
+        if (((document.title = d.title || ""), d.viewport)) {
+          var A;
+          (A = document.querySelector('meta[name="viewport"]')) === null ||
+            A === void 0 ||
+            A.setAttribute("content", d.viewport);
+        }
+        let C1 = d.bodyClassName;
+        if (C1) {
+          let l1 = document.body;
+          (l1.classList.forEach(
+            (c1) => c1.startsWith("framer-body-") && l1.classList.remove(c1),
+          ),
+            l1.classList.add(`${d.bodyClassName}-framer-ui7q0`));
+        }
+        return () => {
+          C1 &&
+            document.body.classList.remove(`${d.bodyClassName}-framer-ui7q0`);
+        };
+      }, [void 0, l]));
+    let [i, F] = x2(b, _5, !1),
+      I = void 0,
+      _ = U(null),
+      y = () => !!(!b1() || ["XWGQJU3bM", "Q1XUigOVv"].includes(i)),
+      q = () => (b1() ? !["XWGQJU3bM", "Q1XUigOVv"].includes(i) : !0),
+      f = () => (b1() ? i !== "Q1XUigOVv" : !0),
+      k = C2(),
+      f1 = () => (b1() ? i !== "XWGQJU3bM" : !0),
+      L = () => !b1() || i === "XWGQJU3bM",
+      v = () => !b1() || i === "Q1XUigOVv",
+      Z = P1("c2ZynsCbs"),
+      D = U(null),
+      W = P1("JYlfXrHUn"),
+      T = U(null),
+      p = () =>
+        b1() ? !["jeCnrh3kk", "XWGQJU3bM", "Q1XUigOVv"].includes(i) : !0,
+      j = P1("bj_yV4awM"),
+      h1 = U(null),
+      a1 = Q(),
+      w = [N2, w2, _2];
+    return (
+      p2({}),
+      e(h2.Provider, {
+        value: { primaryVariantId: "WQLkyLRf1", variantClassNames: L5 },
+        children: t(Y, {
+          id: c ?? a1,
+          children: [
+            t(o.div, {
+              ...N,
+              className: O(S2, ...w, "framer-72rtr7", g),
+              ref: a ?? _,
+              style: { ...s },
+              children: [
+                y() &&
+                e(h, {
+                  breakpoint: i,
+                  overrides: {
+                    Q1XUigOVv: { width: "min(100vw, 1280px)" },
+                    XWGQJU3bM: { width: "min(100vw, 1280px)" },
+                  },
+                  children: e(M, {
+                    children: e($, {
+                      className:
+                        "framer-117ms87-container hidden-72rtr7 hidden-1tai7yd",
+                      "data-framer-name": "Navbar Mobile",
+                      layoutScroll: !0,
+                      name: "Navbar Mobile",
+                      children: e(B1, {
+                        height: "100%",
+                        id: "pP8TOEFzj",
+                        layoutId: "pP8TOEFzj",
+                        name: "Navbar Mobile",
+                        style: { maxWidth: "100%", width: "100%" },
+                        variant: "rkAiYEczi",
+                        width: "100%",
+                      }),
+                    }),
+                  }),
+                }),
+                t("div", {
+                  className: "framer-hw1qfl",
+                  "data-framer-name": "Hero Section",
+                  name: "Hero Section",
+                  children: [
+                    q() &&
+                    e(h, {
+                      breakpoint: i,
+                      overrides: {
+                        jeCnrh3kk: { width: "min(100vw, 1280px)" },
+                      },
+                      children: e(M, {
+                        width: "min(83.3333vw, 1280px)",
+                        children: e($, {
+                          className:
+                            "framer-av2csc-container hidden-180ph05 hidden-xp04m8",
+                          "data-framer-name": "Navbar",
+                          name: "Navbar",
+                          children: e(B1, {
+                            height: "100%",
+                            id: "CWcaEBbnj",
+                            layoutId: "CWcaEBbnj",
+                            name: "Navbar",
+                            style: { maxWidth: "100%", width: "100%" },
+                            variant: "vknkFEn9I",
+                            width: "100%",
+                          }),
+                        }),
+                      }),
+                    }),
+                    f() &&
+                    e("div", {
+                      className: "framer-1n81jq3 hidden-xp04m8",
+                      "data-framer-name": "Shadow",
+                      name: "Shadow",
+                      children: t("div", {
+                        className: "framer-1v5s4c7",
+                        "data-framer-name": "Group 2",
+                        name: "Group 2",
+                        children: [
+                          e("div", {
+                            className: "framer-bkigbe",
+                            "data-framer-name": "Ellipse 2",
+                            name: "Ellipse 2",
+                          }),
+                          e("div", {
+                            className: "framer-dld4a3",
+                            "data-framer-name": "Ellipse 3",
+                            name: "Ellipse 3",
+                          }),
+                        ],
+                      }),
+                    }),
+                    e("div", {
+                      className: "framer-171to5k",
+                      "data-framer-name": "Section 1",
+                      name: "Section 1",
+                      children: t("div", {
+                        className: "framer-19lzdxx",
+                        "data-framer-name": "Container",
+                        name: "Container",
+                        children: [
+                          e("div", {
+                            className: "framer-3qczc4",
+                            "data-framer-name": "txt",
+                            name: "txt",
+                            children: t("div", {
+                              className: "framer-kz8x7m",
+                              "data-framer-name": "badge+head",
+                              name: "badge+head",
+                              children: [
+                                e(_1, {
+                                  links: [
+                                    {
+                                      href: {
+                                        hash: ":JYlfXrHUn",
+                                        webPageId: "augiA20Il",
+                                      },
+                                      implicitPathVariables: void 0,
+                                    },
+                                    {
+                                      href: {
+                                        hash: ":JYlfXrHUn",
+                                        webPageId: "augiA20Il",
+                                      },
+                                      implicitPathVariables: void 0,
+                                    },
+                                    {
+                                      href: {
+                                        hash: ":JYlfXrHUn",
+                                        webPageId: "augiA20Il",
+                                      },
+                                      implicitPathVariables: void 0,
+                                    },
+                                    {
+                                      href: {
+                                        hash: ":JYlfXrHUn",
+                                        webPageId: "augiA20Il",
+                                      },
+                                      implicitPathVariables: void 0,
+                                    },
+                                  ],
+                                  children: (d) =>
+                                    e(M, {
+                                      children: e(M2, {
+                                        __framer__animate: { transition: A2 },
+                                        __framer__animateOnce: !1,
+                                        __framer__enter: l2,
+                                        __framer__exit: F5,
+                                        __framer__styleAppearEffectEnabled: !0,
+                                        __framer__threshold: 0.5,
+                                        __perspectiveFX: !1,
+                                        __targetOpacity: 1,
+                                        className: "framer-1257qf2-container",
+                                        children: e(h, {
+                                          breakpoint: i,
+                                          overrides: {
+                                            jeCnrh3kk: { meANpYlOk: d[1] },
+                                            Q1XUigOVv: {
+                                              meANpYlOk: d[3],
+                                              variant: "UdidXiQq9",
+                                            },
+                                            XWGQJU3bM: { meANpYlOk: d[2] },
+                                          },
+                                          children: e(f2, {
+                                            height: "100%",
+                                            id: "t0oLs4C68",
+                                            layoutId: "t0oLs4C68",
+                                            meANpYlOk: d[0],
+                                            qS01XMJr8:
+                                              "Learn About Guild Acadamy",
+                                            variant: "OIFIDN6of",
+                                            width: "100%",
+                                          }),
+                                        }),
+                                      }),
+                                    }),
+                                }),
+                                t("div", {
+                                  className: "framer-vzji2j",
+                                  "data-framer-name": "head-txt",
+                                  name: "head-txt",
+                                  children: [
+                                    e(h, {
+                                      breakpoint: i,
+                                      overrides: {
+                                        Q1XUigOVv: {
+                                          children: e(n, {
+                                            children: e("h1", {
+                                              style: {
+                                                "--font-selector":
+                                                  "R0Y7UGx1cyBKYWthcnRhIFNhbnMtNTAw",
+                                                "--framer-font-family":
+                                                  '"Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif',
+                                                "--framer-font-size": "41px",
+                                                "--framer-font-weight": "500",
+                                                "--framer-letter-spacing":
+                                                  "-0.04em",
+                                                "--framer-line-height": "100%",
+                                                "--framer-text-alignment":
+                                                  "left",
+                                                "--framer-text-color":
+                                                  "rgb(255, 255, 255)",
+                                              },
+                                              children: e("span", {
+                                                "data-text-fill": "true",
+                                                style: {
+                                                  backgroundImage:
+                                                    "radial-gradient(92% 75% at 18.2% 90.5%, var(--token-2eaa7db8-96fe-4551-a9de-deb102762740, rgb(38, 38, 38)) 0%, var(--token-9302ad30-1055-4f54-8c25-a5a6efa02faf, rgb(89, 89, 89)) 100%)",
+                                                },
+                                                children:
+                                                  "Blockchain Innovations for a Decentralized Future.",
+                                              }),
+                                            }),
+                                          }),
+                                          fonts: ["GF;Plus Jakarta Sans-500"],
+                                        },
+                                      },
+                                      children: e(z2, {
+                                        __framer__animate: { transition: B2 },
+                                        __framer__animateOnce: !1,
+                                        __framer__enter: l2,
+                                        __framer__exit: I5,
+                                        __framer__styleAppearEffectEnabled: !0,
+                                        __framer__threshold: 0.5,
+                                        __fromCanvasComponent: !0,
+                                        __perspectiveFX: !1,
+                                        __targetOpacity: 1,
+                                        children: e(n, {
+                                          children: e("h1", {
+                                            className:
+                                              "framer-styles-preset-xwk33z",
+                                            "data-styles-preset": "Sn1ggcgQ3",
+                                            children: e("span", {
+                                              "data-text-fill": "true",
+                                              style: {
+                                                backgroundImage:
+                                                  "radial-gradient(92% 75% at 18.2% 90.5%, var(--token-2eaa7db8-96fe-4551-a9de-deb102762740, rgb(38, 38, 38)) 0%, var(--token-9302ad30-1055-4f54-8c25-a5a6efa02faf, rgb(89, 89, 89)) 100%)",
+                                              },
+                                              children:
+                                                "Blockchain Innovations for a Decentralized Future.",
+                                            }),
+                                          }),
+                                        }),
+                                        className: "framer-1j1lpgd",
+                                        "data-framer-name":
+                                          "A security-first alternative to Okta",
+                                        fonts: ["Inter"],
+                                        name: "A security-first alternative to Okta",
+                                        verticalAlignment: "top",
+                                        withExternalLayout: !0,
+                                      }),
+                                    }),
+                                    e("div", {
+                                      className: "framer-pvzydo",
+                                      children: e(h, {
+                                        breakpoint: i,
+                                        overrides: {
+                                          Q1XUigOVv: {
+                                            children: e(n, {
+                                              children: e("p", {
+                                                style: {
+                                                  "--font-selector":
+                                                    "R0Y7UGx1cyBKYWthcnRhIFNhbnMtcmVndWxhcg==",
+                                                  "--framer-font-family":
+                                                    '"Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif',
+                                                  "--framer-line-height":
+                                                    "140%",
+                                                  "--framer-text-alignment":
+                                                    "left",
+                                                  "--framer-text-color":
+                                                    "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                                },
+                                                children:
+                                                  "Comprehensive educational programs, private audits, and competitive audits, delivered by top-tier ethical hackers ensuring the highest level of security for your projects.",
+                                              }),
+                                            }),
+                                            fonts: [
+                                              "GF;Plus Jakarta Sans-regular",
+                                            ],
+                                          },
+                                        },
+                                        children: e(z2, {
+                                          __framer__animate: { transition: W2 },
+                                          __framer__animateOnce: !1,
+                                          __framer__enter: l2,
+                                          __framer__exit: N5,
+                                          __framer__styleAppearEffectEnabled:
+                                            !0,
+                                          __framer__threshold: 0.5,
+                                          __fromCanvasComponent: !0,
+                                          __perspectiveFX: !1,
+                                          __targetOpacity: 1,
+                                          children: e(n, {
+                                            children: e("p", {
+                                              className:
+                                                "framer-styles-preset-k8yxrn",
+                                              "data-styles-preset": "ferGDeq75",
+                                              style: {
+                                                "--framer-text-color":
+                                                  "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                              },
+                                              children:
+                                                "Comprehensive educational programs, private audits, and competitive audits, delivered by top-tier ethical hackers ensuring the highest level of security for your projects.",
+                                            }),
+                                          }),
+                                          className: "framer-1ncsbu9",
+                                          "data-framer-name":
+                                            "We are building a platform for better security in workforce identity and access management. Join as an early design partner and make your mark on the future of identity.",
+                                          fonts: ["Inter"],
+                                          name: "We are building a platform for better security in workforce identity and access management. Join as an early design partner and make your mark on the future of identity.",
+                                          verticalAlignment: "top",
+                                          withExternalLayout: !0,
+                                        }),
+                                      }),
+                                    }),
+                                    t("div", {
+                                      className: "framer-1ock6vn",
+                                      children: [
+                                        e(_1, {
+                                          links: [
+                                            {
+                                              href: { webPageId: "Q3wAu590R" },
+                                              implicitPathVariables: void 0,
+                                            },
+                                            {
+                                              href: { webPageId: "Q3wAu590R" },
+                                              implicitPathVariables: void 0,
+                                            },
+                                            {
+                                              href: { webPageId: "Q3wAu590R" },
+                                              implicitPathVariables: void 0,
+                                            },
+                                            {
+                                              href: { webPageId: "Q3wAu590R" },
+                                              implicitPathVariables: void 0,
+                                            },
+                                          ],
+                                          children: (d) =>
+                                            e(h, {
+                                              breakpoint: i,
+                                              overrides: {
+                                                Q1XUigOVv: {
+                                                  width:
+                                                    "min(min(100vw, 1280px) - 32px, 1280px)",
+                                                },
+                                              },
+                                              children: e(M, {
+                                                children: e($, {
+                                                  className:
+                                                    "framer-1j1qadg-container",
+                                                  children: e(h, {
+                                                    breakpoint: i,
+                                                    overrides: {
+                                                      jeCnrh3kk: {
+                                                        URgOW2Lv2: d[1],
+                                                      },
+                                                      Q1XUigOVv: {
+                                                        style: {
+                                                          width: "100%",
+                                                        },
+                                                        URgOW2Lv2: d[3],
+                                                      },
+                                                      XWGQJU3bM: {
+                                                        URgOW2Lv2: d[2],
+                                                      },
+                                                    },
+                                                    children: e($1, {
+                                                      height: "100%",
+                                                      id: "pBxhmiDzF",
+                                                      layoutId: "pBxhmiDzF",
+                                                      ofLqZhEO8:
+                                                        "Learn about our audits",
+                                                      URgOW2Lv2: d[0],
+                                                      variant: "ZIp8JIAKN",
+                                                      width: "100%",
+                                                    }),
+                                                  }),
+                                                }),
+                                              }),
+                                            }),
+                                        }),
+                                        e(_1, {
+                                          links: [
+                                            {
+                                              href: { webPageId: "Q60EptuPo" },
+                                              implicitPathVariables: void 0,
+                                            },
+                                            {
+                                              href: { webPageId: "Q60EptuPo" },
+                                              implicitPathVariables: void 0,
+                                            },
+                                            {
+                                              href: { webPageId: "Q60EptuPo" },
+                                              implicitPathVariables: void 0,
+                                            },
+                                            {
+                                              href: { webPageId: "Q60EptuPo" },
+                                              implicitPathVariables: void 0,
+                                            },
+                                          ],
+                                          children: (d) =>
+                                            e(h, {
+                                              breakpoint: i,
+                                              overrides: {
+                                                Q1XUigOVv: {
+                                                  width:
+                                                    "min(min(100vw, 1280px) - 32px, 1280px)",
+                                                },
+                                              },
+                                              children: e(M, {
+                                                children: e($, {
+                                                  className:
+                                                    "framer-h9qa6p-container",
+                                                  children: e(h, {
+                                                    breakpoint: i,
+                                                    overrides: {
+                                                      jeCnrh3kk: {
+                                                        qzxtK1_9Y: d[1],
+                                                      },
+                                                      Q1XUigOVv: {
+                                                        qzxtK1_9Y: d[3],
+                                                        style: {
+                                                          width: "100%",
+                                                        },
+                                                      },
+                                                      XWGQJU3bM: {
+                                                        qzxtK1_9Y: d[2],
+                                                      },
+                                                    },
+                                                    children: e(A1, {
+                                                      height: "100%",
+                                                      id: "zUTMjt9A9",
+                                                      layoutId: "zUTMjt9A9",
+                                                      P7ZHYgc9n:
+                                                        "var(--token-7d27c033-cb66-44c8-bf4e-e66d9f19511b, rgb(10, 11, 10))",
+                                                      qzxtK1_9Y: d[0],
+                                                      RQDpSij6V:
+                                                        "var(--token-7049cce7-715e-45a0-a41e-932274474306, rgb(9, 227, 8))",
+                                                      TiAMtDaz3:
+                                                        "Request an audit",
+                                                      variant: "llZeWFj0E",
+                                                      width: "100%",
+                                                    }),
+                                                  }),
+                                                }),
+                                              }),
+                                            }),
+                                        }),
+                                      ],
+                                    }),
+                                  ],
+                                }),
+                              ],
+                            }),
+                          }),
+                          q() &&
+                          e("div", {
+                            className:
+                              "framer-v5ef1j hidden-180ph05 hidden-xp04m8",
+                            "data-framer-name": "Graphic",
+                            name: "Graphic",
+                            children: t("div", {
+                              className: "framer-i7bazi",
+                              "data-framer-name": "Graphic",
+                              name: "Graphic",
+                              children: [
+                                e(s1, {
+                                  className: "framer-15o9xad",
+                                  "data-framer-name": "Frame 4",
+                                  layout: "position",
+                                  name: "Frame 4",
+                                  opacity: 1,
+                                  svg: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 772 397"><g transform="translate(-13.553 0)" id="ss10016008766_1"><path d="M 0 177.348 C 0 177.348 55.298 203.923 63.43 207.72 C 71.562 211.516 82.947 210.432 91.079 209.889 C 99.211 209.347 215.228 179.518 253.719 149.146 C 292.211 118.775 392.506 35.253 453.225 20.609 C 513.944 5.966 612.612 0 612.612 0 L 786.096 0" fill="transparent" stroke-width="3.25" stroke="var(--token-7049cce7-715e-45a0-a41e-932274474306, rgb(9, 227, 8))" stroke-miterlimit="10"></path></g><g transform="translate(-11.927 99.244)" id="ss10016008766_3"><path d="M 0 92.205 C 0 92.205 15.18 81.9 29.817 81.358 C 44.455 80.816 59.093 88.409 67.225 92.205 C 75.357 96.001 89.452 104.137 97.584 103.594 C 105.716 103.052 200.048 84.612 253.719 71.596 C 307.39 58.579 390.337 18.988 460.815 9.225 C 531.292 -0.537 609.36 0.005 609.36 0.005 L 784.469 0.005" fill="transparent" stroke-width="3.25" stroke="var(--token-7049cce7-715e-45a0-a41e-932274474306, rgb(9, 227, 8))" stroke-miterlimit="10"></path></g><g transform="translate(-13.553 190.185)" id="ss10016008766_5"><path d="M 0 17.535 C 0 17.535 21.143 2.892 46.624 0.722 C 72.104 -1.447 119.27 1.807 141.497 3.434 C 163.725 5.061 168.062 6.688 181.615 7.231 C 195.169 7.773 612.07 7.773 612.07 7.773 L 790.433 7.773" fill="transparent" stroke-width="3.25" stroke="var(--token-7049cce7-715e-45a0-a41e-932274474306, rgb(9, 227, 8))" stroke-miterlimit="10"></path></g><g transform="translate(-10.301 187.653)" id="ss10016008766_7"><path d="M 0 0 C 0 0 15.722 16.291 30.36 21.152 C 44.997 26.012 59.635 20.088 67.767 16.291 C 75.899 12.495 117.101 7.593 125.233 8.135 C 133.365 8.678 201.132 15.728 250.466 41.219 C 299.801 66.709 389.253 93.284 459.73 103.046 C 530.208 112.809 609.902 108.491 609.902 108.491 L 785.011 108.491" fill="transparent" stroke-width="3.25" stroke="var(--token-7049cce7-715e-45a0-a41e-932274474306, rgb(9, 227, 8))" stroke-miterlimit="10"></path></g><g transform="translate(-13.553 180.466)" id="ss10016008766_9"><path d="M 0 39.213 C 0 39.213 55.298 12.638 63.43 8.841 C 71.562 5.045 80.236 -0.984 97.042 0.137 C 113.848 1.257 215.228 37.044 253.719 67.415 C 292.211 97.787 392.506 181.309 453.225 195.952 C 513.944 210.595 612.612 216.561 612.612 216.561 L 788.264 216.561" fill="transparent" stroke-width="3.25" stroke="var(--token-7049cce7-715e-45a0-a41e-932274474306, rgb(9, 227, 8))" stroke-miterlimit="10"></path></g><g><defs><linearGradient id="idss10016008766_11g-872248346" x1="0" x2="1" y1="0.4975124378109453" y2="0.5024875621890547"><stop offset="0" stop-color="rgba(11,12,11,0)" stop-opacity="0"></stop><stop offset="1" stop-color="rgb(11,12,11)" stop-opacity="1"></stop></linearGradient></defs><path d="M 484.669 414.355 L 484.669 -9.762 L 772 -9.762 L 772 414.355 Z" fill="url(#idss10016008766_11g-872248346)"></path></g></svg>',
+                                  svgContentId: 10016008766,
+                                  withExternalLayout: !0,
+                                }),
+                                e(s1, {
+                                  className: "framer-1fug4zx",
+                                  "data-framer-name": "Frame 4",
+                                  layout: "position",
+                                  name: "Frame 4",
+                                  opacity: 0.38,
+                                  svg: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 601 349"><g transform="translate(-95.587 0)" id="ss9187722789_1"><path d="M 691.063 155.906 C 691.063 155.906 642.451 179.268 635.302 182.605 C 628.153 185.943 618.144 184.989 610.995 184.512 C 603.846 184.036 501.855 157.813 468.017 131.113 C 434.178 104.414 346.008 30.99 292.63 18.117 C 239.251 5.245 152.511 0 152.511 0 L 0 0" fill="transparent" stroke-width="2.86" stroke="var(--token-1fcd8a9e-e95f-444d-8078-4a12c6c2a429, rgb(150, 150, 150))" stroke-miterlimit="10"></path></g><g transform="translate(-94.157 87.245)" id="ss9187722789_3"><path d="M 689.634 81.057 C 689.634 81.057 676.289 71.998 663.421 71.521 C 650.553 71.044 637.685 77.719 630.536 81.057 C 623.387 84.394 610.995 91.546 603.846 91.069 C 596.697 90.592 513.77 74.382 466.587 62.939 C 419.404 51.497 346.485 16.692 284.527 8.11 C 222.57 -0.472 153.94 0.005 153.94 0.005 L 0 0.005" fill="transparent" stroke-width="2.86" stroke="var(--token-1fcd8a9e-e95f-444d-8078-4a12c6c2a429, rgb(150, 150, 150))" stroke-miterlimit="10"></path></g><g transform="translate(-95.587 167.19)" id="ss9187722789_5"><path d="M 694.876 15.415 C 694.876 15.415 676.289 2.542 653.889 0.635 C 631.489 -1.272 590.025 1.589 570.485 3.019 C 550.944 4.449 547.132 5.88 535.217 6.356 C 523.302 6.833 156.8 6.833 156.8 6.833 L 0 6.833" fill="transparent" stroke-width="2.86" stroke="var(--token-1fcd8a9e-e95f-444d-8078-4a12c6c2a429, rgb(150, 150, 150))" stroke-miterlimit="10"></path></g><g transform="translate(-92.727 164.964)" id="ss9187722789_7"><path d="M 690.11 0 C 690.11 0 676.289 14.321 663.421 18.594 C 650.553 22.867 637.685 17.659 630.536 14.321 C 623.387 10.984 587.166 6.675 580.017 7.152 C 572.868 7.628 513.293 13.827 469.923 36.235 C 426.553 58.643 347.915 82.005 285.957 90.587 C 224 99.169 153.94 95.373 153.94 95.373 L 0 95.373" fill="transparent" stroke-width="2.86" stroke="var(--token-1fcd8a9e-e95f-444d-8078-4a12c6c2a429, rgb(150, 150, 150))" stroke-miterlimit="10"></path></g><g transform="translate(-95.587 158.646)" id="ss9187722789_9"><path d="M 692.97 34.472 C 692.97 34.472 644.357 11.11 637.208 7.772 C 630.059 4.435 622.434 -0.865 607.659 0.12 C 592.885 1.105 503.761 32.565 469.923 59.264 C 436.085 85.964 347.915 159.387 294.536 172.26 C 241.157 185.133 154.417 190.378 154.417 190.378 L 0 190.378" fill="transparent" stroke-width="2.86" stroke="var(--token-1fcd8a9e-e95f-444d-8078-4a12c6c2a429, rgb(255, 255, 255))" stroke-miterlimit="10"></path></g><g><defs><linearGradient id="idss9187722789_11g-1226244547" x1="0" x2="1" y1="0.4975124378109453" y2="0.5024875621890547"><stop offset="0" stop-color="var(--token-dadc13b2-7e24-4ae7-bd13-3252746a673a, rgb(255, 255, 255)) /* {&quot;name&quot;:&quot;Mask Hero&quot;} */" stop-opacity="1"></stop><stop offset="1" stop-color="var(--token-a04508ef-63ab-47b2-84b4-d9e8e56c04ef, rgba(11, 12, 11, 0)) /* {&quot;name&quot;:&quot;Mask Hero 2&quot;} */" stop-opacity="1"></stop></linearGradient></defs><path d="M -0.328 364.421 L -0.328 -8.418 L 252.267 -8.418 L 252.267 364.421 Z" fill="url(#idss9187722789_11g-1226244547)"></path></g></svg>',
+                                  svgContentId: 9187722789,
+                                  withExternalLayout: !0,
+                                }),
+                                t("div", {
+                                  className: "framer-16le7zk",
+                                  "data-border": !0,
+                                  "data-framer-name": "rec",
+                                  name: "rec",
+                                  children: [
+                                    e("div", {
+                                      className: "framer-1ujfmr4",
+                                      "data-framer-name": "Rectangle 13",
+                                      name: "Rectangle 13",
+                                    }),
+                                    e("div", {
+                                      className: "framer-cm59nh",
+                                      "data-framer-name": "Rectangle 13",
+                                      name: "Rectangle 13",
+                                    }),
+                                    e(s1, {
+                                      className: "framer-1oxlnpr",
+                                      "data-framer-name": "dss",
+                                      layout: "position",
+                                      name: "dss",
+                                      opacity: 1,
+                                      svg: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 82 77"><path d="M 60.768 76.966 C 60.746 76.903 60.725 76.839 60.706 76.775 C 60.291 75.309 60.072 73.743 59.759 72.251 L 57.579 61.666 L 55.001 49.174 C 54.674 47.553 54.198 45.804 53.981 44.185 C 53.967 44.082 53.93 43.94 53.979 43.849 C 54.58 43.717 55.365 43.811 55.985 43.815 L 59.184 43.819 L 73.926 43.818 L 79.553 43.814 C 80.167 43.813 81.386 43.729 81.942 43.836 C 82.027 44.074 82.072 44.748 81.958 44.984 C 81.95 45 81.94 45.016 81.932 45.032 C 81.939 45.32 81.859 45.651 81.827 45.941 C 81.629 47.604 81.325 49.248 80.914 50.873 C 80.841 51.163 80.765 51.453 80.686 51.741 C 80.607 52.03 80.524 52.317 80.438 52.604 C 80.353 52.891 80.264 53.177 80.172 53.462 C 80.08 53.747 79.985 54.03 79.887 54.313 C 79.789 54.596 79.688 54.878 79.584 55.158 C 79.48 55.439 79.372 55.718 79.262 55.996 C 79.152 56.275 79.039 56.552 78.922 56.827 C 78.806 57.103 78.687 57.378 78.564 57.651 C 78.442 57.924 78.317 58.196 78.188 58.466 C 78.06 58.737 77.929 59.006 77.795 59.273 C 77.661 59.541 77.524 59.807 77.384 60.072 C 77.244 60.336 77.101 60.599 76.955 60.861 C 76.81 61.122 76.661 61.382 76.51 61.641 C 76.359 61.899 76.204 62.155 76.048 62.41 C 75.891 62.665 75.731 62.918 75.568 63.17 C 75.406 63.421 75.241 63.671 75.073 63.918 C 74.905 64.166 74.734 64.412 74.561 64.656 C 74.388 64.9 74.212 65.143 74.033 65.383 C 73.855 65.623 73.674 65.861 73.49 66.097 C 73.306 66.334 73.12 66.568 72.931 66.8 C 72.742 67.033 72.551 67.263 72.357 67.491 C 72.163 67.719 71.967 67.945 71.768 68.169 C 71.569 68.392 71.368 68.614 71.164 68.833 C 70.961 69.053 70.755 69.27 70.546 69.485 C 70.338 69.7 70.127 69.912 69.914 70.123 C 69.701 70.333 69.486 70.541 69.268 70.747 C 69.051 70.952 68.831 71.155 68.609 71.356 C 68.387 71.557 68.163 71.756 67.937 71.952 C 67.71 72.147 67.482 72.341 67.251 72.532 C 67.021 72.723 66.788 72.911 66.554 73.097 C 66.319 73.283 66.082 73.466 65.844 73.647 C 65.605 73.828 65.364 74.006 65.122 74.181 C 63.73 75.202 62.246 76.079 60.768 76.966 Z M 44.89 0 L 45.507 0 C 45.863 0.191 47.949 0.382 48.483 0.473 C 49.059 0.57 49.634 0.71 50.204 0.84 C 50.583 0.927 50.962 1.02 51.34 1.118 C 51.717 1.216 52.093 1.319 52.467 1.428 C 52.841 1.537 53.214 1.651 53.585 1.77 C 53.957 1.889 54.326 2.014 54.694 2.143 C 55.061 2.273 55.427 2.408 55.791 2.548 C 56.155 2.688 56.516 2.833 56.876 2.983 C 57.236 3.134 57.593 3.289 57.949 3.45 C 58.304 3.61 58.657 3.775 59.008 3.946 C 59.358 4.116 59.706 4.292 60.052 4.472 C 60.398 4.652 60.741 4.837 61.081 5.027 C 61.421 5.217 61.759 5.412 62.094 5.611 C 62.429 5.811 62.761 6.015 63.09 6.224 C 63.419 6.433 63.745 6.647 64.068 6.865 C 64.391 7.083 64.711 7.306 65.028 7.533 C 65.345 7.76 65.658 7.992 65.968 8.228 C 66.278 8.464 66.585 8.705 66.888 8.95 C 67.256 9.248 67.618 9.553 67.974 9.864 C 68.331 10.175 68.682 10.492 69.028 10.815 C 69.374 11.138 69.714 11.466 70.049 11.801 C 70.383 12.136 70.712 12.476 71.035 12.821 C 71.358 13.167 71.675 13.519 71.986 13.875 C 72.297 14.232 72.602 14.594 72.9 14.961 C 73.199 15.328 73.491 15.7 73.776 16.077 C 74.062 16.454 74.342 16.836 74.614 17.223 C 74.887 17.61 75.153 18.001 75.412 18.396 C 75.672 18.792 75.924 19.192 76.17 19.597 C 76.416 20.001 76.654 20.41 76.886 20.822 C 77.118 21.235 77.342 21.651 77.559 22.071 C 77.777 22.491 77.987 22.915 78.19 23.343 C 78.393 23.77 78.588 24.201 78.777 24.635 C 78.965 25.069 79.145 25.506 79.319 25.947 C 79.492 26.387 79.658 26.83 79.815 27.276 C 80.071 28.002 80.85 30.3 80.881 30.909 C 80.886 31.012 80.868 31.02 80.801 31.088 C 79.816 31.225 78.74 31.134 77.743 31.131 L 72.089 31.13 L 51.343 31.141 C 51.13 30.598 51.036 30.014 50.92 29.445 L 50.409 26.88 L 48.551 17.892 L 45.951 5.296 L 45.189 1.638 C 45.082 1.106 44.916 0.538 44.89 0 Z M 0 0 L 37.329 0 L 21.732 75.523 C 21.679 75.793 21.573 76.754 21.4 76.883 C 20.804 76.738 19.48 75.828 18.888 75.449 C 18.561 75.238 18.236 75.022 17.914 74.802 C 17.593 74.582 17.274 74.357 16.959 74.127 C 16.644 73.898 16.332 73.664 16.024 73.426 C 15.715 73.188 15.41 72.945 15.108 72.698 C 14.807 72.451 14.509 72.2 14.214 71.945 C 13.92 71.69 13.629 71.43 13.342 71.167 C 13.055 70.903 12.771 70.635 12.492 70.364 C 12.212 70.092 11.937 69.817 11.665 69.537 C 11.393 69.258 11.126 68.974 10.862 68.687 C 10.598 68.4 10.339 68.109 10.083 67.815 C 9.828 67.521 9.577 67.223 9.33 66.921 C 9.083 66.619 8.84 66.314 8.602 66.006 C 8.364 65.698 8.13 65.386 7.901 65.071 C 7.671 64.756 7.446 64.437 7.226 64.116 C 7.006 63.794 6.79 63.47 6.579 63.142 C 6.368 62.815 6.161 62.484 5.959 62.151 C 5.598 61.551 5.251 60.943 4.92 60.326 C 4.59 59.709 4.275 59.084 3.976 58.451 C 3.677 57.818 3.394 57.178 3.127 56.531 C 2.861 55.883 2.611 55.23 2.378 54.569 C 2.145 53.909 1.929 53.244 1.729 52.573 C 1.53 51.902 1.348 51.226 1.183 50.546 C 1.018 49.865 0.871 49.181 0.741 48.493 C 0.61 47.805 0.498 47.115 0.403 46.421 C 0.325 45.831 0.232 45.232 0.2 44.637 C 0.16 43.882 0.196 41.991 0 41.38 Z M 0 0 L 0 40.494 C 0.203 39.842 0.163 37.403 0.254 36.524 C 0.343 35.695 0.456 34.869 0.595 34.047 C 0.734 33.225 0.897 32.408 1.086 31.595 C 1.274 30.783 1.488 29.978 1.725 29.179 C 1.963 28.379 2.225 27.588 2.511 26.805 C 2.641 26.448 2.776 26.093 2.916 25.739 C 3.056 25.386 3.2 25.034 3.35 24.685 C 3.5 24.336 3.654 23.988 3.813 23.643 C 3.973 23.298 4.137 22.955 4.306 22.615 C 4.475 22.274 4.648 21.936 4.826 21.6 C 5.005 21.265 5.188 20.931 5.375 20.601 C 5.563 20.27 5.755 19.942 5.952 19.617 C 6.148 19.292 6.349 18.969 6.555 18.649 C 6.761 18.33 6.971 18.013 7.185 17.699 C 7.4 17.385 7.618 17.075 7.842 16.767 C 8.065 16.459 8.292 16.155 8.524 15.853 C 8.755 15.552 8.991 15.253 9.231 14.959 C 9.471 14.664 9.715 14.372 9.963 14.084 C 10.211 13.796 10.463 13.511 10.718 13.23 C 10.974 12.949 11.234 12.672 11.498 12.398 C 11.762 12.124 12.029 11.854 12.3 11.587 C 12.571 11.321 12.846 11.058 13.124 10.8 C 13.403 10.541 13.685 10.286 13.971 10.035 C 14.256 9.784 14.545 9.537 14.838 9.294 C 15.13 9.051 15.426 8.813 15.725 8.578 C 16.024 8.343 16.326 8.113 16.632 7.887 C 16.937 7.66 17.246 7.438 17.557 7.221 C 17.869 7.003 18.184 6.79 18.501 6.581 C 18.819 6.372 19.139 6.167 19.463 5.967 C 19.786 5.767 20.112 5.572 20.441 5.381 C 20.769 5.19 21.101 5.003 21.435 4.822 C 21.769 4.64 22.105 4.463 22.444 4.291 C 22.783 4.118 23.124 3.951 23.467 3.788 C 23.811 3.625 24.157 3.467 24.505 3.313 C 24.852 3.16 25.202 3.012 25.555 2.868 C 25.906 2.725 26.26 2.586 26.616 2.452 C 26.972 2.319 27.33 2.19 27.689 2.066 C 29.15 1.564 30.633 1.144 32.14 0.806 C 32.81 0.658 33.484 0.525 34.16 0.407 C 34.642 0.327 36.23 0.206 36.581 0.03 C 36.599 0.02 36.618 0.01 36.636 0 Z" fill="var(--token-7a9e4765-b7b6-4145-be48-d9809753ae3a, rgb(254, 254, 254)) /* {&quot;name&quot;:&quot;Logo color&quot;} */"></path></svg>',
+                                      svgContentId: 9965840979,
+                                      withExternalLayout: !0,
+                                    }),
+                                    e(M, {
+                                      children: e($, {
+                                        className: "framer-13iqdum-container",
+                                        children: e(w1, {
+                                          height: "100%",
+                                          id: "amnKnD7_4",
+                                          layoutId: "amnKnD7_4",
+                                          projectId: "YnADGzDD7LGB9cUocyyN",
+                                          style: {
+                                            height: "100%",
+                                            width: "100%",
+                                          },
+                                          width: "100%",
+                                        }),
+                                      }),
+                                    }),
+                                  ],
+                                }),
+                                e(S, {
+                                  __framer__loop: R,
+                                  __framer__loopEffectEnabled: !0,
+                                  __framer__loopRepeatDelay: 0,
+                                  __framer__loopRepeatType: "mirror",
+                                  __framer__loopTransition: R2,
+                                  __perspectiveFX: !1,
+                                  __targetOpacity: 1,
+                                  background: {
+                                    alt: "",
+                                    fit: "fill",
+                                    intrinsicHeight: 388.8,
+                                    intrinsicWidth: 464,
+                                    pixelHeight: 486,
+                                    pixelWidth: 580,
+                                    sizes: "108px",
+                                    src: "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512",
+                                    srcSet:
+                                      "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512 512w,https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png 994w",
+                                  },
+                                  className: "framer-1rndu0q",
+                                  "data-framer-name": "Block",
+                                  "data-nosnippet": !0,
+                                  drag: !0,
+                                  dragMomentum: !1,
+                                  dragSnapToOrigin: !0,
+                                  dragTransition: E,
+                                  name: "Block",
+                                  onMouseDown: P,
+                                  whileTap: g1,
+                                }),
+                                e(S, {
+                                  __framer__loop: R,
+                                  __framer__loopEffectEnabled: !0,
+                                  __framer__loopRepeatDelay: 0,
+                                  __framer__loopRepeatType: "mirror",
+                                  __framer__loopTransition: m1,
+                                  __perspectiveFX: !1,
+                                  __targetOpacity: 1,
+                                  background: {
+                                    alt: "",
+                                    fit: "fill",
+                                    intrinsicHeight: 388.8,
+                                    intrinsicWidth: 464,
+                                    pixelHeight: 486,
+                                    pixelWidth: 580,
+                                    sizes: "140px",
+                                    src: "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512",
+                                    srcSet:
+                                      "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512 512w,https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png 994w",
+                                  },
+                                  className: "framer-j125pk",
+                                  "data-framer-name": "Block",
+                                  "data-nosnippet": !0,
+                                  drag: !0,
+                                  dragMomentum: !1,
+                                  dragSnapToOrigin: !0,
+                                  dragTransition: E,
+                                  name: "Block",
+                                  onMouseDown: P,
+                                  style: { rotate: 54 },
+                                  whileTap: g1,
+                                }),
+                                e(S, {
+                                  __framer__loop: R,
+                                  __framer__loopEffectEnabled: !0,
+                                  __framer__loopRepeatDelay: 0,
+                                  __framer__loopRepeatType: "mirror",
+                                  __framer__loopTransition: M5,
+                                  __perspectiveFX: !1,
+                                  __targetOpacity: 1,
+                                  background: {
+                                    alt: "",
+                                    fit: "fill",
+                                    intrinsicHeight: 864.8,
+                                    intrinsicWidth: 864.8,
+                                    pixelHeight: 1081,
+                                    pixelWidth: 1081,
+                                    sizes: "186px",
+                                    src: "https://framerusercontent.com/images/fKNDFCXL3wXoXazxoouVHn3Fgs.png?scale-down-to=1024",
+                                    srcSet:
+                                      "https://framerusercontent.com/images/fKNDFCXL3wXoXazxoouVHn3Fgs.png?scale-down-to=512 512w,https://framerusercontent.com/images/fKNDFCXL3wXoXazxoouVHn3Fgs.png?scale-down-to=1024 1024w,https://framerusercontent.com/images/fKNDFCXL3wXoXazxoouVHn3Fgs.png 1472w",
+                                  },
+                                  className: "framer-1xqsn5e",
+                                  "data-framer-name": "Cardano",
+                                  "data-nosnippet": !0,
+                                  drag: !0,
+                                  dragMomentum: !1,
+                                  dragSnapToOrigin: !0,
+                                  dragTransition: E,
+                                  name: "Cardano",
+                                  onMouseDown: P,
+                                  style: { rotate: -41 },
+                                  whileTap: g1,
+                                }),
+                                e(S, {
+                                  __framer__loop: R,
+                                  __framer__loopEffectEnabled: !0,
+                                  __framer__loopRepeatDelay: 0,
+                                  __framer__loopRepeatType: "mirror",
+                                  __framer__loopTransition: z5,
+                                  __perspectiveFX: !1,
+                                  __targetOpacity: 1,
+                                  background: {
+                                    alt: "",
+                                    fit: "fill",
+                                    intrinsicHeight: 864.8,
+                                    intrinsicWidth: 864.8,
+                                    pixelHeight: 1081,
+                                    pixelWidth: 1081,
+                                    sizes: "188px",
+                                    src: "https://framerusercontent.com/images/lSXeKVPa3y517m4Jc2eT3cbZd8.png?scale-down-to=1024",
+                                    srcSet:
+                                      "https://framerusercontent.com/images/lSXeKVPa3y517m4Jc2eT3cbZd8.png?scale-down-to=512 512w,https://framerusercontent.com/images/lSXeKVPa3y517m4Jc2eT3cbZd8.png?scale-down-to=1024 1024w,https://framerusercontent.com/images/lSXeKVPa3y517m4Jc2eT3cbZd8.png 1472w",
+                                  },
+                                  className: "framer-1vr5n4q",
+                                  "data-framer-name": "Arbitrum",
+                                  "data-nosnippet": !0,
+                                  drag: !0,
+                                  dragMomentum: !1,
+                                  dragSnapToOrigin: !0,
+                                  dragTransition: E,
+                                  name: "Arbitrum",
+                                  onMouseDown: P,
+                                  style: { rotate: -206 },
+                                  whileTap: g1,
+                                }),
+                                e(S, {
+                                  __framer__loop: R,
+                                  __framer__loopEffectEnabled: !0,
+                                  __framer__loopRepeatDelay: 0,
+                                  __framer__loopRepeatType: "mirror",
+                                  __framer__loopTransition: j5,
+                                  __perspectiveFX: !1,
+                                  __targetOpacity: 1,
+                                  background: {
+                                    alt: "",
+                                    fit: "fill",
+                                    intrinsicHeight: 864.8,
+                                    intrinsicWidth: 864.8,
+                                    pixelHeight: 1081,
+                                    pixelWidth: 1081,
+                                    sizes: "126px",
+                                    src: "https://framerusercontent.com/images/yUKACL7nBv7YVqeRYcdjpcYc2OM.png?scale-down-to=1024",
+                                    srcSet:
+                                      "https://framerusercontent.com/images/yUKACL7nBv7YVqeRYcdjpcYc2OM.png?scale-down-to=512 512w,https://framerusercontent.com/images/yUKACL7nBv7YVqeRYcdjpcYc2OM.png?scale-down-to=1024 1024w,https://framerusercontent.com/images/yUKACL7nBv7YVqeRYcdjpcYc2OM.png 1081w",
+                                  },
+                                  className: "framer-1bwcu5b",
+                                  "data-framer-name": "Ethereum",
+                                  "data-nosnippet": !0,
+                                  drag: !0,
+                                  dragMomentum: !1,
+                                  dragSnapToOrigin: !0,
+                                  dragTransition: E,
+                                  name: "Ethereum",
+                                  onMouseDown: P,
+                                  style: { rotate: -101 },
+                                  transformTemplate: y1,
+                                  whileTap: g1,
+                                }),
+                                e(S, {
+                                  __framer__loop: R,
+                                  __framer__loopEffectEnabled: !0,
+                                  __framer__loopRepeatDelay: 0,
+                                  __framer__loopRepeatType: "mirror",
+                                  __framer__loopTransition: S5,
+                                  __perspectiveFX: !1,
+                                  __targetOpacity: 1,
+                                  background: {
+                                    alt: "",
+                                    fit: "fill",
+                                    intrinsicHeight: 864.8,
+                                    intrinsicWidth: 864.8,
+                                    pixelHeight: 1081,
+                                    pixelWidth: 1081,
+                                    sizes: "140px",
+                                    src: "https://framerusercontent.com/images/xwTx1EWS12n5EiBEy6xQeOqNmM.png?scale-down-to=1024",
+                                    srcSet:
+                                      "https://framerusercontent.com/images/xwTx1EWS12n5EiBEy6xQeOqNmM.png?scale-down-to=512 512w,https://framerusercontent.com/images/xwTx1EWS12n5EiBEy6xQeOqNmM.png?scale-down-to=1024 1024w,https://framerusercontent.com/images/xwTx1EWS12n5EiBEy6xQeOqNmM.png 1081w",
+                                  },
+                                  className: "framer-v0lpej",
+                                  "data-framer-name": "Solana",
+                                  "data-nosnippet": !0,
+                                  drag: !0,
+                                  dragMomentum: !1,
+                                  dragSnapToOrigin: !0,
+                                  dragTransition: E,
+                                  name: "Solana",
+                                  onMouseDown: P,
+                                  style: { rotate: -116 },
+                                  transformTemplate: y1,
+                                  whileTap: g1,
+                                }),
+                                e(S, {
+                                  __framer__loop: R,
+                                  __framer__loopEffectEnabled: !0,
+                                  __framer__loopRepeatDelay: 0,
+                                  __framer__loopRepeatType: "mirror",
+                                  __framer__loopTransition: R5,
+                                  __perspectiveFX: !1,
+                                  __targetOpacity: 1,
+                                  background: {
+                                    alt: "",
+                                    fit: "fill",
+                                    intrinsicHeight: 864.8,
+                                    intrinsicWidth: 864.8,
+                                    pixelHeight: 1081,
+                                    pixelWidth: 1081,
+                                    sizes: "140px",
+                                    src: "https://framerusercontent.com/images/Hhbvt6HEF4CgZ9WnKxkyeWMOmY.png?scale-down-to=1024",
+                                    srcSet:
+                                      "https://framerusercontent.com/images/Hhbvt6HEF4CgZ9WnKxkyeWMOmY.png?scale-down-to=512 512w,https://framerusercontent.com/images/Hhbvt6HEF4CgZ9WnKxkyeWMOmY.png?scale-down-to=1024 1024w,https://framerusercontent.com/images/Hhbvt6HEF4CgZ9WnKxkyeWMOmY.png 1081w",
+                                  },
+                                  className: "framer-1c3liat",
+                                  "data-framer-name": "BNB",
+                                  "data-nosnippet": !0,
+                                  drag: !0,
+                                  dragMomentum: !1,
+                                  dragSnapToOrigin: !0,
+                                  dragTransition: E,
+                                  name: "BNB",
+                                  onMouseDown: P,
+                                  style: { rotate: -195 },
+                                  whileTap: g1,
+                                }),
+                                e(S, {
+                                  __framer__loop: R,
+                                  __framer__loopEffectEnabled: !0,
+                                  __framer__loopRepeatDelay: 0,
+                                  __framer__loopRepeatType: "mirror",
+                                  __framer__loopTransition: U5,
+                                  __perspectiveFX: !1,
+                                  __targetOpacity: 1,
+                                  background: {
+                                    alt: "",
+                                    fit: "fill",
+                                    intrinsicHeight: 864.8,
+                                    intrinsicWidth: 864.8,
+                                    pixelHeight: 1081,
+                                    pixelWidth: 1081,
+                                    sizes: "133px",
+                                    src: "https://framerusercontent.com/images/9UHpJk0ZYlKCnENfUccmYW9NJDw.png?scale-down-to=1024",
+                                    srcSet:
+                                      "https://framerusercontent.com/images/9UHpJk0ZYlKCnENfUccmYW9NJDw.png?scale-down-to=512 512w,https://framerusercontent.com/images/9UHpJk0ZYlKCnENfUccmYW9NJDw.png?scale-down-to=1024 1024w,https://framerusercontent.com/images/9UHpJk0ZYlKCnENfUccmYW9NJDw.png 1081w",
+                                  },
+                                  className: "framer-1rnky7f",
+                                  "data-framer-name": "Polygon",
+                                  "data-nosnippet": !0,
+                                  drag: !0,
+                                  dragMomentum: !1,
+                                  dragSnapToOrigin: !0,
+                                  dragTransition: E,
+                                  name: "Polygon",
+                                  onMouseDown: P,
+                                  style: { rotate: -187 },
+                                  transformTemplate: y1,
+                                  whileTap: g1,
+                                }),
+                              ],
+                            }),
+                          }),
+                        ],
+                      }),
+                    }),
+                  ],
+                }),
+                t("div", {
+                  className: "framer-15hed9b",
+                  "data-framer-name": "Section 2",
+                  name: "Section 2",
+                  children: [
+                    t(j2, {
+                      animate: U2,
+                      className: "framer-6oh9yv",
+                      "data-border": !0,
+                      "data-framer-appear-id": "6oh9yv",
+                      "data-framer-name": "Container",
+                      initial: E2,
+                      name: "Container",
+                      optimized: !0,
+                      style: { transformPerspective: 1200 },
+                      children: [
+                        e(s1, {
+                          className: "framer-dz9mo0",
+                          "data-framer-name": "ME",
+                          layout: "position",
+                          name: "ME",
+                          opacity: 1,
+                          svg: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 126 61"><path d="M 99.759 10.971 L 125.076 10.971 C 125.109 11.033 125.136 11.095 125.153 11.163 C 125.254 11.565 125.228 16.318 125.168 16.917 C 125.159 17.015 125.13 17.089 125.077 17.172 L 106.885 17.172 C 106.925 17.238 106.957 17.309 106.971 17.385 C 107.087 17.994 106.99 19.045 106.99 19.693 C 106.991 21.173 107.072 22.704 106.98 24.18 C 106.973 24.292 106.945 24.374 106.885 24.469 L 123.619 24.469 C 123.654 24.524 123.684 24.583 123.698 24.647 C 123.806 25.148 123.728 29.503 123.656 30.149 C 123.644 30.259 123.611 30.345 123.555 30.439 L 106.9 30.439 C 106.926 30.485 106.948 30.533 106.961 30.584 C 107.064 30.991 107.028 38.243 106.98 39.058 C 106.973 39.177 106.945 39.263 106.885 39.364 C 113.219 39.364 119.567 39.459 125.899 39.357 C 125.952 39.44 125.981 39.514 125.99 39.612 C 126.051 40.23 126.075 44.794 125.984 45.264 C 125.971 45.336 125.938 45.403 125.9 45.465 C 125.039 45.38 124.094 45.453 123.226 45.453 L 117.699 45.456 L 99.774 45.455 C 99.805 45.391 99.83 45.324 99.848 45.255 C 99.963 44.816 99.872 43.288 99.872 42.749 L 99.872 35.586 L 99.872 19.264 L 99.87 13.999 C 99.87 13.105 99.916 12.181 99.861 11.289 C 99.854 11.167 99.822 11.075 99.759 10.971 Z M 59.011 0.173 C 59.012 0.248 59.009 0.297 58.976 0.366 C 58.384 1.603 57.705 2.814 57.07 4.032 L 53.321 11.226 L 41.972 32.998 L 47.548 36.116 L 39.569 40.532 L 50.366 56.299 L 34.512 45.882 C 33.152 50.157 31.62 54.396 30.17 58.642 C 28.774 54.76 27.236 50.917 25.769 47.06 L 24.793 47.586 C 22.09 49.093 19.345 50.534 16.623 52.006 L 0 61.004 C 4.285 56.254 8.701 51.612 13.047 46.919 L 16.519 43.161 C 17.042 42.595 17.598 41.839 18.217 41.397 C 18.86 40.937 19.642 40.612 20.347 40.254 L 24.162 38.318 L 37.751 31.407 C 38.418 28.767 39.235 26.146 39.976 23.525 C 40.213 22.685 40.71 20.523 41.046 19.859 C 41.404 19.15 42.314 18.352 42.871 17.749 L 45.853 14.509 Z" fill="var(--token-5197bf6c-818c-4eab-85f8-6f703842b3bf, rgb(10, 11, 10))"></path><path d="M 32.713 8.245 C 32.924 8.255 41.465 14.054 42.439 14.705 L 41.579 17.728 C 41.398 18.363 41.255 19.085 40.956 19.675 C 40.699 20.182 39.565 21.26 39.133 21.731 L 34.573 26.711 C 33.228 22.59 31.718 18.505 30.286 14.413 C 29.82 15.902 29.254 17.376 28.74 18.85 L 25.649 27.705 L 10.383 17.88 C 11.582 19.578 12.731 21.316 13.902 23.033 L 20.662 32.944 L 17.198 33.993 L 10.218 36.113 C 11.159 36.646 12.162 37.107 13.127 37.598 L 18.838 40.502 C 18.576 40.805 18.303 41.183 17.972 41.411 C 17.363 41.832 16.645 42.157 15.992 42.504 L 12.445 44.389 L 0.587 50.712 L 0.587 16.7 C 4.182 15.849 7.753 14.818 11.327 13.877 Z M 61.388 11.02 C 62.099 10.856 63.73 10.968 64.543 10.968 L 71.999 10.971 C 72.037 11.02 72.076 11.075 72.101 11.132 C 72.311 11.615 72.387 12.295 72.507 12.815 L 73.437 16.862 L 76.881 31.841 C 77.043 32.546 78.331 37.69 78.209 38.057 C 78.215 38.049 78.22 38.043 78.226 38.035 C 78.234 38.023 78.243 38.01 78.251 37.998 C 78.28 37.957 78.307 37.916 78.331 37.872 C 78.549 37.461 78.696 36.39 78.811 35.889 L 80.018 30.631 L 82.963 17.794 C 83.459 15.631 84.032 13.459 84.451 11.281 C 84.473 11.165 84.475 11.086 84.435 10.971 L 94.914 10.971 C 94.933 11.001 94.947 11.018 94.959 11.05 C 95.106 11.42 95.001 18.897 95.001 20.056 L 95.001 44.863 C 94.999 45.074 95.005 45.257 94.92 45.455 L 88.148 45.455 C 88.174 45.397 88.196 45.339 88.211 45.278 C 88.324 44.793 88.241 44.082 88.243 43.579 L 88.253 39.317 C 88.262 33.8 88.341 28.272 88.276 22.756 C 88.273 22.557 88.285 22.381 88.175 22.206 C 88.201 22.164 88.225 22.12 88.242 22.073 C 88.37 21.709 88.321 17.746 88.276 17.228 C 88.262 17.066 88.204 16.912 88.135 16.766 C 88.163 16.849 88.193 16.94 88.194 17.03 C 88.195 17.534 87.962 18.173 87.848 18.677 L 86.939 22.684 L 83.256 38.918 C 83.082 39.683 81.928 45.285 81.639 45.592 L 74.65 45.622 C 74.673 45.569 74.688 45.534 74.691 45.475 C 74.71 45.088 74.391 44.059 74.293 43.623 L 73.078 38.206 L 69.994 24.478 C 69.47 22.15 69.008 19.786 68.414 17.476 C 68.358 17.255 68.283 17.107 68.137 16.932 C 68.178 17.019 68.221 17.109 68.254 17.2 C 68.417 17.656 68.274 22.917 68.27 23.731 L 68.21 38.389 C 68.205 39.273 68.308 45.002 68.103 45.455 L 61.392 45.455 C 61.423 45.391 61.448 45.324 61.466 45.255 C 61.587 44.794 61.489 43.445 61.489 42.9 L 61.49 36.376 L 61.489 19.679 L 61.489 14.222 C 61.488 13.27 61.522 12.304 61.481 11.354 C 61.476 11.225 61.454 11.133 61.388 11.02 Z" fill="var(--token-5197bf6c-818c-4eab-85f8-6f703842b3bf, rgb(10, 11, 10))"></path></svg>',
+                          svgContentId: 9985968540,
+                          withExternalLayout: !0,
+                        }),
+                        e(s1, {
+                          className: "framer-u4bibj",
+                          "data-framer-name": "XEND_1_",
+                          layout: "position",
+                          name: "XEND_1_",
+                          opacity: 1,
+                          svg: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 166 67"><path d="M 71.338 36.575 C 72.357 36.396 73.605 36.529 74.649 36.533 C 74.655 36.546 74.661 36.558 74.668 36.571 C 74.702 36.637 74.74 36.706 74.756 36.779 C 74.868 37.266 74.892 38.936 74.65 39.319 C 74.26 39.519 71.875 39.387 71.297 39.382 C 71.322 39.343 71.345 39.303 71.364 39.261 C 71.522 38.91 71.473 36.974 71.338 36.575 Z M 71.43 41.911 C 72.373 41.724 73.592 41.863 74.565 41.867 C 74.597 41.925 74.628 41.988 74.642 42.053 C 74.777 42.665 74.669 45.445 74.67 46.274 C 74.675 49.609 74.778 52.969 74.687 56.302 C 74.681 56.497 74.667 56.639 74.562 56.809 C 74.078 56.953 72.043 56.839 71.409 56.833 C 71.427 56.807 71.433 56.8 71.449 56.768 C 71.546 56.574 71.615 42.416 71.43 41.911 Z M 137.23 41.467 C 138.558 41.371 141.235 41.604 142.364 42.35 C 142.58 42.837 142.56 44.65 142.363 45.165 C 142.097 44.884 141.058 44.639 140.68 44.545 C 139.029 44.134 136.96 43.947 135.438 44.873 C 134.546 45.415 134.012 46.286 133.77 47.286 C 133.385 48.879 133.465 51.184 134.354 52.61 C 134.891 53.473 135.731 53.962 136.709 54.182 C 138.37 54.556 140.874 54.317 142.338 53.4 C 142.393 53.428 142.444 53.476 142.467 53.534 C 142.592 53.846 142.528 55.903 142.381 56.188 C 141.676 56.725 139.923 56.985 139.049 57.071 C 136.821 57.29 134.519 56.919 132.75 55.46 C 131.291 54.258 130.683 52.502 130.513 50.667 C 130.305 48.421 130.527 45.662 132.038 43.859 C 133.354 42.291 135.248 41.649 137.23 41.467 Z M 24.713 11.439 C 25.937 11.284 27.232 11.63 28.228 12.348 C 28.296 12.398 28.362 12.449 28.428 12.501 C 28.493 12.554 28.556 12.608 28.619 12.664 C 28.681 12.72 28.742 12.777 28.802 12.836 C 28.862 12.894 28.92 12.955 28.977 13.016 C 29.033 13.078 29.088 13.141 29.142 13.205 C 29.196 13.269 29.247 13.335 29.298 13.402 C 29.348 13.469 29.397 13.537 29.444 13.606 C 29.491 13.675 29.536 13.746 29.58 13.817 C 29.623 13.889 29.665 13.961 29.705 14.035 C 29.745 14.108 29.783 14.183 29.819 14.258 C 29.855 14.333 29.89 14.41 29.922 14.487 C 29.955 14.564 29.985 14.642 30.014 14.72 C 30.043 14.799 30.069 14.878 30.094 14.958 C 30.119 15.038 30.142 15.118 30.162 15.2 C 30.183 15.281 30.202 15.362 30.219 15.444 C 30.235 15.526 30.25 15.608 30.263 15.691 C 30.54 17.461 30.428 19.617 29.336 21.102 C 28.473 22.274 27.272 22.894 25.853 23.115 C 25.778 23.123 25.702 23.13 25.626 23.134 C 25.55 23.139 25.474 23.142 25.399 23.144 C 25.323 23.145 25.247 23.145 25.171 23.143 C 25.095 23.141 25.019 23.137 24.943 23.132 C 24.867 23.126 24.792 23.119 24.716 23.11 C 24.641 23.101 24.566 23.091 24.491 23.079 C 24.416 23.067 24.341 23.053 24.267 23.037 C 24.192 23.022 24.118 23.004 24.045 22.986 C 23.971 22.967 23.898 22.946 23.825 22.924 C 23.753 22.902 23.681 22.878 23.609 22.853 C 23.537 22.828 23.466 22.801 23.396 22.772 C 23.326 22.744 23.256 22.714 23.187 22.682 C 23.118 22.651 23.049 22.617 22.982 22.583 C 22.914 22.548 22.848 22.512 22.782 22.474 C 22.716 22.436 22.651 22.397 22.587 22.357 C 22.522 22.316 22.459 22.274 22.397 22.231 C 22.329 22.182 22.262 22.133 22.196 22.081 C 22.13 22.029 22.066 21.976 22.003 21.921 C 21.94 21.867 21.878 21.81 21.818 21.753 C 21.758 21.695 21.699 21.636 21.642 21.575 C 21.584 21.514 21.529 21.452 21.474 21.389 C 21.42 21.325 21.367 21.26 21.316 21.194 C 21.265 21.128 21.216 21.061 21.168 20.992 C 21.12 20.924 21.074 20.854 21.03 20.784 C 20.986 20.713 20.943 20.641 20.903 20.568 C 20.862 20.495 20.823 20.421 20.786 20.347 C 20.749 20.272 20.714 20.196 20.681 20.12 C 20.647 20.043 20.616 19.966 20.586 19.888 C 20.557 19.81 20.529 19.731 20.504 19.652 C 20.478 19.572 20.455 19.492 20.433 19.412 C 20.411 19.331 20.392 19.25 20.374 19.168 C 20.357 19.087 20.341 19.005 20.327 18.922 C 20.032 17.161 20.15 14.963 21.227 13.478 C 22.085 12.296 23.289 11.664 24.713 11.439 Z M 11.789 18.039 C 12.944 17.967 14.167 18.373 15.077 19.075 C 15.144 19.127 15.21 19.181 15.274 19.236 C 15.338 19.291 15.401 19.348 15.462 19.406 C 15.523 19.464 15.583 19.524 15.642 19.585 C 15.7 19.647 15.757 19.709 15.812 19.773 C 15.867 19.837 15.921 19.903 15.973 19.97 C 16.025 20.036 16.075 20.104 16.123 20.174 C 16.172 20.243 16.219 20.313 16.264 20.385 C 16.309 20.456 16.352 20.529 16.394 20.603 C 16.435 20.677 16.474 20.751 16.512 20.827 C 16.55 20.903 16.586 20.979 16.619 21.057 C 16.653 21.134 16.685 21.213 16.715 21.292 C 16.745 21.371 16.773 21.451 16.799 21.531 C 16.825 21.611 16.849 21.693 16.871 21.774 C 16.893 21.856 16.913 21.938 16.93 22.021 C 16.948 22.103 16.964 22.186 16.978 22.27 C 16.991 22.353 17.003 22.437 17.012 22.521 C 17.232 24.341 17.131 26.386 15.952 27.875 C 15.021 29.05 13.786 29.603 12.322 29.772 C 12.245 29.777 12.167 29.779 12.09 29.78 C 12.012 29.781 11.935 29.78 11.857 29.777 C 11.78 29.775 11.702 29.77 11.625 29.764 C 11.548 29.758 11.471 29.75 11.394 29.74 C 11.317 29.73 11.24 29.718 11.164 29.705 C 11.087 29.692 11.011 29.677 10.936 29.66 C 10.86 29.643 10.785 29.625 10.71 29.605 C 10.635 29.584 10.56 29.562 10.487 29.539 C 10.413 29.515 10.339 29.49 10.267 29.463 C 10.194 29.436 10.122 29.407 10.051 29.377 C 9.979 29.347 9.909 29.315 9.839 29.281 C 9.769 29.248 9.7 29.213 9.631 29.176 C 9.563 29.14 9.496 29.101 9.429 29.062 C 9.363 29.022 9.297 28.981 9.232 28.938 C 9.168 28.895 9.104 28.851 9.042 28.805 C 8.979 28.759 8.917 28.712 8.857 28.664 C 7.783 27.796 7.136 26.538 6.998 25.172 C 6.812 23.338 6.916 21.361 8.131 19.879 C 9.085 18.717 10.319 18.188 11.789 18.039 Z M 119.962 41.467 C 121.347 41.421 122.801 41.485 124.097 42.029 C 125.15 42.471 125.94 43.251 126.366 44.314 C 126.607 44.915 126.723 45.558 126.772 46.202 C 126.893 47.79 126.79 49.449 126.789 51.047 C 126.787 52.811 126.877 54.593 126.793 56.353 C 126.784 56.53 126.758 56.671 126.687 56.833 L 123.527 56.833 C 123.585 56.722 123.632 56.6 123.643 56.474 C 123.776 54.894 123.663 53.209 123.663 51.621 C 123.662 50.057 123.812 48.216 123.582 46.68 C 123.499 46.131 123.38 45.594 123 45.17 C 122.313 44.404 121.304 44.205 120.324 44.16 C 119.045 44.137 117.931 44.382 116.709 44.72 C 116.732 44.754 116.752 44.788 116.766 44.826 C 116.905 45.203 116.856 55.313 116.797 56.421 C 116.789 56.566 116.752 56.698 116.7 56.833 L 113.544 56.833 C 113.55 56.822 113.557 56.81 113.562 56.798 C 113.707 56.502 113.755 43.515 113.57 43.009 C 114.1 42.852 114.62 42.58 115.15 42.401 C 116.714 41.872 118.317 41.581 119.962 41.467 Z M 85.544 41.467 C 86.93 41.408 88.445 41.484 89.73 42.057 C 90.785 42.529 91.557 43.339 91.964 44.422 C 92.185 45.005 92.293 45.625 92.338 46.245 C 92.454 47.874 92.352 49.565 92.352 51.202 C 92.351 52.914 92.443 54.648 92.356 56.357 C 92.348 56.533 92.318 56.672 92.245 56.833 L 89.089 56.833 C 89.17 56.685 89.201 56.548 89.208 56.379 C 89.29 54.539 89.22 52.666 89.218 50.823 C 89.218 49.505 89.336 48.043 89.152 46.739 C 89.071 46.173 88.959 45.596 88.558 45.167 C 87.82 44.379 86.834 44.193 85.803 44.158 C 84.563 44.136 83.454 44.395 82.269 44.716 C 82.292 44.75 82.314 44.786 82.328 44.824 C 82.445 45.144 82.416 55.33 82.358 56.424 C 82.35 56.572 82.316 56.698 82.258 56.833 L 79.099 56.833 C 79.177 56.689 79.197 56.563 79.203 56.402 C 79.319 53.717 79.216 50.983 79.215 48.294 C 79.215 47.193 79.362 43.835 79.134 43.02 C 79.609 42.85 80.064 42.628 80.541 42.46 C 82.161 41.892 83.833 41.582 85.544 41.467 Z M 55.009 36.83 L 67.743 36.83 C 67.767 36.867 67.769 36.869 67.791 36.914 C 67.961 37.265 67.905 39.221 67.763 39.626 L 58.306 39.626 L 58.306 45.584 L 66.66 45.584 L 66.66 48.404 L 58.306 48.404 L 58.306 56.833 L 55.009 56.833 Z M 151.335 41.467 C 152.933 41.354 154.582 41.455 155.982 42.314 C 157.49 43.24 158.344 44.895 158.742 46.57 C 158.909 47.272 159.319 49.456 158.967 50.028 L 148.398 50.028 C 148.742 50.532 148.681 51.866 149.411 52.919 C 150.021 53.797 150.951 54.283 151.99 54.462 C 153.129 54.658 155.7 54.561 156.658 53.884 C 157.043 53.802 157.586 53.605 157.877 53.334 C 158.102 53.845 158.09 55.745 157.884 56.276 C 157.125 56.747 155.956 56.956 155.082 57.09 C 152.716 57.453 150.107 57.445 148.096 55.969 C 146.559 54.84 145.756 53.1 145.474 51.251 C 145.11 48.863 145.352 45.921 146.832 43.919 C 147.972 42.377 149.482 41.742 151.335 41.467 Z M 151.34 44.061 C 150.548 44.29 149.733 44.609 149.302 45.366 C 148.955 45.977 148.816 47.245 148.44 47.684 L 155.736 47.684 C 155.948 47.209 155.682 46.487 155.505 46.024 C 155.21 45.256 154.681 44.639 153.915 44.305 C 153.112 43.955 152.194 43.965 151.34 44.061 Z M 102.578 41.467 C 103.521 41.415 104.492 41.475 105.41 41.706 C 106.664 42.022 107.907 42.673 108.579 43.818 C 108.884 44.337 109.058 44.926 109.136 45.521 C 109.266 46.521 109.304 53.723 109.071 54.602 C 108.867 55.375 108.396 55.944 107.705 56.339 C 105.792 57.433 101.74 57.529 99.65 56.953 C 98.034 56.507 96.848 55.751 96.353 54.085 C 96.237 53.696 96.221 53.191 96.014 52.845 C 96.007 52.832 95.999 52.82 95.991 52.807 C 96.126 52.598 96.108 52.312 96.134 52.07 C 96.264 50.86 96.463 49.675 97.431 48.833 C 98.795 47.647 100.772 47.442 102.504 47.572 C 103.342 47.635 105.372 47.933 105.952 48.605 C 105.976 48.56 105.998 48.514 106.017 48.466 C 106.267 47.808 106.073 46.298 105.769 45.671 C 105.46 45.037 104.906 44.62 104.25 44.391 C 102.697 43.848 100.536 44.137 99.052 44.773 C 98.483 45.017 97.976 45.373 97.418 45.639 C 97.45 45.583 97.481 45.524 97.502 45.463 C 97.637 45.071 97.619 43.062 97.441 42.701 C 97.892 42.544 98.325 42.319 98.78 42.161 C 100.016 41.732 101.28 41.555 102.578 41.467 Z M 102.233 49.916 C 101.293 50.005 100.313 50.142 99.677 50.93 C 99.305 51.39 99.17 51.997 99.238 52.579 C 99.313 53.203 99.632 53.741 100.132 54.119 C 100.894 54.697 102.016 54.894 102.952 54.822 C 103.752 54.793 105.128 54.889 105.714 54.273 C 106.276 53.681 106.114 51.737 106.075 50.951 C 106.068 50.81 106.045 50.677 105.968 50.557 C 105.023 49.948 103.322 49.871 102.233 49.916 Z M 75.292 9.227 C 76.492 9.061 78.109 9.193 79.348 9.193 L 88.157 9.196 C 88.184 9.251 88.207 9.305 88.225 9.364 C 88.335 9.726 88.325 12.378 88.135 12.71 L 79.833 12.71 C 79.838 12.721 79.843 12.732 79.848 12.743 C 80.059 13.253 80.038 16.269 79.833 16.793 L 87.033 16.793 C 87.067 16.848 87.098 16.906 87.114 16.968 C 87.226 17.381 87.214 20.02 87.018 20.331 L 82.497 20.325 C 81.673 20.324 80.821 20.279 80.001 20.352 L 79.805 20.713 C 79.844 20.77 79.877 20.829 79.897 20.895 C 80.033 21.341 80.02 24.059 79.814 24.448 L 88.149 24.448 C 88.178 24.507 88.203 24.565 88.223 24.627 C 88.332 24.981 88.323 27.646 88.144 27.961 L 75.274 27.961 C 75.298 27.925 75.317 27.89 75.334 27.851 C 75.433 27.614 75.422 10.955 75.369 9.578 C 75.364 9.454 75.335 9.343 75.292 9.227 Z M 54.585 9.196 L 60.248 9.196 C 61.664 11.141 62.98 13.18 64.341 15.166 C 64.773 14.43 67.744 9.565 67.735 9.196 L 72.763 9.196 C 72.781 9.53 67.454 17.484 66.709 18.629 C 67.41 19.657 72.921 27.542 72.939 27.905 C 72.664 28.077 68.029 27.962 67.315 27.961 C 67.31 27.565 63.851 22.756 63.353 22.03 L 59.753 27.961 L 54.827 27.961 C 56.866 24.828 58.975 21.736 61.051 18.627 Z M 91.985 9.227 C 93.22 9.064 94.619 9.193 95.87 9.196 C 95.896 9.213 95.934 9.236 95.959 9.257 C 96.477 9.693 97.955 11.883 98.451 12.549 C 100.288 15.017 102.25 17.456 103.98 19.997 C 104.066 20.123 104.103 20.217 104.11 20.37 C 104.117 20.351 104.124 20.332 104.132 20.314 C 104.164 20.239 104.196 20.17 104.218 20.091 C 104.377 19.505 104.312 10.656 104.259 9.542 C 104.253 9.408 104.223 9.313 104.157 9.196 L 108.331 9.196 C 108.378 9.275 108.413 9.358 108.435 9.447 C 108.579 10.017 108.463 11.7 108.463 12.395 L 108.458 20.664 C 108.457 21.644 108.599 27.588 108.384 27.915 L 108.085 27.961 L 104.939 27.961 C 104.936 27.948 104.936 27.936 104.933 27.924 C 104.87 27.671 96.576 16.815 96.173 16.564 C 96.186 16.604 96.2 16.643 96.21 16.684 C 96.407 17.436 96.273 19.893 96.273 20.86 C 96.275 23.103 96.37 25.394 96.264 27.632 C 96.258 27.758 96.23 27.849 96.167 27.961 L 91.95 27.961 C 91.976 27.918 91.974 27.924 91.999 27.872 C 92.135 27.597 92.145 9.649 91.985 9.227 Z M 24.634 24.709 C 25.832 24.587 27.014 24.824 28.03 25.481 C 28.098 25.524 28.165 25.568 28.231 25.615 C 28.296 25.661 28.361 25.709 28.424 25.759 C 28.487 25.808 28.549 25.859 28.61 25.912 C 28.67 25.964 28.73 26.018 28.788 26.074 C 28.846 26.13 28.902 26.186 28.957 26.245 C 29.012 26.303 29.066 26.363 29.118 26.424 C 29.17 26.485 29.221 26.547 29.27 26.611 C 29.319 26.674 29.367 26.739 29.412 26.805 C 29.458 26.871 29.502 26.938 29.545 27.006 C 29.587 27.074 29.628 27.143 29.667 27.213 C 29.706 27.283 29.744 27.354 29.779 27.426 C 29.815 27.498 29.848 27.571 29.88 27.645 C 29.912 27.718 29.942 27.793 29.97 27.868 C 29.998 27.943 30.025 28.019 30.049 28.095 C 30.073 28.172 30.096 28.249 30.117 28.326 C 30.137 28.404 30.156 28.482 30.172 28.56 C 30.425 29.739 30.328 31.031 30.329 32.231 L 30.327 37.316 C 30.326 39.145 30.482 42.052 30.256 43.774 C 30.152 44.564 29.938 45.213 29.5 45.879 C 28.682 47.123 27.495 47.795 26.06 48.095 C 25.983 48.106 25.905 48.116 25.827 48.124 C 25.749 48.132 25.671 48.138 25.593 48.142 C 25.515 48.147 25.436 48.149 25.358 48.15 C 25.28 48.151 25.201 48.15 25.123 48.147 C 25.045 48.144 24.967 48.139 24.888 48.133 C 24.81 48.126 24.732 48.118 24.655 48.108 C 24.577 48.098 24.5 48.086 24.422 48.072 C 24.345 48.059 24.269 48.043 24.192 48.026 C 24.116 48.009 24.04 47.99 23.964 47.969 C 23.888 47.948 23.813 47.926 23.739 47.902 C 23.664 47.878 23.59 47.852 23.517 47.824 C 23.444 47.797 23.371 47.767 23.299 47.736 C 23.227 47.705 23.156 47.673 23.086 47.639 C 23.015 47.604 22.945 47.569 22.877 47.531 C 22.808 47.494 22.74 47.455 22.673 47.414 C 22.606 47.373 22.54 47.331 22.475 47.288 C 21.433 46.583 20.638 45.473 20.399 44.237 C 20.169 43.044 20.258 41.766 20.257 40.554 L 20.257 35.366 L 20.258 31.592 C 20.257 30.794 20.211 29.961 20.31 29.17 C 20.42 28.297 20.618 27.628 21.118 26.898 C 21.977 25.643 23.157 24.986 24.634 24.709 Z M 112.358 9.227 C 113.425 9.107 114.59 9.193 115.665 9.192 C 118.125 9.189 120.811 8.978 123.217 9.539 C 125.175 9.996 126.824 10.976 127.897 12.708 C 129.476 15.253 129.616 19.056 128.938 21.913 C 128.669 23.046 127.999 24.959 126.945 25.607 C 126.918 25.725 126.85 25.782 126.765 25.865 C 124.395 28.221 120.403 27.963 117.328 27.964 L 112.317 27.961 C 112.345 27.915 112.371 27.871 112.391 27.821 C 112.547 27.44 112.527 11.106 112.448 9.573 C 112.441 9.449 112.407 9.34 112.358 9.227 Z M 117.016 12.711 L 117.012 20.579 C 117.014 21.732 117.119 22.983 116.997 24.124 C 116.985 24.236 116.939 24.351 116.882 24.448 C 118.801 24.456 121.563 24.763 123.036 23.291 C 123.098 23.23 123.13 23.169 123.154 23.087 C 123.741 22.762 124.115 21.833 124.291 21.22 C 124.833 19.335 124.819 16.647 123.84 14.898 C 123.271 13.88 122.418 13.25 121.296 12.942 C 119.94 12.569 118.412 12.709 117.016 12.711 Z M 39.777 9.218 C 41.013 9.071 42.353 9.451 43.376 10.142 C 44.644 10.998 45.453 12.295 45.735 13.788 C 45.973 15.049 45.816 17.036 45.816 18.36 L 45.818 28.3 L 45.818 44.605 L 45.817 49.735 C 45.816 50.72 45.861 51.732 45.777 52.713 C 45.687 53.762 45.43 54.592 44.827 55.465 C 43.889 56.824 42.537 57.522 40.943 57.809 C 39.507 57.918 38.138 57.61 36.971 56.74 C 35.84 55.897 35.009 54.565 34.814 53.162 C 34.6 51.63 34.746 48.962 34.747 47.351 L 34.748 35.325 L 34.747 21.035 L 34.748 16.552 C 34.748 15.751 34.7 14.909 34.783 14.114 C 34.884 13.156 35.272 12.167 35.856 11.401 C 36.832 10.118 38.2 9.432 39.777 9.218 Z" fill="var(--token-5197bf6c-818c-4eab-85f8-6f703842b3bf, rgb(10, 11, 10))"></path></svg>',
+                          svgContentId: 10638927341,
+                          withExternalLayout: !0,
+                        }),
+                        e("div", {
+                          className: "framer-1nbfb6t",
+                          children: e(s1, {
+                            className: "framer-3nfr41",
+                            "data-framer-name": "WEB_2_",
+                            layout: "position",
+                            name: "WEB_2_",
+                            opacity: 1,
+                            svg: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 221 79"><path d="M 87.058 56.023 C 87.229 55.989 87.363 55.983 87.535 56.007 C 87.616 56.537 87.673 59.051 87.443 59.466 L 87.244 59.477 C 86.88 58.947 87.392 56.775 87.058 56.023 Z" fill="var(--token-5197bf6c-818c-4eab-85f8-6f703842b3bf, rgb(10, 11, 10))"></path><path d="M 213.088 25.413 C 213.186 25.404 213.253 25.424 213.346 25.45 C 213.597 25.717 213.975 26.179 214.045 26.545 C 214.366 26.239 214.831 25.622 214.902 25.175 C 215.172 25.653 215.197 26.827 215.067 27.367 C 215.052 27.43 215.01 27.434 214.957 27.466 C 214.806 27.099 214.965 26.664 214.77 26.31 C 214.763 26.297 214.755 26.286 214.748 26.273 C 214.812 26.164 214.835 26.084 214.852 25.959 C 214.556 26.099 214.311 26.683 214.023 26.923 C 214.023 26.907 214.025 26.89 214.023 26.874 C 213.987 26.573 213.483 25.968 213.236 25.797 C 213.241 25.809 213.246 25.82 213.25 25.832 C 213.257 25.852 213.263 25.872 213.269 25.892 C 213.287 25.944 213.304 25.997 213.318 26.05 C 213.371 26.261 213.431 27.266 213.326 27.443 L 213.176 27.429 C 213.001 26.805 213.215 26.115 213.098 25.473 Z" fill="var(--token-5197bf6c-818c-4eab-85f8-6f703842b3bf, rgb(10, 11, 10))"></path><path d="M 136.886 56.024 C 137.678 55.864 138.843 55.923 139.65 56.008 L 139.737 56.117 L 139.706 56.265 C 139.426 56.429 138.771 56.345 138.428 56.343 C 138.477 56.422 138.519 56.508 138.537 56.6 C 138.616 57.013 138.649 57.967 138.43 58.318 C 138.541 58.484 138.554 58.651 138.566 58.846 C 138.582 59.098 138.559 59.329 138.386 59.527 C 137.804 59.149 138.412 56.998 138.03 56.343 C 137.756 56.347 137.342 56.412 137.088 56.311 C 136.958 56.26 136.943 56.146 136.886 56.024 Z M 148.665 56.024 C 149.267 55.92 150.987 55.863 151.526 56.082 L 151.537 56.188 C 151.236 56.463 150.629 56.354 150.24 56.343 C 150.289 56.422 150.33 56.508 150.348 56.6 C 150.428 57.013 150.46 57.967 150.241 58.318 C 150.263 58.35 150.271 58.36 150.29 58.397 C 150.401 58.613 150.426 59.004 150.339 59.231 C 150.279 59.389 150.191 59.48 150.04 59.54 C 149.711 59.133 150.212 56.989 149.826 56.343 C 149.568 56.347 149.191 56.404 148.946 56.331 C 148.762 56.276 148.752 56.185 148.665 56.024 Z M 78.186 55.979 C 78.996 55.974 79.809 55.937 80.611 56.063 L 80.57 56.063 L 80.732 56.217 L 80.847 56.162 L 80.728 56.101 L 80.669 56.24 C 80.047 56.431 79.231 56.349 78.581 56.343 L 78.581 57.582 L 80.12 57.582 C 80.233 57.587 80.347 57.604 80.459 57.616 L 80.488 57.792 L 80.393 57.896 C 79.869 58.041 79.131 57.939 78.581 57.938 C 78.588 58.418 78.665 59.045 78.466 59.489 L 78.362 59.492 C 78 58.991 78.184 56.656 78.186 55.979 Z M 90.681 55.952 C 90.738 55.941 90.797 55.932 90.855 55.925 C 91.416 55.856 91.935 55.932 92.383 56.293 C 92.492 56.381 92.524 56.382 92.54 56.525 C 92.125 56.835 91.494 56.107 90.938 56.264 C 90.571 56.368 90.238 56.666 90.053 56.995 C 89.846 57.363 89.775 57.82 89.9 58.229 C 90.012 58.595 90.263 58.847 90.597 59.023 C 90.861 59.162 91.139 59.238 91.432 59.146 C 91.446 59.144 91.461 59.142 91.475 59.14 C 91.833 59.099 92.053 58.887 92.363 58.724 C 92.49 58.841 92.509 58.861 92.553 59.027 C 92.503 59.133 92.46 59.187 92.357 59.248 C 91.886 59.526 91.202 59.603 90.679 59.451 C 90.245 59.325 89.823 59.053 89.608 58.642 C 89.357 58.161 89.404 57.557 89.57 57.056 C 89.76 56.482 90.163 56.215 90.681 55.952 Z M 113.706 55.952 C 114.084 55.891 114.483 55.876 114.855 55.979 C 114.892 55.989 114.928 56.001 114.963 56.015 C 114.998 56.028 115.033 56.044 115.067 56.061 C 115.1 56.078 115.133 56.096 115.166 56.117 C 115.198 56.137 115.229 56.159 115.259 56.182 C 115.289 56.205 115.318 56.23 115.345 56.256 C 115.372 56.282 115.399 56.31 115.424 56.338 C 115.449 56.367 115.472 56.397 115.494 56.428 C 115.516 56.459 115.536 56.491 115.555 56.524 L 115.519 56.646 C 115.011 56.764 114.683 56.13 113.967 56.29 C 113.944 56.295 113.921 56.301 113.898 56.307 C 113.875 56.314 113.852 56.321 113.829 56.328 C 113.806 56.336 113.784 56.344 113.761 56.353 C 113.739 56.362 113.718 56.371 113.696 56.381 C 113.674 56.391 113.652 56.401 113.631 56.412 C 113.61 56.423 113.589 56.435 113.568 56.447 C 113.547 56.459 113.527 56.472 113.507 56.485 C 113.487 56.498 113.468 56.512 113.448 56.526 C 113.429 56.54 113.41 56.555 113.392 56.57 C 113.373 56.585 113.355 56.6 113.337 56.616 C 113.319 56.633 113.302 56.649 113.285 56.666 C 113.268 56.683 113.251 56.7 113.235 56.718 C 113.22 56.736 113.204 56.754 113.189 56.773 C 113.174 56.791 113.16 56.81 113.145 56.83 C 113.131 56.849 113.117 56.869 113.104 56.889 C 113.091 56.909 113.079 56.929 113.067 56.95 C 113.054 56.972 113.042 56.994 113.03 57.017 C 113.018 57.039 113.007 57.062 112.997 57.085 C 112.986 57.109 112.976 57.132 112.967 57.156 C 112.958 57.179 112.949 57.203 112.941 57.227 C 112.932 57.251 112.925 57.276 112.918 57.3 C 112.911 57.324 112.904 57.349 112.899 57.374 C 112.892 57.399 112.887 57.423 112.883 57.448 C 112.878 57.474 112.874 57.499 112.871 57.524 C 112.867 57.549 112.865 57.574 112.863 57.6 C 112.861 57.625 112.859 57.65 112.858 57.676 C 112.857 57.701 112.857 57.727 112.857 57.752 C 112.858 57.778 112.859 57.803 112.86 57.828 C 112.862 57.854 112.864 57.879 112.867 57.904 C 112.87 57.93 112.873 57.955 112.877 57.98 C 112.882 58.005 112.886 58.03 112.892 58.055 C 112.897 58.08 112.903 58.105 112.909 58.129 C 113.019 58.53 113.253 58.839 113.618 59.041 C 113.867 59.178 114.172 59.231 114.447 59.147 C 114.863 59.101 115.144 58.746 115.496 58.722 C 115.51 58.776 115.5 58.802 115.485 58.856 C 115.415 59.107 115.194 59.312 114.974 59.436 C 114.62 59.636 114.191 59.643 113.809 59.525 C 113.308 59.37 112.867 59.046 112.629 58.569 C 112.616 58.541 112.603 58.513 112.591 58.485 C 112.579 58.456 112.567 58.427 112.556 58.398 C 112.546 58.369 112.536 58.34 112.526 58.311 C 112.517 58.281 112.509 58.251 112.501 58.221 C 112.493 58.191 112.486 58.161 112.48 58.131 C 112.474 58.101 112.468 58.07 112.463 58.04 C 112.459 58.009 112.455 57.978 112.451 57.948 C 112.448 57.917 112.446 57.886 112.444 57.855 C 112.442 57.824 112.441 57.793 112.441 57.762 C 112.441 57.731 112.441 57.701 112.443 57.67 C 112.444 57.639 112.446 57.608 112.449 57.577 C 112.452 57.546 112.455 57.516 112.46 57.485 C 112.464 57.454 112.469 57.424 112.476 57.393 C 112.481 57.363 112.488 57.333 112.496 57.303 C 112.503 57.273 112.511 57.243 112.52 57.213 C 112.528 57.184 112.538 57.154 112.548 57.125 C 112.762 56.523 113.147 56.217 113.706 55.952 Z M 118.316 55.952 C 118.638 55.905 118.918 55.893 119.241 55.945 C 119.574 55.999 119.936 56.117 120.137 56.411 C 120.174 56.466 120.142 56.522 120.13 56.585 C 119.708 56.804 119.168 56.087 118.427 56.308 C 118.116 56.401 117.86 56.636 117.705 56.916 C 117.492 57.299 117.423 57.774 117.544 58.198 C 117.651 58.572 117.92 58.868 118.261 59.051 C 118.512 59.186 118.818 59.229 119.092 59.146 C 119.485 59.096 119.657 58.839 120.004 58.734 C 120.128 58.825 120.138 58.839 120.19 58.985 C 120.052 59.145 119.89 59.258 119.704 59.357 C 119.678 59.371 119.651 59.385 119.623 59.397 C 119.595 59.41 119.568 59.422 119.539 59.433 C 119.511 59.445 119.483 59.455 119.454 59.465 C 119.426 59.475 119.397 59.484 119.368 59.493 C 119.339 59.501 119.309 59.509 119.28 59.516 C 119.25 59.523 119.221 59.53 119.191 59.535 C 119.161 59.541 119.131 59.546 119.101 59.55 C 119.071 59.554 119.041 59.557 119.011 59.56 C 118.981 59.563 118.95 59.565 118.92 59.566 C 118.89 59.567 118.86 59.567 118.83 59.567 C 118.799 59.566 118.769 59.565 118.739 59.563 C 118.708 59.562 118.678 59.559 118.648 59.556 C 118.618 59.552 118.588 59.548 118.558 59.543 C 118.528 59.538 118.498 59.533 118.469 59.527 C 118.439 59.52 118.41 59.513 118.38 59.505 C 118.351 59.498 118.322 59.489 118.293 59.48 C 117.848 59.335 117.438 58.981 117.232 58.56 C 117.02 58.125 117.003 57.603 117.164 57.149 C 117.377 56.549 117.758 56.222 118.316 55.952 Z" fill="var(--token-5197bf6c-818c-4eab-85f8-6f703842b3bf, rgb(10, 11, 10))"></path><path d="M 163.888 27.277 C 164.195 27.211 164.481 27.158 164.778 27.293 C 165.028 27.408 165.253 27.644 165.348 27.904 C 165.433 28.137 165.429 28.38 165.313 28.604 C 165.18 28.862 164.964 29.016 164.693 29.1 C 164.602 29.162 164.576 29.168 164.468 29.181 C 164.204 29.21 164.02 29.205 163.806 29.019 C 163.566 28.809 163.446 28.444 163.443 28.131 C 163.439 27.75 163.639 27.531 163.888 27.277 Z" fill="var(--token-5197bf6c-818c-4eab-85f8-6f703842b3bf, rgb(10, 11, 10))"></path><path d="M 101.777 55.952 C 101.906 55.933 102.035 55.922 102.165 55.917 C 102.625 55.902 102.934 56.049 103.262 56.356 L 103.256 56.461 C 102.944 56.516 102.606 56.315 102.288 56.289 C 102.045 56.269 101.761 56.306 101.576 56.48 C 101.461 56.588 101.393 56.74 101.397 56.898 C 101.414 57.462 102.936 57.602 103.343 57.995 C 103.475 58.123 103.558 58.27 103.559 58.458 C 103.56 58.708 103.41 59.033 103.237 59.21 C 102.943 59.511 102.548 59.523 102.154 59.54 C 102.091 59.532 102.028 59.522 101.965 59.511 C 101.542 59.434 101.239 59.289 100.992 58.927 L 101.02 58.823 C 101.27 58.815 101.451 58.963 101.669 59.062 C 101.988 59.206 102.429 59.247 102.755 59.102 C 102.93 59.024 103.068 58.886 103.119 58.696 C 103.315 57.979 101.437 57.868 101.081 57.258 C 100.971 57.07 100.964 56.825 101.037 56.621 C 101.166 56.265 101.456 56.109 101.777 55.952 Z M 131.164 55.952 C 131.503 55.889 131.837 55.935 132.168 56.02 C 132.421 56.086 132.614 56.136 132.75 56.366 L 132.696 56.483 C 132.386 56.577 131.841 56.328 131.499 56.3 C 131.252 56.28 131.041 56.339 130.858 56.515 C 130.712 56.656 130.694 56.712 130.689 56.903 C 131.023 57.468 132.075 57.549 132.602 57.942 C 132.778 58.073 132.948 58.266 132.964 58.495 C 132.981 58.75 132.805 59.006 132.638 59.182 C 132.332 59.502 131.949 59.527 131.53 59.54 C 131.467 59.532 131.404 59.522 131.341 59.511 C 130.912 59.432 130.598 59.281 130.348 58.917 L 130.383 58.822 C 130.689 58.818 130.91 59.021 131.188 59.117 C 131.492 59.223 131.909 59.228 132.195 59.068 C 132.336 58.989 132.445 58.865 132.485 58.705 C 132.699 57.843 130.812 57.972 130.464 57.277 C 130.363 57.074 130.359 56.8 130.436 56.586 C 130.559 56.239 130.853 56.098 131.164 55.952 Z M 126.983 55.952 C 127.404 55.9 127.81 55.913 128.21 56.079 C 128.392 56.154 128.455 56.218 128.53 56.394 L 128.437 56.581 C 128.165 56.638 127.788 56.271 127.461 56.253 C 127.214 56.24 126.941 56.3 126.763 56.484 C 126.611 56.642 126.573 56.757 126.579 56.963 C 126.851 57.473 127.925 57.549 128.391 57.913 C 128.573 58.055 128.706 58.258 128.726 58.492 C 128.744 58.701 128.682 58.969 128.545 59.128 C 128.268 59.45 127.853 59.505 127.456 59.54 C 127.254 59.522 127.064 59.496 126.87 59.433 C 126.616 59.35 126.23 59.223 126.102 58.971 L 126.155 58.842 C 126.665 58.759 127.193 59.27 127.755 59.186 C 128.013 59.147 128.202 58.951 128.348 58.75 C 128.417 57.92 126.6 57.92 126.236 57.145 C 126.159 56.981 126.165 56.803 126.229 56.635 C 126.369 56.263 126.642 56.113 126.983 55.952 Z M 189.862 56.024 C 190.645 55.885 191.647 55.939 192.44 55.988 C 192.514 56.136 192.5 56.14 192.462 56.292 C 191.806 56.448 190.943 56.34 190.262 56.333 C 190.292 56.379 190.315 56.418 190.329 56.471 C 190.415 56.793 190.398 57.25 190.244 57.544 C 190.693 57.54 191.142 57.531 191.591 57.532 C 191.828 57.533 192.109 57.527 192.286 57.708 L 192.278 57.848 C 192.036 58.013 190.88 57.901 190.534 57.899 L 190.41 57.927 C 190.226 58.282 190.472 58.757 190.253 59.139 C 190.991 59.136 191.745 59.1 192.481 59.15 C 192.567 59.297 192.547 59.298 192.509 59.456 C 191.684 59.608 190.7 59.499 189.853 59.494 C 189.888 59.442 189.92 59.386 189.938 59.325 C 190.061 58.916 190.036 56.335 189.862 56.024 Z M 153.176 56.024 C 153.295 55.999 153.411 55.996 153.532 55.992 C 153.607 56.068 153.647 56.134 153.675 56.239 C 153.765 56.574 153.713 57.204 153.541 57.507 L 155.572 57.507 C 155.836 57.061 155.596 56.549 155.753 56.089 C 155.786 55.99 155.798 55.997 155.891 55.953 C 156.023 56.089 156.074 56.177 156.094 56.375 C 156.144 56.871 156.238 59.164 155.962 59.49 L 155.764 59.463 C 155.536 58.983 155.857 58.389 155.566 57.899 L 153.541 57.899 C 153.546 57.913 153.552 57.926 153.559 57.939 C 153.611 58.044 153.651 58.137 153.661 58.255 C 153.69 58.612 153.766 59.267 153.529 59.543 L 153.45 59.538 C 153.418 59.515 153.32 59.461 153.302 59.432 C 153.067 59.049 153.476 56.702 153.176 56.024 Z M 169.851 56.024 C 170.537 55.911 171.384 55.948 172.08 55.986 C 172.256 55.996 172.409 56.006 172.527 56.139 C 172.511 56.157 172.496 56.176 172.479 56.193 C 172.181 56.48 170.721 56.338 170.259 56.333 C 170.288 56.379 170.312 56.418 170.326 56.471 C 170.412 56.792 170.394 57.249 170.246 57.544 C 170.838 57.533 171.497 57.475 172.077 57.621 C 172.187 57.649 172.244 57.648 172.304 57.751 C 171.803 57.986 171.132 57.907 170.592 57.899 L 170.405 57.936 C 170.236 58.31 170.469 58.76 170.25 59.139 C 170.95 59.141 171.857 58.995 172.52 59.218 L 172.549 59.439 L 172.57 59.239 L 172.515 59.446 C 171.66 59.591 170.71 59.499 169.841 59.494 C 169.877 59.442 169.908 59.386 169.926 59.325 C 170.049 58.916 170.025 56.336 169.851 56.024 Z M 157.978 56.024 C 158.572 55.925 160.006 55.885 160.581 55.998 C 160.619 56.141 160.619 56.162 160.574 56.303 C 159.906 56.437 159.084 56.34 158.395 56.333 C 158.425 56.379 158.449 56.418 158.463 56.471 C 158.547 56.792 158.53 57.249 158.382 57.544 L 159.486 57.533 C 159.719 57.532 160.243 57.485 160.403 57.645 L 160.396 57.817 C 160.144 58.014 159.028 57.9 158.656 57.899 L 158.55 57.926 C 158.348 58.261 158.605 58.76 158.386 59.139 C 159.111 59.142 159.931 59.048 160.642 59.165 C 160.685 59.292 160.682 59.306 160.647 59.437 C 159.963 59.634 158.715 59.498 157.971 59.494 C 158.009 59.431 158.042 59.366 158.062 59.294 C 158.177 58.883 158.155 56.335 157.978 56.024 Z M 121.81 56.024 C 122.218 55.951 124.169 55.877 124.449 56.043 C 124.46 56.188 124.47 56.201 124.388 56.329 C 123.676 56.372 122.946 56.336 122.232 56.333 C 122.26 56.379 122.285 56.418 122.299 56.471 C 122.383 56.792 122.366 57.248 122.22 57.544 C 122.747 57.535 123.3 57.495 123.824 57.543 C 124.011 57.56 124.138 57.592 124.26 57.739 L 124.218 57.871 C 123.691 57.976 123.033 57.902 122.49 57.899 L 122.383 57.927 C 122.185 58.265 122.441 58.76 122.223 59.139 C 122.786 59.143 123.35 59.112 123.914 59.122 C 124.127 59.125 124.377 59.113 124.526 59.27 C 124.511 59.336 124.516 59.379 124.463 59.427 C 124.255 59.615 122.203 59.497 121.803 59.494 C 121.842 59.431 121.875 59.366 121.895 59.294 C 122.01 58.883 121.988 56.335 121.81 56.024 Z M 167.475 58.801 C 167.867 58.15 167.277 56.619 167.643 56.004 C 167.778 55.985 167.824 55.986 167.946 56.046 C 167.96 56.139 167.973 56.233 167.978 56.326 C 168.006 56.806 168.084 59.207 167.826 59.491 C 167.37 59.463 165.88 57.041 165.302 56.614 C 165.445 56.999 165.487 58.916 165.34 59.286 C 165.279 59.437 165.256 59.442 165.117 59.506 C 165.076 59.483 165.019 59.478 164.994 59.438 C 164.842 59.2 165.149 56.667 164.898 56.066 C 164.892 56.052 164.885 56.038 164.879 56.024 C 165.054 55.989 165.186 55.98 165.363 56.012 C 165.734 56.368 167.392 58.396 167.475 58.801 Z M 74.546 55.903 L 74.799 55.944 C 75.14 56.211 76.277 58.928 76.457 59.462 C 76.349 59.523 76.249 59.489 76.134 59.469 C 75.9 59.255 75.784 58.854 75.661 58.565 L 74.941 58.562 L 73.745 58.562 C 73.58 58.971 73.468 59.275 73.082 59.527 L 72.989 59.47 C 73.143 58.704 74.171 56.726 74.546 55.903 Z M 74.693 56.455 L 73.9 58.207 L 74.727 58.207 L 75.507 58.205 C 75.26 57.65 75.036 56.95 74.693 56.455 Z M 95.551 55.952 C 95.683 55.947 95.818 55.953 95.95 55.954 C 96.447 56.686 96.858 57.787 97.197 58.614 C 97.294 58.849 97.49 59.269 97.389 59.512 C 97.029 59.281 96.894 58.941 96.712 58.571 C 96.482 58.522 96.143 58.564 95.901 58.562 L 94.733 58.562 C 94.739 58.593 94.751 58.644 94.75 58.679 C 94.741 58.897 94.512 59.337 94.367 59.496 L 94.181 59.472 C 93.959 59.11 95.472 56.59 95.551 55.952 Z M 95.668 56.525 C 95.678 56.872 95.195 57.901 94.951 58.15 C 94.922 58.179 94.916 58.183 94.888 58.207 L 95.687 58.207 L 96.526 58.203 C 96.403 57.661 96.137 57.094 95.86 56.614 Z M 109.083 55.952 L 109.435 55.948 C 109.806 56.211 110.858 58.886 111.106 59.465 L 111.068 59.487 C 110.451 59.435 110.657 59.011 110.279 58.667 C 110.081 58.487 109.732 58.55 109.481 58.562 L 108.296 58.562 C 108.328 58.734 108.217 58.997 108.146 59.155 C 108.071 59.323 107.956 59.426 107.786 59.491 L 107.709 59.425 C 107.643 58.49 109.009 56.975 109.083 55.952 Z M 109.223 56.526 C 109.194 56.95 108.75 57.915 108.448 58.207 L 109.338 58.207 C 109.559 58.212 109.89 58.259 110.095 58.191 C 110.105 58.091 110.124 58.079 110.068 57.991 C 109.826 57.606 109.63 56.665 109.223 56.526 Z M 184.47 58.889 C 184.479 58.88 184.489 58.87 184.499 58.861 C 184.804 58.533 185.525 56.207 185.514 55.729 C 185.613 55.803 185.735 55.885 185.81 55.984 C 186.009 56.245 186.795 58.562 186.731 58.864 C 187.232 58.288 187.385 57.134 187.649 56.412 C 187.732 56.186 187.839 56.079 188.052 55.981 L 188.169 56.055 C 188.153 56.255 188.087 56.304 187.962 56.454 C 187.976 56.519 187.986 56.591 187.979 56.657 C 187.914 57.199 187.274 58.936 186.986 59.425 C 186.907 59.558 186.774 59.662 186.653 59.753 C 186.657 59.169 185.938 57.169 185.596 56.653 C 185.611 56.728 185.622 56.806 185.607 56.882 C 185.492 57.482 185.011 58.978 184.689 59.487 C 184.618 59.599 184.491 59.681 184.383 59.753 C 184.383 59.732 184.385 59.71 184.384 59.688 C 184.381 59.22 183.387 56.369 183.053 56.024 C 183.255 55.993 183.423 55.955 183.594 56.074 C 183.83 56.656 184.52 58.355 184.47 58.889 Z M 173.967 56.024 C 174.088 56.005 174.268 55.957 174.387 55.99 C 174.474 56.015 174.489 56.048 174.524 56.123 C 174.722 56.55 175.477 58.578 175.354 58.919 C 175.363 58.908 175.373 58.896 175.382 58.884 C 175.749 58.43 176.423 56.339 176.446 55.728 C 176.542 55.803 176.661 55.885 176.732 55.984 C 176.949 56.284 177.71 58.548 177.667 58.908 C 178.114 58.193 178.271 57.234 178.555 56.441 C 178.64 56.202 178.748 56.085 178.971 55.977 L 179.085 56.036 C 179.091 56.216 179.029 56.246 178.918 56.383 C 178.958 56.834 178.234 58.763 177.969 59.21 C 177.868 59.379 177.794 59.47 177.6 59.517 C 177.244 58.785 176.977 57.208 176.513 56.666 C 176.503 56.653 176.491 56.642 176.48 56.63 C 176.502 56.729 176.521 56.813 176.505 56.916 C 176.425 57.455 175.899 59.02 175.603 59.486 C 175.533 59.597 175.413 59.679 175.307 59.753 C 175.307 59.738 175.308 59.722 175.308 59.706 C 175.283 59.19 174.327 56.392 173.967 56.024 Z M 82.384 56.023 C 82.939 55.939 84.058 55.867 84.577 56.053 C 84.611 56.065 84.644 56.079 84.676 56.095 C 84.709 56.111 84.741 56.128 84.771 56.147 C 84.802 56.165 84.832 56.186 84.861 56.207 C 84.89 56.229 84.918 56.252 84.944 56.277 C 84.971 56.301 84.996 56.327 85.021 56.354 C 85.044 56.381 85.067 56.409 85.089 56.438 C 85.11 56.467 85.13 56.497 85.149 56.528 C 85.167 56.559 85.184 56.591 85.199 56.624 C 85.213 56.654 85.226 56.684 85.237 56.715 C 85.247 56.746 85.257 56.777 85.264 56.809 C 85.272 56.841 85.278 56.873 85.283 56.905 C 85.287 56.938 85.29 56.97 85.292 57.003 C 85.292 57.036 85.292 57.068 85.29 57.101 C 85.288 57.134 85.284 57.166 85.279 57.199 C 85.273 57.231 85.266 57.263 85.257 57.294 C 85.249 57.326 85.238 57.357 85.226 57.388 C 85.072 57.782 84.77 57.873 84.413 58.028 C 84.364 58.335 85.166 58.997 85.287 59.367 C 85.307 59.425 85.28 59.444 85.255 59.497 L 84.931 59.495 C 84.605 59.063 84.244 58.425 83.803 58.121 L 82.766 58.121 C 82.793 58.165 82.816 58.21 82.836 58.256 C 82.951 58.527 82.941 59.252 82.833 59.528 C 82.758 59.581 82.781 59.586 82.681 59.572 C 82.638 59.535 82.537 59.47 82.51 59.426 C 82.253 59.001 82.729 56.728 82.384 56.023 Z M 82.787 56.381 C 82.939 56.7 82.968 57.257 82.864 57.597 C 82.843 57.663 82.818 57.707 82.781 57.766 C 83.276 57.773 84.146 57.896 84.558 57.602 L 84.605 57.53 C 84.769 57.403 84.937 57.19 84.95 56.972 C 84.957 56.852 84.872 56.734 84.79 56.654 C 84.385 56.258 83.407 56.315 82.879 56.369 C 82.848 56.372 82.817 56.377 82.787 56.381 Z M 194.225 56.024 C 194.741 55.936 195.432 55.926 195.956 55.961 C 196.292 55.984 196.614 56.114 196.827 56.388 C 196.964 56.565 197.042 56.782 196.999 57.007 C 196.952 57.259 196.792 57.443 196.593 57.59 C 196.524 57.64 196.548 57.604 196.531 57.698 C 196.699 57.812 196.89 57.927 197.037 58.066 C 197.149 58.173 197.222 58.295 197.222 58.454 C 197.222 58.636 197.148 58.76 197.032 58.892 C 197.034 58.904 197.038 58.915 197.038 58.927 C 197.042 59.031 196.986 59.121 196.914 59.19 C 196.391 59.684 194.907 59.503 194.214 59.494 C 194.25 59.442 194.281 59.386 194.299 59.325 C 194.423 58.916 194.398 56.336 194.225 56.024 Z M 194.634 57.96 C 194.784 58.24 194.812 58.657 194.717 58.962 C 194.697 59.025 194.665 59.083 194.63 59.139 C 195.099 59.144 196.112 59.268 196.481 59.006 L 196.512 58.957 C 196.695 58.814 196.767 58.702 196.861 58.495 C 196.846 58.336 196.831 58.277 196.699 58.167 C 196.289 57.825 195.261 57.858 194.762 57.934 C 194.719 57.94 194.677 57.95 194.634 57.96 Z M 194.636 56.382 C 194.786 56.706 194.817 57.107 194.687 57.446 C 194.67 57.489 194.662 57.501 194.639 57.544 C 195.075 57.551 195.924 57.671 196.291 57.403 L 196.341 57.314 C 196.514 57.202 196.597 57.07 196.704 56.9 C 196.664 56.706 196.639 56.653 196.468 56.54 C 196.039 56.254 195.131 56.291 194.636 56.382 Z M 142.339 55.952 C 142.356 55.949 142.374 55.946 142.391 55.944 C 142.955 55.856 143.466 55.898 143.936 56.25 C 143.96 56.268 143.984 56.287 144.008 56.307 C 144.031 56.327 144.054 56.347 144.077 56.368 C 144.1 56.389 144.122 56.411 144.143 56.433 C 144.165 56.455 144.186 56.477 144.206 56.501 C 144.227 56.524 144.246 56.547 144.265 56.572 C 144.284 56.596 144.303 56.62 144.321 56.645 C 144.339 56.67 144.356 56.696 144.373 56.722 C 144.389 56.748 144.405 56.774 144.421 56.801 C 144.436 56.827 144.451 56.854 144.465 56.882 C 144.479 56.909 144.492 56.937 144.505 56.965 C 144.517 56.993 144.529 57.022 144.541 57.051 C 144.552 57.079 144.562 57.108 144.572 57.138 C 144.582 57.167 144.591 57.196 144.599 57.226 C 144.607 57.256 144.615 57.286 144.621 57.316 C 144.628 57.346 144.634 57.376 144.639 57.407 C 144.644 57.437 144.649 57.467 144.653 57.498 C 144.714 57.974 144.603 58.491 144.305 58.872 C 144.02 59.235 143.63 59.444 143.178 59.503 C 143.166 59.511 143.154 59.52 143.141 59.526 C 142.933 59.633 142.474 59.574 142.258 59.513 C 141.853 59.399 141.52 59.005 141.333 58.645 C 141.091 58.182 141.027 57.636 141.189 57.136 C 141.391 56.515 141.774 56.23 142.339 55.952 Z M 142.432 56.311 C 142.017 56.544 141.721 56.762 141.587 57.239 C 141.578 57.267 141.571 57.296 141.564 57.325 C 141.558 57.353 141.552 57.382 141.546 57.411 C 141.541 57.441 141.537 57.47 141.534 57.499 C 141.53 57.528 141.527 57.558 141.524 57.587 C 141.522 57.617 141.521 57.646 141.52 57.676 C 141.519 57.705 141.519 57.735 141.52 57.764 C 141.521 57.794 141.523 57.823 141.525 57.853 C 141.527 57.882 141.53 57.912 141.534 57.941 C 141.537 57.97 141.542 58 141.547 58.029 C 141.552 58.058 141.559 58.087 141.566 58.115 C 141.572 58.144 141.58 58.173 141.588 58.201 C 141.596 58.23 141.605 58.258 141.614 58.286 C 141.624 58.314 141.634 58.341 141.646 58.369 C 141.657 58.396 141.668 58.423 141.681 58.45 C 141.693 58.477 141.706 58.503 141.72 58.529 C 141.733 58.556 141.748 58.581 141.763 58.607 C 141.908 58.852 142.127 59.07 142.411 59.139 C 142.598 59.185 142.929 59.23 143.108 59.145 C 143.499 59.071 143.795 58.911 144.026 58.575 C 144.253 58.245 144.309 57.817 144.225 57.43 C 144.219 57.405 144.214 57.38 144.207 57.356 C 144.201 57.331 144.194 57.307 144.186 57.283 C 144.178 57.259 144.17 57.235 144.161 57.211 C 144.152 57.187 144.143 57.164 144.133 57.141 C 144.123 57.118 144.112 57.095 144.101 57.072 C 144.09 57.049 144.078 57.027 144.066 57.005 C 144.054 56.983 144.041 56.961 144.027 56.939 C 144.014 56.918 144 56.897 143.985 56.876 C 143.971 56.855 143.956 56.835 143.94 56.815 C 143.925 56.795 143.909 56.775 143.892 56.756 C 143.876 56.737 143.859 56.718 143.842 56.7 C 143.824 56.682 143.806 56.664 143.788 56.646 C 143.77 56.629 143.751 56.612 143.731 56.596 C 143.712 56.579 143.693 56.563 143.673 56.548 C 143.653 56.532 143.633 56.517 143.612 56.503 C 143.591 56.488 143.57 56.474 143.548 56.461 C 143.199 56.245 142.826 56.255 142.432 56.311 Z" fill="var(--token-5197bf6c-818c-4eab-85f8-6f703842b3bf, rgb(10, 11, 10))"></path><path d="M 164.092 31.65 C 164.298 31.634 164.512 31.616 164.706 31.7 C 164.899 31.784 165.035 31.972 165.092 32.17 C 165.288 32.863 165.21 42.763 165.152 44.066 C 165.141 44.336 165.147 44.7 165.012 44.938 C 164.907 45.12 164.741 45.156 164.552 45.199 C 164.463 45.228 164.398 45.231 164.304 45.222 C 164.092 45.201 163.926 45.138 163.795 44.957 C 163.634 44.733 163.636 44.429 163.622 44.165 C 163.487 41.732 163.604 39.22 163.606 36.779 C 163.607 35.496 163.481 33.468 163.641 32.287 C 163.682 31.976 163.859 31.826 164.092 31.65 Z M 155.631 31.65 C 155.829 31.625 156.091 31.573 156.273 31.666 C 156.469 31.765 156.57 31.974 156.635 32.173 C 156.81 32.711 156.807 33.953 156.545 34.463 C 157.249 33.834 157.182 32.676 158.326 31.978 C 158.972 31.583 159.827 31.581 160.541 31.754 C 161.046 31.877 161.716 32.135 161.982 32.622 C 162.069 32.783 162.09 32.951 162.026 33.124 C 161.913 33.429 161.648 33.556 161.376 33.689 C 160.529 33.375 159.587 33.08 158.704 33.441 C 157.656 33.87 157.265 35.204 157.102 36.23 C 157.041 36.612 157.025 37.061 156.866 37.415 C 156.859 37.429 156.852 37.443 156.846 37.457 C 156.864 37.496 156.883 37.54 156.893 37.582 C 157.009 38.078 156.886 38.899 156.886 39.424 C 156.884 41.06 157.004 42.788 156.865 44.415 C 156.848 44.603 156.802 44.829 156.681 44.978 C 156.56 45.127 156.363 45.215 156.175 45.231 C 155.961 45.249 155.723 45.187 155.559 45.044 C 155.327 44.843 155.323 44.388 155.316 44.102 C 155.257 41.781 155.338 39.446 155.333 37.123 C 155.329 35.602 155.182 33.972 155.335 32.463 C 155.368 32.137 155.403 31.895 155.631 31.65 Z M 203.888 31.65 C 203.932 31.647 203.976 31.644 204.02 31.642 C 205.552 31.567 207.022 31.918 208.18 32.971 C 209.319 34.007 209.992 35.722 210.049 37.251 C 210.062 37.612 210.031 38.098 209.753 38.365 C 209.571 38.539 209.252 38.576 209.011 38.601 C 207.999 38.704 206.915 38.631 205.895 38.63 L 200.05 38.624 C 200.582 39.433 199.996 41.013 201.511 42.694 C 202.256 43.52 203.157 43.896 204.263 43.945 C 205.313 43.992 206.462 43.65 207.235 42.913 C 207.468 42.69 207.859 42.26 207.867 41.927 C 208.159 41.686 208.205 41.297 208.403 40.989 C 208.557 40.748 208.843 40.589 209.122 40.539 C 209.209 40.523 209.345 40.531 209.421 40.584 C 209.6 40.708 209.665 40.861 209.7 41.072 C 209.818 41.786 209.4 42.556 208.991 43.108 C 208.216 44.154 206.973 44.947 205.681 45.135 C 204.059 45.373 202.266 45.17 200.926 44.16 C 199.55 43.123 198.882 41.53 198.653 39.859 C 198.371 37.804 198.633 35.399 199.926 33.707 C 200.933 32.386 202.291 31.857 203.888 31.65 Z M 203.753 32.941 C 202.52 33.267 201.549 33.847 200.887 34.981 C 200.465 35.706 200.364 36.896 200.126 37.241 C 200.118 37.253 200.11 37.265 200.101 37.277 C 200.076 37.315 200.081 37.307 200.048 37.347 L 208.343 37.347 C 208.531 36.935 208.19 35.769 208.029 35.344 C 207.672 34.402 206.972 33.635 206.049 33.231 C 205.316 32.911 204.538 32.86 203.753 32.941 Z M 179.404 26.704 C 179.572 26.689 179.726 26.687 179.89 26.724 C 180.063 26.763 180.195 26.848 180.282 27.005 C 180.406 27.229 180.409 27.504 180.42 27.753 C 180.497 29.524 180.543 44.259 180.307 44.876 C 180.256 45.011 180.153 45.113 180.022 45.171 C 179.825 45.26 179.576 45.243 179.379 45.161 C 178.563 44.818 179.071 43.658 178.809 43.011 C 178.803 42.994 178.795 42.978 178.788 42.961 C 178.782 43.012 178.779 43.051 178.752 43.095 C 178.135 44.116 176.663 44.816 175.537 45.066 C 173.358 45.55 172.153 45.087 170.347 43.935 C 170.322 43.808 169.397 42.678 169.234 42.393 C 168.881 41.775 168.646 41.088 168.51 40.39 C 168.096 38.279 168.24 35.793 169.471 33.964 C 169.519 33.892 169.568 33.822 169.619 33.752 C 169.67 33.683 169.723 33.615 169.777 33.549 C 169.831 33.482 169.887 33.417 169.945 33.354 C 170.002 33.29 170.062 33.228 170.122 33.167 C 170.183 33.107 170.245 33.047 170.309 32.99 C 170.372 32.932 170.438 32.876 170.504 32.822 C 170.57 32.768 170.638 32.715 170.707 32.664 C 170.777 32.613 170.847 32.564 170.918 32.517 C 170.99 32.469 171.062 32.424 171.136 32.38 C 171.21 32.336 171.285 32.294 171.361 32.254 C 171.436 32.215 171.513 32.176 171.591 32.14 C 171.669 32.104 171.748 32.07 171.827 32.038 C 171.907 32.006 171.987 31.976 172.068 31.948 C 172.149 31.919 172.231 31.893 172.313 31.869 C 172.395 31.845 172.478 31.823 172.562 31.803 C 172.645 31.784 172.729 31.766 172.813 31.75 C 174.443 31.442 176.238 31.713 177.618 32.664 C 178.001 32.928 178.708 33.546 178.797 34.026 C 179.2 33.15 178.608 28.612 178.953 27.247 C 179.025 26.961 179.162 26.842 179.404 26.704 Z M 173.569 32.941 C 172.296 33.279 171.409 33.804 170.725 34.983 C 169.81 36.558 169.683 38.742 170.159 40.476 C 170.491 41.688 171.196 42.787 172.304 43.421 C 172.972 43.803 174.137 44.153 174.91 43.914 C 174.934 43.906 174.964 43.89 174.986 43.88 C 175.985 43.827 176.964 43.295 177.627 42.56 C 178.735 41.331 178.976 39.501 178.881 37.904 C 178.794 36.441 178.309 34.99 177.184 33.995 C 176.193 33.118 174.942 32.837 173.658 32.932 C 173.628 32.934 173.598 32.937 173.569 32.941 Z M 91.717 30.073 C 93.151 29.891 94.639 30.055 95.964 30.648 C 97.299 31.246 98.439 32.298 98.952 33.692 C 99.263 34.535 99.416 35.709 98.843 36.48 C 98.013 37.596 91.186 39.522 90.835 40.296 L 90.909 40.463 C 91.184 40.709 91.631 40.845 91.977 40.965 C 93.702 41.565 94.435 40.531 95.793 39.889 C 96.229 39.683 96.75 39.62 97.207 39.794 C 97.715 39.988 98.204 40.582 98.416 41.075 C 98.495 41.26 98.526 41.421 98.453 41.615 C 98.483 41.674 98.511 41.729 98.524 41.795 C 98.592 42.12 98.469 42.516 98.294 42.788 C 97.644 43.799 95.913 44.614 94.788 44.866 C 92.744 45.324 90.542 45.023 88.765 43.886 C 88.715 43.854 88.665 43.821 88.615 43.787 C 88.566 43.754 88.516 43.719 88.467 43.685 C 88.419 43.65 88.37 43.614 88.323 43.578 C 88.275 43.542 88.227 43.506 88.18 43.468 C 88.133 43.431 88.087 43.393 88.04 43.355 C 87.994 43.317 87.949 43.278 87.904 43.238 C 87.859 43.199 87.814 43.159 87.77 43.118 C 87.726 43.077 87.682 43.036 87.639 42.994 C 87.596 42.953 87.553 42.91 87.512 42.868 C 87.469 42.825 87.427 42.782 87.386 42.738 C 87.345 42.694 87.305 42.65 87.265 42.605 C 87.225 42.56 87.186 42.515 87.147 42.469 C 87.108 42.423 87.07 42.377 87.033 42.33 C 86.995 42.284 86.958 42.237 86.921 42.189 C 86.885 42.141 86.849 42.093 86.814 42.045 C 86.779 41.996 86.744 41.947 86.71 41.898 C 86.676 41.848 86.642 41.799 86.61 41.748 C 86.577 41.698 86.544 41.647 86.512 41.596 C 86.481 41.545 86.45 41.494 86.419 41.442 C 86.389 41.39 86.36 41.338 86.331 41.286 C 86.302 41.233 86.273 41.18 86.246 41.127 C 86.218 41.074 86.19 41.02 86.164 40.966 C 86.138 40.912 86.112 40.858 86.087 40.804 C 86.062 40.749 86.037 40.694 86.013 40.639 C 85.99 40.584 85.967 40.529 85.945 40.473 C 85.922 40.417 85.901 40.361 85.88 40.305 C 85.859 40.249 85.839 40.192 85.819 40.135 C 85.799 40.079 85.78 40.022 85.762 39.964 C 85.744 39.907 85.726 39.85 85.71 39.792 C 85.693 39.734 85.677 39.676 85.662 39.618 C 85.646 39.56 85.631 39.502 85.617 39.444 C 85.604 39.385 85.591 39.327 85.578 39.268 C 85.144 37.25 85.482 35.082 86.602 33.342 C 87.808 31.47 89.593 30.527 91.717 30.073 Z M 92.221 34.016 C 91.234 34.354 90.267 34.915 89.78 35.886 C 89.647 36.151 89.561 36.42 89.661 36.711 C 89.804 36.846 89.863 36.897 90.073 36.897 C 90.417 36.897 91.071 36.515 91.362 36.321 C 91.839 36.181 94.402 35.196 94.596 34.854 C 94.676 34.714 94.653 34.665 94.623 34.515 C 94.345 34.161 93.881 34.061 93.456 34.008 C 93.251 33.984 93.045 33.972 92.839 33.974 C 92.632 33.975 92.426 33.989 92.221 34.016 Z M 188.93 31.65 C 190.221 31.567 191.522 31.803 192.629 32.496 C 193.096 32.79 193.971 33.464 194.1 34.021 C 194.387 33.313 193.925 32.422 194.456 31.798 C 194.69 31.678 194.89 31.583 195.161 31.652 C 195.283 31.683 195.492 31.789 195.556 31.902 C 195.71 32.17 195.733 32.53 195.752 32.832 C 195.861 34.541 195.766 36.31 195.763 38.028 C 195.76 40.229 195.829 42.443 195.725 44.642 C 195.699 45.211 195.649 45.766 195.516 46.321 C 195.216 47.586 194.556 48.612 193.432 49.3 C 191.796 50.3 189.365 50.505 187.528 50.037 C 187.455 50.019 187.382 49.999 187.31 49.978 C 187.238 49.956 187.166 49.933 187.095 49.907 C 187.024 49.882 186.953 49.855 186.884 49.827 C 186.814 49.798 186.745 49.767 186.676 49.735 C 186.608 49.703 186.541 49.669 186.474 49.634 C 186.407 49.599 186.342 49.561 186.277 49.523 C 186.212 49.484 186.148 49.444 186.085 49.402 C 186.022 49.36 185.961 49.317 185.9 49.272 C 185.839 49.227 185.78 49.18 185.721 49.132 C 185.663 49.085 185.605 49.035 185.549 48.985 C 185.493 48.934 185.439 48.882 185.386 48.828 C 185.332 48.775 185.28 48.72 185.229 48.664 C 185.178 48.608 185.129 48.551 185.081 48.493 C 185.033 48.434 184.986 48.375 184.942 48.314 C 184.897 48.253 184.854 48.191 184.812 48.128 C 184.769 48.066 184.729 48.002 184.69 47.937 C 184.442 47.513 184.242 46.96 184.377 46.465 C 184.436 46.249 184.544 46.161 184.728 46.056 C 184.965 46.034 185.255 46.084 185.442 46.249 C 185.588 46.377 185.721 46.62 185.737 46.812 C 185.738 46.824 185.738 46.836 185.739 46.848 C 186.452 47.46 186.397 48.135 187.558 48.637 C 188.813 49.179 190.628 49.079 191.885 48.571 C 192.722 48.234 193.434 47.667 193.785 46.817 C 194.108 46.034 194.41 43.714 194.093 42.946 C 194.088 43.1 193.989 43.233 193.9 43.354 C 193.176 44.337 191.837 44.962 190.658 45.143 C 189.094 45.382 187.408 45.154 186.112 44.19 C 184.721 43.154 183.991 41.446 183.754 39.763 C 183.469 37.732 183.821 35.447 185.079 33.783 C 186.086 32.449 187.305 31.876 188.93 31.65 Z M 189.029 32.941 C 187.715 33.285 186.776 33.752 186.063 34.981 C 185.137 36.578 185.051 38.835 185.524 40.588 C 185.837 41.746 186.483 42.829 187.549 43.433 C 188.275 43.845 189.442 44.105 190.282 43.916 C 191.452 43.751 192.414 43.274 193.136 42.311 C 194.211 40.88 194.386 38.904 194.127 37.181 C 193.928 35.863 193.324 34.524 192.236 33.713 C 191.288 33.006 190.178 32.847 189.029 32.941 Z M 117.999 18.531 C 118.018 18.528 118.038 18.524 118.058 18.521 C 118.228 18.495 118.359 18.502 118.52 18.57 C 119.567 19.01 120.588 19.567 121.61 20.066 L 127.517 22.954 C 128.417 23.394 131.266 24.65 131.855 25.118 C 131.983 25.22 132.175 25.495 132.174 25.659 C 132.174 25.98 131.967 26.41 131.835 26.706 C 131.386 27.702 127.988 34.581 127.565 34.993 C 127.906 35.296 131.759 43.056 132.104 43.99 C 132.205 44.261 132.186 44.521 132.064 44.781 C 131.971 44.976 131.549 45.183 131.354 45.292 C 129.514 46.322 127.547 47.2 125.657 48.138 C 124.342 48.79 122.962 49.617 121.588 50.112 C 121.328 50.404 119.2 51.364 118.71 51.578 C 118.467 51.685 118.254 51.741 117.998 51.641 C 117.863 51.474 117.764 51.266 117.863 51.051 C 118.121 50.488 123.636 45.283 124.563 44.377 C 125.074 43.877 125.768 43.331 126.162 42.741 C 126.264 42.586 126.289 42.529 126.237 42.35 C 126.084 41.832 125.603 41.281 125.299 40.827 C 124.688 39.913 121.874 35.905 121.781 35.245 C 121.739 34.955 121.816 34.657 121.932 34.393 C 122.502 33.105 126.217 28.511 126.277 27.76 C 126.269 27.629 126.225 27.567 126.142 27.468 C 125.557 26.766 124.801 26.127 124.148 25.486 L 119.965 21.394 C 119.479 20.921 117.959 19.657 117.77 19.066 C 117.765 18.846 117.882 18.705 117.999 18.531 Z M 103.118 25.198 C 103.284 25.175 103.45 25.165 103.618 25.168 C 104.137 25.175 104.704 25.338 105.07 25.723 C 105.998 26.701 105.643 29.385 105.623 30.684 C 105.619 30.955 105.603 31.258 105.806 31.467 C 106.003 31.459 106.926 30.815 107.226 30.678 C 107.27 30.659 107.313 30.639 107.357 30.62 C 107.402 30.602 107.446 30.584 107.49 30.566 C 107.535 30.548 107.58 30.531 107.625 30.514 C 107.67 30.498 107.715 30.482 107.76 30.466 C 107.806 30.451 107.851 30.436 107.898 30.422 C 107.943 30.407 107.989 30.394 108.035 30.38 C 108.081 30.367 108.127 30.355 108.173 30.343 C 108.22 30.331 108.267 30.319 108.314 30.308 C 108.36 30.297 108.407 30.287 108.454 30.277 C 108.501 30.268 108.548 30.258 108.595 30.25 C 108.642 30.241 108.69 30.233 108.737 30.226 C 108.784 30.218 108.832 30.212 108.88 30.205 C 108.927 30.199 108.974 30.194 109.022 30.189 C 109.07 30.184 109.117 30.179 109.166 30.175 C 109.213 30.171 109.261 30.168 109.309 30.165 C 109.357 30.163 109.405 30.161 109.453 30.159 C 109.501 30.158 109.548 30.157 109.597 30.156 C 109.644 30.156 109.692 30.156 109.74 30.157 C 109.788 30.158 109.836 30.16 109.884 30.162 C 109.932 30.164 109.98 30.166 110.028 30.17 C 110.075 30.173 110.123 30.177 110.171 30.181 C 110.219 30.186 110.266 30.191 110.314 30.196 C 110.362 30.202 110.409 30.208 110.456 30.215 C 110.504 30.222 110.551 30.229 110.599 30.237 C 110.646 30.245 110.693 30.254 110.74 30.263 C 110.787 30.272 110.834 30.282 110.881 30.292 C 110.928 30.302 110.974 30.313 111.021 30.324 C 111.068 30.336 111.114 30.348 111.16 30.36 C 111.207 30.373 111.253 30.386 111.298 30.4 C 111.345 30.414 111.391 30.428 111.436 30.443 C 111.482 30.458 111.527 30.473 111.572 30.489 C 111.617 30.505 111.662 30.522 111.707 30.539 C 111.763 30.561 111.82 30.583 111.876 30.607 C 111.932 30.63 111.987 30.654 112.042 30.678 C 112.098 30.703 112.152 30.728 112.207 30.754 C 112.262 30.78 112.316 30.807 112.37 30.834 C 112.424 30.862 112.478 30.889 112.531 30.918 C 112.584 30.947 112.637 30.976 112.69 31.006 C 112.742 31.036 112.795 31.067 112.846 31.098 C 112.898 31.129 112.95 31.161 113.001 31.193 C 113.052 31.226 113.103 31.259 113.153 31.292 C 113.203 31.326 113.253 31.361 113.302 31.395 C 113.352 31.43 113.401 31.466 113.45 31.502 C 113.498 31.538 113.546 31.575 113.593 31.612 C 113.641 31.65 113.688 31.688 113.736 31.726 C 113.782 31.765 113.829 31.804 113.874 31.843 C 113.92 31.883 113.965 31.923 114.01 31.964 C 114.055 32.004 114.099 32.046 114.143 32.088 C 114.187 32.129 114.23 32.172 114.272 32.215 C 114.315 32.257 114.358 32.301 114.4 32.345 C 114.441 32.389 114.482 32.433 114.523 32.478 C 114.564 32.523 114.604 32.568 114.643 32.614 C 114.683 32.66 114.722 32.707 114.76 32.754 C 114.798 32.8 114.836 32.848 114.874 32.896 C 114.911 32.943 114.947 32.992 114.984 33.04 C 115.019 33.089 115.055 33.138 115.089 33.188 C 115.124 33.237 115.158 33.287 115.192 33.338 C 115.226 33.388 115.259 33.439 115.292 33.49 C 115.324 33.541 115.356 33.593 115.387 33.645 C 115.418 33.697 115.448 33.749 115.478 33.802 C 115.508 33.855 115.537 33.908 115.565 33.961 C 115.594 34.015 115.622 34.069 115.65 34.123 C 115.677 34.177 115.703 34.231 115.729 34.286 C 115.755 34.341 115.78 34.396 115.805 34.452 C 116.577 36.167 116.698 38.328 116.023 40.097 C 115.555 41.326 114.479 43.091 113.235 43.655 C 113.23 43.665 113.225 43.676 113.219 43.686 C 112.91 44.175 111.545 44.615 110.984 44.755 C 108.707 45.326 107.393 44.583 105.508 43.444 C 105.495 43.54 105.465 43.628 105.429 43.717 C 105.247 44.161 104.858 44.561 104.414 44.738 C 103.89 44.949 103.322 44.981 102.797 44.754 C 102.366 44.567 101.849 44.105 101.694 43.65 C 101.403 42.795 101.563 36.358 101.563 35.023 C 101.564 32.446 101.476 29.832 101.579 27.258 C 101.59 26.98 101.594 26.653 101.714 26.399 C 102.016 25.757 102.468 25.44 103.118 25.198 Z M 108.731 34.159 C 107.736 34.329 106.855 34.721 106.255 35.573 C 105.738 36.306 105.55 37.256 105.71 38.136 C 105.72 38.191 105.732 38.246 105.745 38.3 C 105.757 38.355 105.771 38.409 105.786 38.463 C 105.802 38.516 105.819 38.57 105.836 38.623 C 105.854 38.676 105.874 38.729 105.894 38.781 C 105.915 38.833 105.937 38.884 105.96 38.935 C 105.983 38.986 106.007 39.037 106.032 39.086 C 106.058 39.136 106.085 39.185 106.112 39.234 C 106.14 39.282 106.17 39.33 106.2 39.377 C 106.23 39.424 106.261 39.47 106.294 39.516 C 106.326 39.561 106.36 39.606 106.394 39.65 C 106.429 39.694 106.465 39.737 106.502 39.779 C 106.538 39.821 106.576 39.862 106.615 39.902 C 106.654 39.943 106.694 39.982 106.735 40.02 C 106.775 40.059 106.817 40.096 106.86 40.132 C 106.902 40.168 106.946 40.203 106.99 40.237 C 107.034 40.272 107.079 40.304 107.125 40.336 C 107.699 40.732 108.491 40.983 109.191 40.927 C 110.201 40.777 111.044 40.434 111.679 39.586 C 111.712 39.541 111.745 39.495 111.776 39.448 C 111.808 39.402 111.838 39.354 111.867 39.306 C 111.896 39.258 111.924 39.209 111.95 39.159 C 111.977 39.11 112.002 39.06 112.027 39.009 C 112.051 38.958 112.074 38.907 112.095 38.855 C 112.117 38.803 112.138 38.75 112.157 38.697 C 112.176 38.644 112.193 38.591 112.21 38.537 C 112.226 38.483 112.242 38.429 112.255 38.374 C 112.269 38.32 112.282 38.265 112.293 38.209 C 112.304 38.154 112.313 38.099 112.322 38.043 C 112.33 37.987 112.337 37.931 112.343 37.875 C 112.348 37.819 112.352 37.763 112.355 37.707 C 112.358 37.651 112.359 37.594 112.359 37.538 C 112.359 37.482 112.358 37.425 112.355 37.369 C 112.352 37.313 112.348 37.257 112.343 37.201 C 112.337 37.145 112.33 37.089 112.322 37.033 C 112.314 36.978 112.305 36.923 112.295 36.869 C 112.284 36.815 112.272 36.76 112.259 36.706 C 112.246 36.653 112.231 36.599 112.215 36.546 C 112.2 36.493 112.182 36.44 112.164 36.388 C 112.145 36.335 112.126 36.283 112.105 36.232 C 112.084 36.181 112.061 36.13 112.038 36.08 C 112.015 36.029 111.99 35.98 111.964 35.931 C 111.938 35.882 111.911 35.833 111.883 35.786 C 111.854 35.738 111.825 35.691 111.794 35.645 C 111.764 35.599 111.732 35.553 111.699 35.509 C 111.666 35.464 111.633 35.42 111.598 35.377 C 111.563 35.334 111.526 35.292 111.489 35.251 C 111.452 35.21 111.414 35.17 111.375 35.13 C 111.336 35.091 111.296 35.053 111.255 35.015 C 111.214 34.978 111.173 34.942 111.13 34.907 C 111.087 34.871 111.043 34.837 110.999 34.804 C 110.351 34.327 109.53 34.106 108.731 34.159 Z M 139.713 26.99 C 140.753 26.934 141.813 26.976 142.855 26.975 C 144.647 26.975 146.744 26.724 148.439 27.401 C 149.495 27.823 150.369 28.595 150.816 29.656 C 151.262 30.712 151.319 32.058 150.888 33.122 C 150.452 34.198 149.602 35.022 148.544 35.474 C 149.503 35.717 150.468 36.253 151.095 37.026 C 151.846 37.952 152.111 39.152 151.992 40.324 C 151.925 40.98 151.716 42.134 151.196 42.558 C 151.187 42.622 151.181 42.668 151.152 42.727 C 150.749 43.539 149.816 44.118 149 44.447 C 148.432 44.676 147.837 44.807 147.229 44.869 C 146.221 44.972 139.797 45.044 139.16 44.773 C 139.061 44.601 139.008 44.436 138.971 44.242 C 138.792 43.314 138.876 42.291 138.875 41.347 L 138.876 36.664 L 138.886 30.4 C 138.889 29.62 138.825 28.817 138.868 28.042 C 138.882 27.788 138.932 27.501 139.086 27.292 C 139.25 27.07 139.462 27.035 139.713 26.99 Z M 140.501 36.453 C 140.632 36.741 140.699 43.012 140.557 43.397 C 140.544 43.434 140.515 43.476 140.496 43.508 L 144.337 43.514 C 145.286 43.514 146.263 43.563 147.202 43.405 C 147.818 43.302 148.54 43.11 148.997 42.66 C 149.057 42.602 149.108 42.553 149.139 42.475 C 149.634 42.186 149.963 41.513 150.104 40.975 C 150.35 40.036 150.257 38.959 149.757 38.118 C 149.267 37.294 148.443 36.775 147.526 36.551 C 146.677 36.343 141.391 36.312 140.501 36.453 Z M 140.496 28.568 C 140.659 28.91 140.693 34.351 140.559 34.707 C 140.538 34.762 140.514 34.809 140.484 34.859 C 142.168 34.862 145.199 35.023 146.726 34.776 C 147.269 34.688 148.009 34.5 148.388 34.064 C 148.433 34.012 148.447 33.972 148.472 33.908 C 148.926 33.646 149.176 33.099 149.308 32.61 C 149.529 31.789 149.537 30.795 149.091 30.046 C 148.662 29.325 147.883 28.916 147.092 28.721 C 145.917 28.432 141.779 28.433 140.496 28.568 Z M 61.963 25.176 C 62.496 25.149 62.978 25.187 63.454 25.451 C 63.761 25.62 64.06 25.879 64.228 26.191 C 64.792 27.232 65.033 28.665 65.352 29.806 L 67.18 36.346 C 68.05 34.094 68.801 31.774 69.601 29.494 C 69.936 28.542 70.231 27.54 70.643 26.62 C 70.919 26.002 71.305 25.54 71.954 25.302 C 72.565 25.076 73.291 25.126 73.879 25.403 C 74.255 25.58 74.515 25.837 74.721 26.196 C 75.314 27.222 75.645 28.549 76.039 29.669 L 78.405 36.376 C 78.793 34.607 79.381 32.838 79.869 31.092 C 80.278 29.631 80.608 28.067 81.131 26.646 C 81.236 26.361 81.375 26.114 81.578 25.889 C 81.992 25.431 82.571 25.189 83.182 25.162 C 83.779 25.136 84.358 25.33 84.797 25.743 C 85.184 26.107 85.554 26.761 85.565 27.305 C 85.578 28.007 83.746 34.095 83.394 34.449 C 83.503 34.778 80.944 42.783 80.542 43.701 C 80.317 44.215 79.955 44.568 79.427 44.768 C 78.882 44.975 78.171 44.971 77.642 44.722 C 77.213 44.522 76.873 44.16 76.645 43.749 C 76.17 42.895 75.833 41.559 75.497 40.612 C 74.595 38.059 73.713 35.498 72.78 32.957 C 71.979 35.357 71.091 37.734 70.249 40.119 C 69.861 41.215 69.473 42.831 68.886 43.79 C 68.546 44.347 68.033 44.748 67.396 44.899 C 66.871 45.023 66.349 44.955 65.891 44.663 C 65.545 44.443 65.234 44.115 65.059 43.742 C 64.67 42.912 64.44 41.982 64.166 41.108 L 62.81 36.791 L 61.057 31.201 C 60.72 30.125 60.321 29.036 60.08 27.936 C 59.944 27.317 60.074 26.695 60.423 26.165 C 60.79 25.607 61.321 25.305 61.963 25.176 Z M 26.899 1.882 C 27.095 1.883 27.29 1.886 27.485 1.893 L 27.485 1.895 L 27.645 1.953 L 27.5 2.039 C 27.577 4.239 27.518 6.46 27.518 8.664 C 27.609 8.615 27.705 8.558 27.802 8.524 C 28.109 8.415 28.281 8.515 28.56 8.646 C 33.378 10.913 38.141 13.323 42.925 15.664 L 47.005 17.66 C 47.766 18.032 48.648 18.376 49.333 18.871 C 49.514 19.002 49.682 19.292 49.747 19.506 C 49.856 19.863 49.668 20.37 49.539 20.699 C 48.947 22.208 48.053 23.705 47.32 25.155 L 42.709 34.282 C 44.257 37.596 45.978 40.85 47.609 44.124 C 48.267 45.444 49.088 46.82 49.599 48.197 C 49.737 48.57 49.891 49.013 49.705 49.393 C 49.516 49.783 49.124 50.067 48.76 50.278 C 47.289 51.127 45.659 51.82 44.132 52.573 L 35.952 56.644 L 31.117 59.051 C 30.23 59.497 29.298 60.066 28.359 60.379 C 28.061 60.478 27.861 60.405 27.589 60.268 L 27.554 60.25 C 27.385 61.108 27.515 64.106 27.515 65.146 L 27.518 77.342 C 27.31 77.35 27.128 77.371 26.938 77.272 C 26.762 76.608 26.897 71.836 26.899 70.744 C 26.823 70.787 26.746 70.826 26.668 70.863 C 26.424 70.977 26.324 70.99 26.068 70.893 C 25.058 70.513 24.061 69.925 23.092 69.443 L 17.285 66.551 L 9.632 62.755 C 8.322 62.105 6.946 61.503 5.681 60.775 C 5.38 60.602 4.839 60.265 4.712 59.919 C 4.603 59.625 4.641 59.195 4.74 58.904 C 4.958 58.268 5.331 57.651 5.637 57.054 C 6.047 56.255 6.436 55.446 6.836 54.642 L 11.731 44.804 C 11.199 43.614 10.551 42.452 9.964 41.288 L 6.435 34.313 C 5.987 33.428 4.87 31.526 4.682 30.669 C 4.631 30.435 4.672 30.172 4.748 29.948 C 4.857 29.63 5.068 29.389 5.349 29.211 C 6.117 28.728 7.026 28.361 7.843 27.961 L 12.795 25.551 L 25.848 19.152 C 26.192 18.986 26.426 18.937 26.792 19.073 L 26.856 19.097 C 27.009 18.785 26.9 3.652 26.899 1.882 Z M 27.518 9.864 L 27.518 59.123 C 30.962 55.774 34.441 52.434 37.812 49.012 C 38.408 48.441 40.355 46.791 40.569 46.156 C 40.592 45.03 34.59 37.167 33.704 35.193 C 33.545 34.838 33.434 34.463 33.505 34.073 C 33.712 32.936 34.77 31.736 35.417 30.789 C 36.096 29.799 40.524 23.6 40.586 22.982 C 40.613 22.712 40.451 22.579 40.274 22.396 C 39.031 21.11 37.716 19.878 36.44 18.624 L 27.518 9.864 Z M 26.861 20.417 L 18.248 28.886 C 16.894 30.214 15.42 31.511 14.156 32.919 C 14.023 33.066 13.86 33.204 13.859 33.417 C 13.856 34.351 19.748 41.984 20.645 43.754 C 20.825 44.11 20.983 44.532 20.951 44.938 C 20.868 45.991 19.53 47.647 18.93 48.556 L 15.657 53.515 C 15.126 54.318 14.491 55.138 14.044 55.988 C 13.951 56.166 13.819 56.434 13.875 56.638 C 14.039 57.234 16.183 59.073 16.747 59.648 C 20.131 62.967 23.561 66.254 26.899 69.619 L 26.898 31.71 L 26.904 23.582 C 26.905 22.839 27.033 21.042 26.861 20.417 Z" fill="var(--token-5197bf6c-818c-4eab-85f8-6f703842b3bf, rgb(10, 11, 10))"></path></svg>',
+                            svgContentId: 9641678577,
+                            withExternalLayout: !0,
+                          }),
+                        }),
+                      ],
+                    }),
+                    t(j2, {
+                      animate: U2,
+                      className: "framer-128m11y",
+                      "data-border": !0,
+                      "data-framer-appear-id": "128m11y",
+                      "data-framer-name": "Container",
+                      initial: E2,
+                      name: "Container",
+                      optimized: !0,
+                      style: { transformPerspective: 1200 },
+                      children: [
+                        t("div", {
+                          className: "framer-8e1bmi",
+                          "data-framer-name": "Text Container",
+                          name: "Text Container",
+                          children: [
+                            t("div", {
+                              className: "framer-1na77cf",
+                              "data-framer-name": "Counter",
+                              name: "Counter",
+                              children: [
+                                e(M, {
+                                  children: e($, {
+                                    className: "framer-1y324kx-container",
+                                    children: e(v1, {
+                                      decimalSeparator: "comma",
+                                      endNumber: 4,
+                                      font: {
+                                        fontFamily:
+                                          '"Inter", "Inter Placeholder", sans-serif',
+                                        fontStyle: "normal",
+                                        fontWeight: 700,
+                                      },
+                                      fontColor:
+                                        "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                      fontSize: 28,
+                                      height: "100%",
+                                      id: "hmC9rv1mJ",
+                                      layoutId: "hmC9rv1mJ",
+                                      loop: !1,
+                                      prefix: "",
+                                      speed: 110,
+                                      startNumber: 0,
+                                      suffix: "",
+                                      width: "100%",
+                                    }),
+                                  }),
+                                }),
+                                e(C, {
+                                  __fromCanvasComponent: !0,
+                                  children: e(n, {
+                                    children: e("h1", {
+                                      style: {
+                                        "--font-selector": "SW50ZXItQm9sZA==",
+                                        "--framer-font-family":
+                                          '"Inter", "Inter Placeholder", sans-serif',
+                                        "--framer-font-size": "28px",
+                                        "--framer-font-weight": "700",
+                                        "--framer-line-height": "150%",
+                                        "--framer-text-color":
+                                          "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                      },
+                                      children: "+",
+                                    }),
+                                  }),
+                                  className: "framer-ayti8r",
+                                  "data-framer-name": "Plus",
+                                  fonts: ["Inter-Bold"],
+                                  name: "Plus",
+                                  verticalAlignment: "top",
+                                  withExternalLayout: !0,
+                                }),
+                              ],
+                            }),
+                            e(C, {
+                              __fromCanvasComponent: !0,
+                              children: e(n, {
+                                children: e("p", {
+                                  style: {
+                                    "--font-selector": "SW50ZXItTWVkaXVt",
+                                    "--framer-font-family":
+                                      '"Inter", "Inter Placeholder", sans-serif',
+                                    "--framer-font-size": "15px",
+                                    "--framer-font-weight": "500",
+                                    "--framer-line-height": "150%",
+                                    "--framer-text-alignment": "center",
+                                    "--framer-text-color":
+                                      "var(--token-69a0ec5c-da85-4a5a-a0c3-c41a92df0364, rgb(153, 153, 153))",
+                                  },
+                                  children: "Years of Experience",
+                                }),
+                              }),
+                              className: "framer-sfjvbl",
+                              "data-framer-name": "Text",
+                              fonts: ["Inter-Medium"],
+                              name: "Text",
+                              verticalAlignment: "top",
+                              withExternalLayout: !0,
+                            }),
+                          ],
+                        }),
+                        t("div", {
+                          className: "framer-m9k93s",
+                          "data-framer-name": "Text Container",
+                          name: "Text Container",
+                          children: [
+                            t("div", {
+                              className: "framer-1ghxpl6",
+                              "data-framer-name": "Counter",
+                              name: "Counter",
+                              children: [
+                                e(M, {
+                                  children: e($, {
+                                    className: "framer-1bclzx5-container",
+                                    children: e(v1, {
+                                      decimalSeparator: "comma",
+                                      endNumber: 1,
+                                      font: {
+                                        fontFamily:
+                                          '"Inter", "Inter Placeholder", sans-serif',
+                                        fontStyle: "normal",
+                                        fontWeight: 700,
+                                      },
+                                      fontColor:
+                                        "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                      fontSize: 28,
+                                      height: "100%",
+                                      id: "NknCbIt_O",
+                                      layoutId: "NknCbIt_O",
+                                      loop: !1,
+                                      prefix: "",
+                                      speed: 10,
+                                      startNumber: 0,
+                                      suffix: "",
+                                      width: "100%",
+                                    }),
+                                  }),
+                                }),
+                                e(C, {
+                                  __fromCanvasComponent: !0,
+                                  children: e(n, {
+                                    children: e("h1", {
+                                      style: {
+                                        "--font-selector": "SW50ZXItQm9sZA==",
+                                        "--framer-font-family":
+                                          '"Inter", "Inter Placeholder", sans-serif',
+                                        "--framer-font-size": "28px",
+                                        "--framer-font-weight": "700",
+                                        "--framer-line-height": "150%",
+                                        "--framer-text-color":
+                                          "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                      },
+                                      children: "B+",
+                                    }),
+                                  }),
+                                  className: "framer-wapf38",
+                                  "data-framer-name": "Plus",
+                                  fonts: ["Inter-Bold"],
+                                  name: "Plus",
+                                  verticalAlignment: "top",
+                                  withExternalLayout: !0,
+                                }),
+                              ],
+                            }),
+                            e(C, {
+                              __fromCanvasComponent: !0,
+                              children: e(n, {
+                                children: e("p", {
+                                  style: {
+                                    "--font-selector": "SW50ZXItTWVkaXVt",
+                                    "--framer-font-family":
+                                      '"Inter", "Inter Placeholder", sans-serif',
+                                    "--framer-font-size": "15px",
+                                    "--framer-font-weight": "500",
+                                    "--framer-line-height": "150%",
+                                    "--framer-text-alignment": "center",
+                                    "--framer-text-color":
+                                      "var(--token-69a0ec5c-da85-4a5a-a0c3-c41a92df0364, rgb(153, 153, 153))",
+                                  },
+                                  children: "Secured in Digital Assets",
+                                }),
+                              }),
+                              className: "framer-1vmj7ye",
+                              "data-framer-name": "Text",
+                              fonts: ["Inter-Medium"],
+                              name: "Text",
+                              verticalAlignment: "top",
+                              withExternalLayout: !0,
+                            }),
+                          ],
+                        }),
+                        t("div", {
+                          className: "framer-g9zb2a",
+                          "data-framer-name": "Text Container",
+                          name: "Text Container",
+                          children: [
+                            t("div", {
+                              className: "framer-1e679xj",
+                              "data-framer-name": "Counter",
+                              name: "Counter",
+                              children: [
+                                e(M, {
+                                  children: e($, {
+                                    className: "framer-4m2yj1-container",
+                                    children: e(v1, {
+                                      decimalSeparator: "comma",
+                                      endNumber: 1,
+                                      font: {
+                                        fontFamily:
+                                          '"Inter", "Inter Placeholder", sans-serif',
+                                        fontStyle: "normal",
+                                        fontWeight: 700,
+                                      },
+                                      fontColor:
+                                        "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                      fontSize: 28,
+                                      height: "100%",
+                                      id: "hcbJGuOj1",
+                                      layoutId: "hcbJGuOj1",
+                                      loop: !1,
+                                      prefix: "",
+                                      speed: 50,
+                                      startNumber: 0,
+                                      suffix: "",
+                                      width: "100%",
+                                    }),
+                                  }),
+                                }),
+                                e(C, {
+                                  __fromCanvasComponent: !0,
+                                  children: e(n, {
+                                    children: e("h1", {
+                                      style: {
+                                        "--font-selector": "SW50ZXItQm9sZA==",
+                                        "--framer-font-family":
+                                          '"Inter", "Inter Placeholder", sans-serif',
+                                        "--framer-font-size": "28px",
+                                        "--framer-font-weight": "700",
+                                        "--framer-line-height": "150%",
+                                        "--framer-text-color":
+                                          "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                      },
+                                      children: "M+",
+                                    }),
+                                  }),
+                                  className: "framer-dv03z3",
+                                  "data-framer-name": "Plus",
+                                  fonts: ["Inter-Bold"],
+                                  name: "Plus",
+                                  verticalAlignment: "top",
+                                  withExternalLayout: !0,
+                                }),
+                              ],
+                            }),
+                            e(C, {
+                              __fromCanvasComponent: !0,
+                              children: e(n, {
+                                children: e("p", {
+                                  style: {
+                                    "--font-selector": "SW50ZXItTWVkaXVt",
+                                    "--framer-font-family":
+                                      '"Inter", "Inter Placeholder", sans-serif',
+                                    "--framer-font-size": "15px",
+                                    "--framer-font-weight": "500",
+                                    "--framer-line-height": "150%",
+                                    "--framer-text-alignment": "center",
+                                    "--framer-text-color":
+                                      "var(--token-69a0ec5c-da85-4a5a-a0c3-c41a92df0364, rgb(153, 153, 153))",
+                                  },
+                                  children: "Lines of Code",
+                                }),
+                              }),
+                              className: "framer-1yxc21a",
+                              "data-framer-name": "Text",
+                              fonts: ["Inter-Medium"],
+                              name: "Text",
+                              verticalAlignment: "top",
+                              withExternalLayout: !0,
+                            }),
+                          ],
+                        }),
+                        t("div", {
+                          className: "framer-13rryyb",
+                          "data-framer-name": "Text Container",
+                          name: "Text Container",
+                          children: [
+                            t("div", {
+                              className: "framer-19d5gbk",
+                              "data-framer-name": "Counter",
+                              name: "Counter",
+                              children: [
+                                e(M, {
+                                  children: e($, {
+                                    className: "framer-yfl9o5-container",
+                                    children: e(v1, {
+                                      decimalSeparator: "comma",
+                                      endNumber: 10,
+                                      font: {
+                                        fontFamily:
+                                          '"Inter", "Inter Placeholder", sans-serif',
+                                        fontStyle: "normal",
+                                        fontWeight: 700,
+                                      },
+                                      fontColor:
+                                        "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                      fontSize: 28,
+                                      height: "100%",
+                                      id: "oq9O0C5Zf",
+                                      layoutId: "oq9O0C5Zf",
+                                      loop: !1,
+                                      prefix: "",
+                                      speed: 10,
+                                      startNumber: 0,
+                                      suffix: "",
+                                      width: "100%",
+                                    }),
+                                  }),
+                                }),
+                                e(C, {
+                                  __fromCanvasComponent: !0,
+                                  children: e(n, {
+                                    children: e("h1", {
+                                      style: {
+                                        "--font-selector":
+                                          "R0Y7U3BhY2UgR3JvdGVzay03MDA=",
+                                        "--framer-font-family":
+                                          '"Space Grotesk", "Space Grotesk Placeholder", sans-serif',
+                                        "--framer-font-size": "28px",
+                                        "--framer-font-weight": "700",
+                                        "--framer-line-height": "150%",
+                                        "--framer-text-color":
+                                          "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                      },
+                                      children: "+",
+                                    }),
+                                  }),
+                                  className: "framer-imx0dn",
+                                  "data-framer-name": "Plus",
+                                  fonts: ["GF;Space Grotesk-700"],
+                                  name: "Plus",
+                                  verticalAlignment: "top",
+                                  withExternalLayout: !0,
+                                }),
+                              ],
+                            }),
+                            e(C, {
+                              __fromCanvasComponent: !0,
+                              children: e(n, {
+                                children: e("p", {
+                                  style: {
+                                    "--font-selector": "SW50ZXItTWVkaXVt",
+                                    "--framer-font-family":
+                                      '"Inter", "Inter Placeholder", sans-serif',
+                                    "--framer-font-size": "15px",
+                                    "--framer-font-weight": "500",
+                                    "--framer-line-height": "150%",
+                                    "--framer-text-alignment": "center",
+                                    "--framer-text-color":
+                                      "var(--token-69a0ec5c-da85-4a5a-a0c3-c41a92df0364, rgb(153, 153, 153))",
+                                  },
+                                  children: "Projects Completed",
+                                }),
+                              }),
+                              className: "framer-1dnqelm",
+                              "data-framer-name": "Text",
+                              fonts: ["Inter-Medium"],
+                              name: "Text",
+                              verticalAlignment: "top",
+                              withExternalLayout: !0,
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+                f() &&
+                t("section", {
+                  className: "framer-1212kh8 hidden-xp04m8",
+                  "data-framer-name": "Section 3",
+                  name: "Section 3",
+                  children: [
+                    e(C, {
+                      __fromCanvasComponent: !0,
+                      children: e(n, {
+                        children: e("p", {
+                          style: {
+                            "--font-selector": "R0Y7SW50ZXItNjAw",
+                            "--framer-font-family":
+                              '"Inter", "Inter Placeholder", sans-serif',
+                            "--framer-font-weight": "600",
+                            "--framer-line-height": "24px",
+                            "--framer-text-alignment": "center",
+                            "--framer-text-color":
+                              "var(--token-7049cce7-715e-45a0-a41e-932274474306, rgb(9, 227, 8))",
+                          },
+                          children: "Supported Chains",
+                        }),
+                      }),
+                      className: "framer-136vdzm",
+                      fonts: ["GF;Inter-600"],
+                      transformTemplate: y1,
+                      verticalAlignment: "top",
+                      withExternalLayout: !0,
+                    }),
+                    e(C, {
+                      __fromCanvasComponent: !0,
+                      children: e(n, {
+                        children: e("p", {
+                          style: {
+                            "--font-selector": "R0Y7SW50ZXItNjAw",
+                            "--framer-font-family":
+                              '"Inter", "Inter Placeholder", sans-serif',
+                            "--framer-font-weight": "600",
+                            "--framer-line-height": "24px",
+                            "--framer-text-alignment": "center",
+                            "--framer-text-color": "rgb(182, 182, 185)",
+                          },
+                          children:
+                            "Providing auditing for the following blockchains and more.",
+                        }),
+                      }),
+                      className: "framer-ozew3n",
+                      fonts: ["GF;Inter-600"],
+                      transformTemplate: y1,
+                      verticalAlignment: "top",
+                      withExternalLayout: !0,
+                    }),
+                    e(C, {
+                      __fromCanvasComponent: !0,
+                      children: e(n, {
+                        children: e("h2", {
+                          style: {
+                            "--font-selector": "R0Y7SW50ZXItNzAw",
+                            "--framer-font-family":
+                              '"Inter", "Inter Placeholder", sans-serif',
+                            "--framer-font-size": "36px",
+                            "--framer-font-weight": "700",
+                            "--framer-letter-spacing": "-0.72px",
+                            "--framer-line-height": "44px",
+                            "--framer-text-alignment": "center",
+                            "--framer-text-color":
+                              "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                          },
+                          children: "Bringing security to every chain",
+                        }),
+                      }),
+                      className: "framer-1akw1mh",
+                      fonts: ["GF;Inter-700"],
+                      transformTemplate: y1,
+                      verticalAlignment: "top",
+                      withExternalLayout: !0,
+                    }),
+                    f1() &&
+                    t("div", {
+                      className: "framer-p2hyij hidden-180ph05",
+                      children: [
+                        e(x, {
+                          background: {
+                            alt: "",
+                            fit: "fill",
+                            intrinsicHeight: 272,
+                            intrinsicWidth: 272,
+                            loading: "lazy",
+                            pixelHeight: 272,
+                            pixelWidth: 272,
+                            src: "https://framerusercontent.com/images/jQ9MeNPwRw7aziif3oefg0VA6A.png",
+                          },
+                          className: "framer-1ganoji",
+                        }),
+                        e(x, {
+                          background: {
+                            alt: "",
+                            fit: "fill",
+                            intrinsicHeight: 272,
+                            intrinsicWidth: 272,
+                            loading: "lazy",
+                            pixelHeight: 272,
+                            pixelWidth: 272,
+                            src: "https://framerusercontent.com/images/fwINI0g62WGdCyj5m0teA0A0.png",
+                          },
+                          className: "framer-1bzvu20",
+                        }),
+                        e(x, {
+                          background: {
+                            alt: "Binance smart contract audits  logo",
+                            fit: "fill",
+                            intrinsicHeight: 272,
+                            intrinsicWidth: 272,
+                            loading: "lazy",
+                            pixelHeight: 272,
+                            pixelWidth: 272,
+                            src: "https://framerusercontent.com/images/L1Dy4BopIy60MRVYrYgqyOrRVK4.png",
+                          },
+                          className: "framer-nfpc8u",
+                        }),
+                        e(x, {
+                          background: {
+                            alt: "",
+                            fit: "fill",
+                            intrinsicHeight: 520.8,
+                            intrinsicWidth: 520,
+                            loading: "lazy",
+                            pixelHeight: 651,
+                            pixelWidth: 650,
+                            sizes: "72px",
+                            src: "https://framerusercontent.com/images/QESvCvsgp3izcFPOqGE6s1aZGDI.png",
+                            srcSet:
+                              "https://framerusercontent.com/images/QESvCvsgp3izcFPOqGE6s1aZGDI.png 650w",
+                          },
+                          className: "framer-7wfos3",
+                          "data-framer-name": "image",
+                          name: "image",
+                        }),
+                        e(x, {
+                          background: {
+                            alt: "",
+                            fit: "fill",
+                            intrinsicHeight: 520.8,
+                            intrinsicWidth: 520,
+                            loading: "lazy",
+                            pixelHeight: 651,
+                            pixelWidth: 650,
+                            sizes: "72px",
+                            src: "https://framerusercontent.com/images/UVs4xlHerWCNnm9n6VjTZKMeHQ.png",
+                            srcSet:
+                              "https://framerusercontent.com/images/UVs4xlHerWCNnm9n6VjTZKMeHQ.png 650w",
+                          },
+                          className: "framer-12anijm",
+                          "data-framer-name": "image",
+                          name: "image",
+                        }),
+                        e(x, {
+                          background: {
+                            alt: "",
+                            fit: "fill",
+                            intrinsicHeight: 272,
+                            intrinsicWidth: 272,
+                            loading: "lazy",
+                            pixelHeight: 272,
+                            pixelWidth: 272,
+                            src: "https://framerusercontent.com/images/n6vP8ESbJs8QizubSQFxVv3anVs.png",
+                          },
+                          className: "framer-1wa5cgn",
+                        }),
+                        e(x, {
+                          background: {
+                            alt: "",
+                            fit: "fill",
+                            intrinsicHeight: 272,
+                            intrinsicWidth: 272,
+                            loading: "lazy",
+                            pixelHeight: 272,
+                            pixelWidth: 272,
+                            src: "https://framerusercontent.com/images/gzEYgwRactEuvufBq5r5AzUOc.png",
+                          },
+                          className: "framer-s2d6gu",
+                        }),
+                        e(x, {
+                          background: {
+                            alt: "",
+                            fit: "fill",
+                            intrinsicHeight: 272,
+                            intrinsicWidth: 272,
+                            loading: "lazy",
+                            pixelHeight: 272,
+                            pixelWidth: 272,
+                            src: "https://framerusercontent.com/images/gV79M4V3cgwbCxt68MxnYYeT7g.png",
+                          },
+                          className: "framer-12f53rz",
+                        }),
+                        e(x, {
+                          background: {
+                            alt: "",
+                            fit: "fill",
+                            intrinsicHeight: 272,
+                            intrinsicWidth: 272,
+                            loading: "lazy",
+                            pixelHeight: 272,
+                            pixelWidth: 272,
+                            src: "https://framerusercontent.com/images/9S7ZAVZVUXTKX6hhI5wvdPNw.png",
+                          },
+                          className: "framer-1izs7jp",
+                        }),
+                        e(x, {
+                          background: {
+                            alt: "",
+                            fit: "fill",
+                            intrinsicHeight: 272,
+                            intrinsicWidth: 272,
+                            loading: "lazy",
+                            pixelHeight: 272,
+                            pixelWidth: 272,
+                            src: "https://framerusercontent.com/images/yaMy9ruL3fA6l4408XRtuU4HKRE.png",
+                          },
+                          className: "framer-1iup5ag",
+                        }),
+                      ],
+                    }),
+                    L() &&
+                    t("div", {
+                      className:
+                        "framer-14q7ajt hidden-72rtr7 hidden-1tai7yd",
+                      children: [
+                        e(x, {
+                          background: {
+                            alt: "",
+                            fit: "fill",
+                            intrinsicHeight: 272,
+                            intrinsicWidth: 272,
+                            loading: "lazy",
+                            pixelHeight: 272,
+                            pixelWidth: 272,
+                            src: "https://framerusercontent.com/images/jQ9MeNPwRw7aziif3oefg0VA6A.png",
+                          },
+                          className: "framer-1qj26li",
+                        }),
+                        e(x, {
+                          background: {
+                            alt: "",
+                            fit: "fill",
+                            intrinsicHeight: 272,
+                            intrinsicWidth: 272,
+                            loading: "lazy",
+                            pixelHeight: 272,
+                            pixelWidth: 272,
+                            src: "https://framerusercontent.com/images/gzEYgwRactEuvufBq5r5AzUOc.png",
+                          },
+                          className: "framer-1tsrdml",
+                        }),
+                        e(x, {
+                          background: {
+                            alt: "Binance smart contract audits  logo",
+                            fit: "fill",
+                            intrinsicHeight: 272,
+                            intrinsicWidth: 272,
+                            loading: "lazy",
+                            pixelHeight: 272,
+                            pixelWidth: 272,
+                            src: "https://framerusercontent.com/images/L1Dy4BopIy60MRVYrYgqyOrRVK4.png",
+                          },
+                          className: "framer-roczm4",
+                        }),
+                        e(x, {
+                          background: {
+                            alt: "",
+                            fit: "fill",
+                            intrinsicHeight: 272,
+                            intrinsicWidth: 272,
+                            loading: "lazy",
+                            pixelHeight: 272,
+                            pixelWidth: 272,
+                            src: "https://framerusercontent.com/images/9S7ZAVZVUXTKX6hhI5wvdPNw.png",
+                          },
+                          className: "framer-1apo83n",
+                        }),
+                        e(x, {
+                          background: {
+                            alt: "",
+                            fit: "fill",
+                            intrinsicHeight: 272,
+                            intrinsicWidth: 272,
+                            loading: "lazy",
+                            pixelHeight: 272,
+                            pixelWidth: 272,
+                            src: "https://framerusercontent.com/images/d0tRRGoK8uysnjgnZGdjNw5ipAc.png",
+                          },
+                          className: "framer-1py3vzg",
+                        }),
+                        e(x, {
+                          background: {
+                            alt: "",
+                            fit: "fill",
+                            intrinsicHeight: 272,
+                            intrinsicWidth: 272,
+                            loading: "lazy",
+                            pixelHeight: 272,
+                            pixelWidth: 272,
+                            src: "https://framerusercontent.com/images/n6vP8ESbJs8QizubSQFxVv3anVs.png",
+                          },
+                          className: "framer-15fnzvr",
+                        }),
+                        e(x, {
+                          background: {
+                            alt: "",
+                            fit: "fill",
+                            intrinsicHeight: 272,
+                            intrinsicWidth: 272,
+                            loading: "lazy",
+                            pixelHeight: 272,
+                            pixelWidth: 272,
+                            src: "https://framerusercontent.com/images/yaMy9ruL3fA6l4408XRtuU4HKRE.png",
+                          },
+                          className: "framer-10w9r2f",
+                        }),
+                        e(x, {
+                          background: {
+                            alt: "",
+                            fit: "fill",
+                            intrinsicHeight: 272,
+                            intrinsicWidth: 272,
+                            loading: "lazy",
+                            pixelHeight: 272,
+                            pixelWidth: 272,
+                            src: "https://framerusercontent.com/images/gV79M4V3cgwbCxt68MxnYYeT7g.png",
+                          },
+                          className: "framer-13t7dvm",
+                        }),
+                        e(x, {
+                          background: {
+                            alt: "",
+                            fit: "fill",
+                            intrinsicHeight: 272,
+                            intrinsicWidth: 272,
+                            loading: "lazy",
+                            pixelHeight: 272,
+                            pixelWidth: 272,
+                            src: "https://framerusercontent.com/images/fwINI0g62WGdCyj5m0teA0A0.png",
+                          },
+                          className: "framer-1q2b1s6",
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+                v() &&
+                t("div", {
+                  className:
+                    "framer-1quyz1w hidden-72rtr7 hidden-1tai7yd hidden-180ph05",
+                  "data-framer-name": "Smart Contracts",
+                  name: "Smart Contracts",
+                  children: [
+                    t("div", {
+                      className: "framer-17sbmwn",
+                      children: [
+                        t("div", {
+                          className: "framer-evb4ej",
+                          children: [
+                            e(C, {
+                              __fromCanvasComponent: !0,
+                              children: e(n, {
+                                children: e("h2", {
+                                  style: {
+                                    "--font-selector":
+                                      "RlM7UGx1cyBKYWthcnRhIFNhbnMtcmVndWxhcg==",
+                                    "--framer-font-family":
+                                      '"Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif',
+                                    "--framer-font-size": "15px",
+                                    "--framer-letter-spacing": "0px",
+                                    "--framer-line-height": "1.7em",
+                                    "--framer-text-alignment": "center",
+                                    "--framer-text-color":
+                                      "var(--token-7049cce7-715e-45a0-a41e-932274474306, rgb(9, 227, 8))",
+                                  },
+                                  children: "Supported Chains",
+                                }),
+                              }),
+                              className: "framer-o9dqnn",
+                              fonts: ["FS;Plus Jakarta Sans-regular"],
+                              verticalAlignment: "top",
+                              withExternalLayout: !0,
+                            }),
+                            e(C, {
+                              __fromCanvasComponent: !0,
+                              children: e(n, {
+                                children: e("h2", {
+                                  style: {
+                                    "--font-selector":
+                                      "RlM7UGx1cyBKYWthcnRhIFNhbnMtbWVkaXVt",
+                                    "--framer-font-family":
+                                      '"Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif',
+                                    "--framer-font-size": "26px",
+                                    "--framer-font-weight": "500",
+                                    "--framer-letter-spacing": "0px",
+                                    "--framer-line-height": "1.5em",
+                                    "--framer-text-alignment": "center",
+                                    "--framer-text-color":
+                                      "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                  },
+                                  children:
+                                    "Bringing security to every chain",
+                                }),
+                              }),
+                              className: "framer-3u8mf7",
+                              fonts: ["FS;Plus Jakarta Sans-medium"],
+                              verticalAlignment: "top",
+                              withExternalLayout: !0,
+                            }),
+                          ],
+                        }),
+                        e(C, {
+                          __fromCanvasComponent: !0,
+                          children: e(n, {
+                            children: e("h2", {
+                              style: {
+                                "--font-selector":
+                                  "RlM7UGx1cyBKYWthcnRhIFNhbnMtcmVndWxhcg==",
+                                "--framer-font-family":
+                                  '"Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif',
+                                "--framer-font-size": "15px",
+                                "--framer-letter-spacing": "0px",
+                                "--framer-line-height": "1.7em",
+                                "--framer-text-alignment": "center",
+                                "--framer-text-color":
+                                  "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                              },
+                              children:
+                                "Providing auditing for the following blockchains and more.",
+                            }),
+                          }),
+                          className: "framer-1zuw21",
+                          fonts: ["FS;Plus Jakarta Sans-regular"],
+                          verticalAlignment: "top",
+                          withExternalLayout: !0,
+                        }),
+                      ],
+                    }),
+                    f() &&
+                    e(S, {
+                      __framer__loop: R,
+                      __framer__loopEffectEnabled: !0,
+                      __framer__loopRepeatDelay: 0,
+                      __framer__loopRepeatType: "mirror",
+                      __framer__loopTransition: m1,
+                      __perspectiveFX: !1,
+                      __targetOpacity: 1,
+                      background: {
+                        alt: "",
+                        fit: "fill",
+                        intrinsicHeight: 388.8,
+                        intrinsicWidth: 464,
+                        loading: "lazy",
+                        pixelHeight: 486,
+                        pixelWidth: 580,
+                        sizes: "267px",
+                        src: "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512",
+                        srcSet:
+                          "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512 512w,https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png 994w",
+                      },
+                      className: "framer-1t2etvs hidden-xp04m8",
+                      "data-framer-name": "Block",
+                      "data-nosnippet": !0,
+                      drag: !0,
+                      dragMomentum: !1,
+                      dragSnapToOrigin: !0,
+                      dragTransition: E,
+                      name: "Block",
+                      onMouseDown: P,
+                      style: { rotate: -11 },
+                    }),
+                    f() &&
+                    e(S, {
+                      __framer__loop: R,
+                      __framer__loopEffectEnabled: !0,
+                      __framer__loopRepeatDelay: 0,
+                      __framer__loopRepeatType: "mirror",
+                      __framer__loopTransition: m1,
+                      __perspectiveFX: !1,
+                      __targetOpacity: 1,
+                      background: {
+                        alt: "",
+                        fit: "fill",
+                        intrinsicHeight: 388.8,
+                        intrinsicWidth: 464,
+                        loading: "lazy",
+                        pixelHeight: 486,
+                        pixelWidth: 580,
+                        sizes: "115px",
+                        src: "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512",
+                        srcSet:
+                          "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512 512w,https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png 994w",
+                      },
+                      className: "framer-vn9x9r hidden-xp04m8",
+                      "data-framer-name": "Block",
+                      "data-nosnippet": !0,
+                      drag: !0,
+                      dragMomentum: !1,
+                      dragSnapToOrigin: !0,
+                      dragTransition: E,
+                      name: "Block",
+                      onMouseDown: P,
+                      style: { rotate: -326 },
+                    }),
+                    t("div", {
+                      className: "framer-k7ney",
+                      "data-framer-name": "Container",
+                      name: "Container",
+                      children: [
+                        t("div", {
+                          className: "framer-85eg8i",
+                          "data-border": !0,
+                          "data-framer-name": "Lest 01",
+                          name: "Lest 01",
+                          children: [
+                            e("div", {
+                              className: "framer-1cgjt3l",
+                              "data-framer-name": "Contant",
+                              name: "Contant",
+                              children: e(h, {
+                                breakpoint: i,
+                                overrides: {
+                                  Q1XUigOVv: {
+                                    background: {
+                                      alt: "",
+                                      fit: "fill",
+                                      intrinsicHeight: 520.8,
+                                      intrinsicWidth: 520.8,
+                                      loading: "lazy",
+                                      pixelHeight: 651,
+                                      pixelWidth: 651,
+                                      sizes: "65px",
+                                      src: "https://framerusercontent.com/images/sqrh7j4vJl8KzqLRoXAOgQvCxQ.png",
+                                      srcSet:
+                                        "https://framerusercontent.com/images/sqrh7j4vJl8KzqLRoXAOgQvCxQ.png?scale-down-to=512 512w,https://framerusercontent.com/images/sqrh7j4vJl8KzqLRoXAOgQvCxQ.png 651w",
+                                    },
+                                  },
+                                },
+                                children: e(x, {
+                                  background: {
+                                    alt: "",
+                                    fit: "fill",
+                                    intrinsicHeight: 520.8,
+                                    intrinsicWidth: 520.8,
+                                    loading: "lazy",
+                                    pixelHeight: 651,
+                                    pixelWidth: 651,
+                                    sizes: "100px",
+                                    src: "https://framerusercontent.com/images/sqrh7j4vJl8KzqLRoXAOgQvCxQ.png",
+                                    srcSet:
+                                      "https://framerusercontent.com/images/sqrh7j4vJl8KzqLRoXAOgQvCxQ.png?scale-down-to=512 512w,https://framerusercontent.com/images/sqrh7j4vJl8KzqLRoXAOgQvCxQ.png 651w",
+                                  },
+                                  className: "framer-ofz8mk",
+                                  "data-framer-name": "image",
+                                  name: "image",
+                                }),
+                              }),
+                            }),
+                            e("div", {
+                              className: "framer-103iyjy",
+                              "data-framer-name": "Title ",
+                              name: "Title ",
+                              children: e(C, {
+                                __fromCanvasComponent: !0,
+                                children: e(n, {
+                                  children: e("h4", {
+                                    style: {
+                                      "--framer-font-size": "17px",
+                                      "--framer-line-height": "1.4em",
+                                      "--framer-text-alignment": "center",
+                                      "--framer-text-color":
+                                        "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                    },
+                                    children: "Solana",
+                                  }),
+                                }),
+                                className: "framer-1p2mdfk",
+                                fonts: ["Inter"],
+                                verticalAlignment: "top",
+                                withExternalLayout: !0,
+                              }),
+                            }),
+                          ],
+                        }),
+                        t("div", {
+                          className: "framer-bzz9hc",
+                          "data-border": !0,
+                          "data-framer-name": "Lest 01",
+                          name: "Lest 01",
+                          children: [
+                            e("div", {
+                              className: "framer-1wrd7lh",
+                              "data-framer-name": "Contant",
+                              name: "Contant",
+                              children: e(h, {
+                                breakpoint: i,
+                                overrides: {
+                                  Q1XUigOVv: {
+                                    background: {
+                                      alt: "",
+                                      fit: "fill",
+                                      intrinsicHeight: 520.8,
+                                      intrinsicWidth: 520.8,
+                                      loading: "lazy",
+                                      pixelHeight: 651,
+                                      pixelWidth: 651,
+                                      sizes: "65px",
+                                      src: "https://framerusercontent.com/images/QESvCvsgp3izcFPOqGE6s1aZGDI.png",
+                                      srcSet:
+                                        "https://framerusercontent.com/images/QESvCvsgp3izcFPOqGE6s1aZGDI.png 650w",
+                                    },
+                                  },
+                                },
+                                children: e(x, {
+                                  background: {
+                                    alt: "",
+                                    fit: "fill",
+                                    intrinsicHeight: 520.8,
+                                    intrinsicWidth: 520.8,
+                                    loading: "lazy",
+                                    pixelHeight: 651,
+                                    pixelWidth: 651,
+                                    sizes: "100px",
+                                    src: "https://framerusercontent.com/images/QESvCvsgp3izcFPOqGE6s1aZGDI.png",
+                                    srcSet:
+                                      "https://framerusercontent.com/images/QESvCvsgp3izcFPOqGE6s1aZGDI.png 650w",
+                                  },
+                                  className: "framer-1j6jvka",
+                                  "data-framer-name": "image",
+                                  name: "image",
+                                }),
+                              }),
+                            }),
+                            e("div", {
+                              className: "framer-17ja6ah",
+                              "data-framer-name": "Title ",
+                              name: "Title ",
+                              children: e(C, {
+                                __fromCanvasComponent: !0,
+                                children: e(n, {
+                                  children: e("h4", {
+                                    style: {
+                                      "--framer-font-size": "17px",
+                                      "--framer-line-height": "1.4em",
+                                      "--framer-text-alignment": "center",
+                                      "--framer-text-color":
+                                        "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                    },
+                                    children: "Near",
+                                  }),
+                                }),
+                                className: "framer-10mqin3",
+                                fonts: ["Inter"],
+                                verticalAlignment: "top",
+                                withExternalLayout: !0,
+                              }),
+                            }),
+                          ],
+                        }),
+                        t("div", {
+                          className: "framer-hanm0d",
+                          "data-border": !0,
+                          "data-framer-name": "Lest 01",
+                          name: "Lest 01",
+                          children: [
+                            e("div", {
+                              className: "framer-dsy09z",
+                              "data-framer-name": "Contant",
+                              name: "Contant",
+                              children: e(h, {
+                                breakpoint: i,
+                                overrides: {
+                                  Q1XUigOVv: {
+                                    background: {
+                                      alt: "",
+                                      fit: "fill",
+                                      intrinsicHeight: 520.8,
+                                      intrinsicWidth: 520.8,
+                                      loading: "lazy",
+                                      pixelHeight: 651,
+                                      pixelWidth: 651,
+                                      sizes: "65px",
+                                      src: "https://framerusercontent.com/images/MRa04MH6P0TWHfzr7Dr0Hk8oeg.png",
+                                      srcSet:
+                                        "https://framerusercontent.com/images/MRa04MH6P0TWHfzr7Dr0Hk8oeg.png 650w",
+                                    },
+                                  },
+                                },
+                                children: e(x, {
+                                  background: {
+                                    alt: "",
+                                    fit: "fill",
+                                    intrinsicHeight: 520.8,
+                                    intrinsicWidth: 520.8,
+                                    loading: "lazy",
+                                    pixelHeight: 651,
+                                    pixelWidth: 651,
+                                    sizes: "100px",
+                                    src: "https://framerusercontent.com/images/MRa04MH6P0TWHfzr7Dr0Hk8oeg.png",
+                                    srcSet:
+                                      "https://framerusercontent.com/images/MRa04MH6P0TWHfzr7Dr0Hk8oeg.png 650w",
+                                  },
+                                  className: "framer-fxt8lq",
+                                  "data-framer-name": "image",
+                                  name: "image",
+                                }),
+                              }),
+                            }),
+                            e("div", {
+                              className: "framer-no6vp4",
+                              "data-framer-name": "Title ",
+                              name: "Title ",
+                              children: e(C, {
+                                __fromCanvasComponent: !0,
+                                children: e(n, {
+                                  children: e("h4", {
+                                    style: {
+                                      "--framer-font-size": "17px",
+                                      "--framer-line-height": "1.4em",
+                                      "--framer-text-alignment": "center",
+                                      "--framer-text-color":
+                                        "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                    },
+                                    children: "Ethereum",
+                                  }),
+                                }),
+                                className: "framer-19e7f19",
+                                fonts: ["Inter"],
+                                verticalAlignment: "top",
+                                withExternalLayout: !0,
+                              }),
+                            }),
+                          ],
+                        }),
+                        t("div", {
+                          className: "framer-1az6435",
+                          "data-border": !0,
+                          "data-framer-name": "Lest 01",
+                          name: "Lest 01",
+                          children: [
+                            e("div", {
+                              className: "framer-15vfdwb",
+                              "data-framer-name": "Contant",
+                              name: "Contant",
+                              children: e(h, {
+                                breakpoint: i,
+                                overrides: {
+                                  Q1XUigOVv: {
+                                    background: {
+                                      alt: "",
+                                      fit: "fill",
+                                      intrinsicHeight: 520.8,
+                                      intrinsicWidth: 520.8,
+                                      loading: "lazy",
+                                      pixelHeight: 651,
+                                      pixelWidth: 651,
+                                      sizes: "65px",
+                                      src: "https://framerusercontent.com/images/MvQ5GOHW6DebjXYSDOrf6Gq6lM.png",
+                                      srcSet:
+                                        "https://framerusercontent.com/images/MvQ5GOHW6DebjXYSDOrf6Gq6lM.png?scale-down-to=512 512w,https://framerusercontent.com/images/MvQ5GOHW6DebjXYSDOrf6Gq6lM.png 651w",
+                                    },
+                                  },
+                                },
+                                children: e(x, {
+                                  background: {
+                                    alt: "",
+                                    fit: "fill",
+                                    intrinsicHeight: 520.8,
+                                    intrinsicWidth: 520.8,
+                                    loading: "lazy",
+                                    pixelHeight: 651,
+                                    pixelWidth: 651,
+                                    sizes: "100px",
+                                    src: "https://framerusercontent.com/images/MvQ5GOHW6DebjXYSDOrf6Gq6lM.png",
+                                    srcSet:
+                                      "https://framerusercontent.com/images/MvQ5GOHW6DebjXYSDOrf6Gq6lM.png?scale-down-to=512 512w,https://framerusercontent.com/images/MvQ5GOHW6DebjXYSDOrf6Gq6lM.png 651w",
+                                  },
+                                  className: "framer-1g115jf",
+                                  "data-framer-name": "image",
+                                  name: "image",
+                                }),
+                              }),
+                            }),
+                            e("div", {
+                              className: "framer-qronkf",
+                              "data-framer-name": "Title ",
+                              name: "Title ",
+                              children: e(C, {
+                                __fromCanvasComponent: !0,
+                                children: e(n, {
+                                  children: e("h4", {
+                                    style: {
+                                      "--framer-font-size": "17px",
+                                      "--framer-line-height": "1.4em",
+                                      "--framer-text-alignment": "center",
+                                      "--framer-text-color":
+                                        "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                    },
+                                    children: "Polygon",
+                                  }),
+                                }),
+                                className: "framer-etxgq9",
+                                fonts: ["Inter"],
+                                verticalAlignment: "top",
+                                withExternalLayout: !0,
+                              }),
+                            }),
+                          ],
+                        }),
+                        t("div", {
+                          className: "framer-1kndl8r",
+                          "data-border": !0,
+                          "data-framer-name": "Lest 01",
+                          name: "Lest 01",
+                          children: [
+                            e("div", {
+                              className: "framer-14m5wfj",
+                              "data-framer-name": "Contant",
+                              name: "Contant",
+                              children: e(h, {
+                                breakpoint: i,
+                                overrides: {
+                                  Q1XUigOVv: {
+                                    background: {
+                                      alt: "",
+                                      fit: "fill",
+                                      intrinsicHeight: 520.8,
+                                      intrinsicWidth: 520.8,
+                                      loading: "lazy",
+                                      pixelHeight: 651,
+                                      pixelWidth: 651,
+                                      sizes: "65px",
+                                      src: "https://framerusercontent.com/images/KItj9fQ2qxzJTPHVUJZsLHVAuyE.png",
+                                      srcSet:
+                                        "https://framerusercontent.com/images/KItj9fQ2qxzJTPHVUJZsLHVAuyE.png 650w",
+                                    },
+                                  },
+                                },
+                                children: e(x, {
+                                  background: {
+                                    alt: "",
+                                    fit: "fill",
+                                    intrinsicHeight: 520.8,
+                                    intrinsicWidth: 520.8,
+                                    loading: "lazy",
+                                    pixelHeight: 651,
+                                    pixelWidth: 651,
+                                    sizes: "100px",
+                                    src: "https://framerusercontent.com/images/KItj9fQ2qxzJTPHVUJZsLHVAuyE.png",
+                                    srcSet:
+                                      "https://framerusercontent.com/images/KItj9fQ2qxzJTPHVUJZsLHVAuyE.png 650w",
+                                  },
+                                  className: "framer-8ev09z",
+                                  "data-framer-name": "image",
+                                  name: "image",
+                                }),
+                              }),
+                            }),
+                            e("div", {
+                              className: "framer-zt38q9",
+                              "data-framer-name": "Title ",
+                              name: "Title ",
+                              children: e(C, {
+                                __fromCanvasComponent: !0,
+                                children: e(n, {
+                                  children: e("h4", {
+                                    style: {
+                                      "--framer-font-size": "17px",
+                                      "--framer-line-height": "1.4em",
+                                      "--framer-text-alignment": "center",
+                                      "--framer-text-color":
+                                        "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                    },
+                                    children: "Avalanche",
+                                  }),
+                                }),
+                                className: "framer-hr81mf",
+                                fonts: ["Inter"],
+                                verticalAlignment: "top",
+                                withExternalLayout: !0,
+                              }),
+                            }),
+                          ],
+                        }),
+                        t("div", {
+                          className: "framer-1ao794p",
+                          "data-border": !0,
+                          "data-framer-name": "Lest 01",
+                          name: "Lest 01",
+                          children: [
+                            e("div", {
+                              className: "framer-mefgcn",
+                              "data-framer-name": "Contant",
+                              name: "Contant",
+                              children: e(h, {
+                                breakpoint: i,
+                                overrides: {
+                                  Q1XUigOVv: {
+                                    background: {
+                                      alt: "",
+                                      fit: "fit",
+                                      intrinsicHeight: 520.8,
+                                      intrinsicWidth: 520.8,
+                                      loading: "lazy",
+                                      pixelHeight: 651,
+                                      pixelWidth: 651,
+                                      positionX: "center",
+                                      positionY: "center",
+                                      sizes: "65px",
+                                      src: "https://framerusercontent.com/images/L0cDW2FgeZnTvkAp0jXy1p5WM.png",
+                                      srcSet:
+                                        "https://framerusercontent.com/images/L0cDW2FgeZnTvkAp0jXy1p5WM.png 582w",
+                                    },
+                                  },
+                                },
+                                children: e(x, {
+                                  background: {
+                                    alt: "",
+                                    fit: "fit",
+                                    intrinsicHeight: 520.8,
+                                    intrinsicWidth: 520.8,
+                                    loading: "lazy",
+                                    pixelHeight: 651,
+                                    pixelWidth: 651,
+                                    positionX: "center",
+                                    positionY: "center",
+                                    sizes: "100px",
+                                    src: "https://framerusercontent.com/images/L0cDW2FgeZnTvkAp0jXy1p5WM.png",
+                                    srcSet:
+                                      "https://framerusercontent.com/images/L0cDW2FgeZnTvkAp0jXy1p5WM.png 582w",
+                                  },
+                                  className: "framer-ippcvq",
+                                  "data-framer-name": "image",
+                                  name: "image",
+                                }),
+                              }),
+                            }),
+                            e("div", {
+                              className: "framer-13n63cz",
+                              "data-framer-name": "Title ",
+                              name: "Title ",
+                              children: e(C, {
+                                __fromCanvasComponent: !0,
+                                children: e(n, {
+                                  children: e("h4", {
+                                    style: {
+                                      "--framer-font-size": "17px",
+                                      "--framer-line-height": "1.4em",
+                                      "--framer-text-alignment": "center",
+                                      "--framer-text-color":
+                                        "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                    },
+                                    children: "Arbitrum",
+                                  }),
+                                }),
+                                className: "framer-1fo6chx",
+                                fonts: ["Inter"],
+                                verticalAlignment: "top",
+                                withExternalLayout: !0,
+                              }),
+                            }),
+                          ],
+                        }),
+                        t("div", {
+                          className: "framer-yksecg",
+                          "data-border": !0,
+                          "data-framer-name": "Lest 01",
+                          name: "Lest 01",
+                          children: [
+                            e("div", {
+                              className: "framer-18wsno1",
+                              "data-framer-name": "Contant",
+                              name: "Contant",
+                              children: e(h, {
+                                breakpoint: i,
+                                overrides: {
+                                  Q1XUigOVv: {
+                                    background: {
+                                      alt: "",
+                                      fit: "fill",
+                                      intrinsicHeight: 520.8,
+                                      intrinsicWidth: 520.8,
+                                      loading: "lazy",
+                                      pixelHeight: 651,
+                                      pixelWidth: 651,
+                                      sizes: "65px",
+                                      src: "https://framerusercontent.com/images/bFUQLGtXxFvemL3EwEMla4KpImw.png",
+                                      srcSet:
+                                        "https://framerusercontent.com/images/bFUQLGtXxFvemL3EwEMla4KpImw.png?scale-down-to=512 512w,https://framerusercontent.com/images/bFUQLGtXxFvemL3EwEMla4KpImw.png 651w",
+                                    },
+                                  },
+                                },
+                                children: e(x, {
+                                  background: {
+                                    alt: "",
+                                    fit: "fill",
+                                    intrinsicHeight: 520.8,
+                                    intrinsicWidth: 520.8,
+                                    loading: "lazy",
+                                    pixelHeight: 651,
+                                    pixelWidth: 651,
+                                    sizes: "100px",
+                                    src: "https://framerusercontent.com/images/bFUQLGtXxFvemL3EwEMla4KpImw.png",
+                                    srcSet:
+                                      "https://framerusercontent.com/images/bFUQLGtXxFvemL3EwEMla4KpImw.png?scale-down-to=512 512w,https://framerusercontent.com/images/bFUQLGtXxFvemL3EwEMla4KpImw.png 651w",
+                                  },
+                                  className: "framer-1cqrde5",
+                                  "data-framer-name": "image",
+                                  name: "image",
+                                }),
+                              }),
+                            }),
+                            e("div", {
+                              className: "framer-3z2pae",
+                              "data-framer-name": "Title ",
+                              name: "Title ",
+                              children: e(C, {
+                                __fromCanvasComponent: !0,
+                                children: e(n, {
+                                  children: e("h4", {
+                                    style: {
+                                      "--framer-font-size": "17px",
+                                      "--framer-line-height": "1.4em",
+                                      "--framer-text-alignment": "center",
+                                      "--framer-text-color":
+                                        "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                    },
+                                    children: "Optimism",
+                                  }),
+                                }),
+                                className: "framer-ji4ooq",
+                                fonts: ["Inter"],
+                                verticalAlignment: "top",
+                                withExternalLayout: !0,
+                              }),
+                            }),
+                          ],
+                        }),
+                        t("div", {
+                          className: "framer-j97575",
+                          "data-border": !0,
+                          "data-framer-name": "Lest 01",
+                          name: "Lest 01",
+                          children: [
+                            e("div", {
+                              className: "framer-1rcm3a7",
+                              "data-framer-name": "Contant",
+                              name: "Contant",
+                              children: e(h, {
+                                breakpoint: i,
+                                overrides: {
+                                  Q1XUigOVv: {
+                                    background: {
+                                      alt: "",
+                                      fit: "fill",
+                                      intrinsicHeight: 520.8,
+                                      intrinsicWidth: 520.8,
+                                      loading: "lazy",
+                                      pixelHeight: 651,
+                                      pixelWidth: 651,
+                                      sizes: "65px",
+                                      src: "https://framerusercontent.com/images/UVs4xlHerWCNnm9n6VjTZKMeHQ.png",
+                                      srcSet:
+                                        "https://framerusercontent.com/images/UVs4xlHerWCNnm9n6VjTZKMeHQ.png 650w",
+                                    },
+                                  },
+                                },
+                                children: e(x, {
+                                  background: {
+                                    alt: "",
+                                    fit: "fill",
+                                    intrinsicHeight: 520.8,
+                                    intrinsicWidth: 520.8,
+                                    loading: "lazy",
+                                    pixelHeight: 651,
+                                    pixelWidth: 651,
+                                    sizes: "100px",
+                                    src: "https://framerusercontent.com/images/UVs4xlHerWCNnm9n6VjTZKMeHQ.png",
+                                    srcSet:
+                                      "https://framerusercontent.com/images/UVs4xlHerWCNnm9n6VjTZKMeHQ.png 650w",
+                                  },
+                                  className: "framer-1cf802q",
+                                  "data-framer-name": "image",
+                                  name: "image",
+                                }),
+                              }),
+                            }),
+                            e("div", {
+                              className: "framer-1t5ujc8",
+                              "data-framer-name": "Title ",
+                              name: "Title ",
+                              children: e(C, {
+                                __fromCanvasComponent: !0,
+                                children: e(n, {
+                                  children: e("h4", {
+                                    style: {
+                                      "--framer-font-size": "17px",
+                                      "--framer-line-height": "1.4em",
+                                      "--framer-text-alignment": "center",
+                                      "--framer-text-color":
+                                        "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                    },
+                                    children: "Cardano",
+                                  }),
+                                }),
+                                className: "framer-z64c7b",
+                                fonts: ["Inter"],
+                                verticalAlignment: "top",
+                                withExternalLayout: !0,
+                              }),
+                            }),
+                          ],
+                        }),
+                        t("div", {
+                          className: "framer-1cbmlvx",
+                          "data-border": !0,
+                          "data-framer-name": "Lest 01",
+                          name: "Lest 01",
+                          children: [
+                            e("div", {
+                              className: "framer-14kr3zv",
+                              "data-framer-name": "Contant",
+                              name: "Contant",
+                              children: e(h, {
+                                breakpoint: i,
+                                overrides: {
+                                  Q1XUigOVv: {
+                                    background: {
+                                      alt: "",
+                                      fit: "fill",
+                                      intrinsicHeight: 520.8,
+                                      intrinsicWidth: 520.8,
+                                      loading: "lazy",
+                                      pixelHeight: 651,
+                                      pixelWidth: 651,
+                                      sizes: "65px",
+                                      src: "https://framerusercontent.com/images/DOdBid3SZ1tt9qNMlotY2Q5Am4.png",
+                                      srcSet:
+                                        "https://framerusercontent.com/images/DOdBid3SZ1tt9qNMlotY2Q5Am4.png?scale-down-to=512 512w,https://framerusercontent.com/images/DOdBid3SZ1tt9qNMlotY2Q5Am4.png 651w",
+                                    },
+                                  },
+                                },
+                                children: e(x, {
+                                  background: {
+                                    alt: "",
+                                    fit: "fill",
+                                    intrinsicHeight: 520.8,
+                                    intrinsicWidth: 520.8,
+                                    loading: "lazy",
+                                    pixelHeight: 651,
+                                    pixelWidth: 651,
+                                    sizes: "100px",
+                                    src: "https://framerusercontent.com/images/DOdBid3SZ1tt9qNMlotY2Q5Am4.png",
+                                    srcSet:
+                                      "https://framerusercontent.com/images/DOdBid3SZ1tt9qNMlotY2Q5Am4.png?scale-down-to=512 512w,https://framerusercontent.com/images/DOdBid3SZ1tt9qNMlotY2Q5Am4.png 651w",
+                                  },
+                                  className: "framer-801utb",
+                                  "data-framer-name": "image",
+                                  name: "image",
+                                }),
+                              }),
+                            }),
+                            e("div", {
+                              className: "framer-1mn93zs",
+                              "data-framer-name": "Title ",
+                              name: "Title ",
+                              children: e(C, {
+                                __fromCanvasComponent: !0,
+                                children: e(n, {
+                                  children: e("h4", {
+                                    style: {
+                                      "--framer-font-size": "17px",
+                                      "--framer-line-height": "1.4em",
+                                      "--framer-text-alignment": "center",
+                                      "--framer-text-color":
+                                        "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                    },
+                                    children: "Sui",
+                                  }),
+                                }),
+                                className: "framer-1ys60h9",
+                                fonts: ["Inter"],
+                                verticalAlignment: "top",
+                                withExternalLayout: !0,
+                              }),
+                            }),
+                          ],
+                        }),
+                        t("div", {
+                          className: "framer-18nxhsg",
+                          "data-border": !0,
+                          "data-framer-name": "Lest 01",
+                          name: "Lest 01",
+                          children: [
+                            e("div", {
+                              className: "framer-3gi99x",
+                              "data-framer-name": "Contant",
+                              name: "Contant",
+                              children: e(h, {
+                                breakpoint: i,
+                                overrides: {
+                                  Q1XUigOVv: {
+                                    background: {
+                                      alt: "",
+                                      fit: "fill",
+                                      intrinsicHeight: 520.8,
+                                      intrinsicWidth: 520.8,
+                                      loading: "lazy",
+                                      pixelHeight: 651,
+                                      pixelWidth: 651,
+                                      sizes: "65px",
+                                      src: "https://framerusercontent.com/images/m5nGxPuBjPGiL0EcU8RqPD5A71I.png",
+                                      srcSet:
+                                        "https://framerusercontent.com/images/m5nGxPuBjPGiL0EcU8RqPD5A71I.png?scale-down-to=512 512w,https://framerusercontent.com/images/m5nGxPuBjPGiL0EcU8RqPD5A71I.png 651w",
+                                    },
+                                  },
+                                },
+                                children: e(x, {
+                                  background: {
+                                    alt: "",
+                                    fit: "fill",
+                                    intrinsicHeight: 520.8,
+                                    intrinsicWidth: 520.8,
+                                    loading: "lazy",
+                                    pixelHeight: 651,
+                                    pixelWidth: 651,
+                                    sizes: "100px",
+                                    src: "https://framerusercontent.com/images/m5nGxPuBjPGiL0EcU8RqPD5A71I.png",
+                                    srcSet:
+                                      "https://framerusercontent.com/images/m5nGxPuBjPGiL0EcU8RqPD5A71I.png?scale-down-to=512 512w,https://framerusercontent.com/images/m5nGxPuBjPGiL0EcU8RqPD5A71I.png 651w",
+                                  },
+                                  className: "framer-487djs",
+                                  "data-framer-name": "image",
+                                  name: "image",
+                                }),
+                              }),
+                            }),
+                            e("div", {
+                              className: "framer-3ufw93",
+                              "data-framer-name": "Title ",
+                              name: "Title ",
+                              children: e(C, {
+                                __fromCanvasComponent: !0,
+                                children: e(n, {
+                                  children: e("h4", {
+                                    style: {
+                                      "--framer-font-size": "17px",
+                                      "--framer-line-height": "1.4em",
+                                      "--framer-text-alignment": "center",
+                                      "--framer-text-color":
+                                        "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                    },
+                                    children: "Polkadot",
+                                  }),
+                                }),
+                                className: "framer-rtwtso",
+                                fonts: ["Inter"],
+                                verticalAlignment: "top",
+                                withExternalLayout: !0,
+                              }),
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+                t("div", {
+                  className: "framer-ps4c9d",
+                  "data-framer-name": "Section 4",
+                  id: Z,
+                  name: "Section 4",
+                  ref: D,
+                  children: [
+                    f() &&
+                    e(h, {
+                      breakpoint: i,
+                      overrides: {
+                        XWGQJU3bM: {
+                          background: {
+                            alt: "",
+                            fit: "fill",
+                            intrinsicHeight: 388.8,
+                            intrinsicWidth: 464,
+                            loading: "lazy",
+                            pixelHeight: 486,
+                            pixelWidth: 580,
+                            sizes: "170px",
+                            src: "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512",
+                            srcSet:
+                              "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512 512w,https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png 994w",
+                          },
+                        },
+                      },
+                      children: e(S, {
+                        __framer__loop: R,
+                        __framer__loopEffectEnabled: !0,
+                        __framer__loopRepeatDelay: 0,
+                        __framer__loopRepeatType: "mirror",
+                        __framer__loopTransition: m1,
+                        __perspectiveFX: !1,
+                        __targetOpacity: 1,
+                        background: {
+                          alt: "",
+                          fit: "fill",
+                          intrinsicHeight: 388.8,
+                          intrinsicWidth: 464,
+                          loading: "lazy",
+                          pixelHeight: 486,
+                          pixelWidth: 580,
+                          sizes: "251px",
+                          src: "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512",
+                          srcSet:
+                            "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512 512w,https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png 994w",
+                        },
+                        className: "framer-1i2xjtq hidden-xp04m8",
+                        "data-framer-name": "Block",
+                        "data-nosnippet": !0,
+                        drag: !0,
+                        dragMomentum: !1,
+                        dragSnapToOrigin: !0,
+                        dragTransition: E,
+                        name: "Block",
+                        onMouseDown: P,
+                        style: { rotate: -326 },
+                      }),
+                    }),
+                    f() &&
+                    e(h, {
+                      breakpoint: i,
+                      overrides: { XWGQJU3bM: { transformTemplate: P2 } },
+                      children: e(S, {
+                        __framer__loop: R,
+                        __framer__loopEffectEnabled: !0,
+                        __framer__loopRepeatDelay: 0,
+                        __framer__loopRepeatType: "mirror",
+                        __framer__loopTransition: m1,
+                        __perspectiveFX: !1,
+                        __targetOpacity: 1,
+                        background: {
+                          alt: "",
+                          fit: "fill",
+                          intrinsicHeight: 388.8,
+                          intrinsicWidth: 464,
+                          loading: "lazy",
+                          pixelHeight: 486,
+                          pixelWidth: 580,
+                          sizes: "151px",
+                          src: "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512",
+                          srcSet:
+                            "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512 512w,https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png 994w",
+                        },
+                        className: "framer-1hmt24w hidden-xp04m8",
+                        "data-framer-name": "Block",
+                        "data-nosnippet": !0,
+                        drag: !0,
+                        dragMomentum: !1,
+                        dragSnapToOrigin: !0,
+                        dragTransition: E,
+                        name: "Block",
+                        onMouseDown: P,
+                        style: { rotate: -376 },
+                      }),
+                    }),
+                    t("div", {
+                      className: "framer-1yyjn0n",
+                      children: [
+                        e(h, {
+                          breakpoint: i,
+                          overrides: {
+                            Q1XUigOVv: {
+                              children: e(n, {
+                                children: e("h2", {
+                                  style: {
+                                    "--font-selector": "R0Y7SW50ZXItNzAw",
+                                    "--framer-font-family":
+                                      '"Inter", "Inter Placeholder", sans-serif',
+                                    "--framer-font-size": "25px",
+                                    "--framer-font-weight": "700",
+                                    "--framer-letter-spacing": "-0.72px",
+                                    "--framer-line-height": "1.5em",
+                                    "--framer-text-alignment": "center",
+                                    "--framer-text-color":
+                                      "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                  },
+                                  children: "Our Services",
+                                }),
+                              }),
+                            },
+                            XWGQJU3bM: {
+                              children: e(n, {
+                                children: e("h2", {
+                                  style: {
+                                    "--font-selector": "R0Y7SW50ZXItNzAw",
+                                    "--framer-font-family":
+                                      '"Inter", "Inter Placeholder", sans-serif',
+                                    "--framer-font-size": "36px",
+                                    "--framer-font-weight": "700",
+                                    "--framer-letter-spacing": "-0.72px",
+                                    "--framer-line-height": "1.5em",
+                                    "--framer-text-alignment": "center",
+                                    "--framer-text-color":
+                                      "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                  },
+                                  children: "Our Services",
+                                }),
+                              }),
+                            },
+                          },
+                          children: e(C, {
+                            __fromCanvasComponent: !0,
+                            children: e(n, {
+                              children: e("h2", {
+                                style: {
+                                  "--font-selector": "R0Y7SW50ZXItNzAw",
+                                  "--framer-font-family":
+                                    '"Inter", "Inter Placeholder", sans-serif',
+                                  "--framer-font-size": "36px",
+                                  "--framer-font-weight": "700",
+                                  "--framer-letter-spacing": "-0.72px",
+                                  "--framer-line-height": "44px",
+                                  "--framer-text-alignment": "center",
+                                  "--framer-text-color":
+                                    "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                },
+                                children: "Our Services",
+                              }),
+                            }),
+                            className: "framer-1goigrv",
+                            fonts: ["GF;Inter-700"],
+                            verticalAlignment: "top",
+                            withExternalLayout: !0,
+                          }),
+                        }),
+                        e(h, {
+                          breakpoint: i,
+                          overrides: {
+                            Q1XUigOVv: {
+                              children: e(n, {
+                                children: e("h2", {
+                                  style: {
+                                    "--font-selector": "R0Y7SW50ZXItNjAw",
+                                    "--framer-font-family":
+                                      '"Inter", "Inter Placeholder", sans-serif',
+                                    "--framer-font-size": "15px",
+                                    "--framer-font-weight": "600",
+                                    "--framer-line-height": "24px",
+                                    "--framer-text-alignment": "center",
+                                    "--framer-text-color": "rgb(182, 182, 185)",
+                                  },
+                                  children:
+                                    "Specializing in providing top-notch blockchain security solutions.",
+                                }),
+                              }),
+                            },
+                          },
+                          children: e(C, {
+                            __fromCanvasComponent: !0,
+                            children: e(n, {
+                              children: e("h2", {
+                                style: {
+                                  "--font-selector": "R0Y7SW50ZXItNjAw",
+                                  "--framer-font-family":
+                                    '"Inter", "Inter Placeholder", sans-serif',
+                                  "--framer-font-weight": "600",
+                                  "--framer-line-height": "24px",
+                                  "--framer-text-alignment": "center",
+                                  "--framer-text-color": "rgb(182, 182, 185)",
+                                },
+                                children:
+                                  "Specializing in providing top-notch blockchain security solutions.",
+                              }),
+                            }),
+                            className: "framer-1pybend",
+                            fonts: ["GF;Inter-600"],
+                            verticalAlignment: "top",
+                            withExternalLayout: !0,
+                          }),
+                        }),
+                      ],
+                    }),
+                    t("div", {
+                      className: "framer-17ve921",
+                      "data-framer-name": "Container",
+                      name: "Container",
+                      children: [
+                        t("div", {
+                          className: "framer-1ywqqkv",
+                          "data-border": !0,
+                          "data-framer-name": "Lest 01",
+                          name: "Lest 01",
+                          children: [
+                            e("div", {
+                              className: "framer-1htcnl0",
+                              "data-framer-name": "Title ",
+                              name: "Title ",
+                              children: e(C, {
+                                __fromCanvasComponent: !0,
+                                children: e(n, {
+                                  children: e("h4", {
+                                    style: {
+                                      "--framer-font-size": "24px",
+                                      "--framer-line-height": "1.4em",
+                                      "--framer-text-alignment": "center",
+                                      "--framer-text-color":
+                                        "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                    },
+                                    children: "Web App Pentest",
+                                  }),
+                                }),
+                                className: "framer-vsjwt6",
+                                fonts: ["Inter"],
+                                verticalAlignment: "top",
+                                withExternalLayout: !0,
+                              }),
+                            }),
+                            e("div", {
+                              className: "framer-5jwtqe",
+                              "data-framer-name": "Contant",
+                              name: "Contant",
+                              children: e(h, {
+                                breakpoint: i,
+                                overrides: {
+                                  Q1XUigOVv: {
+                                    children: e(n, {
+                                      children: e("p", {
+                                        style: {
+                                          "--framer-font-size": "15px",
+                                          "--framer-line-height": "140%",
+                                          "--framer-text-alignment": "center",
+                                          "--framer-text-color":
+                                            "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                        },
+                                        children:
+                                          "Uncover vulnerabilities in your web applications and APIs. Our testing methodology ensures your online platforms are secure against modern threats.",
+                                      }),
+                                    }),
+                                  },
+                                },
+                                children: e(C, {
+                                  __fromCanvasComponent: !0,
+                                  children: e(n, {
+                                    children: e("p", {
+                                      style: {
+                                        "--framer-line-height": "140%",
+                                        "--framer-text-alignment": "center",
+                                        "--framer-text-color":
+                                          "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                      },
+                                      children:
+                                        "Identify vulnerabilities in dApps, and blockchain ecosystems to help strengthen the security of decentralized applications.",
+                                    }),
+                                  }),
+                                  className: "framer-qsr8w2",
+                                  fonts: ["Inter"],
+                                  verticalAlignment: "top",
+                                  withExternalLayout: !0,
+                                }),
+                              }),
+                            }),
+                          ],
+                        }),
+                        t("div", {
+                          className: "framer-125nsv8",
+                          "data-border": !0,
+                          "data-framer-name": "Lest 02",
+                          name: "Lest 02",
+                          children: [
+                            e("div", {
+                              className: "framer-1y5eqjf",
+                              "data-framer-name": "Title ",
+                              name: "Title ",
+                              children: e(C, {
+                                __fromCanvasComponent: !0,
+                                children: e(n, {
+                                  children: e("h4", {
+                                    style: {
+                                      "--framer-font-size": "24px",
+                                      "--framer-line-height": "1.4em",
+                                      "--framer-text-alignment": "center",
+                                      "--framer-text-color":
+                                        "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                    },
+                                    children: "Web3 Pentest",
+                                  }),
+                                }),
+                                className: "framer-nnubj1",
+                                fonts: ["Inter"],
+                                verticalAlignment: "top",
+                                withExternalLayout: !0,
+                              }),
+                            }),
+                            e("div", {
+                              className: "framer-h54jv5",
+                              "data-framer-name": "Contant",
+                              name: "Contant",
+                              children: e(h, {
+                                breakpoint: i,
+                                overrides: {
+                                  Q1XUigOVv: {
+                                    children: e(n, {
+                                      children: e("p", {
+                                        style: {
+                                          "--framer-font-size": "15px",
+                                          "--framer-line-height": "140%",
+                                          "--framer-text-alignment": "center",
+                                          "--framer-text-color":
+                                            "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                        },
+                                        children:
+                                          "Identify vulnerabilities in dApps, and blockchain ecosystems to help strengthen the security of decentralized applications.",
+                                      }),
+                                    }),
+                                  },
+                                },
+                                children: e(C, {
+                                  __fromCanvasComponent: !0,
+                                  children: e(n, {
+                                    children: e("p", {
+                                      style: {
+                                        "--framer-line-height": "140%",
+                                        "--framer-text-alignment": "center",
+                                        "--framer-text-color":
+                                          "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                      },
+                                      children:
+                                        "Identify vulnerabilities in dApps, and blockchain ecosystems to help strengthen the security of decentralized applications.",
+                                    }),
+                                  }),
+                                  className: "framer-1g7cas4",
+                                  fonts: ["Inter"],
+                                  verticalAlignment: "top",
+                                  withExternalLayout: !0,
+                                }),
+                              }),
+                            }),
+                          ],
+                        }),
+                        t("div", {
+                          className: "framer-1silq0f",
+                          "data-border": !0,
+                          "data-framer-name": "Lest 01",
+                          name: "Lest 01",
+                          children: [
+                            e("div", {
+                              className: "framer-ymwhmt",
+                              "data-framer-name": "Title ",
+                              name: "Title ",
+                              children: e(C, {
+                                __fromCanvasComponent: !0,
+                                children: e(n, {
+                                  children: e("h4", {
+                                    style: {
+                                      "--framer-font-size": "24px",
+                                      "--framer-line-height": "1.4em",
+                                      "--framer-text-alignment": "center",
+                                      "--framer-text-color":
+                                        "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                    },
+                                    children: "Smart Contract Audit",
+                                  }),
+                                }),
+                                className: "framer-xizh7q",
+                                fonts: ["Inter"],
+                                verticalAlignment: "top",
+                                withExternalLayout: !0,
+                              }),
+                            }),
+                            e("div", {
+                              className: "framer-1hgk5pb",
+                              "data-framer-name": "Contant",
+                              name: "Contant",
+                              children: e(h, {
+                                breakpoint: i,
+                                overrides: {
+                                  Q1XUigOVv: {
+                                    children: e(n, {
+                                      children: e("p", {
+                                        style: {
+                                          "--framer-font-size": "15px",
+                                          "--framer-line-height": "140%",
+                                          "--framer-text-alignment": "center",
+                                          "--framer-text-color":
+                                            "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                        },
+                                        children:
+                                          "Ensure the security and reliability of your smart contracts with comprehensive code reviews and vulnerability",
+                                      }),
+                                    }),
+                                  },
+                                },
+                                children: e(C, {
+                                  __fromCanvasComponent: !0,
+                                  children: e(n, {
+                                    children: e("p", {
+                                      style: {
+                                        "--framer-line-height": "140%",
+                                        "--framer-text-alignment": "center",
+                                        "--framer-text-color":
+                                          "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                      },
+                                      children:
+                                        "Ensure the security and reliability of your smart contracts with comprehensive code reviews and vulnerability",
+                                    }),
+                                  }),
+                                  className: "framer-1xb2h12",
+                                  fonts: ["Inter"],
+                                  verticalAlignment: "top",
+                                  withExternalLayout: !0,
+                                }),
+                              }),
+                            }),
+                          ],
+                        }),
+                        t("div", {
+                          className: "framer-1silq0f",
+                          "data-border": !0,
+                          "data-framer-name": "Lest 01",
+                          name: "Lest 01",
+                          children: [
+                            e("div", {
+                              className: "framer-ymwhmt",
+                              "data-framer-name": "Title ",
+                              name: "Title ",
+                              children: e(C, {
+                                __fromCanvasComponent: !0,
+                                children: e(n, {
+                                  children: e("h4", {
+                                    style: {
+                                      "--framer-font-size": "24px",
+                                      "--framer-line-height": "1.4em",
+                                      "--framer-text-alignment": "center",
+                                      "--framer-text-color":
+                                        "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                    },
+                                    children: "Private Audits",
+                                  }),
+                                }),
+                                className: "framer-xizh7q",
+                                fonts: ["Inter"],
+                                verticalAlignment: "top",
+                                withExternalLayout: !0,
+                              }),
+                            }),
+                            e("div", {
+                              className: "framer-1hgk5pb",
+                              "data-framer-name": "Contant",
+                              name: "Contant",
+                              children: e(h, {
+                                breakpoint: i,
+                                overrides: {
+                                  Q1XUigOVv: {
+                                    children: e(n, {
+                                      children: e("p", {
+                                        style: {
+                                          "--framer-font-size": "15px",
+                                          "--framer-line-height": "140%",
+                                          "--framer-text-alignment": "center",
+                                          "--framer-text-color":
+                                            "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                        },
+                                        children:
+                                          "Customized audit solutions tailored to your project's specific needs.",
+                                      }),
+                                    }),
+                                  },
+                                },
+                                children: e(C, {
+                                  __fromCanvasComponent: !0,
+                                  children: e(n, {
+                                    children: e("p", {
+                                      style: {
+                                        "--framer-line-height": "140%",
+                                        "--framer-text-alignment": "center",
+                                        "--framer-text-color":
+                                          "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                      },
+                                      children:
+                                          "Customized audit solutions tailored to your project's specific needs.",
+                                    }),
+                                  }),
+                                  className: "framer-1xb2h12",
+                                  fonts: ["Inter"],
+                                  verticalAlignment: "top",
+                                  withExternalLayout: !0,
+                                }),
+                              }),
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+                t("div", {
+                  className: "framer-1swkq8r",
+                  "data-framer-name": "Guild Academy",
+                  name: "Guild Academy",
+                  children: [
+                    t("div", {
+                      className: "framer-19qgbj8",
+                      "data-framer-name": "Container",
+                      name: "Container",
+                      children: [
+                        f() &&
+                        e("div", {
+                          className: "framer-tdirjv hidden-xp04m8",
+                          "data-framer-name": "shadow",
+                          name: "shadow",
+                          children: t("div", {
+                            className: "framer-1fmf1ij",
+                            "data-framer-name": "Group 2",
+                            name: "Group 2",
+                            children: [
+                              e("div", {
+                                className: "framer-1jebix",
+                                "data-framer-name": "Ellipse 2",
+                                name: "Ellipse 2",
+                              }),
+                              e("div", {
+                                className: "framer-1pwz3yr",
+                                "data-framer-name": "Ellipse 3",
+                                name: "Ellipse 3",
+                              }),
+                            ],
+                          }),
+                        }),
+                        t("div", {
+                          className: "framer-otapak",
+                          "data-framer-name": "head-txt",
+                          name: "head-txt",
+                          children: [
+                            t("div", {
+                              className: "framer-1rxbt53",
+                              "data-border": !0,
+                              id: W,
+                              ref: T,
+                              children: [
+                                t("div", {
+                                  className: "framer-1vjbwqe",
+                                  children: [
+                                    t("div", {
+                                      className: "framer-1vzfukf",
+                                      children: [
+                                        e(s1, {
+                                          className: "framer-1md35q4",
+                                          "data-framer-name": "rwe",
+                                          fill: "black",
+                                          intrinsicHeight: 614,
+                                          intrinsicWidth: 836,
+                                          name: "rwe",
+                                          svg: '<svg xmlns="http://www.w3.org/2000/svg" width="836" height="614"><path fill="#00E400" d="M543.101 0h25.897c5.633 1.288 11.693.71 17.436 1.399 76.583 9.18 142.783 46.104 190.424 106.752q6.025 7.766 11.538 15.905 5.512 8.138 10.488 16.615 4.976 8.478 9.396 17.258 4.419 8.78 8.263 17.827c1.309 3.053 4.4 8.615 4.008 11.894q-50.64.936-101.288.96c-.024-.316-.012-.426-.156-.756-1.538-3.511-9.989-13.737-12.696-17.147-26.37-33.218-61.336-59.209-102.6-70.388-42.193-11.43-87.672-5.111-127.403 12.047-12.338 5.329-23.875 11.789-35.528 18.452-5.203-9.457-9.361-19.809-14.028-29.568-8.753-18.301-17.809-36.551-26.084-55.072 4.421-3.863 10.123-6.748 15.224-9.648q5.331-2.997 10.785-5.763 5.455-2.766 11.023-5.296 5.567-2.53 11.238-4.82 5.671-2.288 11.435-4.333 5.764-2.045 11.61-3.84 5.845-1.796 11.763-3.34 5.917-1.545 11.895-2.834 5.978-1.29 12.006-2.322c6.713-1.147 13.551-2.173 20.336-2.723 4.829-.391 9.868-.298 14.628-1.182.13-.024.26-.051.39-.077ZM520.82 282.088l314.866-.008-.043.9c.796 3.193 1.03 13.651-.151 16.711.236 1.552.439 4.256-.431 5.636-.095.15-.216.283-.324.425 1.211 3.578.037 9.098-.373 12.887-2.549 23.593-7.622 47.789-16.523 69.853-2.482 6.151-4.912 12.468-7.804 18.436-26.032 53.714-69.122 95.5-119.878 126.078-11.712 7.056-24.044 14.574-36.656 19.936-.184-2.478-38.812-79.877-43.979-90.816 18.874-5.081 34.721-11.06 50.951-22.359 20.766-14.457 37.136-33.513 50.918-54.562 1.753-2.676 5.366-6.941 5.921-10.025-7.066.642-14.567.102-21.693.092l-43.1-.017-55.045.019c-9.913.001-20.095.464-29.972-.201l-32.316-64.323c-4.77-9.475-10.181-18.934-14.368-28.662Zm314.823.892c.355 3.372-.129 19.649-.906 22.772.108-.142.229-.275.324-.425.87-1.38.667-4.084.431-5.636 1.181-3.06.947-13.518.151-16.711Z"/><path fill="#00E400" fill-opacity=".961" d="M835.643 282.98c.796 3.193 1.03 13.651-.151 16.711.236 1.552.439 4.256-.431 5.636-.095.15-.216.283-.324.425.777-3.123 1.261-19.4.906-22.772Z"/><path fill="#00E400" d="M283.022 7.339c5.382 8.225 9.27 17.94 13.651 26.761l28.235 57.181 96.905 195.762 102.28 206.544 28.481 57.288c4.167 8.378 10.618 19.502 13.537 28.037-34.189-.021-68.466-.554-102.644.086l-180.51-362.01q-28.735 58.892-58.108 117.469l-75.144 151.615 159.375.044c3.461 5.433 5.877 11.842 8.573 17.695l14.435 31.334 13.088 28.273c2.33 5.026 5.21 10.23 6.864 15.5L0 578.92v-.719c2.538-4.461 4.533-9.368 6.744-14.006 2.9-6.081 6.002-12.076 9.02-18.1l44.67-90.332 157.494-318.015 46.158-93.274 11.258-22.556c2.387-4.82 4.601-10.168 7.678-14.58Z"/></svg>',
+                                          withExternalLayout: !0,
+                                        }),
+                                        e(h, {
+                                          breakpoint: i,
+                                          overrides: {
+                                            Q1XUigOVv: {
+                                              children: e(n, {
+                                                children: t("h2", {
+                                                  style: {
+                                                    "--font-selector":
+                                                      "R0Y7UGx1cyBKYWthcnRhIFNhbnMtNjAw",
+                                                    "--framer-font-family":
+                                                      '"Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif',
+                                                    "--framer-font-size":
+                                                      "15px",
+                                                    "--framer-font-weight":
+                                                      "600",
+                                                    "--framer-letter-spacing":
+                                                      "-0.02em",
+                                                    "--framer-line-height":
+                                                      "120%",
+                                                    "--framer-text-alignment":
+                                                      "center",
+                                                    "--framer-text-color":
+                                                      "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                                  },
+                                                  children: [
+                                                    e("span", {
+                                                      style: {
+                                                        "--framer-font-size":
+                                                          "28px",
+                                                      },
+                                                      children: "Guild Academy",
+                                                    }),
+                                                    e("br", {}),
+                                                    e("br", {
+                                                      className:
+                                                        "trailing-break",
+                                                    }),
+                                                  ],
+                                                }),
+                                              }),
+                                              fonts: [
+                                                "GF;Plus Jakarta Sans-600",
+                                              ],
+                                            },
+                                          },
+                                          children: e(C, {
+                                            __fromCanvasComponent: !0,
+                                            children: e(n, {
+                                              children: t("h2", {
+                                                className:
+                                                  "framer-styles-preset-rp61ro",
+                                                "data-styles-preset":
+                                                  "fOTtXmCE4",
+                                                style: {
+                                                  "--framer-text-alignment":
+                                                    "center",
+                                                },
+                                                children: [
+                                                  e("span", {
+                                                    style: {
+                                                      "--framer-text-color":
+                                                        "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                                    },
+                                                    children: "Guild Academy",
+                                                  }),
+                                                  e("br", {}),
+                                                  e("br", {
+                                                    className: "trailing-break",
+                                                  }),
+                                                ],
+                                              }),
+                                            }),
+                                            className: "framer-9j50vb",
+                                            "data-framer-name":
+                                              "Do you have critical and complex infrastructure?",
+                                            fonts: ["Inter"],
+                                            name: "Do you have critical and complex infrastructure?",
+                                            verticalAlignment: "top",
+                                            withExternalLayout: !0,
+                                          }),
+                                        }),
+                                      ],
+                                    }),
+                                    e(h, {
+                                      breakpoint: i,
+                                      overrides: {
+                                        jeCnrh3kk: {
+                                          children: t(n, {
+                                            children: [
+                                              e("p", {
+                                                style: {
+                                                  "--framer-line-height":
+                                                    "140%",
+                                                  "--framer-text-alignment":
+                                                    "center",
+                                                  "--framer-text-color":
+                                                    "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                                },
+                                                children:
+                                                  "Our hybrid bootcamp is a four-month intensive program designed to equip participants with the skills and knowledge needed for a successful career in blockchain security. We provide:",
+                                              }),
+                                              e("p", {
+                                                style: {
+                                                  "--font-selector":
+                                                    "R0Y7UGx1cyBKYWthcnRhIFNhbnMtNTAw",
+                                                  "--framer-font-family":
+                                                    '"Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif',
+                                                  "--framer-font-weight": "500",
+                                                  "--framer-line-height":
+                                                    "140%",
+                                                  "--framer-text-alignment":
+                                                    "center",
+                                                  "--framer-text-color":
+                                                    "var(--token-7049cce7-715e-45a0-a41e-932274474306, rgb(9, 227, 8))",
+                                                },
+                                                children: e("br", {
+                                                  className: "trailing-break",
+                                                }),
+                                              }),
+                                              t("ul", {
+                                                style: {
+                                                  "--framer-font-size": "20px",
+                                                  "--framer-line-height":
+                                                    "140%",
+                                                  "--framer-text-color":
+                                                    "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                                },
+                                                children: [
+                                                  t("li", {
+                                                    children: [
+                                                      t("p", {
+                                                        children: [
+                                                          e("strong", {
+                                                            children:
+                                                              "Food and Accommodation:",
+                                                          }),
+                                                          " Comfortable living arrangements and nutritious meals.",
+                                                        ],
+                                                      }),
+                                                      e("p", {
+                                                        style: {
+                                                          "--font-selector":
+                                                            "R0Y7UGx1cyBKYWthcnRhIFNhbnMtcmVndWxhcg==",
+                                                          "--framer-font-family":
+                                                            '"Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif',
+                                                          "--framer-text-color":
+                                                            "rgb(234, 234, 235)",
+                                                        },
+                                                        children: e("br", {
+                                                          className:
+                                                            "trailing-break",
+                                                        }),
+                                                      }),
+                                                    ],
+                                                  }),
+                                                  t("li", {
+                                                    children: [
+                                                      t("p", {
+                                                        children: [
+                                                          e("strong", {
+                                                            children:
+                                                              "24-Hour Electricity:",
+                                                          }),
+                                                          " Uninterrupted power supply to support your studies.",
+                                                        ],
+                                                      }),
+                                                      e("p", {
+                                                        style: {
+                                                          "--font-selector":
+                                                            "R0Y7UGx1cyBKYWthcnRhIFNhbnMtcmVndWxhcg==",
+                                                          "--framer-font-family":
+                                                            '"Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif',
+                                                          "--framer-text-color":
+                                                            "rgb(234, 234, 235)",
+                                                        },
+                                                        children: e("br", {
+                                                          className:
+                                                            "trailing-break",
+                                                        }),
+                                                      }),
+                                                    ],
+                                                  }),
+                                                  t("li", {
+                                                    children: [
+                                                      t("p", {
+                                                        children: [
+                                                          e("strong", {
+                                                            children:
+                                                              "Unlimited Internet:",
+                                                          }),
+                                                          " Fast and reliable internet access.",
+                                                        ],
+                                                      }),
+                                                      e("p", {
+                                                        style: {
+                                                          "--font-selector":
+                                                            "R0Y7UGx1cyBKYWthcnRhIFNhbnMtcmVndWxhcg==",
+                                                          "--framer-font-family":
+                                                            '"Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif',
+                                                          "--framer-text-color":
+                                                            "rgb(234, 234, 235)",
+                                                        },
+                                                        children: e("br", {
+                                                          className:
+                                                            "trailing-break",
+                                                        }),
+                                                      }),
+                                                    ],
+                                                  }),
+                                                  t("li", {
+                                                    children: [
+                                                      t("p", {
+                                                        children: [
+                                                          e("strong", {
+                                                            children:
+                                                              "Learning Resources:",
+                                                          }),
+                                                          " Comprehensive materials and tools to enhance your learning experience.",
+                                                        ],
+                                                      }),
+                                                      e("p", {
+                                                        style: {
+                                                          "--font-selector":
+                                                            "R0Y7UGx1cyBKYWthcnRhIFNhbnMtcmVndWxhcg==",
+                                                          "--framer-font-family":
+                                                            '"Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif',
+                                                          "--framer-text-color":
+                                                            "rgb(234, 234, 235)",
+                                                        },
+                                                        children: e("br", {
+                                                          className:
+                                                            "trailing-break",
+                                                        }),
+                                                      }),
+                                                    ],
+                                                  }),
+                                                  e("li", {
+                                                    children: t("p", {
+                                                      children: [
+                                                        e("strong", {
+                                                          children:
+                                                            "World-Class Instructors:",
+                                                        }),
+                                                        " Learn from the best in the industry.",
+                                                      ],
+                                                    }),
+                                                  }),
+                                                ],
+                                              }),
+                                              e("p", {
+                                                style: {
+                                                  "--font-selector":
+                                                    "R0Y7UGx1cyBKYWthcnRhIFNhbnMtcmVndWxhcg==",
+                                                  "--framer-font-family":
+                                                    '"Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif',
+                                                  "--framer-font-size": "20px",
+                                                  "--framer-line-height":
+                                                    "140%",
+                                                  "--framer-text-color":
+                                                    "rgb(234, 234, 235)",
+                                                },
+                                                children: e("br", {
+                                                  className: "trailing-break",
+                                                }),
+                                              }),
+                                              e("p", {
+                                                style: {
+                                                  "--framer-font-size": "20px",
+                                                  "--framer-line-height":
+                                                    "140%",
+                                                  "--framer-text-alignment":
+                                                    "center",
+                                                  "--framer-text-color":
+                                                    "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                                },
+                                                children:
+                                                  "The hybrid bootcamp is an immersive experience in blockchain technology, focusing on mathematics related to blockchain, smart contract auditing, and practical exposure through real-time auditing and hackathons.",
+                                              }),
+                                              e("p", {
+                                                style: {
+                                                  "--font-selector":
+                                                    "R0Y7UGx1cyBKYWthcnRhIFNhbnMtcmVndWxhcg==",
+                                                  "--framer-font-family":
+                                                    '"Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif',
+                                                  "--framer-font-size": "20px",
+                                                  "--framer-line-height":
+                                                    "140%",
+                                                  "--framer-text-alignment":
+                                                    "center",
+                                                  "--framer-text-color":
+                                                    "rgb(234, 234, 235)",
+                                                },
+                                                children: e("br", {
+                                                  className: "trailing-break",
+                                                }),
+                                              }),
+                                              e("p", {
+                                                style: {
+                                                  "--framer-font-size": "20px",
+                                                  "--framer-line-height":
+                                                    "140%",
+                                                  "--framer-text-alignment":
+                                                    "center",
+                                                  "--framer-text-color":
+                                                    "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                                },
+                                                children:
+                                                  "The bootcamp runs twice a year, offering students a unique opportunity to become proficient in securing blockchain networks and smart contracts.",
+                                              }),
+                                            ],
+                                          }),
+                                        },
+                                        Q1XUigOVv: {
+                                          children: t(n, {
+                                            children: [
+                                              e("p", {
+                                                style: {
+                                                  "--framer-line-height":
+                                                    "140%",
+                                                  "--framer-text-alignment":
+                                                    "center",
+                                                  "--framer-text-color":
+                                                    "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                                },
+                                                children:
+                                                  "Our hybrid bootcamp is a four-month intensive program designed to equip participants with the skills and knowledge needed for a successful career in blockchain security. We provide:",
+                                              }),
+                                              e("p", {
+                                                style: {
+                                                  "--font-selector":
+                                                    "R0Y7UGx1cyBKYWthcnRhIFNhbnMtNTAw",
+                                                  "--framer-font-family":
+                                                    '"Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif',
+                                                  "--framer-font-weight": "500",
+                                                  "--framer-line-height":
+                                                    "140%",
+                                                  "--framer-text-alignment":
+                                                    "center",
+                                                  "--framer-text-color":
+                                                    "var(--token-7049cce7-715e-45a0-a41e-932274474306, rgb(9, 227, 8))",
+                                                },
+                                                children: e("br", {
+                                                  className: "trailing-break",
+                                                }),
+                                              }),
+                                              t("ul", {
+                                                style: {
+                                                  "--framer-font-size": "15px",
+                                                  "--framer-line-height":
+                                                    "140%",
+                                                  "--framer-text-color":
+                                                    "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                                },
+                                                children: [
+                                                  t("li", {
+                                                    children: [
+                                                      t("p", {
+                                                        children: [
+                                                          e("strong", {
+                                                            children:
+                                                              "Food and Accommodation:",
+                                                          }),
+                                                          " Comfortable living arrangements and nutritious meals.",
+                                                        ],
+                                                      }),
+                                                      e("p", {
+                                                        style: {
+                                                          "--font-selector":
+                                                            "R0Y7UGx1cyBKYWthcnRhIFNhbnMtcmVndWxhcg==",
+                                                          "--framer-font-family":
+                                                            '"Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif',
+                                                          "--framer-font-size":
+                                                            "18px",
+                                                          "--framer-text-color":
+                                                            "rgb(234, 234, 235)",
+                                                        },
+                                                        children: e("br", {
+                                                          className:
+                                                            "trailing-break",
+                                                        }),
+                                                      }),
+                                                    ],
+                                                  }),
+                                                  t("li", {
+                                                    children: [
+                                                      t("p", {
+                                                        children: [
+                                                          e("strong", {
+                                                            children:
+                                                              "24-Hour Electricity:",
+                                                          }),
+                                                          " Uninterrupted power supply to support your studies.",
+                                                        ],
+                                                      }),
+                                                      e("p", {
+                                                        style: {
+                                                          "--font-selector":
+                                                            "R0Y7UGx1cyBKYWthcnRhIFNhbnMtcmVndWxhcg==",
+                                                          "--framer-font-family":
+                                                            '"Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif',
+                                                          "--framer-font-size":
+                                                            "18px",
+                                                          "--framer-text-color":
+                                                            "rgb(234, 234, 235)",
+                                                        },
+                                                        children: e("br", {
+                                                          className:
+                                                            "trailing-break",
+                                                        }),
+                                                      }),
+                                                    ],
+                                                  }),
+                                                  t("li", {
+                                                    children: [
+                                                      t("p", {
+                                                        children: [
+                                                          e("strong", {
+                                                            children:
+                                                              "Unlimited Internet:",
+                                                          }),
+                                                          " Fast and reliable internet access.",
+                                                        ],
+                                                      }),
+                                                      e("p", {
+                                                        style: {
+                                                          "--font-selector":
+                                                            "R0Y7UGx1cyBKYWthcnRhIFNhbnMtcmVndWxhcg==",
+                                                          "--framer-font-family":
+                                                            '"Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif',
+                                                          "--framer-font-size":
+                                                            "18px",
+                                                          "--framer-text-color":
+                                                            "rgb(234, 234, 235)",
+                                                        },
+                                                        children: e("br", {
+                                                          className:
+                                                            "trailing-break",
+                                                        }),
+                                                      }),
+                                                    ],
+                                                  }),
+                                                  t("li", {
+                                                    children: [
+                                                      t("p", {
+                                                        children: [
+                                                          e("strong", {
+                                                            children:
+                                                              "Learning Resources:",
+                                                          }),
+                                                          " Comprehensive materials and tools to enhance your learning experience.",
+                                                        ],
+                                                      }),
+                                                      e("p", {
+                                                        style: {
+                                                          "--font-selector":
+                                                            "R0Y7UGx1cyBKYWthcnRhIFNhbnMtcmVndWxhcg==",
+                                                          "--framer-font-family":
+                                                            '"Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif',
+                                                          "--framer-font-size":
+                                                            "18px",
+                                                          "--framer-text-color":
+                                                            "rgb(234, 234, 235)",
+                                                        },
+                                                        children: e("br", {
+                                                          className:
+                                                            "trailing-break",
+                                                        }),
+                                                      }),
+                                                    ],
+                                                  }),
+                                                  e("li", {
+                                                    children: t("p", {
+                                                      children: [
+                                                        e("strong", {
+                                                          children:
+                                                            "World-Class Instructors:",
+                                                        }),
+                                                        " Learn from the best in the industry.",
+                                                      ],
+                                                    }),
+                                                  }),
+                                                ],
+                                              }),
+                                              e("p", {
+                                                style: {
+                                                  "--font-selector":
+                                                    "R0Y7UGx1cyBKYWthcnRhIFNhbnMtcmVndWxhcg==",
+                                                  "--framer-font-family":
+                                                    '"Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif',
+                                                  "--framer-font-size": "18px",
+                                                  "--framer-line-height":
+                                                    "140%",
+                                                  "--framer-text-color":
+                                                    "rgb(234, 234, 235)",
+                                                },
+                                                children: e("br", {
+                                                  className: "trailing-break",
+                                                }),
+                                              }),
+                                              e("p", {
+                                                style: {
+                                                  "--framer-font-size": "15px",
+                                                  "--framer-line-height":
+                                                    "140%",
+                                                  "--framer-text-alignment":
+                                                    "center",
+                                                  "--framer-text-color":
+                                                    "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                                },
+                                                children:
+                                                  "The hybrid bootcamp is an immersive experience in blockchain technology, focusing on mathematics related to blockchain, smart contract auditing, and practical exposure through real-time auditing and hackathons.",
+                                              }),
+                                              e("p", {
+                                                style: {
+                                                  "--font-selector":
+                                                    "R0Y7UGx1cyBKYWthcnRhIFNhbnMtcmVndWxhcg==",
+                                                  "--framer-font-family":
+                                                    '"Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif',
+                                                  "--framer-font-size": "18px",
+                                                  "--framer-line-height":
+                                                    "140%",
+                                                  "--framer-text-alignment":
+                                                    "center",
+                                                  "--framer-text-color":
+                                                    "rgb(234, 234, 235)",
+                                                },
+                                                children: e("br", {
+                                                  className: "trailing-break",
+                                                }),
+                                              }),
+                                              e("p", {
+                                                style: {
+                                                  "--framer-font-size": "15px",
+                                                  "--framer-line-height":
+                                                    "140%",
+                                                  "--framer-text-alignment":
+                                                    "center",
+                                                  "--framer-text-color":
+                                                    "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                                },
+                                                children:
+                                                  "The bootcamp runs twice a year, offering students a unique opportunity to become proficient in securing blockchain networks and smart contracts.",
+                                              }),
+                                            ],
+                                          }),
+                                        },
+                                        XWGQJU3bM: {
+                                          children: t(n, {
+                                            children: [
+                                              e("p", {
+                                                style: {
+                                                  "--framer-line-height":
+                                                    "140%",
+                                                  "--framer-text-alignment":
+                                                    "center",
+                                                  "--framer-text-color":
+                                                    "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                                },
+                                                children:
+                                                  "Our hybrid bootcamp is a four-month intensive program designed to equip participants with the skills and knowledge needed for a successful career in blockchain security. We provide:",
+                                              }),
+                                              e("p", {
+                                                style: {
+                                                  "--font-selector":
+                                                    "R0Y7UGx1cyBKYWthcnRhIFNhbnMtNTAw",
+                                                  "--framer-font-family":
+                                                    '"Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif',
+                                                  "--framer-font-weight": "500",
+                                                  "--framer-line-height":
+                                                    "140%",
+                                                  "--framer-text-alignment":
+                                                    "center",
+                                                  "--framer-text-color":
+                                                    "var(--token-7049cce7-715e-45a0-a41e-932274474306, rgb(9, 227, 8))",
+                                                },
+                                                children: e("br", {
+                                                  className: "trailing-break",
+                                                }),
+                                              }),
+                                              t("ul", {
+                                                style: {
+                                                  "--framer-font-size": "20px",
+                                                  "--framer-line-height":
+                                                    "140%",
+                                                  "--framer-text-color":
+                                                    "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                                },
+                                                children: [
+                                                  t("li", {
+                                                    children: [
+                                                      t("p", {
+                                                        children: [
+                                                          e("strong", {
+                                                            children:
+                                                              "Food and Accommodation:",
+                                                          }),
+                                                          " Comfortable living arrangements and nutritious meals.",
+                                                        ],
+                                                      }),
+                                                      e("p", {
+                                                        style: {
+                                                          "--font-selector":
+                                                            "R0Y7UGx1cyBKYWthcnRhIFNhbnMtcmVndWxhcg==",
+                                                          "--framer-font-family":
+                                                            '"Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif',
+                                                          "--framer-text-color":
+                                                            "rgb(234, 234, 235)",
+                                                        },
+                                                        children: e("br", {
+                                                          className:
+                                                            "trailing-break",
+                                                        }),
+                                                      }),
+                                                    ],
+                                                  }),
+                                                  t("li", {
+                                                    children: [
+                                                      t("p", {
+                                                        children: [
+                                                          e("strong", {
+                                                            children:
+                                                              "24-Hour Electricity:",
+                                                          }),
+                                                          " Uninterrupted power supply to support your studies.",
+                                                        ],
+                                                      }),
+                                                      e("p", {
+                                                        style: {
+                                                          "--font-selector":
+                                                            "R0Y7UGx1cyBKYWthcnRhIFNhbnMtcmVndWxhcg==",
+                                                          "--framer-font-family":
+                                                            '"Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif',
+                                                          "--framer-text-color":
+                                                            "rgb(234, 234, 235)",
+                                                        },
+                                                        children: e("br", {
+                                                          className:
+                                                            "trailing-break",
+                                                        }),
+                                                      }),
+                                                    ],
+                                                  }),
+                                                  t("li", {
+                                                    children: [
+                                                      t("p", {
+                                                        children: [
+                                                          e("strong", {
+                                                            children:
+                                                              "Unlimited Internet:",
+                                                          }),
+                                                          " Fast and reliable internet access.",
+                                                        ],
+                                                      }),
+                                                      e("p", {
+                                                        style: {
+                                                          "--font-selector":
+                                                            "R0Y7UGx1cyBKYWthcnRhIFNhbnMtcmVndWxhcg==",
+                                                          "--framer-font-family":
+                                                            '"Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif',
+                                                          "--framer-text-color":
+                                                            "rgb(234, 234, 235)",
+                                                        },
+                                                        children: e("br", {
+                                                          className:
+                                                            "trailing-break",
+                                                        }),
+                                                      }),
+                                                    ],
+                                                  }),
+                                                  t("li", {
+                                                    children: [
+                                                      t("p", {
+                                                        children: [
+                                                          e("strong", {
+                                                            children:
+                                                              "Learning Resources:",
+                                                          }),
+                                                          " Comprehensive materials and tools to enhance your learning experience.",
+                                                        ],
+                                                      }),
+                                                      e("p", {
+                                                        style: {
+                                                          "--font-selector":
+                                                            "R0Y7UGx1cyBKYWthcnRhIFNhbnMtcmVndWxhcg==",
+                                                          "--framer-font-family":
+                                                            '"Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif',
+                                                          "--framer-text-color":
+                                                            "rgb(234, 234, 235)",
+                                                        },
+                                                        children: e("br", {
+                                                          className:
+                                                            "trailing-break",
+                                                        }),
+                                                      }),
+                                                    ],
+                                                  }),
+                                                  e("li", {
+                                                    children: t("p", {
+                                                      children: [
+                                                        e("strong", {
+                                                          children:
+                                                            "World-Class Instructors:",
+                                                        }),
+                                                        " Learn from the best in the industry.",
+                                                      ],
+                                                    }),
+                                                  }),
+                                                ],
+                                              }),
+                                              e("p", {
+                                                style: {
+                                                  "--font-selector":
+                                                    "R0Y7UGx1cyBKYWthcnRhIFNhbnMtcmVndWxhcg==",
+                                                  "--framer-font-family":
+                                                    '"Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif',
+                                                  "--framer-font-size": "20px",
+                                                  "--framer-line-height":
+                                                    "140%",
+                                                  "--framer-text-color":
+                                                    "rgb(234, 234, 235)",
+                                                },
+                                                children: e("br", {
+                                                  className: "trailing-break",
+                                                }),
+                                              }),
+                                              e("p", {
+                                                style: {
+                                                  "--framer-font-size": "20px",
+                                                  "--framer-line-height":
+                                                    "140%",
+                                                  "--framer-text-alignment":
+                                                    "center",
+                                                  "--framer-text-color":
+                                                    "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                                },
+                                                children:
+                                                  "The hybrid bootcamp is an immersive experience in blockchain technology, focusing on mathematics related to blockchain, smart contract auditing, and practical exposure through real-time auditing and hackathons.",
+                                              }),
+                                              e("p", {
+                                                style: {
+                                                  "--font-selector":
+                                                    "R0Y7UGx1cyBKYWthcnRhIFNhbnMtcmVndWxhcg==",
+                                                  "--framer-font-family":
+                                                    '"Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif',
+                                                  "--framer-font-size": "20px",
+                                                  "--framer-line-height":
+                                                    "140%",
+                                                  "--framer-text-alignment":
+                                                    "center",
+                                                  "--framer-text-color":
+                                                    "rgb(234, 234, 235)",
+                                                },
+                                                children: e("br", {
+                                                  className: "trailing-break",
+                                                }),
+                                              }),
+                                              e("p", {
+                                                style: {
+                                                  "--framer-font-size": "20px",
+                                                  "--framer-line-height":
+                                                    "140%",
+                                                  "--framer-text-alignment":
+                                                    "center",
+                                                  "--framer-text-color":
+                                                    "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                                },
+                                                children:
+                                                  "The bootcamp runs twice a year, offering students a unique opportunity to become proficient in securing blockchain networks and smart contracts.",
+                                              }),
+                                            ],
+                                          }),
+                                        },
+                                      },
+                                      children: e(C, {
+                                        __fromCanvasComponent: !0,
+                                        children: t(n, {
+                                          children: [
+                                            e("p", {
+                                              style: {
+                                                "--framer-line-height": "140%",
+                                                "--framer-text-alignment":
+                                                  "center",
+                                                "--framer-text-color":
+                                                  "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                              },
+                                              children:
+                                                "Our hybrid bootcamp is a four-month intensive program designed to equip participants with the skills and knowledge needed for a successful career in blockchain security. We provide:",
+                                            }),
+                                            e("p", {
+                                              style: {
+                                                "--font-selector":
+                                                  "R0Y7UGx1cyBKYWthcnRhIFNhbnMtNTAw",
+                                                "--framer-font-family":
+                                                  '"Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif',
+                                                "--framer-font-weight": "500",
+                                                "--framer-line-height": "140%",
+                                                "--framer-text-alignment":
+                                                  "center",
+                                                "--framer-text-color":
+                                                  "var(--token-7049cce7-715e-45a0-a41e-932274474306, rgb(9, 227, 8))",
+                                              },
+                                              children: e("br", {
+                                                className: "trailing-break",
+                                              }),
+                                            }),
+                                            t("ul", {
+                                              style: {
+                                                "--framer-line-height": "140%",
+                                                "--framer-text-color":
+                                                  "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                              },
+                                              children: [
+                                                t("li", {
+                                                  children: [
+                                                    t("p", {
+                                                      children: [
+                                                        e("strong", {
+                                                          children:
+                                                            "Food and Accommodation:",
+                                                        }),
+                                                        " Comfortable living arrangements and nutritious meals.",
+                                                      ],
+                                                    }),
+                                                    e("p", {
+                                                      style: {
+                                                        "--font-selector":
+                                                          "R0Y7UGx1cyBKYWthcnRhIFNhbnMtcmVndWxhcg==",
+                                                        "--framer-font-family":
+                                                          '"Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif',
+                                                        "--framer-text-color":
+                                                          "rgb(234, 234, 235)",
+                                                      },
+                                                      children: e("br", {
+                                                        className:
+                                                          "trailing-break",
+                                                      }),
+                                                    }),
+                                                  ],
+                                                }),
+                                                t("li", {
+                                                  children: [
+                                                    t("p", {
+                                                      children: [
+                                                        e("strong", {
+                                                          children:
+                                                            "24-Hour Electricity:",
+                                                        }),
+                                                        " Uninterrupted power supply to support your studies.",
+                                                      ],
+                                                    }),
+                                                    e("p", {
+                                                      style: {
+                                                        "--font-selector":
+                                                          "R0Y7UGx1cyBKYWthcnRhIFNhbnMtcmVndWxhcg==",
+                                                        "--framer-font-family":
+                                                          '"Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif',
+                                                        "--framer-text-color":
+                                                          "rgb(234, 234, 235)",
+                                                      },
+                                                      children: e("br", {
+                                                        className:
+                                                          "trailing-break",
+                                                      }),
+                                                    }),
+                                                  ],
+                                                }),
+                                                t("li", {
+                                                  children: [
+                                                    t("p", {
+                                                      children: [
+                                                        e("strong", {
+                                                          children:
+                                                            "Unlimited Internet:",
+                                                        }),
+                                                        " Fast and reliable internet access.",
+                                                      ],
+                                                    }),
+                                                    e("p", {
+                                                      style: {
+                                                        "--font-selector":
+                                                          "R0Y7UGx1cyBKYWthcnRhIFNhbnMtcmVndWxhcg==",
+                                                        "--framer-font-family":
+                                                          '"Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif',
+                                                        "--framer-text-color":
+                                                          "rgb(234, 234, 235)",
+                                                      },
+                                                      children: e("br", {
+                                                        className:
+                                                          "trailing-break",
+                                                      }),
+                                                    }),
+                                                  ],
+                                                }),
+                                                t("li", {
+                                                  children: [
+                                                    t("p", {
+                                                      children: [
+                                                        e("strong", {
+                                                          children:
+                                                            "Learning Resources:",
+                                                        }),
+                                                        " Comprehensive materials and tools to enhance your learning experience.",
+                                                      ],
+                                                    }),
+                                                    e("p", {
+                                                      style: {
+                                                        "--font-selector":
+                                                          "R0Y7UGx1cyBKYWthcnRhIFNhbnMtcmVndWxhcg==",
+                                                        "--framer-font-family":
+                                                          '"Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif',
+                                                        "--framer-text-color":
+                                                          "rgb(234, 234, 235)",
+                                                      },
+                                                      children: e("br", {
+                                                        className:
+                                                          "trailing-break",
+                                                      }),
+                                                    }),
+                                                  ],
+                                                }),
+                                                e("li", {
+                                                  children: t("p", {
+                                                    children: [
+                                                      e("strong", {
+                                                        children:
+                                                          "World-Class Instructors:",
+                                                      }),
+                                                      " Learn from the best in the industry.",
+                                                    ],
+                                                  }),
+                                                }),
+                                              ],
+                                            }),
+                                            e("p", {
+                                              style: {
+                                                "--font-selector":
+                                                  "R0Y7UGx1cyBKYWthcnRhIFNhbnMtcmVndWxhcg==",
+                                                "--framer-font-family":
+                                                  '"Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif',
+                                                "--framer-line-height": "140%",
+                                                "--framer-text-alignment":
+                                                  "center",
+                                                "--framer-text-color":
+                                                  "rgb(234, 234, 235)",
+                                              },
+                                              children: e("br", {
+                                                className: "trailing-break",
+                                              }),
+                                            }),
+                                            e("p", {
+                                              style: {
+                                                "--framer-line-height": "140%",
+                                                "--framer-text-alignment":
+                                                  "center",
+                                                "--framer-text-color":
+                                                  "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                              },
+                                              children:
+                                                "The hybrid bootcamp is an immersive experience in blockchain technology, focusing on mathematics related to blockchain, smart contract auditing, and practical exposure through real-time auditing and hackathons.",
+                                            }),
+                                            e("p", {
+                                              style: {
+                                                "--font-selector":
+                                                  "R0Y7UGx1cyBKYWthcnRhIFNhbnMtcmVndWxhcg==",
+                                                "--framer-font-family":
+                                                  '"Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif',
+                                                "--framer-line-height": "140%",
+                                                "--framer-text-alignment":
+                                                  "center",
+                                                "--framer-text-color":
+                                                  "rgb(234, 234, 235)",
+                                              },
+                                              children: e("br", {
+                                                className: "trailing-break",
+                                              }),
+                                            }),
+                                            e("p", {
+                                              style: {
+                                                "--framer-line-height": "140%",
+                                                "--framer-text-alignment":
+                                                  "center",
+                                                "--framer-text-color":
+                                                  "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                              },
+                                              children:
+                                                "The bootcamp runs twice a year, offering students a unique opportunity to become proficient in securing blockchain networks and smart contracts.",
+                                            }),
+                                          ],
+                                        }),
+                                        className: "framer-1r9duzb",
+                                        "data-framer-name":
+                                          "We are building for the outliers. If today\u2019s identity providers aren\u2019t up to your specs or solving your problems, Citadel may be perfect for you.",
+                                        fonts: [
+                                          "GF;Plus Jakarta Sans-500",
+                                          "GF;Plus Jakarta Sans-700",
+                                          "GF;Plus Jakarta Sans-regular",
+                                        ],
+                                        name: "We are building for the outliers. If today\u2019s identity providers aren\u2019t up to your specs or solving your problems, Citadel may be perfect for you.",
+                                        verticalAlignment: "top",
+                                        withExternalLayout: !0,
+                                      }),
+                                    }),
+                                  ],
+                                }),
+                                e(_1, {
+                                  links: [
+                                    {
+                                      href: { webPageId: "FO7Dp2THB" },
+                                      implicitPathVariables: void 0,
+                                    },
+                                    {
+                                      href: { webPageId: "FO7Dp2THB" },
+                                      implicitPathVariables: void 0,
+                                    },
+                                    {
+                                      href: { webPageId: "FO7Dp2THB" },
+                                      implicitPathVariables: void 0,
+                                    },
+                                    {
+                                      href: { webPageId: "FO7Dp2THB" },
+                                      implicitPathVariables: void 0,
+                                    },
+                                  ],
+                                  children: (d) =>
+                                    e(M, {
+                                      children: e($, {
+                                        className: "framer-vt2qhm-container",
+                                        children: e(h, {
+                                          breakpoint: i,
+                                          overrides: {
+                                            jeCnrh3kk: { qzxtK1_9Y: d[1] },
+                                            Q1XUigOVv: { qzxtK1_9Y: d[3] },
+                                            XWGQJU3bM: { qzxtK1_9Y: d[2] },
+                                          },
+                                          children: e(A1, {
+                                            height: "100%",
+                                            id: "SEMy3oMTP",
+                                            layoutId: "SEMy3oMTP",
+                                            P7ZHYgc9n:
+                                              "var(--token-7d27c033-cb66-44c8-bf4e-e66d9f19511b, rgb(10, 11, 10))",
+                                            qzxtK1_9Y: d[0],
+                                            RQDpSij6V:
+                                              "var(--token-7049cce7-715e-45a0-a41e-932274474306, rgb(0, 225, 0))",
+                                            TiAMtDaz3: "Apply Now",
+                                            variant: "llZeWFj0E",
+                                            width: "100%",
+                                          }),
+                                        }),
+                                      }),
+                                    }),
+                                }),
+                              ],
+                            }),
+                            f() &&
+                            e(S, {
+                              __framer__loop: R,
+                              __framer__loopEffectEnabled: !0,
+                              __framer__loopRepeatDelay: 0,
+                              __framer__loopRepeatType: "mirror",
+                              __framer__loopTransition: m1,
+                              __perspectiveFX: !1,
+                              __targetOpacity: 1,
+                              background: {
+                                alt: "",
+                                fit: "fill",
+                                intrinsicHeight: 388.8,
+                                intrinsicWidth: 464,
+                                loading: "lazy",
+                                pixelHeight: 486,
+                                pixelWidth: 580,
+                                sizes: "267px",
+                                src: "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512",
+                                srcSet:
+                                  "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512 512w,https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png 994w",
+                              },
+                              className: "framer-ea1y6q hidden-xp04m8",
+                              "data-framer-name": "Block",
+                              "data-nosnippet": !0,
+                              drag: !0,
+                              dragMomentum: !1,
+                              dragSnapToOrigin: !0,
+                              dragTransition: E,
+                              name: "Block",
+                              onMouseDown: P,
+                            }),
+                            f() &&
+                            e(S, {
+                              __framer__loop: R,
+                              __framer__loopEffectEnabled: !0,
+                              __framer__loopRepeatDelay: 0,
+                              __framer__loopRepeatType: "mirror",
+                              __framer__loopTransition: m1,
+                              __perspectiveFX: !1,
+                              __targetOpacity: 1,
+                              background: {
+                                alt: "",
+                                fit: "fill",
+                                intrinsicHeight: 388.8,
+                                intrinsicWidth: 464,
+                                loading: "lazy",
+                                pixelHeight: 486,
+                                pixelWidth: 580,
+                                sizes: "223px",
+                                src: "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512",
+                                srcSet:
+                                  "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512 512w,https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png 994w",
+                              },
+                              className: "framer-1tmpjox hidden-xp04m8",
+                              "data-framer-name": "Block",
+                              "data-nosnippet": !0,
+                              drag: !0,
+                              dragMomentum: !1,
+                              dragSnapToOrigin: !0,
+                              dragTransition: E,
+                              name: "Block",
+                              onMouseDown: P,
+                              style: { rotate: -50 },
+                            }),
+                            f() &&
+                            e(h, {
+                              breakpoint: i,
+                              overrides: {
+                                XWGQJU3bM: {
+                                  background: {
+                                    alt: "",
+                                    fit: "fill",
+                                    intrinsicHeight: 388.8,
+                                    intrinsicWidth: 464,
+                                    loading: "lazy",
+                                    pixelHeight: 486,
+                                    pixelWidth: 580,
+                                    sizes: "138px",
+                                    src: "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512",
+                                    srcSet:
+                                      "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512 512w,https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png 994w",
+                                  },
+                                  transformTemplate: void 0,
+                                },
+                              },
+                              children: e(S, {
+                                __framer__loop: R,
+                                __framer__loopEffectEnabled: !0,
+                                __framer__loopRepeatDelay: 0,
+                                __framer__loopRepeatType: "mirror",
+                                __framer__loopTransition: m1,
+                                __perspectiveFX: !1,
+                                __targetOpacity: 1,
+                                background: {
+                                  alt: "",
+                                  fit: "fill",
+                                  intrinsicHeight: 388.8,
+                                  intrinsicWidth: 464,
+                                  loading: "lazy",
+                                  pixelHeight: 486,
+                                  pixelWidth: 580,
+                                  sizes: "99px",
+                                  src: "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512",
+                                  srcSet:
+                                    "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512 512w,https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png 994w",
+                                },
+                                className: "framer-1wizzeq hidden-xp04m8",
+                                "data-framer-name": "Block",
+                                "data-nosnippet": !0,
+                                drag: !0,
+                                dragMomentum: !1,
+                                dragSnapToOrigin: !0,
+                                dragTransition: E,
+                                name: "Block",
+                                onMouseDown: P,
+                                style: { rotate: -121 },
+                                transformTemplate: P2,
+                              }),
+                            }),
+                            L() &&
+                            e(h, {
+                              breakpoint: i,
+                              overrides: {
+                                XWGQJU3bM: {
+                                  background: {
+                                    alt: "",
+                                    fit: "fill",
+                                    intrinsicHeight: 388.8,
+                                    intrinsicWidth: 464,
+                                    loading: "lazy",
+                                    pixelHeight: 486,
+                                    pixelWidth: 580,
+                                    sizes: "153px",
+                                    src: "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512",
+                                    srcSet:
+                                      "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512 512w,https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png 994w",
+                                  },
+                                },
+                              },
+                              children: e(S, {
+                                __framer__loop: R,
+                                __framer__loopEffectEnabled: !0,
+                                __framer__loopRepeatDelay: 0,
+                                __framer__loopRepeatType: "mirror",
+                                __framer__loopTransition: R2,
+                                __perspectiveFX: !1,
+                                __targetOpacity: 1,
+                                background: {
+                                  alt: "",
+                                  fit: "fill",
+                                  intrinsicHeight: 388.8,
+                                  intrinsicWidth: 464,
+                                  loading: "lazy",
+                                  pixelHeight: 486,
+                                  pixelWidth: 580,
+                                  src: "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512",
+                                  srcSet:
+                                    "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512 512w,https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png 994w",
+                                },
+                                className:
+                                  "framer-tr3om3 hidden-72rtr7 hidden-1tai7yd hidden-xp04m8",
+                                "data-framer-name": "Block",
+                                "data-nosnippet": !0,
+                                name: "Block",
+                                style: { rotate: -281 },
+                              }),
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                    q() &&
+                    e(S, {
+                      __framer__loop: R,
+                      __framer__loopEffectEnabled: !0,
+                      __framer__loopRepeatDelay: 0,
+                      __framer__loopRepeatType: "mirror",
+                      __framer__loopTransition: m1,
+                      __perspectiveFX: !1,
+                      __targetOpacity: 1,
+                      background: {
+                        alt: "",
+                        fit: "fill",
+                        intrinsicHeight: 388.8,
+                        intrinsicWidth: 464,
+                        loading: "lazy",
+                        pixelHeight: 486,
+                        pixelWidth: 580,
+                        sizes: "286px",
+                        src: "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512",
+                        srcSet:
+                          "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512 512w,https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png 994w",
+                      },
+                      className: "framer-57siy4 hidden-180ph05 hidden-xp04m8",
+                      "data-framer-name": "Block",
+                      "data-nosnippet": !0,
+                      drag: !0,
+                      dragMomentum: !1,
+                      dragSnapToOrigin: !0,
+                      dragTransition: E,
+                      name: "Block",
+                      onMouseDown: P,
+                      style: { rotate: -15 },
+                    }),
+                  ],
+                }),
+                t("div", {
+                  className: "framer-1fkiv3s",
+                  "data-framer-name": "FAQ",
+                  name: "FAQ",
+                  children: [
+                    p() &&
+                    e(S, {
+                      __framer__loop: R,
+                      __framer__loopEffectEnabled: !0,
+                      __framer__loopRepeatDelay: 0,
+                      __framer__loopRepeatType: "mirror",
+                      __framer__loopTransition: m1,
+                      __perspectiveFX: !1,
+                      __targetOpacity: 1,
+                      background: {
+                        alt: "",
+                        fit: "fill",
+                        intrinsicHeight: 388.8,
+                        intrinsicWidth: 464,
+                        loading: "lazy",
+                        pixelHeight: 486,
+                        pixelWidth: 580,
+                        sizes: "191px",
+                        src: "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512",
+                        srcSet:
+                          "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512 512w,https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png 994w",
+                      },
+                      className:
+                        "framer-1cuukxv hidden-1tai7yd hidden-180ph05 hidden-xp04m8",
+                      "data-framer-name": "Block",
+                      "data-nosnippet": !0,
+                      drag: !0,
+                      dragMomentum: !1,
+                      dragSnapToOrigin: !0,
+                      dragTransition: E,
+                      name: "Block",
+                      onMouseDown: P,
+                      style: { rotate: -212 },
+                      transformTemplate: y1,
+                    }),
+                    t("div", {
+                      className: "framer-1q7idue",
+                      "data-framer-name": "Let's Talk",
+                      name: "Let's Talk",
+                      children: [
+                        t("div", {
+                          className: "framer-yhu483",
+                          "data-framer-name": "Container",
+                          name: "Container",
+                          children: [
+                            t("div", {
+                              className: "framer-1qkab9s",
+                              "data-framer-name": "Container",
+                              name: "Container",
+                              children: [
+                                t("div", {
+                                  className: "framer-apeq29",
+                                  "data-framer-name": "Section Title",
+                                  name: "Section Title",
+                                  children: [
+                                    e(h, {
+                                      breakpoint: i,
+                                      overrides: {
+                                        jeCnrh3kk: {
+                                          children: e(n, {
+                                            children: e("h2", {
+                                              style: {
+                                                "--framer-font-size": "48px",
+                                                "--framer-letter-spacing":
+                                                  "-2px",
+                                                "--framer-text-color":
+                                                  "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                              },
+                                              children: "Common Questions",
+                                            }),
+                                          }),
+                                        },
+                                        Q1XUigOVv: {
+                                          children: e(n, {
+                                            children: e("h2", {
+                                              style: {
+                                                "--framer-font-size": "32px",
+                                                "--framer-letter-spacing":
+                                                  "-2px",
+                                                "--framer-line-height": "1.5em",
+                                                "--framer-text-alignment":
+                                                  "center",
+                                                "--framer-text-color":
+                                                  "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                              },
+                                              children: "Common Questions",
+                                            }),
+                                          }),
+                                        },
+                                        XWGQJU3bM: {
+                                          children: e(n, {
+                                            children: e("h2", {
+                                              style: {
+                                                "--framer-font-size": "40px",
+                                                "--framer-letter-spacing":
+                                                  "-2px",
+                                                "--framer-line-height": "1.5em",
+                                                "--framer-text-alignment":
+                                                  "center",
+                                                "--framer-text-color":
+                                                  "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                              },
+                                              children: "Common Questions",
+                                            }),
+                                          }),
+                                        },
+                                      },
+                                      children: e(C, {
+                                        __fromCanvasComponent: !0,
+                                        children: e(n, {
+                                          children: e("h2", {
+                                            style: {
+                                              "--framer-font-size": "60px",
+                                              "--framer-letter-spacing": "-2px",
+                                              "--framer-text-color":
+                                                "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                            },
+                                            children: "Common Questions",
+                                          }),
+                                        }),
+                                        className: "framer-1a8nohw",
+                                        fonts: ["Inter"],
+                                        verticalAlignment: "top",
+                                        withExternalLayout: !0,
+                                      }),
+                                    }),
+                                    e(h, {
+                                      breakpoint: i,
+                                      overrides: {
+                                        Q1XUigOVv: {
+                                          children: e(n, {
+                                            children: e("p", {
+                                              style: {
+                                                "--font-selector":
+                                                  "R0Y7UGx1cyBKYWthcnRhIFNhbnMtcmVndWxhcg==",
+                                                "--framer-font-family":
+                                                  '"Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif',
+                                                "--framer-font-size": "15px",
+                                                "--framer-line-height": "140%",
+                                                "--framer-text-alignment":
+                                                  "center",
+                                                "--framer-text-color":
+                                                  "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                              },
+                                              children:
+                                                "Explore frequently asked questions.",
+                                            }),
+                                          }),
+                                          fonts: [
+                                            "GF;Plus Jakarta Sans-regular",
+                                          ],
+                                        },
+                                      },
+                                      children: e(C, {
+                                        __fromCanvasComponent: !0,
+                                        children: e(n, {
+                                          children: e("p", {
+                                            style: {
+                                              "--framer-line-height": "140%",
+                                              "--framer-text-alignment": "left",
+                                              "--framer-text-color":
+                                                "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                            },
+                                            children:
+                                              "Haven\u2019t found what you\u2019re looking for? Contact us",
+                                          }),
+                                        }),
+                                        className: "framer-jwq1a0",
+                                        fonts: ["Inter"],
+                                        verticalAlignment: "top",
+                                        withExternalLayout: !0,
+                                      }),
+                                    }),
+                                  ],
+                                }),
+                                e("div", {
+                                  className: "framer-4jl14v",
+                                  "data-framer-name": "Section Title",
+                                  name: "Section Title",
+                                  children: e(h, {
+                                    breakpoint: i,
+                                    overrides: {
+                                      Q1XUigOVv: {
+                                        width:
+                                          "min(min(100vw, 1280px) - 32px, 1200px)",
+                                      },
+                                      XWGQJU3bM: {
+                                        width:
+                                          "min((min(100vw, 1280px) - 64px) * 0.9, 768px)",
+                                      },
+                                    },
+                                    children: e(M, {
+                                      width:
+                                        "calc(min(min(100vw, 1280px) - 64px, 1200px) * 0.5917)",
+                                      children: e($, {
+                                        className: "framer-1z0rjbm-container",
+                                        "data-framer-name": "Faq Area",
+                                        id: j,
+                                        name: "Faq Area",
+                                        ref: h1,
+                                        children: e(n2, {
+                                          height: "100%",
+                                          id: "bj_yV4awM",
+                                          layoutId: "bj_yV4awM",
+                                          name: "Faq Area",
+                                          style: { width: "100%" },
+                                          variant: "IzLDmX04P",
+                                          width: "100%",
+                                        }),
+                                      }),
+                                    }),
+                                  }),
+                                }),
+                              ],
+                            }),
+                            e("div", {
+                              className: "framer-1aboqt0",
+                              "data-border": !0,
+                              "data-framer-name": "card",
+                              name: "card",
+                              children: e("div", {
+                                className: "framer-i8rgto",
+                                "data-framer-name": "txt",
+                                name: "txt",
+                                children: t("div", {
+                                  className: "framer-m0m4x2",
+                                  "data-framer-name": "head-txt",
+                                  name: "head-txt",
+                                  children: [
+                                    e(h, {
+                                      breakpoint: i,
+                                      overrides: {
+                                        jeCnrh3kk: {
+                                          children: e(n, {
+                                            children: e("h3", {
+                                              style: {
+                                                "--font-selector":
+                                                  "R0Y7UGx1cyBKYWthcnRhIFNhbnMtNTAw",
+                                                "--framer-font-family":
+                                                  '"Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif',
+                                                "--framer-font-size": "44px",
+                                                "--framer-font-weight": "500",
+                                                "--framer-line-height": "120%",
+                                                "--framer-text-alignment":
+                                                  "center",
+                                                "--framer-text-color":
+                                                  "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                              },
+                                              children: "Our Proud Partners",
+                                            }),
+                                          }),
+                                        },
+                                        Q1XUigOVv: {
+                                          children: e(n, {
+                                            children: e("h3", {
+                                              style: {
+                                                "--font-selector":
+                                                  "R0Y7UGx1cyBKYWthcnRhIFNhbnMtNTAw",
+                                                "--framer-font-family":
+                                                  '"Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif',
+                                                "--framer-font-size": "20px",
+                                                "--framer-font-weight": "500",
+                                                "--framer-line-height": "120%",
+                                                "--framer-text-alignment":
+                                                  "center",
+                                                "--framer-text-color":
+                                                  "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                              },
+                                              children: "Our Proud Partners",
+                                            }),
+                                          }),
+                                        },
+                                        XWGQJU3bM: {
+                                          children: e(n, {
+                                            children: e("h3", {
+                                              style: {
+                                                "--font-selector":
+                                                  "R0Y7UGx1cyBKYWthcnRhIFNhbnMtNTAw",
+                                                "--framer-font-family":
+                                                  '"Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif',
+                                                "--framer-font-size": "29px",
+                                                "--framer-font-weight": "500",
+                                                "--framer-line-height": "120%",
+                                                "--framer-text-alignment":
+                                                  "center",
+                                                "--framer-text-color":
+                                                  "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                              },
+                                              children: "Our Proud Partners",
+                                            }),
+                                          }),
+                                        },
+                                      },
+                                      children: e(C, {
+                                        __fromCanvasComponent: !0,
+                                        children: e(n, {
+                                          children: e("h3", {
+                                            style: {
+                                              "--font-selector":
+                                                "R0Y7UGx1cyBKYWthcnRhIFNhbnMtNTAw",
+                                              "--framer-font-family":
+                                                '"Plus Jakarta Sans", "Plus Jakarta Sans Placeholder", sans-serif',
+                                              "--framer-font-size": "34px",
+                                              "--framer-font-weight": "500",
+                                              "--framer-line-height": "120%",
+                                              "--framer-text-alignment":
+                                                "center",
+                                              "--framer-text-color":
+                                                "var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10))",
+                                            },
+                                            children: "Our Proud Partners",
+                                          }),
+                                        }),
+                                        className: "framer-d50tri",
+                                        "data-framer-name":
+                                          "What do you want to see in your new IdP?",
+                                        fonts: ["GF;Plus Jakarta Sans-500"],
+                                        name: "What do you want to see in your new IdP?",
+                                        verticalAlignment: "center",
+                                        withExternalLayout: !0,
+                                      }),
+                                    }),
+                                    t("div", {
+                                      className: "framer-vjpm0g",
+                                      "data-framer-name": "desc-txts",
+                                      name: "desc-txts",
+                                      children: [
+                                        e(h, {
+                                          breakpoint: i,
+                                          overrides: {
+                                            Q1XUigOVv: {
+                                              svg: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 192 40"><path d="M 157.327 15.678 C 158.531 15.453 160.878 15.308 162.04 15.643 C 162.289 18.248 162.149 20.895 162.158 23.508 C 162.163 25.08 162.299 26.649 162.323 28.22 C 162.339 29.219 162.434 30.01 161.706 30.761 L 161.532 30.938 C 160.837 31.198 158.519 31.045 157.815 30.841 C 156.531 29.398 158.046 18.258 157.337 15.713 Z M 139.553 15.339 L 140.193 15.304 C 140.445 15.442 140.562 15.479 140.693 15.749 C 141.136 16.655 141.213 18.203 140.868 19.158 C 140.377 20.515 138.285 19.959 137.158 20.493 C 134.324 21.835 136.191 27.696 135.285 30.155 C 135.146 30.531 134.962 30.779 134.594 30.947 C 133.764 31.325 131.692 31.047 130.847 30.733 C 130.825 30.687 130.806 30.641 130.786 30.594 C 130.468 29.825 130.761 28.972 130.256 28.218 C 130.32 28.116 130.374 28.009 130.417 27.897 C 130.781 26.939 130.728 16.554 130.311 15.632 C 131.56 15.586 133.508 15.269 134.653 15.722 C 135.093 15.896 135.185 16.153 135.361 16.552 C 135.405 17.559 134.751 18.538 134.215 19.352 C 136.633 17.899 135.69 16.528 139.553 15.339 Z M 166.979 11.61 C 168.01 11.595 169.031 11.6 170.061 11.657 C 170.901 12.569 170.441 14.436 170.624 15.59 C 171.902 15.582 173.18 15.599 174.458 15.639 C 174.848 16.123 174.759 17.452 174.738 18.073 C 174.722 18.516 174.596 18.977 174.258 19.285 C 173.464 20.007 171.303 19.627 170.272 19.569 C 170.375 19.732 170.48 19.924 170.54 20.108 C 170.849 21.053 170.721 26.353 170.301 27.165 C 171.495 27.285 173.285 26.963 174.331 27.547 C 174.588 27.69 174.763 27.95 174.836 28.228 C 174.989 28.818 174.765 29.911 174.459 30.424 C 174.452 30.665 174.38 30.71 174.231 30.89 C 172.262 31.575 168.49 30.957 166.549 30.151 C 166.556 30.124 166.556 30.127 166.56 30.103 C 166.622 29.737 165.799 27.558 165.7 26.962 C 165.423 25.29 166.093 20.635 165.312 19.505 C 164.782 19.565 163.918 19.75 163.441 19.452 C 162.622 18.938 163.132 16.604 162.912 15.63 L 165.496 15.554 C 166.052 14.527 165.445 13.329 165.919 12.329 C 166.155 11.828 166.504 11.785 166.979 11.61 Z M 108.951 15.603 C 110.549 15.489 112.284 15.547 113.876 15.708 C 114.027 16.531 113.757 17.088 113.304 17.78 C 113.319 17.825 113.327 17.869 113.335 17.915 L 113.342 17.953 C 113.49 18.81 109.626 29.75 108.881 30.812 C 107.165 31.48 104.371 30.993 102.541 30.904 C 102.553 30.813 98.065 17.392 97.521 15.678 C 98.69 15.486 100.983 15.354 102.116 15.749 C 103.403 17.234 105.302 25.697 105.615 27.839 L 105.791 27.94 C 106.129 27.363 109.014 16.072 108.951 15.603 Z M 147.945 15.169 C 150.045 15.179 152.228 15.431 153.797 16.996 C 154.413 17.61 155.472 19.026 155.466 19.941 C 155.464 20.322 155.405 20.389 155.147 20.644 C 153.894 20.813 152.523 20.625 151.262 20.547 C 151.244 20.487 151.223 20.43 151.185 20.379 C 150.647 19.645 149.82 18.966 148.903 18.828 C 148.249 18.73 147.419 18.874 146.882 19.277 C 146.548 19.527 146.474 19.733 146.42 20.128 C 147.31 21.332 152.519 21.126 154.766 23.345 C 155.545 24.116 156.04 25.17 156.044 26.274 C 156.048 27.441 155.476 28.475 154.666 29.284 C 152.816 31.134 150.196 31.471 147.705 31.478 C 145.956 31.325 143.984 30.695 142.667 29.502 C 141.94 28.843 141.136 27.414 141.096 26.411 C 141.081 26.044 141.188 25.923 141.42 25.672 C 142.218 25.373 143.069 25.33 143.912 25.419 C 144.514 25.483 145.377 25.599 145.78 26.11 C 146.047 26.448 146.171 26.934 146.12 27.356 L 146.115 27.392 C 147.598 27.806 149.005 28.318 150.466 27.536 C 150.884 27.311 151.141 27.061 151.274 26.614 C 150.846 25.429 145.176 25.244 143.129 23.662 C 142.259 22.989 141.583 22.07 141.443 20.958 C 141.298 19.801 141.713 18.489 142.423 17.576 C 143.763 15.852 145.905 15.427 147.945 15.169 Z M 174.972 15.678 C 175.786 15.556 176.686 15.574 177.514 15.557 C 178.111 15.544 179.204 15.515 179.703 15.872 C 180.861 16.702 182.716 26.276 183.342 26.876 C 184.074 26.203 185.466 17.367 186.869 15.769 C 187.948 15.356 190.258 15.525 191.406 15.698 C 191.427 15.78 191.44 15.862 191.45 15.946 C 191.461 16.026 191.468 16.106 191.463 16.187 C 191.421 16.919 188.153 25.425 187.672 25.848 C 187.697 25.945 187.699 26.044 187.69 26.144 C 187.621 26.95 187.024 27.999 186.725 28.78 C 185.869 31.014 185.363 33.826 183.422 35.432 C 181.496 37.028 178.723 36.616 176.422 36.407 C 176.452 36.35 176.479 36.29 176.503 36.23 C 177.27 34.358 175.246 32.953 178.677 32.767 C 179.279 32.734 179.84 32.708 180.284 32.247 C 181.373 30.419 175.586 18.569 174.972 15.678 Z M 65.44 15.677 C 66.561 15.48 68.829 15.331 69.925 15.695 C 70.214 15.791 70.421 16.154 70.552 16.417 C 71.486 18.29 73.305 24.342 73.49 26.381 C 73.526 26.783 73.413 27.189 73.286 27.567 C 73.531 27.296 73.825 26.97 73.958 26.627 C 74.325 25.683 77.09 15.934 77.078 15.652 C 78.366 15.605 80.725 15.254 81.854 15.826 L 81.954 16.202 C 81.554 17.614 78.965 25.032 78.141 25.848 C 78.196 26.044 78.162 26.313 78.101 26.505 C 77.791 27.463 77.324 28.388 76.979 29.338 C 76.118 31.702 75.529 34.735 73.073 35.992 C 71.743 36.672 68.63 36.939 67.201 36.479 C 66.439 35.701 66.89 33.836 66.745 32.797 C 67.659 32.664 68.653 32.863 69.595 32.745 C 70.173 32.672 70.633 32.559 71.006 32.079 C 71.248 30.067 66.469 18.311 65.44 15.677 Z M 119.701 15.339 C 121.743 15.067 123.662 15.159 125.525 16.113 C 125.738 16.22 125.945 16.337 126.146 16.465 C 126.347 16.592 126.541 16.73 126.728 16.877 C 126.915 17.024 127.094 17.18 127.266 17.345 C 127.438 17.51 127.6 17.683 127.755 17.865 C 127.908 18.046 128.053 18.235 128.188 18.431 C 128.323 18.626 128.448 18.829 128.563 19.037 C 128.678 19.245 128.782 19.459 128.875 19.678 C 128.969 19.897 129.051 20.12 129.122 20.347 C 129.491 21.499 129.845 23.104 129.272 24.219 C 128.089 25.069 119.722 24.625 117.745 24.599 C 118.422 25.213 118.951 25.817 119.12 26.738 C 119.56 26.989 120.019 27.256 120.496 27.429 C 121.273 27.712 122.304 27.821 123.071 27.455 C 123.674 27.167 124.169 26.55 124.39 25.929 C 125.465 25.783 126.6 25.816 127.685 25.788 C 128.007 25.75 128.329 25.716 128.652 25.687 L 128.97 25.964 C 129.112 26.437 128.989 26.81 128.778 27.235 C 127.903 28.992 126.345 30.412 124.48 31.033 C 124.207 31.124 123.93 31.202 123.649 31.265 C 123.367 31.329 123.084 31.379 122.797 31.415 C 122.511 31.45 122.224 31.471 121.936 31.478 C 121.647 31.485 121.36 31.478 121.072 31.456 C 120.785 31.434 120.499 31.398 120.215 31.348 C 119.931 31.298 119.65 31.234 119.373 31.155 C 119.095 31.077 118.822 30.986 118.554 30.88 C 118.286 30.775 118.023 30.656 117.767 30.525 C 115.92 29.598 114.631 28.075 113.987 26.121 C 113.257 23.905 113.389 21.279 114.452 19.191 C 115.563 17.006 117.477 16.058 119.701 15.339 Z M 120.596 19.068 C 118.84 19.799 119.218 20.813 118.028 21.756 L 122.247 21.677 L 124.716 21.697 C 124.776 21.082 124.506 20.374 124.117 19.899 C 123.714 19.406 122.924 19.041 122.297 18.978 C 121.746 18.922 121.143 18.987 120.596 19.068 Z M 89.887 15.169 C 90.407 15.156 90.946 15.198 91.463 15.253 C 93.091 15.424 94.675 16.183 95.712 17.467 C 97.634 19.85 97.633 26.13 97.298 29.18 C 97.268 29.458 97.132 30.552 96.925 30.715 C 96.128 31.344 93.75 31.015 92.758 30.906 C 92.577 30.725 92.439 30.635 92.382 30.379 C 92.165 29.411 92.871 28.557 92.496 27.455 C 92.43 28.112 91.99 28.873 91.605 29.395 C 90.778 30.517 89.559 31.115 88.197 31.318 C 85.989 31.649 84.228 30.854 82.502 29.573 C 82.162 28.454 81.748 27.592 81.814 26.382 C 82.157 20.047 90.03 23.167 92.126 21.294 C 92.307 20.884 92.382 20.626 92.231 20.186 C 92.071 19.717 91.738 19.366 91.296 19.149 C 88.395 17.73 87.59 20.238 86.198 20.709 C 85.437 20.967 83.567 21.143 82.829 20.765 C 82.429 20.559 82.401 20.368 82.274 19.966 C 82.354 19.205 82.815 18.556 83.306 17.994 C 85.033 16.016 87.361 15.347 89.887 15.169 Z M 91.652 23.982 C 90.553 24.942 86.695 24.427 86.579 26.186 C 86.544 26.714 86.7 27.48 87.055 27.881 L 87.074 27.903 C 88.128 28.193 89.084 28.281 90.068 27.721 C 91.077 27.146 91.828 26.223 92.129 25.097 C 92.209 24.795 92.22 24.499 92.197 24.188 C 91.986 24.013 91.913 24.015 91.652 23.982 Z" fill="var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10)) /* {&quot;name&quot;:&quot;Text color&quot;} */"></path><path d="M 54.517 10.593 C 55.956 10.48 58.661 10.179 59.936 10.86 C 60.532 11.179 60.899 12 61.172 12.596 C 62.105 14.628 62.676 16.88 63.442 18.984 C 64.688 22.406 66.141 25.843 67.187 29.329 C 67.322 29.78 67.619 30.574 67.388 31.001 C 66.15 31.479 63.884 31.02 62.548 30.9 C 62.663 30.209 61.516 27.594 61.193 26.81 C 60.744 26.539 59.847 26.65 59.322 26.651 C 57.937 26.677 53.835 26.202 52.893 27.037 C 52.333 27.533 52.594 28.459 52.55 29.124 C 52.519 29.614 52.39 29.976 52.008 30.306 C 50.664 31.469 47.941 30.964 46.295 30.847 C 46.311 30.825 46.327 30.802 46.342 30.779 C 47.183 29.466 47.599 27.716 48.125 26.243 C 49.266 23.033 50.425 19.829 51.604 16.632 C 52.161 15.079 52.59 13.352 53.321 11.884 C 53.593 11.337 53.908 10.796 54.517 10.593 Z M 56.874 13.97 C 57.169 14.845 55.166 21.031 54.663 22.062 C 54.552 22.291 54.38 22.504 54.202 22.683 C 55.103 22.615 56.044 22.486 56.947 22.547 L 59.674 22.578 C 59.688 22.532 59.7 22.487 59.71 22.44 C 59.949 21.243 58.078 17.583 57.734 16.204 C 57.587 15.613 57.81 14.536 57.555 14.059 C 57.55 14.049 57.545 14.04 57.539 14.031 Z M 20.153 1.89 C 20.173 1.89 20.192 1.889 20.212 1.889 C 21.459 1.883 22.525 2.329 23.608 2.89 C 26.288 4.277 28.673 6.303 31.127 8.051 C 33.367 9.646 35.915 11.113 37.86 13.054 C 37.995 13.186 38.122 13.324 38.243 13.469 C 38.363 13.613 38.476 13.764 38.582 13.92 C 38.687 14.076 38.784 14.237 38.873 14.403 C 38.962 14.569 39.043 14.739 39.115 14.913 C 39.187 15.087 39.25 15.264 39.304 15.445 C 39.358 15.625 39.403 15.808 39.439 15.992 C 39.474 16.177 39.5 16.364 39.517 16.551 C 39.534 16.739 39.542 16.927 39.539 17.115 C 39.534 19.238 35.458 31.135 34.356 33.62 C 33.957 34.519 33.397 35.623 32.691 36.318 C 30.232 38.738 24.197 37.985 21.023 37.966 C 17.717 37.982 11.837 38.634 8.982 36.733 C 8.15 36.179 7.487 35.163 7.042 34.275 C 5.54 31.278 4.696 27.745 3.644 24.562 C 2.976 22.541 2.062 20.45 1.646 18.372 C 1.341 16.847 1.322 15.552 2.212 14.227 C 2.735 13.458 3.349 12.771 4.054 12.165 C 6.094 10.412 8.482 8.944 10.691 7.402 C 12.895 5.866 15.126 4.088 17.497 2.829 C 18.373 2.364 19.182 2.083 20.153 1.89 Z M 13.573 11.92 C 12.846 12.202 12.018 12.424 11.674 13.195 C 11.569 13.429 11.55 13.68 11.547 13.934 C 11.798 14.282 11.917 14.381 12.349 14.447 C 14.709 14.81 17.21 12.552 19.213 15.261 C 19.559 15.728 20.093 16.528 20.003 17.138 C 19.944 17.185 19.776 17.348 19.713 17.342 C 19.645 17.335 19.579 17.321 19.513 17.308 C 19.081 17.224 18.6 16.807 18.235 16.567 C 16.279 15.283 14.465 15.014 12.424 16.347 C 12.074 16.575 11.804 16.79 11.714 17.222 C 11.673 17.417 11.704 17.668 11.721 17.865 C 11.936 18.166 11.982 18.294 12.37 18.357 C 13.628 18.563 15.171 17.439 17.692 17.882 C 19.058 18.947 19.858 20.021 20.553 21.624 C 18.206 20.298 16.613 18.679 13.668 19.498 C 12.828 19.731 11.999 20.059 11.553 20.85 C 11.498 20.948 11.503 21.234 11.489 21.356 C 11.687 21.824 11.716 21.944 12.163 22.227 C 15.303 22.122 15.698 20.079 19.04 22.467 L 19.08 22.762 C 17.172 24.755 11.729 22.967 11.855 28.734 C 11.874 29.644 12.448 30.476 13.087 31.082 C 13.184 31.172 13.284 31.257 13.388 31.337 C 13.493 31.417 13.601 31.492 13.712 31.561 C 13.824 31.631 13.939 31.695 14.057 31.753 C 14.175 31.812 14.295 31.864 14.418 31.911 C 14.541 31.958 14.666 31.998 14.793 32.033 C 14.92 32.067 15.048 32.096 15.178 32.118 C 15.308 32.14 15.438 32.156 15.57 32.165 C 15.701 32.175 15.832 32.178 15.964 32.175 C 17.637 32.126 19.22 30.849 20.546 29.94 C 22.129 31.009 23.896 32.494 25.936 32.097 C 26.548 31.978 27.099 31.692 27.619 31.36 C 28.575 30.475 28.956 29.717 29.309 28.497 C 28.959 26.883 28.528 25.557 27.051 24.612 C 25.856 23.848 22.655 23.511 22.039 22.967 C 21.997 22.929 21.957 22.893 21.919 22.85 C 22.02 22.472 22.207 22.353 22.544 22.162 C 23.379 21.686 24.346 21.378 25.261 21.096 C 26.385 21.486 28.024 22.458 29.187 22.125 C 29.493 21.831 29.593 21.745 29.6 21.296 C 29.605 20.944 29.391 20.515 29.15 20.273 C 28.42 19.54 27.183 19.233 26.179 19.237 C 24.221 19.243 21.91 20.994 21.237 20.924 C 21.174 20.247 21.502 19.744 21.917 19.244 C 22.292 18.792 22.712 18.382 23.138 17.979 C 23.813 17.817 24.535 17.621 25.232 17.681 C 26.479 17.787 28.208 18.87 29.317 18.11 C 29.486 17.653 29.513 17.517 29.43 17.02 C 28.858 16.209 28.252 15.673 27.246 15.5 C 24.444 15.018 21.718 17.545 21.082 17.452 C 20.948 16.647 21.635 15.769 22.091 15.132 C 22.805 14.133 24.146 13.901 25.279 13.624 C 26.329 14.023 27.955 14.857 29.094 14.363 C 29.247 14.297 29.384 14.189 29.505 14.076 C 29.58 13.663 29.554 13.478 29.312 13.127 C 28.813 12.406 27.774 12.015 26.946 11.875 C 25.669 11.66 24.058 11.739 22.974 12.513 C 22.261 13.022 21.563 14.005 20.762 14.309 C 20.492 14.412 20.303 14.351 20.045 14.239 C 19.568 14.031 19.137 13.451 18.777 13.086 C 17.46 11.746 15.334 11.723 13.573 11.92 Z" fill="var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10)) /* {&quot;name&quot;:&quot;Text color&quot;} */"></path><path d="M 21.269 24.844 C 22.965 25.085 24.272 25.25 25.67 26.337 C 25.812 26.771 25.983 27.232 26.034 27.687 C 26.121 28.469 25.8 28.951 25.33 29.543 C 25.31 29.556 25.291 29.567 25.27 29.579 C 25.183 29.626 25.096 29.674 25.006 29.718 C 24.478 29.979 23.802 30.069 23.235 29.874 C 22.485 29.615 21.915 28.908 21.579 28.219 C 21.046 27.124 20.873 26.001 21.269 24.844 Z M 18.942 24.975 C 19.244 24.933 19.48 25.054 19.751 25.171 C 20.03 25.525 20.108 25.821 20.082 26.264 C 20.016 27.376 19.423 28.561 18.59 29.299 C 17.903 29.908 17.221 29.98 16.335 29.924 C 16.185 29.856 16.056 29.755 15.928 29.653 C 15.429 29.258 14.92 28.696 14.85 28.037 C 14.793 27.512 15.002 27.027 15.326 26.626 C 16.333 25.377 17.442 25.139 18.942 24.975 Z" fill="var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10)) /* {&quot;name&quot;:&quot;Text color&quot;} */"></path></svg>',
+                                              svgContentId: 12532199094,
+                                            },
+                                            XWGQJU3bM: {
+                                              svg: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 195 41"><path d="M 159.785 16.07 C 161.008 15.84 163.391 15.691 164.572 16.034 C 164.825 18.704 164.683 21.418 164.692 24.096 C 164.696 25.707 164.835 27.315 164.86 28.926 C 164.876 29.949 164.972 30.76 164.233 31.53 L 164.056 31.711 C 163.35 31.978 160.996 31.821 160.28 31.612 C 158.977 30.132 160.515 18.715 159.795 16.106 Z M 141.733 15.722 L 142.383 15.686 C 142.639 15.828 142.759 15.866 142.892 16.143 C 143.341 17.072 143.419 18.658 143.069 19.636 C 142.57 21.028 140.446 20.458 139.301 21.005 C 136.423 22.381 138.319 28.389 137.399 30.909 C 137.258 31.294 137.071 31.548 136.697 31.72 C 135.854 32.109 133.749 31.823 132.891 31.501 C 132.869 31.454 132.849 31.407 132.829 31.359 C 132.506 30.57 132.805 29.696 132.291 28.924 C 132.357 28.819 132.411 28.71 132.455 28.595 C 132.825 27.613 132.771 16.968 132.347 16.023 C 133.616 15.976 135.594 15.651 136.757 16.115 C 137.203 16.293 137.297 16.557 137.476 16.966 C 137.521 17.998 136.856 19.001 136.312 19.836 C 138.768 18.346 137.81 16.942 141.733 15.722 Z M 169.588 11.9 C 170.635 11.884 171.672 11.89 172.718 11.948 C 173.571 12.883 173.104 14.797 173.29 15.98 C 174.588 15.972 175.886 15.989 177.184 16.03 C 177.58 16.526 177.49 17.888 177.468 18.525 C 177.452 18.979 177.324 19.452 176.981 19.767 C 176.175 20.507 173.98 20.118 172.933 20.058 C 173.037 20.225 173.144 20.422 173.205 20.61 C 173.519 21.579 173.389 27.012 172.962 27.844 C 174.174 27.968 175.993 27.637 177.055 28.236 C 177.316 28.383 177.494 28.649 177.568 28.934 C 177.723 29.538 177.496 30.658 177.185 31.184 C 177.178 31.431 177.105 31.477 176.954 31.662 C 174.954 32.365 171.123 31.731 169.151 30.904 C 169.159 30.877 169.158 30.88 169.162 30.856 C 169.226 30.48 168.39 28.247 168.289 27.636 C 168.007 25.922 168.688 21.151 167.895 19.992 C 167.357 20.054 166.479 20.244 165.995 19.938 C 165.163 19.412 165.681 17.019 165.458 16.021 L 168.082 15.943 C 168.647 14.89 168.03 13.662 168.511 12.638 C 168.752 12.124 169.106 12.079 169.588 11.9 Z M 110.653 15.993 C 112.276 15.876 114.039 15.936 115.656 16.101 C 115.809 16.945 115.534 17.515 115.075 18.225 C 115.09 18.271 115.098 18.316 115.106 18.363 L 115.113 18.402 C 115.263 19.281 111.339 30.494 110.582 31.582 C 108.839 32.267 106.001 31.768 104.143 31.677 C 104.155 31.584 99.597 17.826 99.045 16.07 C 100.232 15.874 102.561 15.738 103.712 16.143 C 105.019 17.665 106.947 26.339 107.265 28.535 L 107.444 28.639 C 107.787 28.047 110.717 16.474 110.653 15.993 Z M 150.257 15.549 C 152.389 15.558 154.607 15.817 156.2 17.421 C 156.826 18.05 157.901 19.501 157.895 20.439 C 157.893 20.831 157.834 20.899 157.571 21.16 C 156.299 21.334 154.907 21.14 153.625 21.06 C 153.608 20.999 153.586 20.941 153.548 20.889 C 153.001 20.137 152.161 19.441 151.23 19.299 C 150.565 19.198 149.723 19.346 149.177 19.759 C 148.837 20.015 148.763 20.226 148.708 20.631 C 149.612 21.865 154.902 21.654 157.184 23.929 C 157.975 24.718 158.478 25.799 158.483 26.931 C 158.487 28.127 157.905 29.187 157.083 30.016 C 155.203 31.913 152.542 32.257 150.013 32.265 C 148.236 32.108 146.233 31.462 144.896 30.239 C 144.158 29.565 143.341 28.099 143.3 27.071 C 143.285 26.696 143.394 26.571 143.629 26.314 C 144.44 26.007 145.305 25.963 146.16 26.055 C 146.772 26.12 147.648 26.239 148.058 26.762 C 148.329 27.109 148.455 27.608 148.403 28.04 L 148.398 28.077 C 149.904 28.502 151.333 29.026 152.817 28.224 C 153.242 27.994 153.503 27.738 153.638 27.279 C 153.202 26.065 147.444 25.875 145.365 24.253 C 144.482 23.564 143.795 22.622 143.653 21.482 C 143.506 20.296 143.927 18.951 144.649 18.015 C 146.01 16.249 148.185 15.813 150.257 15.549 Z M 177.706 16.07 C 178.533 15.945 179.447 15.964 180.287 15.946 C 180.894 15.933 182.004 15.903 182.51 16.269 C 183.687 17.119 185.571 26.932 186.207 27.548 C 186.951 26.858 188.364 17.801 189.789 16.163 C 190.884 15.74 193.231 15.913 194.397 16.09 C 194.418 16.174 194.431 16.258 194.442 16.345 C 194.452 16.427 194.46 16.509 194.455 16.592 C 194.412 17.342 191.093 26.061 190.605 26.494 C 190.629 26.594 190.631 26.695 190.622 26.797 C 190.553 27.624 189.947 28.699 189.643 29.499 C 188.773 31.79 188.259 34.671 186.288 36.318 C 184.331 37.954 181.515 37.532 179.179 37.318 C 179.209 37.259 179.237 37.198 179.261 37.136 C 180.039 35.216 177.985 33.777 181.469 33.586 C 182.08 33.553 182.65 33.525 183.101 33.053 C 184.207 31.18 178.33 19.033 177.706 16.07 Z M 66.463 16.069 C 67.602 15.867 69.904 15.715 71.018 16.088 C 71.311 16.186 71.522 16.557 71.655 16.828 C 72.603 18.747 74.451 24.951 74.638 27.041 C 74.675 27.453 74.56 27.868 74.431 28.256 C 74.68 27.978 74.979 27.644 75.114 27.293 C 75.486 26.325 78.294 16.333 78.282 16.043 C 79.59 15.995 81.986 15.635 83.133 16.222 L 83.235 16.607 C 82.828 18.055 80.199 25.658 79.362 26.494 C 79.417 26.695 79.384 26.971 79.321 27.167 C 79.007 28.15 78.533 29.098 78.182 30.071 C 77.307 32.495 76.709 35.604 74.215 36.891 C 72.864 37.589 69.702 37.862 68.251 37.391 C 67.477 36.593 67.935 34.682 67.788 33.617 C 68.716 33.481 69.725 33.685 70.682 33.563 C 71.269 33.489 71.737 33.373 72.116 32.881 C 72.361 30.819 67.507 18.769 66.463 16.069 Z M 121.571 15.722 C 123.645 15.443 125.594 15.538 127.487 16.516 C 127.702 16.625 127.913 16.745 128.117 16.876 C 128.321 17.007 128.518 17.148 128.708 17.299 C 128.898 17.449 129.08 17.609 129.255 17.779 C 129.429 17.948 129.594 18.125 129.751 18.311 C 129.907 18.497 130.054 18.691 130.191 18.891 C 130.328 19.092 130.455 19.299 130.572 19.513 C 130.689 19.727 130.794 19.946 130.889 20.17 C 130.984 20.394 131.068 20.623 131.14 20.856 C 131.515 22.037 131.874 23.681 131.291 24.825 C 130.09 25.696 121.592 25.24 119.585 25.214 C 120.272 25.843 120.81 26.462 120.981 27.406 C 121.428 27.663 121.894 27.937 122.379 28.115 C 123.168 28.404 124.215 28.517 124.994 28.141 C 125.606 27.847 126.109 27.213 126.334 26.577 C 127.425 26.428 128.578 26.461 129.68 26.433 C 130.007 26.394 130.334 26.359 130.662 26.329 L 130.986 26.613 C 131.129 27.098 131.004 27.48 130.79 27.916 C 129.901 29.717 128.319 31.172 126.425 31.808 C 126.148 31.902 125.866 31.982 125.581 32.047 C 125.295 32.112 125.007 32.163 124.716 32.2 C 124.426 32.236 124.134 32.258 123.841 32.265 C 123.548 32.272 123.256 32.265 122.964 32.242 C 122.672 32.22 122.382 32.183 122.093 32.132 C 121.805 32.08 121.52 32.014 121.238 31.934 C 120.956 31.854 120.679 31.76 120.407 31.652 C 120.134 31.544 119.867 31.423 119.607 31.288 C 117.732 30.337 116.422 28.777 115.768 26.774 C 115.027 24.503 115.161 21.811 116.24 19.67 C 117.369 17.432 119.312 16.459 121.571 15.722 Z M 122.48 19.544 C 120.697 20.294 121.081 21.333 119.873 22.3 L 124.157 22.219 L 126.664 22.24 C 126.726 21.609 126.451 20.884 126.056 20.396 C 125.648 19.891 124.845 19.517 124.207 19.452 C 123.649 19.395 123.035 19.461 122.48 19.544 Z M 91.292 15.549 C 91.819 15.535 92.367 15.578 92.892 15.634 C 94.546 15.81 96.154 16.587 97.207 17.904 C 99.16 20.347 99.159 26.783 98.819 29.91 C 98.788 30.195 98.65 31.315 98.44 31.482 C 97.63 32.127 95.215 31.79 94.208 31.679 C 94.024 31.493 93.883 31.401 93.825 31.138 C 93.605 30.146 94.322 29.271 93.942 28.142 C 93.874 28.815 93.428 29.595 93.036 30.13 C 92.196 31.28 90.958 31.893 89.575 32.101 C 87.332 32.44 85.544 31.626 83.791 30.313 C 83.446 29.165 83.025 28.282 83.092 27.041 C 83.441 20.548 91.437 23.746 93.566 21.826 C 93.75 21.406 93.825 21.142 93.672 20.691 C 93.51 20.21 93.171 19.85 92.722 19.628 C 89.776 18.173 88.959 20.744 87.545 21.227 C 86.772 21.491 84.873 21.671 84.124 21.284 C 83.717 21.073 83.688 20.877 83.559 20.465 C 83.641 19.686 84.109 19.02 84.608 18.443 C 86.362 16.416 88.726 15.73 91.292 15.549 Z M 93.084 24.582 C 91.968 25.565 88.05 25.037 87.932 26.841 C 87.896 27.382 88.055 28.167 88.415 28.578 L 88.435 28.601 C 89.505 28.897 90.476 28.988 91.476 28.414 C 92.5 27.825 93.262 26.878 93.568 25.725 C 93.65 25.414 93.661 25.112 93.637 24.793 C 93.424 24.614 93.349 24.615 93.084 24.582 Z" fill="var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10)) /* {&quot;name&quot;:&quot;Text color&quot;} */"></path><path d="M 55.369 10.858 C 56.831 10.742 59.577 10.433 60.872 11.131 C 61.478 11.458 61.85 12.3 62.128 12.911 C 63.076 14.994 63.655 17.302 64.433 19.459 C 65.699 22.966 67.174 26.489 68.237 30.062 C 68.374 30.524 68.676 31.339 68.441 31.776 C 67.184 32.266 64.882 31.795 63.525 31.673 C 63.642 30.964 62.477 28.284 62.149 27.481 C 61.694 27.203 60.782 27.317 60.248 27.317 C 58.843 27.344 54.677 26.857 53.719 27.713 C 53.151 28.221 53.416 29.171 53.371 29.852 C 53.339 30.354 53.208 30.725 52.82 31.064 C 51.456 32.256 48.69 31.738 47.019 31.618 C 47.035 31.595 47.051 31.572 47.066 31.548 C 47.921 30.202 48.343 28.409 48.877 26.899 C 50.036 23.608 51.213 20.325 52.41 17.048 C 52.976 15.456 53.412 13.686 54.154 12.181 C 54.431 11.62 54.751 11.066 55.369 10.858 Z M 57.762 14.32 C 58.062 15.217 56.028 21.556 55.517 22.614 C 55.405 22.848 55.229 23.066 55.048 23.25 C 55.964 23.18 56.919 23.049 57.837 23.111 L 60.606 23.142 C 60.62 23.095 60.633 23.049 60.643 23.001 C 60.886 21.774 58.985 18.023 58.637 16.609 C 58.487 16.003 58.714 14.9 58.454 14.41 C 58.449 14.4 58.444 14.391 58.438 14.382 Z M 20.468 1.938 C 20.488 1.937 20.508 1.937 20.528 1.937 C 21.795 1.93 22.877 2.387 23.977 2.962 C 26.699 4.384 29.121 6.461 31.613 8.252 C 33.888 9.888 36.476 11.39 38.452 13.38 C 38.588 13.515 38.718 13.657 38.84 13.805 C 38.963 13.954 39.077 14.108 39.184 14.268 C 39.291 14.428 39.39 14.593 39.481 14.763 C 39.571 14.933 39.653 15.107 39.726 15.286 C 39.799 15.464 39.863 15.646 39.918 15.831 C 39.973 16.016 40.019 16.203 40.055 16.392 C 40.091 16.582 40.118 16.773 40.135 16.965 C 40.152 17.157 40.159 17.35 40.157 17.543 C 40.151 19.719 36.012 31.914 34.892 34.46 C 34.487 35.382 33.919 36.514 33.202 37.226 C 30.704 39.706 24.575 38.935 21.351 38.915 C 17.994 38.931 12.022 39.6 9.122 37.651 C 8.277 37.084 7.604 36.042 7.152 35.131 C 5.626 32.06 4.77 28.439 3.701 25.176 C 3.022 23.104 2.094 20.961 1.672 18.831 C 1.362 17.268 1.343 15.941 2.247 14.583 C 2.777 13.794 3.401 13.09 4.118 12.469 C 6.189 10.673 8.614 9.167 10.858 7.588 C 13.096 6.012 15.362 4.19 17.77 2.9 C 18.66 2.423 19.481 2.136 20.468 1.938 Z M 13.785 12.218 C 13.047 12.508 12.206 12.735 11.856 13.524 C 11.749 13.765 11.731 14.022 11.728 14.283 C 11.983 14.639 12.103 14.74 12.542 14.808 C 14.939 15.181 17.479 12.866 19.514 15.642 C 19.865 16.122 20.407 16.941 20.315 17.567 C 20.256 17.615 20.085 17.782 20.021 17.776 C 19.952 17.768 19.885 17.754 19.818 17.741 C 19.379 17.655 18.891 17.227 18.519 16.981 C 16.533 15.665 14.691 15.389 12.618 16.755 C 12.263 16.989 11.988 17.21 11.897 17.652 C 11.855 17.853 11.887 18.11 11.904 18.312 C 12.123 18.62 12.169 18.751 12.564 18.816 C 13.841 19.027 15.408 17.875 17.968 18.329 C 19.355 19.421 20.168 20.521 20.874 22.164 C 18.49 20.806 16.872 19.146 13.882 19.985 C 13.028 20.224 12.186 20.561 11.733 21.371 C 11.678 21.471 11.682 21.765 11.668 21.89 C 11.87 22.37 11.899 22.493 12.353 22.782 C 15.542 22.675 15.943 20.581 19.337 23.029 L 19.378 23.331 C 17.44 25.374 11.912 23.541 12.04 29.453 C 12.06 30.385 12.643 31.238 13.292 31.859 C 13.39 31.951 13.491 32.038 13.597 32.12 C 13.703 32.202 13.813 32.279 13.927 32.35 C 14.04 32.422 14.157 32.487 14.276 32.547 C 14.396 32.607 14.518 32.661 14.643 32.709 C 14.768 32.757 14.895 32.798 15.024 32.834 C 15.153 32.869 15.283 32.898 15.415 32.921 C 15.547 32.944 15.679 32.96 15.813 32.97 C 15.946 32.979 16.08 32.982 16.213 32.979 C 17.913 32.929 19.52 31.621 20.867 30.689 C 22.475 31.784 24.269 33.307 26.342 32.9 C 26.963 32.778 27.522 32.485 28.051 32.144 C 29.022 31.237 29.408 30.46 29.767 29.21 C 29.412 27.555 28.974 26.196 27.473 25.227 C 26.26 24.444 23.009 24.098 22.384 23.541 C 22.341 23.503 22.3 23.465 22.261 23.422 C 22.364 23.034 22.554 22.912 22.896 22.716 C 23.745 22.229 24.726 21.912 25.656 21.623 C 26.797 22.023 28.462 23.019 29.644 22.678 C 29.954 22.376 30.056 22.288 30.062 21.828 C 30.068 21.467 29.851 21.028 29.606 20.78 C 28.864 20.029 27.608 19.714 26.589 19.718 C 24.599 19.724 22.252 21.519 21.568 21.447 C 21.505 20.753 21.838 20.238 22.26 19.725 C 22.641 19.262 23.067 18.841 23.5 18.428 C 24.185 18.262 24.918 18.062 25.626 18.123 C 26.892 18.232 28.649 19.341 29.775 18.562 C 29.947 18.094 29.974 17.955 29.89 17.446 C 29.309 16.614 28.693 16.064 27.672 15.887 C 24.826 15.393 22.057 17.984 21.412 17.889 C 21.275 17.063 21.973 16.163 22.436 15.51 C 23.162 14.487 24.523 14.249 25.674 13.965 C 26.741 14.374 28.392 15.229 29.548 14.723 C 29.704 14.654 29.843 14.544 29.966 14.428 C 30.042 14.004 30.016 13.815 29.77 13.455 C 29.263 12.716 28.208 12.315 27.367 12.172 C 26.07 11.951 24.434 12.032 23.333 12.826 C 22.609 13.348 21.9 14.355 21.086 14.667 C 20.812 14.772 20.62 14.71 20.358 14.595 C 19.873 14.382 19.436 13.787 19.071 13.413 C 17.733 12.039 15.573 12.016 13.785 12.218 Z" fill="var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10)) /* {&quot;name&quot;:&quot;Text color&quot;} */"></path><path d="M 21.601 25.465 C 23.323 25.712 24.651 25.881 26.071 26.996 C 26.215 27.44 26.389 27.913 26.44 28.379 C 26.53 29.181 26.203 29.675 25.725 30.282 C 25.706 30.295 25.686 30.307 25.665 30.318 C 25.576 30.367 25.488 30.416 25.397 30.461 C 24.86 30.729 24.174 30.821 23.598 30.621 C 22.837 30.356 22.257 29.631 21.916 28.924 C 21.375 27.802 21.199 26.651 21.601 25.465 Z M 19.238 25.599 C 19.545 25.556 19.784 25.68 20.059 25.801 C 20.343 26.163 20.422 26.467 20.396 26.921 C 20.329 28.06 19.727 29.275 18.881 30.032 C 18.183 30.656 17.49 30.73 16.59 30.672 C 16.438 30.603 16.307 30.499 16.177 30.395 C 15.67 29.989 15.153 29.413 15.082 28.738 C 15.024 28.2 15.236 27.703 15.565 27.291 C 16.588 26.012 17.714 25.768 19.238 25.599 Z" fill="var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10)) /* {&quot;name&quot;:&quot;Text color&quot;} */"></path></svg>',
+                                              svgContentId: 10063231583,
+                                            },
+                                          },
+                                          children: e(s1, {
+                                            className: "framer-q10wg7",
+                                            "data-framer-name": "image",
+                                            layout: "position",
+                                            name: "image",
+                                            opacity: 1,
+                                            svg: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 317 66"><path d="M 259.753 25.868 C 261.741 25.498 265.616 25.258 267.535 25.81 C 267.947 30.109 267.715 34.477 267.73 38.789 C 267.737 41.381 267.962 43.971 268.003 46.563 C 268.029 48.211 268.185 49.517 266.983 50.755 L 266.697 51.048 C 265.549 51.477 261.722 51.224 260.558 50.887 C 258.439 48.506 260.94 30.126 259.77 25.926 Z M 230.407 25.309 L 231.464 25.251 C 231.88 25.479 232.074 25.541 232.29 25.986 C 233.021 27.481 233.148 30.034 232.578 31.61 C 231.768 33.85 228.315 32.932 226.453 33.813 C 221.774 36.028 224.857 45.699 223.361 49.756 C 223.132 50.375 222.827 50.785 222.22 51.062 C 220.849 51.687 217.428 51.227 216.034 50.709 C 215.997 50.633 215.965 50.557 215.933 50.48 C 215.408 49.21 215.893 47.803 215.058 46.56 C 215.164 46.392 215.253 46.216 215.325 46.031 C 215.925 44.45 215.838 27.314 215.149 25.793 C 217.211 25.717 220.427 25.194 222.318 25.941 C 223.044 26.228 223.196 26.652 223.487 27.31 C 223.56 28.972 222.479 30.587 221.594 31.93 C 225.586 29.533 224.029 27.272 230.407 25.309 Z M 275.689 19.157 C 277.392 19.131 279.076 19.139 280.778 19.234 C 282.165 20.739 281.405 23.82 281.708 25.724 C 283.818 25.711 285.928 25.738 288.038 25.805 C 288.682 26.603 288.535 28.796 288.499 29.821 C 288.473 30.551 288.265 31.313 287.707 31.82 C 286.397 33.011 282.829 32.384 281.126 32.289 C 281.297 32.558 281.47 32.875 281.569 33.178 C 282.08 34.738 281.868 43.483 281.174 44.822 C 283.145 45.021 286.101 44.49 287.827 45.453 C 288.252 45.689 288.542 46.118 288.661 46.577 C 288.915 47.549 288.545 49.353 288.04 50.199 C 288.027 50.596 287.909 50.671 287.663 50.968 C 284.412 52.099 278.185 51.08 274.979 49.749 C 274.991 49.705 274.99 49.709 274.997 49.67 C 275.1 49.066 273.741 45.47 273.578 44.488 C 273.12 41.728 274.226 34.047 272.937 32.183 C 272.062 32.282 270.635 32.588 269.849 32.095 C 268.496 31.248 269.338 27.397 268.975 25.789 L 273.241 25.664 C 274.159 23.969 273.157 21.992 273.938 20.343 C 274.329 19.517 274.905 19.445 275.689 19.157 Z M 179.882 25.745 C 182.52 25.556 185.386 25.652 188.015 25.918 C 188.263 27.277 187.817 28.195 187.07 29.337 C 187.095 29.411 187.107 29.484 187.121 29.56 L 187.132 29.623 C 187.376 31.037 180.997 49.087 179.767 50.839 C 176.933 51.943 172.32 51.138 169.299 50.991 C 169.319 50.842 161.909 28.696 161.011 25.868 C 162.941 25.553 166.727 25.334 168.598 25.987 C 170.723 28.437 173.858 42.4 174.375 45.935 L 174.666 46.102 C 175.224 45.149 179.987 26.519 179.882 25.745 Z M 244.264 25.03 C 247.73 25.045 251.335 25.462 253.926 28.043 C 254.943 29.057 256.69 31.392 256.68 32.902 C 256.677 33.532 256.581 33.642 256.154 34.062 C 254.086 34.342 251.822 34.031 249.74 33.902 C 249.711 33.803 249.675 33.709 249.613 33.626 C 248.725 32.415 247.358 31.295 245.845 31.067 C 244.765 30.904 243.395 31.142 242.508 31.806 C 241.956 32.22 241.835 32.56 241.745 33.211 C 243.215 35.198 251.816 34.858 255.524 38.52 C 256.811 39.791 257.628 41.53 257.636 43.352 C 257.643 45.278 256.697 46.983 255.361 48.319 C 252.305 51.372 247.979 51.927 243.867 51.939 C 240.979 51.687 237.723 50.647 235.549 48.678 C 234.349 47.592 233.021 45.233 232.955 43.578 C 232.93 42.973 233.107 42.772 233.49 42.359 C 234.807 41.865 236.213 41.794 237.604 41.942 C 238.598 42.048 240.023 42.238 240.689 43.081 C 241.129 43.638 241.334 44.442 241.25 45.138 L 241.243 45.197 C 243.69 45.881 246.013 46.725 248.425 45.434 C 249.116 45.064 249.541 44.651 249.76 43.913 C 249.052 41.958 239.691 41.652 236.312 39.042 C 234.876 37.933 233.759 36.416 233.528 34.58 C 233.289 32.672 233.974 30.507 235.147 29.001 C 237.359 26.156 240.895 25.455 244.263 25.03 Z M 288.887 25.868 C 290.231 25.667 291.716 25.698 293.083 25.669 C 294.068 25.648 295.873 25.6 296.696 26.189 C 298.609 27.558 301.672 43.355 302.706 44.345 C 303.914 43.235 306.212 28.656 308.528 26.019 C 310.309 25.338 314.123 25.616 316.02 25.901 C 316.055 26.037 316.075 26.172 316.093 26.311 C 316.11 26.443 316.122 26.575 316.114 26.709 C 316.044 27.917 310.649 41.952 309.855 42.649 C 309.895 42.81 309.898 42.972 309.884 43.137 C 309.771 44.468 308.785 46.198 308.291 47.486 C 306.877 51.174 306.042 55.812 302.838 58.463 C 299.657 61.097 295.079 60.417 291.28 60.072 C 291.33 59.977 291.375 59.879 291.414 59.779 C 292.679 56.69 289.339 54.373 295.004 54.065 C 295.997 54.011 296.924 53.968 297.656 53.208 C 299.454 50.192 289.9 30.639 288.887 25.868 Z M 108.045 25.868 C 109.896 25.541 113.639 25.297 115.45 25.897 C 115.926 26.055 116.268 26.653 116.485 27.089 C 118.026 30.178 121.03 40.165 121.335 43.529 C 121.394 44.192 121.208 44.861 120.998 45.485 C 121.403 45.038 121.888 44.5 122.108 43.935 C 122.714 42.377 127.278 26.292 127.258 25.825 C 129.385 25.748 133.28 25.169 135.145 26.113 L 135.31 26.734 C 134.649 29.063 130.374 41.303 129.014 42.649 C 129.104 42.973 129.049 43.416 128.947 43.733 C 128.436 45.315 127.666 46.841 127.096 48.407 C 125.674 52.309 124.701 57.313 120.647 59.386 C 118.45 60.509 113.311 60.949 110.951 60.191 C 109.693 58.906 110.439 55.83 110.198 54.116 C 111.707 53.896 113.348 54.224 114.904 54.029 C 115.858 53.909 116.618 53.722 117.234 52.931 C 117.633 49.611 109.743 30.213 108.045 25.867 Z M 197.631 25.309 C 201.003 24.86 204.17 25.013 207.247 26.586 C 207.598 26.762 207.94 26.956 208.272 27.167 C 208.604 27.377 208.924 27.604 209.233 27.846 C 209.542 28.089 209.838 28.347 210.122 28.619 C 210.405 28.892 210.674 29.177 210.928 29.477 C 211.182 29.776 211.421 30.087 211.644 30.41 C 211.867 30.734 212.074 31.067 212.263 31.411 C 212.453 31.755 212.625 32.108 212.779 32.469 C 212.933 32.83 213.069 33.198 213.186 33.573 C 213.796 35.474 214.379 38.121 213.433 39.962 C 211.48 41.364 197.666 40.631 194.403 40.589 C 195.52 41.602 196.393 42.598 196.672 44.118 C 197.399 44.531 198.156 44.973 198.944 45.259 C 200.226 45.724 201.929 45.905 203.196 45.301 C 204.191 44.826 205.008 43.807 205.373 42.782 C 207.148 42.542 209.022 42.596 210.813 42.55 C 211.344 42.488 211.877 42.432 212.409 42.383 L 212.935 42.84 C 213.169 43.621 212.966 44.236 212.617 44.937 C 211.172 47.837 208.6 50.179 205.522 51.204 C 205.071 51.355 204.613 51.483 204.149 51.588 C 203.685 51.693 203.216 51.775 202.743 51.834 C 202.271 51.893 201.797 51.928 201.321 51.939 C 200.845 51.951 200.37 51.938 199.895 51.902 C 199.421 51.867 198.949 51.807 198.48 51.724 C 198.011 51.642 197.548 51.536 197.09 51.406 C 196.631 51.278 196.181 51.126 195.738 50.952 C 195.294 50.778 194.861 50.583 194.437 50.366 C 191.39 48.836 189.26 46.324 188.197 43.1 C 186.992 39.444 187.21 35.111 188.964 31.665 C 190.799 28.061 193.959 26.496 197.631 25.309 Z M 199.108 31.462 C 196.21 32.669 196.835 34.341 194.87 35.897 L 201.835 35.766 L 205.911 35.801 C 206.011 34.786 205.564 33.618 204.922 32.833 C 204.258 32.019 202.953 31.418 201.917 31.313 C 201.008 31.221 200.011 31.328 199.108 31.462 Z M 148.407 25.03 C 149.265 25.008 150.156 25.077 151.01 25.167 C 153.698 25.45 156.312 26.701 158.024 28.82 C 161.198 32.753 161.196 43.115 160.644 48.147 C 160.593 48.606 160.37 50.41 160.028 50.679 C 158.712 51.717 154.786 51.174 153.148 50.995 C 152.849 50.696 152.62 50.548 152.526 50.125 C 152.169 48.528 153.334 47.12 152.716 45.302 C 152.606 46.385 151.88 47.64 151.244 48.502 C 149.878 50.353 147.865 51.339 145.616 51.675 C 141.971 52.22 139.063 50.91 136.214 48.796 C 135.654 46.949 134.969 45.527 135.078 43.53 C 135.645 33.078 148.644 38.225 152.104 35.135 C 152.403 34.458 152.526 34.033 152.278 33.308 C 152.013 32.533 151.463 31.954 150.733 31.597 C 145.943 29.255 144.615 33.393 142.317 34.17 C 141.059 34.595 137.972 34.886 136.755 34.262 C 136.094 33.923 136.047 33.607 135.837 32.944 C 135.969 31.689 136.731 30.618 137.542 29.689 C 140.393 26.426 144.236 25.322 148.407 25.03 Z M 151.321 39.571 C 149.507 41.154 143.137 40.304 142.946 43.207 C 142.887 44.079 143.145 45.343 143.731 46.003 L 143.763 46.04 C 145.503 46.518 147.081 46.664 148.707 45.739 C 150.372 44.791 151.611 43.267 152.109 41.411 C 152.242 40.911 152.258 40.423 152.221 39.91 C 151.873 39.622 151.752 39.625 151.321 39.571 Z" fill="var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10)) /* {&quot;name&quot;:&quot;Text color&quot;} */"></path><path d="M 90.01 17.478 C 92.386 17.292 96.851 16.795 98.956 17.919 C 99.941 18.445 100.547 19.801 100.998 20.783 C 102.539 24.136 103.48 27.853 104.745 31.324 C 106.802 36.97 109.201 42.642 110.928 48.393 C 111.152 49.137 111.642 50.447 111.261 51.152 C 109.217 51.941 105.475 51.183 103.269 50.985 C 103.458 49.845 101.566 45.53 101.032 44.237 C 100.292 43.79 98.81 43.973 97.942 43.974 C 95.657 44.017 88.885 43.233 87.329 44.611 C 86.404 45.429 86.834 46.958 86.763 48.055 C 86.71 48.862 86.497 49.46 85.867 50.005 C 83.648 51.924 79.153 51.091 76.435 50.898 C 76.462 50.861 76.488 50.823 76.512 50.785 C 77.902 48.619 78.588 45.732 79.456 43.301 C 81.34 38.004 83.254 32.718 85.2 27.444 C 86.12 24.881 86.828 22.031 88.035 19.609 C 88.485 18.706 89.005 17.813 90.01 17.478 Z M 93.901 23.051 C 94.389 24.495 91.081 34.7 90.251 36.403 C 90.068 36.78 89.783 37.131 89.489 37.427 C 90.978 37.315 92.53 37.103 94.022 37.203 L 98.523 37.253 C 98.547 37.178 98.568 37.103 98.583 37.025 C 98.978 35.051 95.889 29.012 95.322 26.737 C 95.079 25.761 95.447 23.985 95.026 23.197 C 95.017 23.181 95.008 23.166 95 23.151 Z M 33.273 3.119 C 33.306 3.118 33.339 3.117 33.371 3.117 C 35.43 3.106 37.19 3.843 38.978 4.768 C 43.402 7.057 47.341 10.4 51.392 13.284 C 55.09 15.917 59.298 18.336 62.509 21.539 C 62.731 21.756 62.941 21.984 63.14 22.223 C 63.339 22.462 63.526 22.71 63.7 22.968 C 63.874 23.226 64.034 23.491 64.182 23.765 C 64.329 24.039 64.462 24.319 64.58 24.606 C 64.699 24.893 64.803 25.186 64.892 25.484 C 64.982 25.781 65.056 26.082 65.115 26.388 C 65.174 26.693 65.217 27 65.245 27.31 C 65.272 27.619 65.285 27.929 65.281 28.24 C 65.272 31.743 58.542 51.373 56.723 55.473 C 56.064 56.956 55.14 58.778 53.975 59.925 C 49.914 63.918 39.95 62.675 34.71 62.643 C 29.251 62.67 19.543 63.746 14.829 60.609 C 13.456 59.695 12.361 58.019 11.626 56.553 C 9.146 51.609 7.754 45.779 6.016 40.527 C 4.913 37.192 3.405 33.742 2.718 30.313 C 2.214 27.797 2.183 25.661 3.652 23.475 C 4.515 22.206 5.529 21.072 6.694 20.073 C 10.061 17.18 14.004 14.757 17.652 12.214 C 21.29 9.678 24.973 6.746 28.888 4.668 C 30.334 3.901 31.67 3.438 33.273 3.119 Z M 22.409 19.667 C 21.21 20.134 19.843 20.5 19.273 21.771 C 19.1 22.158 19.07 22.572 19.065 22.992 C 19.479 23.565 19.676 23.728 20.389 23.838 C 24.286 24.437 28.414 20.71 31.722 25.18 C 32.293 25.952 33.174 27.271 33.025 28.278 C 32.929 28.356 32.651 28.625 32.546 28.614 C 32.435 28.603 32.326 28.58 32.216 28.559 C 31.503 28.42 30.71 27.732 30.106 27.335 C 26.877 25.217 23.882 24.773 20.512 26.972 C 19.935 27.349 19.488 27.703 19.34 28.416 C 19.273 28.738 19.325 29.153 19.352 29.478 C 19.707 29.974 19.783 30.185 20.424 30.29 C 22.5 30.629 25.049 28.774 29.21 29.506 C 31.465 31.263 32.786 33.034 33.934 35.679 C 30.058 33.492 27.429 30.82 22.567 32.171 C 21.179 32.556 19.811 33.097 19.074 34.402 C 18.984 34.564 18.991 35.036 18.969 35.238 C 19.296 36.01 19.343 36.208 20.082 36.674 C 25.266 36.501 25.918 33.13 31.436 37.071 L 31.501 37.558 C 28.352 40.846 19.365 37.896 19.572 47.412 C 19.605 48.913 20.552 50.285 21.608 51.286 C 21.767 51.434 21.932 51.574 22.104 51.706 C 22.277 51.838 22.455 51.962 22.64 52.076 C 22.824 52.191 23.014 52.296 23.208 52.393 C 23.403 52.489 23.602 52.576 23.805 52.653 C 24.008 52.73 24.214 52.797 24.424 52.854 C 24.633 52.911 24.845 52.958 25.06 52.994 C 25.274 53.031 25.489 53.057 25.706 53.073 C 25.923 53.088 26.14 53.094 26.357 53.088 C 29.12 53.008 31.733 50.902 33.922 49.401 C 36.536 51.164 39.453 53.616 42.822 52.961 C 43.831 52.764 44.742 52.292 45.6 51.744 C 47.179 50.284 47.807 49.033 48.391 47.021 C 47.813 44.356 47.101 42.169 44.662 40.61 C 42.689 39.349 37.405 38.792 36.388 37.896 C 36.318 37.833 36.252 37.773 36.189 37.703 C 36.356 37.079 36.664 36.883 37.22 36.567 C 38.6 35.783 40.196 35.274 41.707 34.808 C 43.563 35.452 46.269 37.056 48.19 36.506 C 48.695 36.021 48.86 35.878 48.871 35.138 C 48.879 34.557 48.526 33.85 48.128 33.451 C 46.923 32.242 44.881 31.735 43.223 31.74 C 39.99 31.751 36.174 34.64 35.062 34.524 C 34.959 33.407 35.501 32.578 36.186 31.753 C 36.805 31.007 37.498 30.33 38.203 29.665 C 39.316 29.398 40.508 29.075 41.658 29.173 C 43.717 29.349 46.572 31.135 48.404 29.881 C 48.683 29.127 48.727 28.903 48.59 28.083 C 47.645 26.745 46.645 25.86 44.984 25.574 C 40.358 24.779 35.857 28.95 34.808 28.796 C 34.585 27.467 35.72 26.019 36.473 24.967 C 37.653 23.32 39.866 22.937 41.736 22.48 C 43.471 23.138 46.155 24.515 48.035 23.7 C 48.288 23.59 48.514 23.412 48.714 23.225 C 48.837 22.543 48.795 22.239 48.395 21.66 C 47.571 20.469 45.857 19.824 44.488 19.593 C 42.381 19.238 39.721 19.369 37.931 20.646 C 36.754 21.487 35.602 23.108 34.279 23.61 C 33.833 23.779 33.521 23.68 33.095 23.494 C 32.307 23.152 31.595 22.194 31.002 21.591 C 28.827 19.38 25.317 19.343 22.409 19.667 Z" fill="var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10)) /* {&quot;name&quot;:&quot;Text color&quot;} */"></path><path d="M 35.115 40.992 C 37.916 41.391 40.073 41.663 42.382 43.456 C 42.616 44.172 42.898 44.933 42.983 45.684 C 43.127 46.974 42.596 47.769 41.82 48.746 C 41.788 48.767 41.756 48.786 41.723 48.805 C 41.578 48.883 41.434 48.962 41.286 49.035 C 40.414 49.465 39.298 49.615 38.361 49.292 C 37.124 48.865 36.182 47.699 35.628 46.561 C 34.748 44.754 34.462 42.902 35.116 40.992 Z M 31.274 41.208 C 31.773 41.139 32.162 41.338 32.609 41.533 C 33.071 42.116 33.199 42.605 33.156 43.336 C 33.047 45.171 32.069 47.126 30.693 48.344 C 29.559 49.348 28.432 49.468 26.97 49.375 C 26.723 49.263 26.509 49.096 26.298 48.928 C 25.474 48.275 24.634 47.348 24.517 46.26 C 24.424 45.395 24.768 44.595 25.303 43.933 C 26.966 41.873 28.797 41.48 31.274 41.208 Z" fill="var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10)) /* {&quot;name&quot;:&quot;Text color&quot;} */"></path></svg>',
+                                            svgContentId: 11300605002,
+                                            withExternalLayout: !0,
+                                          }),
+                                        }),
+                                        e("div", {
+                                          className: "framer-1p1d0l6",
+                                          children: e(h, {
+                                            breakpoint: i,
+                                            overrides: {
+                                              Q1XUigOVv: {
+                                                svg: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 181 65"><path d="M 71.301 46.095 C 71.441 46.067 71.551 46.062 71.692 46.082 C 71.758 46.518 71.805 48.586 71.616 48.927 L 71.453 48.937 C 71.155 48.501 71.575 46.713 71.301 46.095 Z" fill="var(--token-5197bf6c-818c-4eab-85f8-6f703842b3bf, rgb(10, 11, 10))"></path><path d="M 174.52 20.91 C 174.6 20.902 174.655 20.919 174.732 20.94 C 174.937 21.16 175.247 21.54 175.304 21.84 C 175.567 21.589 175.948 21.082 176.006 20.713 C 176.227 21.107 176.247 22.072 176.141 22.517 C 176.128 22.569 176.094 22.572 176.051 22.599 C 175.927 22.297 176.058 21.939 175.898 21.647 C 175.892 21.637 175.885 21.627 175.88 21.617 C 175.932 21.527 175.95 21.462 175.965 21.359 C 175.722 21.474 175.521 21.954 175.285 22.152 C 175.285 22.139 175.287 22.125 175.286 22.112 C 175.256 21.864 174.844 21.366 174.642 21.225 C 174.645 21.235 174.649 21.245 174.653 21.254 C 174.658 21.271 174.663 21.287 174.668 21.304 C 174.683 21.347 174.697 21.39 174.708 21.434 C 174.752 21.607 174.801 22.434 174.715 22.58 L 174.592 22.568 C 174.449 22.055 174.624 21.487 174.529 20.959 Z" fill="var(--token-5197bf6c-818c-4eab-85f8-6f703842b3bf, rgb(10, 11, 10))"></path><path d="M 112.11 46.096 C 112.758 45.964 113.713 46.013 114.374 46.083 L 114.445 46.172 L 114.42 46.294 C 114.19 46.429 113.654 46.36 113.373 46.358 C 113.414 46.423 113.447 46.494 113.462 46.57 C 113.527 46.91 113.554 47.695 113.375 47.983 C 113.466 48.12 113.476 48.257 113.486 48.418 C 113.499 48.625 113.48 48.815 113.339 48.978 C 112.862 48.667 113.36 46.897 113.047 46.358 C 112.823 46.361 112.484 46.415 112.276 46.332 C 112.169 46.29 112.157 46.196 112.11 46.096 Z M 121.758 46.096 C 122.25 46.01 123.659 45.963 124.1 46.143 L 124.11 46.231 C 123.863 46.457 123.366 46.367 123.047 46.358 C 123.087 46.423 123.121 46.494 123.136 46.57 C 123.201 46.91 123.227 47.695 123.048 47.983 C 123.066 48.01 123.072 48.018 123.088 48.049 C 123.179 48.226 123.199 48.548 123.129 48.735 C 123.079 48.865 123.007 48.939 122.883 48.988 C 122.614 48.654 123.024 46.89 122.708 46.358 C 122.497 46.362 122.188 46.408 121.987 46.348 C 121.837 46.303 121.828 46.229 121.758 46.096 Z M 64.035 46.059 C 64.698 46.055 65.364 46.024 66.021 46.127 L 65.987 46.127 L 66.12 46.255 L 66.214 46.209 L 66.116 46.159 L 66.068 46.274 C 65.559 46.431 64.891 46.363 64.358 46.358 L 64.358 47.378 L 65.618 47.378 C 65.711 47.381 65.804 47.395 65.896 47.406 L 65.92 47.55 L 65.842 47.636 C 65.413 47.755 64.809 47.671 64.358 47.671 C 64.364 48.066 64.427 48.581 64.264 48.947 L 64.179 48.949 C 63.882 48.537 64.033 46.615 64.035 46.059 Z M 74.268 46.037 C 74.315 46.027 74.363 46.02 74.411 46.014 C 74.87 45.958 75.295 46.02 75.662 46.317 C 75.751 46.389 75.778 46.39 75.791 46.508 C 75.45 46.763 74.934 46.164 74.479 46.293 C 74.178 46.379 73.905 46.624 73.754 46.894 C 73.584 47.198 73.526 47.574 73.628 47.91 C 73.72 48.211 73.926 48.418 74.199 48.563 C 74.415 48.678 74.643 48.74 74.883 48.665 C 74.895 48.663 74.907 48.661 74.918 48.66 C 75.212 48.625 75.392 48.451 75.645 48.318 C 75.75 48.414 75.765 48.43 75.802 48.566 C 75.761 48.654 75.725 48.698 75.641 48.748 C 75.255 48.977 74.695 49.04 74.267 48.915 C 73.911 48.811 73.565 48.588 73.389 48.25 C 73.184 47.854 73.222 47.357 73.358 46.945 C 73.514 46.473 73.844 46.253 74.268 46.037 Z M 93.126 46.037 C 93.436 45.986 93.762 45.974 94.067 46.059 C 94.097 46.067 94.126 46.077 94.155 46.088 C 94.184 46.099 94.212 46.112 94.24 46.126 C 94.268 46.14 94.295 46.155 94.321 46.172 C 94.347 46.189 94.373 46.207 94.397 46.226 C 94.422 46.245 94.446 46.265 94.468 46.287 C 94.491 46.308 94.512 46.331 94.533 46.354 C 94.553 46.378 94.572 46.403 94.59 46.428 C 94.608 46.453 94.625 46.48 94.64 46.507 L 94.611 46.608 C 94.195 46.705 93.926 46.183 93.34 46.314 C 93.321 46.319 93.302 46.324 93.283 46.329 C 93.264 46.334 93.245 46.34 93.227 46.346 C 93.208 46.352 93.189 46.359 93.171 46.366 C 93.153 46.374 93.135 46.381 93.117 46.389 C 93.099 46.398 93.082 46.406 93.065 46.415 C 93.047 46.424 93.03 46.434 93.013 46.444 C 92.996 46.454 92.979 46.464 92.963 46.475 C 92.947 46.486 92.931 46.497 92.915 46.509 C 92.899 46.52 92.883 46.532 92.868 46.545 C 92.853 46.557 92.838 46.57 92.823 46.583 C 92.809 46.596 92.795 46.61 92.781 46.624 C 92.767 46.638 92.753 46.652 92.74 46.667 C 92.727 46.681 92.715 46.696 92.702 46.712 C 92.69 46.727 92.678 46.743 92.666 46.759 C 92.655 46.775 92.644 46.791 92.633 46.807 C 92.622 46.824 92.612 46.841 92.602 46.858 C 92.592 46.876 92.582 46.894 92.572 46.913 C 92.562 46.931 92.553 46.95 92.545 46.969 C 92.536 46.988 92.528 47.007 92.52 47.027 C 92.513 47.046 92.506 47.066 92.499 47.086 C 92.492 47.105 92.486 47.125 92.48 47.146 C 92.474 47.166 92.469 47.186 92.465 47.206 C 92.459 47.227 92.455 47.247 92.452 47.268 C 92.448 47.288 92.444 47.309 92.442 47.33 C 92.439 47.351 92.437 47.371 92.435 47.392 C 92.433 47.413 92.432 47.434 92.431 47.455 C 92.43 47.476 92.43 47.497 92.431 47.518 C 92.431 47.539 92.432 47.559 92.433 47.58 C 92.434 47.601 92.436 47.622 92.439 47.643 C 92.441 47.664 92.444 47.684 92.447 47.705 C 92.45 47.726 92.454 47.746 92.459 47.767 C 92.463 47.787 92.468 47.808 92.473 47.828 C 92.563 48.158 92.755 48.412 93.054 48.578 C 93.258 48.691 93.508 48.734 93.733 48.665 C 94.074 48.628 94.304 48.336 94.592 48.316 C 94.603 48.36 94.595 48.381 94.582 48.426 C 94.526 48.632 94.345 48.801 94.164 48.903 C 93.874 49.067 93.523 49.073 93.21 48.976 C 92.799 48.849 92.438 48.582 92.244 48.19 C 92.233 48.167 92.222 48.144 92.212 48.12 C 92.202 48.097 92.193 48.073 92.184 48.049 C 92.176 48.025 92.167 48.001 92.16 47.977 C 92.152 47.953 92.145 47.928 92.139 47.904 C 92.132 47.879 92.127 47.854 92.121 47.829 C 92.116 47.804 92.112 47.779 92.108 47.754 C 92.104 47.729 92.101 47.704 92.098 47.678 C 92.095 47.653 92.093 47.628 92.092 47.602 C 92.091 47.577 92.09 47.552 92.09 47.526 C 92.089 47.501 92.09 47.475 92.091 47.45 C 92.092 47.424 92.094 47.399 92.096 47.374 C 92.099 47.348 92.102 47.323 92.105 47.298 C 92.109 47.273 92.113 47.247 92.118 47.222 C 92.123 47.197 92.128 47.173 92.134 47.148 C 92.14 47.123 92.147 47.099 92.154 47.074 C 92.161 47.05 92.169 47.026 92.178 47.002 C 92.353 46.506 92.668 46.255 93.126 46.037 Z M 96.901 46.037 C 97.165 45.998 97.394 45.988 97.659 46.031 C 97.931 46.075 98.228 46.172 98.393 46.414 C 98.423 46.459 98.397 46.506 98.387 46.557 C 98.041 46.737 97.599 46.148 96.992 46.33 C 96.738 46.406 96.528 46.599 96.401 46.83 C 96.226 47.145 96.17 47.536 96.269 47.884 C 96.357 48.192 96.577 48.436 96.856 48.586 C 97.062 48.697 97.313 48.733 97.537 48.664 C 97.859 48.623 98 48.412 98.284 48.325 C 98.386 48.4 98.394 48.412 98.436 48.532 C 98.323 48.664 98.19 48.757 98.039 48.838 C 98.017 48.85 97.994 48.861 97.972 48.871 C 97.949 48.882 97.926 48.891 97.903 48.901 C 97.88 48.91 97.857 48.919 97.834 48.927 C 97.81 48.935 97.787 48.943 97.763 48.95 C 97.739 48.957 97.715 48.963 97.691 48.969 C 97.667 48.975 97.642 48.98 97.618 48.985 C 97.594 48.989 97.569 48.993 97.544 48.997 C 97.52 49 97.495 49.003 97.471 49.005 C 97.446 49.007 97.421 49.009 97.396 49.01 C 97.371 49.011 97.347 49.011 97.322 49.011 C 97.297 49.01 97.272 49.009 97.248 49.008 C 97.223 49.006 97.198 49.004 97.173 49.001 C 97.149 48.999 97.124 48.995 97.1 48.991 C 97.075 48.987 97.051 48.983 97.026 48.978 C 97.002 48.972 96.978 48.967 96.954 48.96 C 96.93 48.954 96.906 48.947 96.882 48.939 C 96.518 48.82 96.182 48.529 96.014 48.182 C 95.84 47.824 95.826 47.395 95.958 47.021 C 96.132 46.527 96.444 46.259 96.901 46.037 Z" fill="var(--token-5197bf6c-818c-4eab-85f8-6f703842b3bf, rgb(10, 11, 10))"></path><path d="M 134.225 22.443 C 134.476 22.389 134.711 22.345 134.954 22.456 C 135.159 22.551 135.343 22.745 135.42 22.959 C 135.49 23.151 135.487 23.351 135.392 23.535 C 135.283 23.747 135.106 23.874 134.884 23.943 C 134.81 23.994 134.789 23.999 134.7 24.009 C 134.484 24.034 134.333 24.03 134.158 23.876 C 133.961 23.703 133.863 23.403 133.86 23.146 C 133.857 22.832 134.021 22.652 134.225 22.443 Z" fill="var(--token-5197bf6c-818c-4eab-85f8-6f703842b3bf, rgb(10, 11, 10))"></path><path d="M 83.356 46.037 C 83.461 46.021 83.567 46.011 83.674 46.008 C 84.05 45.995 84.304 46.116 84.572 46.369 L 84.567 46.455 C 84.312 46.501 84.034 46.335 83.775 46.314 C 83.576 46.297 83.343 46.328 83.191 46.471 C 83.097 46.56 83.041 46.685 83.045 46.815 C 83.059 47.279 84.305 47.394 84.638 47.717 C 84.746 47.822 84.815 47.943 84.815 48.098 C 84.816 48.304 84.693 48.571 84.551 48.717 C 84.311 48.965 83.988 48.975 83.664 48.989 C 83.613 48.982 83.561 48.974 83.51 48.965 C 83.163 48.901 82.915 48.782 82.713 48.484 L 82.736 48.399 C 82.941 48.392 83.088 48.514 83.267 48.595 C 83.529 48.714 83.89 48.747 84.157 48.628 C 84.3 48.564 84.413 48.45 84.455 48.294 C 84.615 47.704 83.077 47.613 82.786 47.111 C 82.696 46.956 82.69 46.754 82.75 46.587 C 82.856 46.294 83.093 46.165 83.356 46.037 Z M 107.424 46.037 C 107.701 45.985 107.975 46.022 108.246 46.093 C 108.454 46.146 108.611 46.188 108.723 46.377 L 108.679 46.473 C 108.424 46.551 107.978 46.346 107.699 46.323 C 107.496 46.306 107.323 46.355 107.173 46.5 C 107.053 46.615 107.039 46.662 107.035 46.819 C 107.308 47.284 108.17 47.351 108.602 47.674 C 108.746 47.781 108.885 47.94 108.898 48.129 C 108.912 48.339 108.768 48.549 108.631 48.694 C 108.38 48.958 108.067 48.978 107.724 48.989 C 107.672 48.982 107.62 48.974 107.569 48.964 C 107.218 48.9 106.96 48.776 106.755 48.476 L 106.784 48.398 C 107.035 48.394 107.216 48.562 107.444 48.641 C 107.693 48.727 108.034 48.732 108.268 48.6 C 108.384 48.535 108.473 48.433 108.506 48.302 C 108.681 47.592 107.136 47.698 106.851 47.127 C 106.768 46.96 106.765 46.734 106.827 46.558 C 106.929 46.272 107.169 46.156 107.424 46.037 Z M 103.999 46.037 C 104.345 45.993 104.677 46.004 105.005 46.141 C 105.153 46.203 105.205 46.255 105.267 46.4 L 105.191 46.554 C 104.968 46.601 104.659 46.299 104.391 46.284 C 104.189 46.274 103.965 46.323 103.82 46.474 C 103.695 46.604 103.664 46.699 103.669 46.869 C 103.892 47.288 104.772 47.35 105.153 47.65 C 105.302 47.767 105.411 47.934 105.427 48.126 C 105.442 48.298 105.391 48.518 105.279 48.65 C 105.052 48.915 104.712 48.96 104.387 48.989 C 104.222 48.974 104.066 48.953 103.907 48.901 C 103.699 48.832 103.383 48.728 103.278 48.52 L 103.322 48.414 C 103.739 48.346 104.172 48.766 104.632 48.697 C 104.843 48.665 104.998 48.504 105.118 48.339 C 105.174 47.656 103.686 47.656 103.388 47.018 C 103.324 46.883 103.33 46.737 103.382 46.598 C 103.497 46.292 103.72 46.169 103.999 46.037 Z M 155.498 46.096 C 156.139 45.981 156.96 46.026 157.609 46.066 C 157.67 46.188 157.658 46.191 157.627 46.316 C 157.09 46.444 156.383 46.356 155.826 46.35 C 155.85 46.388 155.869 46.42 155.881 46.464 C 155.951 46.729 155.937 47.104 155.81 47.346 C 156.178 47.343 156.546 47.336 156.914 47.337 C 157.108 47.337 157.338 47.333 157.483 47.481 L 157.476 47.596 C 157.279 47.733 156.331 47.64 156.048 47.639 L 155.947 47.661 C 155.796 47.953 155.998 48.345 155.818 48.659 C 156.422 48.657 157.04 48.627 157.643 48.667 C 157.713 48.788 157.697 48.79 157.666 48.919 C 156.99 49.045 156.184 48.955 155.49 48.951 C 155.519 48.908 155.545 48.862 155.56 48.812 C 155.661 48.475 155.641 46.352 155.498 46.096 Z M 125.452 46.096 C 125.549 46.075 125.645 46.073 125.743 46.07 C 125.805 46.132 125.838 46.187 125.861 46.272 C 125.934 46.548 125.892 47.067 125.75 47.316 L 127.414 47.316 C 127.631 46.949 127.434 46.527 127.562 46.149 C 127.59 46.067 127.599 46.073 127.676 46.037 C 127.784 46.149 127.826 46.222 127.842 46.384 C 127.882 46.793 127.96 48.679 127.734 48.948 L 127.571 48.925 C 127.385 48.531 127.648 48.041 127.409 47.639 L 125.75 47.639 C 125.755 47.65 125.76 47.66 125.765 47.671 C 125.808 47.758 125.841 47.834 125.849 47.932 C 125.873 48.225 125.935 48.764 125.741 48.991 L 125.676 48.987 C 125.65 48.968 125.57 48.923 125.555 48.899 C 125.363 48.585 125.697 46.654 125.452 46.096 Z M 139.109 46.096 C 139.671 46.003 140.364 46.033 140.934 46.064 C 141.078 46.072 141.203 46.081 141.301 46.191 C 141.287 46.205 141.275 46.221 141.261 46.235 C 141.017 46.471 139.821 46.354 139.443 46.35 C 139.467 46.388 139.486 46.42 139.498 46.464 C 139.568 46.728 139.553 47.103 139.432 47.346 C 139.917 47.337 140.457 47.29 140.932 47.41 C 141.022 47.433 141.069 47.432 141.117 47.516 C 140.708 47.71 140.158 47.645 139.716 47.639 L 139.563 47.669 C 139.424 47.976 139.615 48.347 139.436 48.659 C 140.009 48.66 140.751 48.54 141.295 48.724 L 141.318 48.905 L 141.336 48.741 L 141.291 48.911 C 140.59 49.03 139.813 48.955 139.101 48.951 C 139.13 48.908 139.155 48.862 139.17 48.812 C 139.271 48.475 139.251 46.353 139.109 46.096 Z M 129.385 46.096 C 129.872 46.014 131.045 45.981 131.517 46.075 C 131.548 46.192 131.548 46.21 131.511 46.325 C 130.964 46.435 130.291 46.356 129.726 46.35 C 129.75 46.388 129.77 46.42 129.782 46.464 C 129.851 46.727 129.837 47.103 129.716 47.346 L 130.62 47.337 C 130.811 47.337 131.24 47.298 131.371 47.43 L 131.365 47.571 C 131.159 47.733 130.244 47.639 129.94 47.639 L 129.853 47.66 C 129.688 47.936 129.898 48.347 129.719 48.659 C 130.313 48.661 130.984 48.584 131.567 48.68 C 131.602 48.785 131.599 48.796 131.57 48.904 C 131.011 49.066 129.988 48.954 129.379 48.951 C 129.41 48.899 129.437 48.845 129.454 48.786 C 129.548 48.448 129.53 46.352 129.385 46.096 Z M 99.763 46.096 C 100.097 46.035 101.695 45.974 101.924 46.112 C 101.933 46.231 101.941 46.242 101.875 46.347 C 101.291 46.382 100.693 46.353 100.108 46.35 C 100.132 46.388 100.152 46.42 100.163 46.464 C 100.233 46.727 100.218 47.103 100.098 47.346 C 100.53 47.339 100.983 47.306 101.413 47.346 C 101.565 47.36 101.67 47.386 101.769 47.507 L 101.735 47.616 C 101.303 47.702 100.765 47.641 100.32 47.639 L 100.233 47.662 C 100.07 47.94 100.28 48.347 100.101 48.659 C 100.562 48.662 101.025 48.637 101.486 48.644 C 101.661 48.647 101.865 48.637 101.987 48.766 C 101.975 48.821 101.979 48.856 101.935 48.896 C 101.766 49.05 100.085 48.954 99.757 48.951 C 99.789 48.899 99.816 48.845 99.833 48.786 C 99.927 48.448 99.909 46.351 99.763 46.096 Z M 137.163 48.381 C 137.484 47.845 137.001 46.586 137.3 46.079 C 137.411 46.063 137.449 46.064 137.549 46.114 C 137.56 46.19 137.57 46.267 137.575 46.344 C 137.597 46.739 137.661 48.715 137.45 48.948 C 137.077 48.925 135.857 46.932 135.383 46.581 C 135.5 46.898 135.535 48.475 135.414 48.779 C 135.364 48.904 135.346 48.908 135.232 48.96 C 135.198 48.942 135.151 48.937 135.131 48.905 C 135.007 48.709 135.258 46.625 135.052 46.13 C 135.048 46.118 135.042 46.107 135.036 46.096 C 135.18 46.067 135.288 46.06 135.433 46.086 C 135.737 46.379 137.095 48.047 137.163 48.381 Z M 61.054 45.996 L 61.261 46.03 C 61.54 46.249 62.471 48.485 62.618 48.925 C 62.53 48.974 62.448 48.947 62.354 48.93 C 62.163 48.754 62.067 48.424 61.967 48.186 L 61.377 48.184 L 60.397 48.184 C 60.262 48.521 60.171 48.77 59.855 48.978 L 59.778 48.931 C 59.904 48.301 60.746 46.674 61.054 45.996 Z M 61.174 46.45 L 60.524 47.892 L 61.202 47.892 L 61.841 47.891 C 61.638 47.434 61.455 46.857 61.174 46.45 Z M 78.257 46.037 C 78.365 46.032 78.475 46.037 78.583 46.038 C 78.991 46.64 79.327 47.546 79.605 48.226 C 79.684 48.42 79.845 48.766 79.762 48.965 C 79.467 48.775 79.357 48.496 79.207 48.191 C 79.019 48.151 78.741 48.186 78.544 48.184 L 77.587 48.184 C 77.592 48.21 77.602 48.252 77.601 48.28 C 77.593 48.459 77.406 48.821 77.287 48.953 L 77.135 48.933 C 76.953 48.635 78.192 46.562 78.257 46.037 Z M 78.352 46.508 C 78.36 46.794 77.965 47.64 77.765 47.845 C 77.742 47.869 77.737 47.872 77.714 47.892 L 78.368 47.892 L 79.055 47.889 C 78.955 47.443 78.737 46.976 78.51 46.581 Z M 89.34 46.037 L 89.628 46.033 C 89.932 46.25 90.793 48.451 90.996 48.927 L 90.965 48.945 C 90.46 48.902 90.629 48.553 90.319 48.27 C 90.157 48.122 89.871 48.174 89.666 48.184 L 88.695 48.184 C 88.721 48.326 88.63 48.542 88.572 48.672 C 88.51 48.81 88.417 48.895 88.277 48.949 L 88.214 48.894 C 88.16 48.125 89.279 46.878 89.34 46.037 Z M 89.454 46.508 C 89.43 46.858 89.066 47.651 88.819 47.892 L 89.549 47.892 C 89.729 47.896 90.001 47.935 90.168 47.879 C 90.176 47.797 90.192 47.786 90.146 47.714 C 89.948 47.397 89.788 46.623 89.454 46.508 Z M 151.082 48.453 C 151.089 48.445 151.098 48.438 151.105 48.43 C 151.355 48.16 151.946 46.247 151.937 45.853 C 152.018 45.914 152.118 45.981 152.179 46.063 C 152.342 46.278 152.986 48.184 152.934 48.432 C 153.344 47.959 153.469 47.009 153.685 46.415 C 153.753 46.229 153.841 46.141 154.016 46.06 L 154.111 46.121 C 154.098 46.286 154.044 46.326 153.942 46.45 C 153.953 46.503 153.962 46.562 153.955 46.617 C 153.903 47.062 153.378 48.492 153.142 48.894 C 153.078 49.003 152.969 49.089 152.869 49.164 C 152.873 48.683 152.284 47.038 152.004 46.613 C 152.017 46.675 152.025 46.739 152.013 46.802 C 151.919 47.296 151.525 48.526 151.261 48.945 C 151.203 49.037 151.099 49.104 151.01 49.164 C 151.011 49.146 151.012 49.128 151.011 49.11 C 151.009 48.726 150.195 46.379 149.921 46.096 C 150.087 46.07 150.224 46.039 150.364 46.137 C 150.557 46.615 151.123 48.013 151.082 48.453 Z M 142.48 46.096 C 142.578 46.08 142.727 46.04 142.824 46.068 C 142.895 46.088 142.907 46.115 142.936 46.177 C 143.098 46.529 143.716 48.197 143.616 48.478 C 143.623 48.468 143.631 48.459 143.639 48.449 C 143.939 48.075 144.491 46.355 144.51 45.853 C 144.589 45.914 144.686 45.982 144.744 46.063 C 144.922 46.31 145.545 48.173 145.51 48.468 C 145.876 47.88 146.005 47.091 146.237 46.439 C 146.307 46.242 146.396 46.146 146.578 46.057 L 146.671 46.105 C 146.676 46.254 146.625 46.278 146.534 46.391 C 146.567 46.762 145.974 48.349 145.757 48.717 C 145.674 48.856 145.614 48.931 145.455 48.97 C 145.163 48.367 144.945 47.07 144.565 46.624 C 144.556 46.614 144.547 46.604 144.538 46.594 C 144.556 46.676 144.572 46.745 144.559 46.829 C 144.493 47.273 144.062 48.561 143.819 48.944 C 143.762 49.036 143.664 49.103 143.577 49.164 C 143.577 49.151 143.578 49.138 143.578 49.125 C 143.557 48.7 142.775 46.398 142.479 46.096 Z M 67.473 46.095 C 67.928 46.026 68.844 45.966 69.269 46.119 C 69.296 46.13 69.324 46.141 69.35 46.154 C 69.377 46.167 69.403 46.181 69.428 46.197 C 69.453 46.212 69.478 46.229 69.502 46.247 C 69.525 46.265 69.548 46.284 69.57 46.304 C 69.591 46.324 69.612 46.345 69.632 46.367 C 69.652 46.389 69.67 46.412 69.688 46.436 C 69.705 46.46 69.722 46.485 69.737 46.511 C 69.752 46.536 69.766 46.562 69.779 46.589 C 69.79 46.614 69.8 46.639 69.809 46.664 C 69.818 46.689 69.826 46.715 69.832 46.742 C 69.838 46.768 69.843 46.794 69.847 46.821 C 69.851 46.848 69.853 46.874 69.854 46.901 C 69.855 46.928 69.855 46.955 69.853 46.982 C 69.851 47.009 69.848 47.036 69.844 47.062 C 69.839 47.089 69.833 47.115 69.826 47.141 C 69.819 47.167 69.811 47.193 69.801 47.218 C 69.674 47.543 69.427 47.617 69.135 47.745 C 69.094 47.998 69.751 48.542 69.851 48.846 C 69.866 48.894 69.845 48.909 69.824 48.953 L 69.559 48.952 C 69.292 48.596 68.997 48.071 68.635 47.821 L 67.786 47.821 C 67.807 47.857 67.827 47.894 67.843 47.932 C 67.937 48.155 67.929 48.752 67.84 48.978 C 67.78 49.023 67.798 49.026 67.716 49.015 C 67.681 48.985 67.598 48.931 67.576 48.895 C 67.366 48.545 67.756 46.675 67.473 46.095 Z M 67.803 46.39 C 67.928 46.652 67.951 47.11 67.866 47.39 C 67.849 47.444 67.828 47.48 67.798 47.529 C 68.203 47.535 68.916 47.636 69.254 47.394 L 69.292 47.334 C 69.426 47.23 69.564 47.055 69.574 46.876 C 69.58 46.777 69.511 46.68 69.443 46.614 C 69.111 46.289 68.31 46.335 67.878 46.38 C 67.853 46.382 67.828 46.386 67.803 46.39 Z M 159.071 46.096 C 159.494 46.023 160.06 46.015 160.489 46.044 C 160.764 46.063 161.028 46.169 161.202 46.395 C 161.315 46.54 161.378 46.719 161.343 46.904 C 161.305 47.112 161.174 47.264 161.01 47.384 C 160.954 47.426 160.974 47.396 160.959 47.473 C 161.097 47.567 161.254 47.661 161.374 47.776 C 161.466 47.864 161.526 47.964 161.526 48.095 C 161.526 48.245 161.465 48.347 161.37 48.455 C 161.372 48.465 161.375 48.475 161.375 48.485 C 161.378 48.569 161.332 48.644 161.273 48.7 C 160.845 49.107 159.629 48.958 159.062 48.951 C 159.092 48.908 159.117 48.862 159.132 48.812 C 159.233 48.475 159.213 46.353 159.071 46.096 Z M 159.406 47.688 C 159.529 47.919 159.552 48.262 159.474 48.513 C 159.458 48.565 159.432 48.613 159.403 48.659 C 159.787 48.663 160.617 48.765 160.918 48.549 L 160.944 48.509 C 161.094 48.391 161.153 48.299 161.23 48.129 C 161.218 47.998 161.206 47.949 161.098 47.859 C 160.762 47.578 159.92 47.605 159.511 47.667 C 159.476 47.672 159.442 47.681 159.406 47.688 Z M 159.408 46.391 C 159.53 46.657 159.556 46.987 159.449 47.266 C 159.436 47.301 159.429 47.311 159.41 47.346 C 159.768 47.352 160.463 47.451 160.763 47.23 L 160.804 47.157 C 160.946 47.065 161.014 46.956 161.101 46.816 C 161.068 46.657 161.048 46.613 160.908 46.52 C 160.557 46.285 159.813 46.315 159.408 46.391 Z M 116.576 46.037 C 116.59 46.034 116.605 46.032 116.619 46.03 C 117.08 45.957 117.499 45.992 117.884 46.281 C 117.904 46.297 117.924 46.312 117.943 46.329 C 117.962 46.345 117.981 46.362 118 46.379 C 118.018 46.396 118.036 46.414 118.054 46.432 C 118.071 46.45 118.089 46.469 118.105 46.488 C 118.122 46.507 118.138 46.526 118.154 46.546 C 118.17 46.566 118.185 46.586 118.2 46.607 C 118.214 46.627 118.229 46.648 118.242 46.67 C 118.255 46.691 118.269 46.713 118.282 46.735 C 118.294 46.757 118.306 46.779 118.317 46.802 C 118.329 46.824 118.34 46.847 118.35 46.87 C 118.36 46.893 118.37 46.917 118.379 46.94 C 118.388 46.964 118.397 46.988 118.405 47.012 C 118.413 47.036 118.42 47.06 118.427 47.085 C 118.434 47.109 118.44 47.134 118.446 47.159 C 118.451 47.183 118.456 47.208 118.46 47.233 C 118.464 47.258 118.468 47.283 118.471 47.309 C 118.522 47.7 118.431 48.125 118.186 48.439 C 117.953 48.738 117.634 48.91 117.264 48.958 C 117.254 48.965 117.244 48.972 117.233 48.977 C 117.063 49.065 116.687 49.017 116.51 48.967 C 116.178 48.873 115.906 48.548 115.752 48.252 C 115.554 47.872 115.502 47.422 115.634 47.011 C 115.8 46.5 116.113 46.265 116.576 46.037 Z M 116.653 46.332 C 116.313 46.524 116.07 46.703 115.96 47.095 C 115.953 47.119 115.947 47.142 115.942 47.166 C 115.936 47.189 115.932 47.213 115.927 47.237 C 115.923 47.261 115.919 47.285 115.917 47.309 C 115.914 47.333 115.911 47.358 115.909 47.382 C 115.907 47.406 115.906 47.43 115.906 47.455 C 115.905 47.479 115.905 47.503 115.906 47.528 C 115.906 47.552 115.908 47.576 115.91 47.6 C 115.911 47.625 115.914 47.649 115.917 47.673 C 115.92 47.697 115.923 47.721 115.928 47.745 C 115.932 47.769 115.937 47.793 115.943 47.816 C 115.948 47.84 115.955 47.864 115.961 47.887 C 115.968 47.91 115.975 47.934 115.983 47.957 C 115.991 47.98 115.999 48.002 116.009 48.025 C 116.018 48.047 116.027 48.07 116.037 48.092 C 116.047 48.114 116.058 48.136 116.069 48.157 C 116.08 48.179 116.092 48.2 116.105 48.221 C 116.223 48.423 116.402 48.602 116.635 48.659 C 116.788 48.696 117.059 48.734 117.206 48.664 C 117.526 48.603 117.769 48.471 117.958 48.195 C 118.143 47.923 118.19 47.571 118.121 47.252 C 118.116 47.232 118.112 47.212 118.107 47.192 C 118.101 47.171 118.095 47.151 118.089 47.132 C 118.083 47.112 118.076 47.092 118.069 47.072 C 118.062 47.053 118.054 47.034 118.046 47.015 C 118.037 46.995 118.029 46.977 118.019 46.958 C 118.01 46.939 118.001 46.921 117.991 46.903 C 117.981 46.884 117.97 46.866 117.959 46.849 C 117.948 46.831 117.937 46.814 117.925 46.797 C 117.913 46.78 117.901 46.763 117.888 46.746 C 117.875 46.73 117.862 46.714 117.848 46.698 C 117.835 46.682 117.821 46.667 117.807 46.652 C 117.792 46.637 117.778 46.622 117.763 46.608 C 117.748 46.593 117.733 46.58 117.717 46.566 C 117.701 46.552 117.685 46.539 117.669 46.527 C 117.652 46.514 117.636 46.502 117.619 46.49 C 117.602 46.478 117.584 46.466 117.567 46.455 C 117.281 46.277 116.975 46.286 116.653 46.332 Z" fill="var(--token-5197bf6c-818c-4eab-85f8-6f703842b3bf, rgb(10, 11, 10))"></path><path d="M 134.392 26.041 C 134.56 26.028 134.736 26.013 134.895 26.082 C 135.053 26.151 135.165 26.306 135.211 26.469 C 135.371 27.039 135.308 35.185 135.261 36.257 C 135.251 36.479 135.256 36.779 135.145 36.974 C 135.06 37.124 134.923 37.153 134.769 37.189 C 134.696 37.213 134.642 37.216 134.566 37.208 C 134.392 37.191 134.256 37.139 134.149 36.99 C 134.017 36.806 134.019 36.556 134.007 36.338 C 133.897 34.336 133.993 32.27 133.994 30.261 C 133.995 29.206 133.892 27.537 134.023 26.565 C 134.056 26.31 134.201 26.186 134.392 26.041 Z M 127.463 26.041 C 127.624 26.021 127.839 25.978 127.988 26.054 C 128.149 26.136 128.231 26.307 128.285 26.472 C 128.428 26.914 128.426 27.936 128.211 28.355 C 128.787 27.838 128.733 26.886 129.67 26.311 C 130.199 25.986 130.899 25.984 131.484 26.127 C 131.898 26.228 132.446 26.44 132.664 26.841 C 132.735 26.973 132.752 27.111 132.7 27.254 C 132.608 27.505 132.391 27.609 132.167 27.719 C 131.474 27.46 130.703 27.218 129.979 27.515 C 129.121 27.868 128.801 28.965 128.667 29.81 C 128.617 30.124 128.604 30.493 128.474 30.785 C 128.468 30.796 128.463 30.808 128.457 30.819 C 128.472 30.851 128.488 30.887 128.496 30.922 C 128.591 31.33 128.491 32.005 128.49 32.437 C 128.488 33.784 128.587 35.205 128.473 36.544 C 128.46 36.699 128.422 36.885 128.323 37.007 C 128.224 37.13 128.062 37.202 127.908 37.215 C 127.733 37.23 127.538 37.179 127.404 37.062 C 127.213 36.896 127.21 36.522 127.205 36.287 C 127.156 34.377 127.222 32.455 127.218 30.544 C 127.215 29.293 127.095 27.952 127.22 26.71 C 127.247 26.442 127.275 26.243 127.463 26.041 Z M 166.985 26.041 C 167.021 26.039 167.057 26.036 167.093 26.035 C 168.348 25.973 169.552 26.262 170.501 27.128 C 171.433 27.98 171.984 29.392 172.031 30.65 C 172.042 30.946 172.016 31.346 171.788 31.566 C 171.64 31.71 171.378 31.74 171.181 31.76 C 170.352 31.845 169.464 31.785 168.629 31.784 L 163.842 31.779 C 164.277 32.445 163.797 33.745 165.038 35.128 C 165.648 35.808 166.387 36.117 167.293 36.158 C 168.153 36.196 169.093 35.915 169.726 35.308 C 169.917 35.125 170.237 34.771 170.244 34.497 C 170.483 34.298 170.521 33.978 170.683 33.725 C 170.809 33.527 171.044 33.396 171.271 33.355 C 171.344 33.342 171.455 33.348 171.517 33.392 C 171.663 33.494 171.716 33.62 171.745 33.793 C 171.842 34.381 171.499 35.015 171.164 35.469 C 170.53 36.33 169.512 36.981 168.453 37.137 C 167.125 37.332 165.657 37.166 164.559 36.334 C 163.433 35.481 162.885 34.17 162.698 32.795 C 162.467 31.105 162.682 29.126 163.74 27.733 C 164.565 26.647 165.677 26.211 166.985 26.041 Z M 166.875 27.103 C 165.865 27.371 165.069 27.848 164.527 28.782 C 164.181 29.378 164.099 30.358 163.904 30.641 C 163.897 30.651 163.891 30.661 163.884 30.671 C 163.863 30.702 163.867 30.696 163.84 30.729 L 170.633 30.729 C 170.788 30.39 170.509 29.43 170.377 29.081 C 170.084 28.306 169.511 27.675 168.755 27.342 C 168.155 27.078 167.517 27.037 166.875 27.103 Z M 146.933 21.971 C 147.07 21.96 147.197 21.957 147.331 21.988 C 147.472 22.021 147.581 22.09 147.652 22.22 C 147.753 22.403 147.756 22.63 147.765 22.835 C 147.828 24.292 147.866 36.415 147.672 36.923 C 147.63 37.034 147.546 37.118 147.439 37.166 C 147.278 37.239 147.074 37.225 146.913 37.157 C 146.244 36.876 146.66 35.921 146.445 35.388 C 146.44 35.375 146.434 35.361 146.429 35.348 C 146.423 35.389 146.421 35.421 146.399 35.458 C 145.893 36.298 144.688 36.874 143.766 37.079 C 141.981 37.478 140.994 37.097 139.515 36.149 C 139.495 36.045 138.737 35.115 138.603 34.881 C 138.314 34.372 138.122 33.806 138.01 33.232 C 137.671 31.496 137.789 29.45 138.797 27.945 C 138.836 27.886 138.877 27.828 138.919 27.771 C 138.96 27.714 139.004 27.658 139.048 27.604 C 139.093 27.549 139.138 27.495 139.186 27.443 C 139.233 27.391 139.281 27.339 139.331 27.289 C 139.38 27.24 139.431 27.191 139.484 27.143 C 139.536 27.096 139.589 27.05 139.643 27.005 C 139.698 26.961 139.754 26.917 139.81 26.876 C 139.867 26.834 139.924 26.793 139.983 26.754 C 140.041 26.715 140.101 26.678 140.161 26.642 C 140.222 26.606 140.283 26.571 140.345 26.538 C 140.407 26.506 140.47 26.474 140.534 26.445 C 140.598 26.415 140.662 26.387 140.727 26.36 C 140.793 26.334 140.858 26.309 140.925 26.286 C 140.991 26.263 141.058 26.241 141.125 26.222 C 141.192 26.202 141.26 26.184 141.329 26.167 C 141.397 26.151 141.466 26.136 141.535 26.124 C 142.869 25.87 144.339 26.093 145.47 26.875 C 145.783 27.093 146.362 27.601 146.436 27.996 C 146.766 27.275 146.28 23.542 146.563 22.418 C 146.622 22.183 146.735 22.085 146.933 21.971 Z M 142.153 27.103 C 141.111 27.381 140.385 27.813 139.824 28.783 C 139.076 30.079 138.971 31.877 139.361 33.303 C 139.633 34.3 140.21 35.204 141.117 35.726 C 141.665 36.041 142.619 36.329 143.252 36.132 C 143.272 36.125 143.296 36.112 143.314 36.104 C 144.133 36.06 144.935 35.623 145.477 35.017 C 146.385 34.006 146.582 32.501 146.504 31.187 C 146.433 29.983 146.036 28.79 145.114 27.97 C 144.303 27.249 143.278 27.018 142.227 27.096 C 142.202 27.098 142.177 27.1 142.153 27.103 Z M 75.117 24.743 C 76.291 24.594 77.51 24.729 78.595 25.217 C 79.688 25.709 80.622 26.575 81.043 27.721 C 81.297 28.415 81.422 29.381 80.953 30.015 C 80.273 30.934 74.682 32.518 74.394 33.155 L 74.455 33.292 C 74.68 33.495 75.046 33.607 75.329 33.706 C 76.742 34.199 77.342 33.348 78.455 32.82 C 78.812 32.65 79.239 32.599 79.613 32.742 C 80.029 32.901 80.429 33.391 80.603 33.796 C 80.668 33.948 80.693 34.08 80.633 34.24 C 80.658 34.289 80.681 34.334 80.692 34.388 C 80.748 34.656 80.647 34.981 80.503 35.206 C 79.971 36.037 78.554 36.708 77.632 36.915 C 75.957 37.292 74.154 37.044 72.699 36.109 C 72.658 36.082 72.617 36.055 72.576 36.028 C 72.536 36 72.495 35.972 72.455 35.943 C 72.415 35.914 72.376 35.885 72.337 35.855 C 72.297 35.826 72.258 35.796 72.22 35.765 C 72.181 35.734 72.143 35.703 72.106 35.672 C 72.068 35.64 72.03 35.608 71.994 35.576 C 71.957 35.543 71.92 35.51 71.884 35.477 C 71.848 35.443 71.812 35.409 71.777 35.375 C 71.741 35.341 71.707 35.306 71.672 35.271 C 71.638 35.236 71.603 35.2 71.57 35.164 C 71.536 35.128 71.503 35.092 71.47 35.055 C 71.438 35.018 71.406 34.981 71.374 34.943 C 71.342 34.905 71.311 34.867 71.28 34.829 C 71.249 34.79 71.219 34.752 71.189 34.712 C 71.159 34.673 71.13 34.634 71.101 34.594 C 71.072 34.554 71.044 34.514 71.016 34.473 C 70.988 34.432 70.961 34.391 70.934 34.35 C 70.907 34.309 70.88 34.267 70.854 34.225 C 70.828 34.183 70.803 34.141 70.778 34.098 C 70.753 34.055 70.729 34.013 70.705 33.969 C 70.681 33.926 70.658 33.883 70.636 33.839 C 70.613 33.795 70.59 33.751 70.569 33.707 C 70.547 33.662 70.526 33.618 70.506 33.573 C 70.485 33.528 70.465 33.483 70.445 33.437 C 70.426 33.392 70.408 33.346 70.389 33.3 C 70.371 33.255 70.353 33.209 70.336 33.162 C 70.319 33.116 70.302 33.069 70.286 33.023 C 70.27 32.976 70.254 32.929 70.239 32.882 C 70.225 32.835 70.21 32.788 70.197 32.74 C 70.183 32.693 70.17 32.645 70.157 32.597 C 70.145 32.55 70.132 32.502 70.121 32.454 C 70.11 32.406 70.099 32.357 70.089 32.309 C 69.733 30.649 70.01 28.865 70.928 27.434 C 71.915 25.893 73.377 25.117 75.117 24.743 Z M 75.529 27.988 C 74.721 28.266 73.929 28.728 73.53 29.526 C 73.421 29.744 73.351 29.965 73.433 30.205 C 73.55 30.316 73.598 30.358 73.77 30.358 C 74.052 30.358 74.588 30.044 74.826 29.884 C 75.217 29.769 77.315 28.959 77.475 28.677 C 77.54 28.562 77.521 28.522 77.497 28.398 C 77.269 28.107 76.889 28.025 76.541 27.981 C 76.373 27.961 76.204 27.952 76.035 27.953 C 75.866 27.954 75.697 27.966 75.529 27.988 Z M 154.734 26.041 C 155.792 25.973 156.857 26.167 157.764 26.738 C 158.147 26.979 158.863 27.534 158.969 27.992 C 159.204 27.41 158.825 26.677 159.26 26.163 C 159.452 26.064 159.615 25.986 159.838 26.043 C 159.937 26.069 160.109 26.156 160.162 26.249 C 160.287 26.469 160.306 26.765 160.322 27.013 C 160.411 28.42 160.333 29.876 160.331 31.289 C 160.328 33.1 160.385 34.921 160.3 36.731 C 160.278 37.199 160.237 37.656 160.129 38.112 C 159.883 39.153 159.343 39.998 158.422 40.563 C 157.082 41.386 155.091 41.555 153.587 41.17 C 153.526 41.155 153.467 41.139 153.408 41.121 C 153.349 41.103 153.29 41.084 153.232 41.063 C 153.173 41.042 153.116 41.02 153.059 40.997 C 153.001 40.973 152.945 40.948 152.889 40.921 C 152.833 40.895 152.778 40.867 152.723 40.838 C 152.668 40.809 152.615 40.778 152.562 40.747 C 152.508 40.715 152.456 40.682 152.405 40.647 C 152.353 40.613 152.303 40.577 152.253 40.54 C 152.203 40.503 152.154 40.465 152.107 40.425 C 152.059 40.386 152.012 40.345 151.966 40.304 C 151.92 40.262 151.875 40.219 151.832 40.175 C 151.788 40.131 151.745 40.086 151.703 40.04 C 151.662 39.994 151.622 39.947 151.582 39.899 C 151.543 39.851 151.505 39.802 151.468 39.752 C 151.431 39.702 151.396 39.651 151.362 39.599 C 151.327 39.548 151.294 39.495 151.262 39.442 C 151.059 39.093 150.895 38.638 151.006 38.231 C 151.054 38.053 151.142 37.981 151.293 37.894 C 151.487 37.876 151.725 37.917 151.878 38.053 C 151.997 38.159 152.106 38.358 152.12 38.517 C 152.12 38.526 152.12 38.536 152.121 38.546 C 152.705 39.049 152.66 39.605 153.611 40.018 C 154.638 40.464 156.125 40.381 157.154 39.964 C 157.84 39.686 158.424 39.22 158.711 38.52 C 158.976 37.876 159.223 35.968 158.963 35.335 C 158.959 35.462 158.878 35.572 158.805 35.671 C 158.212 36.48 157.115 36.994 156.15 37.143 C 154.869 37.34 153.488 37.152 152.427 36.359 C 151.287 35.506 150.69 34.101 150.496 32.717 C 150.262 31.046 150.55 29.165 151.58 27.796 C 152.405 26.699 153.404 26.227 154.734 26.041 Z M 154.816 27.103 C 153.739 27.386 152.97 27.77 152.386 28.782 C 151.628 30.096 151.558 31.952 151.945 33.395 C 152.202 34.348 152.731 35.239 153.603 35.736 C 154.198 36.075 155.154 36.289 155.841 36.133 C 156.8 35.998 157.588 35.605 158.179 34.813 C 159.059 33.635 159.203 32.009 158.991 30.592 C 158.828 29.508 158.333 28.406 157.442 27.739 C 156.666 27.157 155.757 27.026 154.816 27.103 Z M 96.642 15.247 C 96.658 15.245 96.674 15.242 96.69 15.239 C 96.829 15.217 96.937 15.223 97.069 15.279 C 97.926 15.641 98.762 16.099 99.599 16.51 L 104.437 18.886 C 105.174 19.248 107.507 20.281 107.99 20.667 C 108.095 20.75 108.252 20.977 108.251 21.112 C 108.251 21.376 108.082 21.73 107.973 21.973 C 107.606 22.793 104.823 28.453 104.477 28.792 C 104.756 29.041 107.912 35.426 108.194 36.194 C 108.276 36.417 108.261 36.632 108.161 36.845 C 108.085 37.006 107.739 37.176 107.58 37.266 C 106.072 38.113 104.462 38.835 102.914 39.607 C 101.836 40.144 100.707 40.824 99.581 41.232 C 99.368 41.472 97.625 42.261 97.224 42.438 C 97.025 42.525 96.851 42.572 96.641 42.489 C 96.531 42.352 96.449 42.181 96.53 42.004 C 96.741 41.541 101.259 37.258 102.017 36.513 C 102.436 36.101 103.005 35.652 103.327 35.167 C 103.411 35.039 103.432 34.992 103.388 34.845 C 103.263 34.419 102.869 33.965 102.62 33.592 C 102.12 32.84 99.816 29.542 99.739 28.999 C 99.705 28.761 99.768 28.515 99.863 28.298 C 100.33 27.239 103.372 23.459 103.422 22.841 C 103.415 22.733 103.379 22.682 103.31 22.6 C 102.832 22.023 102.213 21.497 101.678 20.97 L 98.252 17.603 C 97.854 17.214 96.609 16.174 96.454 15.687 C 96.45 15.507 96.546 15.39 96.642 15.247 Z M 84.454 20.733 C 84.59 20.714 84.726 20.705 84.863 20.708 C 85.289 20.714 85.753 20.847 86.053 21.165 C 86.813 21.969 86.522 24.178 86.506 25.246 C 86.502 25.47 86.49 25.719 86.655 25.891 C 86.817 25.884 87.573 25.354 87.818 25.242 C 87.854 25.225 87.89 25.21 87.926 25.194 C 87.962 25.179 87.999 25.164 88.035 25.149 C 88.072 25.135 88.108 25.12 88.145 25.107 C 88.182 25.093 88.219 25.08 88.256 25.067 C 88.293 25.055 88.331 25.042 88.369 25.031 C 88.406 25.019 88.444 25.007 88.481 24.997 C 88.519 24.986 88.557 24.975 88.595 24.965 C 88.633 24.956 88.671 24.946 88.709 24.937 C 88.748 24.928 88.786 24.92 88.824 24.912 C 88.863 24.904 88.901 24.896 88.94 24.889 C 88.979 24.882 89.017 24.876 89.056 24.869 C 89.095 24.863 89.134 24.858 89.173 24.853 C 89.212 24.847 89.25 24.843 89.289 24.839 C 89.328 24.835 89.368 24.831 89.407 24.828 C 89.446 24.825 89.485 24.822 89.525 24.82 C 89.564 24.817 89.603 24.816 89.642 24.815 C 89.681 24.813 89.721 24.813 89.76 24.812 C 89.799 24.812 89.838 24.812 89.878 24.813 C 89.917 24.814 89.956 24.815 89.995 24.817 C 90.035 24.818 90.074 24.821 90.113 24.823 C 90.152 24.826 90.191 24.829 90.231 24.833 C 90.27 24.836 90.309 24.84 90.348 24.845 C 90.387 24.85 90.426 24.855 90.464 24.86 C 90.503 24.866 90.542 24.872 90.581 24.879 C 90.619 24.885 90.658 24.892 90.697 24.9 C 90.735 24.907 90.774 24.915 90.812 24.924 C 90.85 24.932 90.888 24.941 90.927 24.95 C 90.965 24.96 91.003 24.97 91.041 24.98 C 91.079 24.991 91.116 25.001 91.154 25.013 C 91.192 25.024 91.229 25.036 91.267 25.048 C 91.304 25.06 91.341 25.073 91.378 25.086 C 91.415 25.099 91.452 25.113 91.489 25.127 C 91.535 25.145 91.581 25.163 91.627 25.183 C 91.672 25.202 91.718 25.221 91.763 25.242 C 91.808 25.262 91.853 25.283 91.898 25.304 C 91.943 25.326 91.987 25.347 92.031 25.37 C 92.076 25.392 92.12 25.415 92.164 25.439 C 92.207 25.462 92.25 25.487 92.294 25.511 C 92.337 25.536 92.379 25.561 92.422 25.587 C 92.464 25.612 92.507 25.639 92.548 25.665 C 92.59 25.692 92.632 25.719 92.673 25.747 C 92.714 25.775 92.755 25.803 92.795 25.832 C 92.836 25.86 92.876 25.89 92.916 25.919 C 92.955 25.949 92.994 25.979 93.034 26.01 C 93.073 26.041 93.111 26.072 93.15 26.104 C 93.188 26.135 93.226 26.167 93.264 26.2 C 93.301 26.233 93.338 26.266 93.375 26.299 C 93.411 26.333 93.448 26.367 93.484 26.401 C 93.52 26.436 93.555 26.47 93.59 26.506 C 93.625 26.541 93.659 26.577 93.694 26.613 C 93.728 26.649 93.761 26.685 93.795 26.722 C 93.828 26.759 93.861 26.797 93.893 26.835 C 93.926 26.872 93.958 26.911 93.989 26.949 C 94.02 26.988 94.051 27.027 94.082 27.066 C 94.112 27.105 94.142 27.145 94.172 27.185 C 94.201 27.225 94.23 27.266 94.259 27.306 C 94.287 27.347 94.315 27.388 94.343 27.43 C 94.371 27.471 94.398 27.513 94.424 27.555 C 94.451 27.597 94.477 27.64 94.502 27.682 C 94.528 27.725 94.553 27.768 94.577 27.812 C 94.601 27.855 94.625 27.899 94.649 27.943 C 94.672 27.987 94.695 28.031 94.718 28.076 C 94.74 28.12 94.762 28.165 94.783 28.21 C 94.804 28.255 94.824 28.301 94.845 28.346 C 95.477 29.758 95.576 31.536 95.023 32.992 C 94.64 34.002 93.759 35.455 92.74 35.919 C 92.736 35.927 92.731 35.936 92.727 35.944 C 92.474 36.346 91.356 36.708 90.896 36.824 C 89.031 37.294 87.955 36.682 86.412 35.745 C 86.401 35.824 86.376 35.896 86.347 35.97 C 86.198 36.335 85.879 36.664 85.515 36.81 C 85.086 36.983 84.621 37.009 84.191 36.823 C 83.838 36.669 83.415 36.289 83.288 35.915 C 83.05 35.211 83.18 29.915 83.18 28.817 C 83.181 26.696 83.11 24.545 83.194 22.428 C 83.203 22.199 83.206 21.93 83.304 21.721 C 83.552 21.193 83.922 20.932 84.454 20.733 Z M 89.051 28.106 C 88.236 28.245 87.515 28.568 87.023 29.269 C 86.6 29.872 86.446 30.654 86.577 31.378 C 86.586 31.423 86.595 31.468 86.605 31.513 C 86.616 31.558 86.627 31.602 86.639 31.647 C 86.652 31.691 86.666 31.735 86.68 31.778 C 86.695 31.822 86.711 31.865 86.728 31.908 C 86.745 31.951 86.763 31.993 86.782 32.035 C 86.8 32.077 86.82 32.119 86.841 32.16 C 86.862 32.201 86.884 32.241 86.906 32.281 C 86.929 32.321 86.953 32.36 86.978 32.399 C 87.003 32.438 87.028 32.476 87.055 32.513 C 87.082 32.551 87.109 32.587 87.138 32.623 C 87.166 32.659 87.195 32.695 87.225 32.729 C 87.255 32.764 87.286 32.798 87.318 32.831 C 87.35 32.864 87.383 32.896 87.416 32.928 C 87.449 32.96 87.484 32.99 87.519 33.02 C 87.553 33.05 87.589 33.079 87.625 33.107 C 87.661 33.135 87.698 33.162 87.736 33.188 C 88.206 33.513 88.854 33.72 89.428 33.674 C 90.255 33.551 90.945 33.268 91.465 32.571 C 91.493 32.534 91.52 32.496 91.545 32.458 C 91.571 32.419 91.596 32.38 91.62 32.34 C 91.644 32.301 91.666 32.261 91.688 32.22 C 91.71 32.179 91.73 32.138 91.75 32.096 C 91.77 32.054 91.789 32.012 91.807 31.969 C 91.825 31.926 91.841 31.883 91.857 31.839 C 91.873 31.796 91.887 31.752 91.9 31.708 C 91.914 31.663 91.926 31.619 91.938 31.574 C 91.949 31.529 91.959 31.484 91.968 31.438 C 91.977 31.393 91.985 31.347 91.992 31.301 C 91.999 31.255 92.004 31.209 92.009 31.163 C 92.013 31.117 92.017 31.071 92.019 31.025 C 92.021 30.978 92.023 30.932 92.023 30.886 C 92.023 30.839 92.021 30.793 92.019 30.747 C 92.017 30.701 92.014 30.654 92.009 30.608 C 92.004 30.562 91.999 30.516 91.992 30.47 C 91.986 30.425 91.978 30.38 91.97 30.335 C 91.961 30.29 91.951 30.246 91.941 30.201 C 91.93 30.157 91.918 30.113 91.905 30.069 C 91.892 30.026 91.878 29.982 91.863 29.939 C 91.848 29.896 91.831 29.853 91.814 29.811 C 91.797 29.769 91.779 29.727 91.76 29.686 C 91.741 29.645 91.72 29.604 91.699 29.563 C 91.678 29.523 91.656 29.483 91.633 29.444 C 91.609 29.405 91.585 29.366 91.56 29.328 C 91.535 29.29 91.509 29.253 91.482 29.216 C 91.455 29.179 91.428 29.143 91.399 29.108 C 91.37 29.072 91.341 29.038 91.31 29.004 C 91.28 28.97 91.249 28.937 91.216 28.905 C 91.184 28.872 91.152 28.841 91.119 28.81 C 91.085 28.779 91.051 28.75 91.016 28.721 C 90.981 28.692 90.945 28.663 90.909 28.636 C 90.378 28.243 89.706 28.062 89.051 28.106 Z M 114.426 22.207 C 115.277 22.161 116.146 22.195 116.999 22.195 C 118.467 22.194 120.184 21.988 121.573 22.545 C 122.437 22.892 123.153 23.528 123.519 24.4 C 123.884 25.269 123.931 26.377 123.578 27.252 C 123.221 28.138 122.524 28.816 121.658 29.188 C 122.444 29.387 123.234 29.829 123.747 30.464 C 124.363 31.227 124.58 32.214 124.482 33.178 C 124.427 33.718 124.256 34.668 123.83 35.016 C 123.823 35.069 123.818 35.106 123.794 35.155 C 123.464 35.823 122.7 36.299 122.032 36.571 C 121.567 36.759 121.079 36.867 120.582 36.918 C 119.756 37.002 114.494 37.061 113.973 36.839 C 113.892 36.697 113.848 36.561 113.818 36.401 C 113.671 35.638 113.74 34.797 113.74 34.019 L 113.74 30.166 L 113.748 25.013 C 113.751 24.371 113.698 23.71 113.733 23.072 C 113.745 22.864 113.786 22.627 113.912 22.455 C 114.046 22.273 114.22 22.244 114.426 22.207 Z M 115.071 29.993 C 115.178 30.23 115.233 35.39 115.117 35.707 C 115.106 35.737 115.082 35.772 115.067 35.798 L 118.213 35.802 C 118.99 35.802 119.79 35.843 120.559 35.713 C 121.064 35.628 121.655 35.47 122.029 35.1 C 122.078 35.052 122.121 35.012 122.145 34.948 C 122.551 34.71 122.82 34.156 122.936 33.713 C 123.137 32.941 123.061 32.055 122.651 31.363 C 122.25 30.685 121.576 30.258 120.825 30.074 C 120.129 29.903 115.8 29.877 115.071 29.993 Z M 115.067 23.505 C 115.2 23.786 115.228 28.264 115.118 28.557 C 115.101 28.602 115.082 28.641 115.057 28.681 C 116.437 28.684 118.918 28.816 120.169 28.613 C 120.614 28.541 121.22 28.386 121.53 28.028 C 121.567 27.985 121.579 27.952 121.599 27.899 C 121.971 27.683 122.176 27.234 122.284 26.831 C 122.465 26.156 122.471 25.338 122.106 24.721 C 121.755 24.128 121.117 23.792 120.469 23.632 C 119.507 23.394 116.118 23.394 115.067 23.505 Z M 50.748 20.715 C 51.185 20.692 51.579 20.724 51.969 20.941 C 52.22 21.08 52.465 21.293 52.603 21.55 C 53.065 22.406 53.262 23.585 53.524 24.524 L 55.021 29.905 C 55.734 28.052 56.348 26.143 57.004 24.267 C 57.278 23.484 57.52 22.659 57.857 21.902 C 58.083 21.394 58.4 21.014 58.93 20.818 C 59.431 20.632 60.026 20.673 60.507 20.901 C 60.815 21.047 61.028 21.258 61.197 21.553 C 61.682 22.398 61.954 23.489 62.276 24.411 L 64.214 29.93 C 64.532 28.474 65.013 27.019 65.413 25.582 C 65.748 24.38 66.019 23.093 66.447 21.924 C 66.533 21.69 66.646 21.486 66.813 21.301 C 67.151 20.924 67.626 20.725 68.127 20.703 C 68.615 20.681 69.09 20.841 69.449 21.181 C 69.766 21.481 70.069 22.019 70.078 22.466 C 70.089 23.043 68.589 28.053 68.3 28.344 C 68.389 28.615 66.294 35.201 65.964 35.956 C 65.78 36.38 65.484 36.67 65.051 36.835 C 64.605 37.005 64.023 37.001 63.589 36.797 C 63.238 36.632 62.959 36.334 62.772 35.996 C 62.384 35.293 62.107 34.194 61.833 33.415 C 61.093 31.315 60.372 29.207 59.607 27.116 C 58.951 29.091 58.224 31.047 57.534 33.01 C 57.217 33.911 56.898 35.24 56.418 36.03 C 56.14 36.488 55.72 36.818 55.198 36.942 C 54.767 37.044 54.34 36.988 53.965 36.748 C 53.682 36.567 53.427 36.297 53.284 35.99 C 52.965 35.308 52.776 34.542 52.553 33.823 L 51.442 30.271 L 50.006 25.672 C 49.73 24.787 49.403 23.89 49.206 22.985 C 49.094 22.476 49.201 21.964 49.486 21.528 C 49.787 21.069 50.222 20.821 50.748 20.715 Z M 22.031 1.548 C 22.191 1.549 22.351 1.552 22.511 1.558 L 22.511 1.559 L 22.641 1.607 L 22.523 1.677 C 22.585 3.488 22.537 5.315 22.537 7.128 C 22.612 7.089 22.691 7.041 22.77 7.013 C 23.021 6.924 23.163 7.006 23.391 7.114 C 27.337 8.979 31.238 10.962 35.156 12.888 L 38.497 14.53 C 39.12 14.836 39.843 15.119 40.404 15.527 C 40.552 15.635 40.69 15.873 40.743 16.049 C 40.832 16.343 40.678 16.76 40.572 17.031 C 40.088 18.272 39.356 19.504 38.756 20.697 L 34.978 28.207 C 36.246 30.933 37.656 33.611 38.992 36.305 C 39.531 37.39 40.203 38.523 40.622 39.656 C 40.735 39.963 40.861 40.327 40.709 40.64 C 40.554 40.96 40.233 41.195 39.935 41.368 C 38.73 42.067 37.395 42.637 36.145 43.256 L 29.445 46.605 L 25.485 48.586 C 24.758 48.953 23.995 49.421 23.226 49.679 C 22.982 49.761 22.818 49.7 22.595 49.588 L 22.567 49.573 C 22.429 50.278 22.535 52.745 22.535 53.601 L 22.537 63.636 C 22.367 63.642 22.218 63.66 22.062 63.579 C 21.918 63.032 22.029 59.106 22.031 58.207 C 21.969 58.242 21.905 58.275 21.841 58.305 C 21.642 58.399 21.56 58.409 21.35 58.33 C 20.523 58.017 19.706 57.534 18.912 57.136 L 14.156 54.757 L 7.889 51.634 C 6.816 51.099 5.689 50.603 4.653 50.005 C 4.406 49.862 3.963 49.585 3.859 49.3 C 3.77 49.058 3.801 48.705 3.882 48.466 C 4.061 47.942 4.366 47.435 4.617 46.943 C 4.952 46.286 5.271 45.62 5.599 44.959 L 9.607 36.864 C 9.172 35.885 8.642 34.929 8.16 33.971 L 5.27 28.232 C 4.904 27.504 3.988 25.939 3.835 25.234 C 3.793 25.042 3.826 24.825 3.889 24.641 C 3.978 24.379 4.15 24.181 4.381 24.035 C 5.01 23.637 5.754 23.335 6.424 23.006 L 10.479 21.023 L 21.169 15.758 C 21.451 15.622 21.643 15.581 21.943 15.693 L 21.996 15.713 C 22.12 15.456 22.031 3.005 22.031 1.548 Z M 22.537 8.116 L 22.537 48.646 C 25.358 45.89 28.207 43.142 30.968 40.326 C 31.456 39.856 33.051 38.499 33.226 37.976 C 33.245 37.05 28.33 30.58 27.604 28.956 C 27.473 28.664 27.383 28.356 27.441 28.034 C 27.61 27.099 28.476 26.112 29.007 25.333 C 29.563 24.518 33.189 19.418 33.24 18.91 C 33.262 18.687 33.13 18.577 32.985 18.427 C 31.966 17.369 30.89 16.356 29.845 15.324 L 22.537 8.116 Z M 21.999 16.799 L 14.945 23.767 C 13.837 24.859 12.629 25.927 11.593 27.085 C 11.485 27.207 11.351 27.32 11.35 27.495 C 11.348 28.264 16.174 34.544 16.909 36 C 17.056 36.293 17.185 36.64 17.159 36.974 C 17.091 37.841 15.995 39.203 15.504 39.951 L 12.823 44.031 C 12.388 44.692 11.868 45.367 11.502 46.066 C 11.426 46.213 11.318 46.433 11.364 46.601 C 11.498 47.092 13.254 48.605 13.716 49.077 C 16.487 51.809 19.296 54.513 22.031 57.282 L 22.03 26.09 L 22.035 19.403 C 22.035 18.791 22.14 17.313 21.999 16.799 Z" fill="var(--token-5197bf6c-818c-4eab-85f8-6f703842b3bf, rgb(10, 11, 10))"></path></svg>',
+                                                svgContentId: 10939801934,
+                                              },
+                                              XWGQJU3bM: {
+                                                svg: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 173 62"><path d="M 68.15 43.968 C 68.283 43.941 68.388 43.936 68.523 43.955 C 68.586 44.371 68.631 46.343 68.451 46.669 L 68.295 46.678 C 68.01 46.262 68.411 44.557 68.15 43.968 Z" fill="var(--token-5197bf6c-818c-4eab-85f8-6f703842b3bf, rgb(10, 11, 10))"></path><path d="M 166.806 19.945 C 166.883 19.937 166.935 19.953 167.009 19.974 C 167.205 20.183 167.501 20.546 167.556 20.832 C 167.807 20.592 168.171 20.109 168.226 19.757 C 168.438 20.133 168.457 21.054 168.355 21.478 C 168.344 21.528 168.311 21.531 168.269 21.556 C 168.151 21.268 168.276 20.926 168.123 20.648 C 168.118 20.638 168.112 20.629 168.106 20.62 C 168.156 20.533 168.174 20.471 168.187 20.373 C 167.955 20.483 167.764 20.941 167.538 21.13 C 167.538 21.117 167.54 21.104 167.539 21.091 C 167.51 20.854 167.116 20.38 166.923 20.246 C 166.926 20.255 166.93 20.264 166.933 20.273 C 166.939 20.289 166.943 20.305 166.948 20.32 C 166.962 20.361 166.976 20.402 166.986 20.444 C 167.028 20.61 167.075 21.399 166.993 21.538 L 166.875 21.527 C 166.738 21.037 166.906 20.496 166.815 19.991 Z" fill="var(--token-5197bf6c-818c-4eab-85f8-6f703842b3bf, rgb(10, 11, 10))"></path><path d="M 108.569 44.676 C 109.189 44.55 110.101 44.597 110.733 44.664 L 110.801 44.749 L 110.777 44.865 C 110.558 44.994 110.045 44.928 109.776 44.926 C 109.815 44.988 109.847 45.055 109.862 45.128 C 109.924 45.452 109.949 46.201 109.778 46.476 C 109.865 46.606 109.875 46.738 109.884 46.891 C 109.897 47.088 109.879 47.269 109.743 47.425 C 109.288 47.128 109.764 45.44 109.465 44.926 C 109.251 44.929 108.927 44.98 108.727 44.901 C 108.626 44.861 108.614 44.772 108.569 44.676 Z M 117.79 44.676 C 118.261 44.594 119.608 44.549 120.029 44.721 L 120.038 44.805 C 119.803 45.021 119.327 44.935 119.023 44.926 C 119.061 44.988 119.093 45.055 119.107 45.128 C 119.17 45.452 119.195 46.201 119.024 46.476 C 119.041 46.501 119.047 46.509 119.062 46.539 C 119.149 46.708 119.168 47.015 119.101 47.193 C 119.054 47.317 118.985 47.388 118.866 47.435 C 118.609 47.116 119.001 45.433 118.699 44.926 C 118.497 44.929 118.202 44.974 118.01 44.917 C 117.866 44.874 117.858 44.803 117.79 44.676 Z M 62.619 44.641 C 63.253 44.637 63.889 44.608 64.517 44.706 L 64.485 44.706 L 64.612 44.827 L 64.702 44.784 L 64.608 44.737 L 64.562 44.846 C 64.075 44.995 63.437 44.931 62.928 44.926 L 62.928 45.899 L 64.132 45.899 C 64.221 45.902 64.31 45.915 64.398 45.925 L 64.421 46.063 L 64.346 46.145 C 63.936 46.259 63.359 46.179 62.928 46.178 C 62.933 46.555 62.994 47.046 62.838 47.396 L 62.756 47.397 C 62.473 47.004 62.617 45.172 62.619 44.641 Z M 72.4 44.619 C 72.445 44.611 72.49 44.604 72.536 44.598 C 72.975 44.544 73.382 44.604 73.732 44.887 C 73.817 44.956 73.843 44.957 73.855 45.069 C 73.53 45.313 73.036 44.741 72.601 44.864 C 72.314 44.946 72.053 45.18 71.908 45.438 C 71.746 45.727 71.691 46.086 71.788 46.406 C 71.876 46.693 72.073 46.891 72.334 47.029 C 72.541 47.139 72.758 47.198 72.988 47.126 C 72.999 47.125 73.01 47.123 73.021 47.122 C 73.302 47.089 73.474 46.922 73.716 46.795 C 73.816 46.887 73.831 46.903 73.866 47.032 C 73.826 47.116 73.792 47.158 73.712 47.206 C 73.343 47.424 72.808 47.485 72.398 47.365 C 72.058 47.266 71.728 47.053 71.56 46.731 C 71.363 46.353 71.4 45.879 71.53 45.486 C 71.679 45.036 71.995 44.825 72.4 44.619 Z M 90.424 44.62 C 90.72 44.571 91.032 44.56 91.323 44.64 C 91.352 44.648 91.38 44.658 91.408 44.668 C 91.435 44.679 91.462 44.691 91.489 44.705 C 91.515 44.718 91.541 44.733 91.567 44.749 C 91.592 44.765 91.616 44.782 91.639 44.8 C 91.663 44.818 91.686 44.838 91.707 44.858 C 91.728 44.879 91.749 44.9 91.769 44.923 C 91.788 44.945 91.806 44.968 91.823 44.993 C 91.841 45.017 91.857 45.042 91.872 45.068 L 91.843 45.164 C 91.446 45.257 91.189 44.759 90.628 44.884 C 90.61 44.889 90.592 44.893 90.574 44.898 C 90.556 44.903 90.538 44.909 90.52 44.915 C 90.503 44.921 90.485 44.927 90.467 44.934 C 90.45 44.941 90.433 44.948 90.416 44.956 C 90.399 44.964 90.382 44.972 90.365 44.981 C 90.349 44.989 90.332 44.998 90.316 45.008 C 90.3 45.017 90.284 45.027 90.268 45.037 C 90.253 45.048 90.238 45.059 90.222 45.07 C 90.207 45.081 90.192 45.092 90.178 45.104 C 90.163 45.116 90.149 45.128 90.135 45.141 C 90.121 45.153 90.108 45.166 90.095 45.18 C 90.081 45.193 90.068 45.207 90.055 45.221 C 90.043 45.235 90.031 45.249 90.019 45.263 C 90.008 45.278 89.996 45.293 89.985 45.308 C 89.974 45.323 89.963 45.339 89.953 45.355 C 89.943 45.37 89.933 45.386 89.923 45.403 C 89.913 45.42 89.904 45.437 89.895 45.455 C 89.886 45.473 89.877 45.491 89.869 45.509 C 89.86 45.527 89.853 45.545 89.845 45.564 C 89.838 45.583 89.831 45.601 89.825 45.62 C 89.818 45.639 89.812 45.658 89.807 45.677 C 89.801 45.696 89.796 45.716 89.792 45.735 C 89.787 45.755 89.783 45.774 89.78 45.794 C 89.776 45.813 89.773 45.833 89.77 45.853 C 89.768 45.873 89.765 45.893 89.764 45.912 C 89.762 45.932 89.761 45.952 89.76 45.972 C 89.759 45.992 89.759 46.012 89.759 46.032 C 89.76 46.052 89.761 46.072 89.762 46.092 C 89.763 46.112 89.765 46.132 89.767 46.152 C 89.77 46.171 89.772 46.191 89.775 46.211 C 89.779 46.231 89.782 46.25 89.786 46.27 C 89.79 46.289 89.795 46.309 89.8 46.328 C 89.886 46.643 90.069 46.885 90.355 47.043 C 90.55 47.151 90.789 47.193 91.004 47.127 C 91.33 47.091 91.55 46.812 91.825 46.793 C 91.836 46.835 91.828 46.856 91.816 46.898 C 91.762 47.095 91.589 47.256 91.416 47.354 C 91.139 47.51 90.804 47.516 90.505 47.423 C 90.112 47.302 89.767 47.047 89.581 46.673 C 89.571 46.651 89.56 46.629 89.551 46.607 C 89.541 46.585 89.533 46.562 89.524 46.539 C 89.516 46.516 89.508 46.493 89.5 46.47 C 89.493 46.447 89.487 46.424 89.481 46.4 C 89.474 46.377 89.469 46.353 89.464 46.329 C 89.459 46.306 89.455 46.282 89.451 46.258 C 89.447 46.234 89.444 46.21 89.442 46.186 C 89.439 46.161 89.437 46.137 89.436 46.113 C 89.435 46.089 89.434 46.064 89.434 46.04 C 89.433 46.016 89.434 45.992 89.435 45.967 C 89.436 45.943 89.438 45.919 89.44 45.895 C 89.442 45.871 89.445 45.846 89.448 45.822 C 89.452 45.798 89.456 45.774 89.461 45.751 C 89.465 45.727 89.47 45.703 89.476 45.679 C 89.482 45.656 89.488 45.632 89.495 45.609 C 89.502 45.586 89.51 45.563 89.518 45.54 C 89.685 45.067 89.987 44.827 90.424 44.62 Z M 94.032 44.62 C 94.285 44.583 94.504 44.573 94.756 44.614 C 95.017 44.656 95.301 44.749 95.458 44.979 C 95.487 45.023 95.462 45.067 95.452 45.116 C 95.122 45.288 94.7 44.725 94.119 44.899 C 93.876 44.972 93.676 45.156 93.554 45.376 C 93.387 45.677 93.334 46.049 93.428 46.382 C 93.512 46.676 93.723 46.908 93.989 47.051 C 94.186 47.157 94.426 47.191 94.64 47.126 C 94.948 47.087 95.083 46.885 95.354 46.802 C 95.451 46.874 95.459 46.885 95.499 46.999 C 95.392 47.125 95.264 47.214 95.12 47.292 C 95.099 47.303 95.077 47.313 95.056 47.323 C 95.034 47.333 95.012 47.343 94.99 47.351 C 94.968 47.36 94.946 47.369 94.924 47.377 C 94.901 47.384 94.879 47.392 94.856 47.398 C 94.833 47.405 94.81 47.411 94.787 47.417 C 94.764 47.422 94.741 47.427 94.718 47.432 C 94.694 47.436 94.671 47.44 94.647 47.443 C 94.624 47.446 94.6 47.449 94.577 47.451 C 94.553 47.453 94.529 47.454 94.506 47.455 C 94.482 47.456 94.458 47.457 94.435 47.456 C 94.411 47.456 94.387 47.455 94.364 47.454 C 94.34 47.452 94.316 47.45 94.293 47.447 C 94.269 47.445 94.246 47.442 94.222 47.438 C 94.199 47.434 94.175 47.43 94.152 47.425 C 94.129 47.42 94.106 47.414 94.083 47.408 C 94.06 47.402 94.037 47.395 94.015 47.388 C 93.667 47.274 93.345 46.996 93.184 46.666 C 93.018 46.325 93.005 45.915 93.131 45.559 C 93.297 45.087 93.595 44.832 94.032 44.62 Z" fill="var(--token-5197bf6c-818c-4eab-85f8-6f703842b3bf, rgb(10, 11, 10))"></path><path d="M 128.292 21.407 C 128.532 21.356 128.757 21.314 128.989 21.42 C 129.185 21.51 129.361 21.696 129.435 21.899 C 129.502 22.083 129.499 22.273 129.408 22.449 C 129.303 22.651 129.135 22.772 128.922 22.838 C 128.851 22.887 128.831 22.892 128.747 22.901 C 128.54 22.924 128.395 22.921 128.228 22.774 C 128.04 22.609 127.946 22.323 127.944 22.077 C 127.941 21.778 128.097 21.607 128.292 21.407 Z" fill="var(--token-5197bf6c-818c-4eab-85f8-6f703842b3bf, rgb(10, 11, 10))"></path><path d="M 80.993 44.617 C 81.093 44.602 81.195 44.593 81.297 44.59 C 81.656 44.577 81.899 44.693 82.155 44.934 L 82.15 45.017 C 81.906 45.06 81.641 44.902 81.393 44.881 C 81.203 44.866 80.98 44.895 80.835 45.032 C 80.745 45.116 80.692 45.236 80.695 45.36 C 80.709 45.802 81.9 45.912 82.218 46.22 C 82.322 46.321 82.387 46.436 82.388 46.584 C 82.388 46.78 82.271 47.035 82.135 47.174 C 81.905 47.41 81.596 47.42 81.288 47.433 C 81.238 47.427 81.189 47.419 81.14 47.41 C 80.809 47.35 80.572 47.236 80.378 46.952 L 80.4 46.871 C 80.596 46.864 80.737 46.98 80.908 47.057 C 81.158 47.171 81.503 47.203 81.758 47.089 C 81.895 47.028 82.003 46.919 82.044 46.77 C 82.196 46.208 80.727 46.121 80.448 45.642 C 80.362 45.494 80.356 45.302 80.414 45.142 C 80.514 44.863 80.741 44.74 80.993 44.617 Z M 103.997 44.617 C 104.262 44.568 104.524 44.604 104.783 44.671 C 104.981 44.722 105.132 44.762 105.239 44.942 L 105.197 45.034 C 104.953 45.108 104.527 44.912 104.259 44.89 C 104.066 44.874 103.901 44.921 103.757 45.059 C 103.643 45.169 103.629 45.214 103.625 45.363 C 103.886 45.807 104.71 45.871 105.123 46.179 C 105.26 46.282 105.394 46.433 105.406 46.613 C 105.419 46.813 105.282 47.014 105.151 47.152 C 104.911 47.404 104.611 47.423 104.283 47.433 C 104.234 47.426 104.185 47.419 104.136 47.41 C 103.8 47.348 103.554 47.23 103.358 46.944 L 103.385 46.87 C 103.625 46.866 103.798 47.026 104.016 47.101 C 104.254 47.184 104.58 47.188 104.804 47.063 C 104.915 47 105 46.903 105.031 46.778 C 105.199 46.101 103.722 46.202 103.449 45.657 C 103.37 45.498 103.367 45.282 103.427 45.115 C 103.524 44.842 103.754 44.731 103.997 44.617 Z M 100.724 44.617 C 101.054 44.576 101.371 44.586 101.684 44.717 C 101.827 44.776 101.876 44.826 101.935 44.964 L 101.862 45.111 C 101.649 45.156 101.354 44.867 101.098 44.854 C 100.905 44.843 100.691 44.891 100.552 45.035 C 100.433 45.159 100.403 45.249 100.408 45.411 C 100.621 45.811 101.462 45.87 101.826 46.156 C 101.969 46.268 102.073 46.427 102.088 46.611 C 102.103 46.775 102.054 46.985 101.947 47.11 C 101.73 47.362 101.405 47.405 101.094 47.433 C 100.936 47.419 100.787 47.399 100.635 47.349 C 100.437 47.284 100.135 47.185 100.035 46.986 L 100.076 46.885 C 100.475 46.82 100.888 47.221 101.328 47.155 C 101.53 47.125 101.678 46.971 101.793 46.813 C 101.846 46.162 100.424 46.162 100.139 45.554 C 100.079 45.424 100.084 45.285 100.134 45.153 C 100.243 44.861 100.457 44.743 100.724 44.617 Z M 149.946 44.674 C 150.559 44.565 151.343 44.607 151.964 44.646 C 152.022 44.762 152.011 44.764 151.981 44.884 C 151.468 45.006 150.793 44.922 150.259 44.916 C 150.282 44.952 150.301 44.983 150.312 45.025 C 150.379 45.277 150.366 45.636 150.245 45.867 C 150.596 45.863 150.948 45.856 151.3 45.857 C 151.485 45.858 151.705 45.854 151.843 45.995 L 151.837 46.105 C 151.648 46.235 150.743 46.147 150.472 46.145 L 150.375 46.167 C 150.231 46.446 150.424 46.819 150.252 47.118 C 150.83 47.116 151.42 47.088 151.996 47.127 C 152.063 47.242 152.048 47.243 152.019 47.367 C 151.372 47.487 150.602 47.401 149.939 47.397 C 149.967 47.356 149.991 47.313 150.005 47.265 C 150.102 46.943 150.083 44.918 149.946 44.674 Z M 121.228 44.674 C 121.321 44.654 121.412 44.652 121.507 44.649 C 121.566 44.708 121.597 44.76 121.619 44.842 C 121.689 45.105 121.648 45.6 121.514 45.837 L 123.104 45.837 C 123.311 45.487 123.123 45.085 123.245 44.724 C 123.271 44.647 123.28 44.652 123.354 44.618 C 123.457 44.725 123.497 44.794 123.513 44.949 C 123.551 45.339 123.625 47.138 123.409 47.394 L 123.254 47.373 C 123.076 46.996 123.327 46.53 123.099 46.145 L 121.514 46.145 C 121.518 46.156 121.522 46.166 121.528 46.176 C 121.568 46.259 121.6 46.332 121.608 46.425 C 121.631 46.704 121.69 47.219 121.504 47.436 L 121.442 47.432 C 121.417 47.413 121.341 47.371 121.327 47.348 C 121.143 47.048 121.463 45.206 121.228 44.674 Z M 134.281 44.674 C 134.819 44.585 135.481 44.614 136.026 44.644 C 136.164 44.651 136.283 44.66 136.376 44.764 C 136.363 44.778 136.352 44.793 136.338 44.806 C 136.106 45.032 134.962 44.92 134.601 44.916 C 134.623 44.952 134.642 44.983 134.654 45.025 C 134.72 45.276 134.706 45.635 134.59 45.867 C 135.054 45.858 135.57 45.813 136.024 45.927 C 136.11 45.949 136.155 45.949 136.201 46.029 C 135.81 46.213 135.284 46.151 134.862 46.145 L 134.715 46.174 C 134.583 46.467 134.765 46.821 134.594 47.118 C 135.142 47.12 135.851 47.005 136.371 47.181 L 136.393 47.354 L 136.41 47.197 L 136.367 47.359 C 135.697 47.473 134.954 47.401 134.274 47.397 C 134.302 47.356 134.326 47.313 134.34 47.265 C 134.436 46.943 134.417 44.919 134.281 44.674 Z M 124.987 44.674 C 125.452 44.596 126.574 44.564 127.025 44.654 C 127.055 44.766 127.054 44.782 127.02 44.893 C 126.497 44.998 125.853 44.922 125.314 44.916 C 125.337 44.952 125.356 44.983 125.367 45.025 C 125.433 45.276 125.419 45.635 125.304 45.867 L 126.168 45.858 C 126.35 45.857 126.76 45.82 126.885 45.946 L 126.88 46.081 C 126.683 46.235 125.809 46.146 125.518 46.145 L 125.435 46.166 C 125.277 46.429 125.478 46.821 125.306 47.118 C 125.874 47.121 126.516 47.047 127.073 47.138 C 127.106 47.239 127.104 47.25 127.076 47.352 C 126.541 47.507 125.564 47.4 124.981 47.397 C 125.012 47.348 125.037 47.296 125.053 47.24 C 125.143 46.918 125.126 44.918 124.987 44.674 Z M 96.675 44.674 C 96.994 44.616 98.521 44.558 98.74 44.689 C 98.749 44.802 98.757 44.813 98.693 44.913 C 98.135 44.947 97.564 44.919 97.005 44.916 C 97.027 44.952 97.046 44.983 97.057 45.025 C 97.123 45.276 97.11 45.635 96.995 45.867 C 97.408 45.86 97.841 45.828 98.251 45.866 C 98.397 45.879 98.497 45.904 98.592 46.019 L 98.56 46.124 C 98.147 46.205 97.632 46.147 97.207 46.145 L 97.123 46.167 C 96.968 46.432 97.169 46.821 96.998 47.118 C 97.438 47.122 97.88 47.097 98.322 47.105 C 98.489 47.107 98.684 47.098 98.8 47.221 C 98.789 47.273 98.793 47.307 98.751 47.344 C 98.589 47.492 96.982 47.4 96.669 47.397 C 96.7 47.348 96.726 47.296 96.741 47.24 C 96.831 46.918 96.814 44.917 96.675 44.674 Z M 132.422 46.853 C 132.728 46.342 132.267 45.141 132.553 44.658 C 132.658 44.643 132.695 44.644 132.79 44.691 C 132.801 44.764 132.811 44.837 132.815 44.911 C 132.837 45.287 132.898 47.172 132.696 47.395 C 132.339 47.373 131.173 45.472 130.72 45.137 C 130.832 45.438 130.865 46.943 130.75 47.233 C 130.702 47.352 130.684 47.356 130.576 47.406 C 130.543 47.388 130.499 47.384 130.479 47.353 C 130.36 47.166 130.601 45.178 130.404 44.706 C 130.4 44.695 130.394 44.685 130.389 44.674 C 130.526 44.646 130.63 44.639 130.768 44.664 C 131.058 44.944 132.356 46.535 132.422 46.853 Z M 59.676 44.579 L 59.874 44.611 C 60.141 44.82 61.031 46.952 61.172 47.372 C 61.088 47.419 61.009 47.393 60.919 47.377 C 60.736 47.209 60.645 46.895 60.549 46.668 L 59.986 46.666 L 59.049 46.666 C 58.92 46.987 58.832 47.225 58.53 47.423 L 58.457 47.378 C 58.578 46.777 59.382 45.225 59.676 44.579 Z M 59.791 45.012 L 59.17 46.387 L 59.818 46.387 L 60.429 46.386 C 60.235 45.95 60.06 45.4 59.791 45.012 Z M 76.119 44.617 C 76.222 44.613 76.328 44.618 76.431 44.619 C 76.821 45.193 77.142 46.057 77.407 46.706 C 77.483 46.891 77.637 47.221 77.558 47.411 C 77.276 47.23 77.17 46.963 77.028 46.672 C 76.847 46.634 76.582 46.667 76.393 46.666 L 75.479 46.666 C 75.483 46.69 75.493 46.73 75.492 46.757 C 75.485 46.928 75.305 47.273 75.192 47.399 L 75.046 47.38 C 74.873 47.096 76.057 45.118 76.119 44.617 Z M 76.21 45.067 C 76.218 45.34 75.84 46.147 75.649 46.342 C 75.627 46.365 75.622 46.368 75.6 46.387 L 76.225 46.387 L 76.882 46.384 C 76.786 45.958 76.578 45.513 76.361 45.136 Z M 86.712 44.617 L 86.987 44.614 C 87.278 44.821 88.101 46.92 88.296 47.374 L 88.266 47.392 C 87.783 47.351 87.944 47.018 87.648 46.748 C 87.493 46.607 87.22 46.656 87.024 46.666 L 86.096 46.666 C 86.121 46.801 86.034 47.007 85.979 47.131 C 85.919 47.263 85.83 47.344 85.697 47.395 L 85.636 47.343 C 85.585 46.609 86.654 45.42 86.712 44.617 Z M 86.822 45.067 C 86.799 45.4 86.451 46.158 86.215 46.387 L 86.912 46.387 C 87.084 46.391 87.344 46.428 87.504 46.374 C 87.512 46.296 87.527 46.286 87.483 46.217 C 87.293 45.915 87.14 45.177 86.822 45.067 Z M 145.725 46.922 C 145.732 46.915 145.74 46.908 145.748 46.9 C 145.986 46.642 146.551 44.818 146.543 44.442 C 146.62 44.5 146.715 44.564 146.774 44.642 C 146.93 44.847 147.545 46.666 147.495 46.902 C 147.888 46.451 148.007 45.545 148.214 44.978 C 148.279 44.801 148.362 44.716 148.529 44.64 L 148.621 44.698 C 148.608 44.855 148.556 44.893 148.459 45.011 C 148.469 45.062 148.478 45.118 148.472 45.17 C 148.421 45.596 147.92 46.959 147.695 47.343 C 147.633 47.447 147.529 47.529 147.434 47.6 C 147.437 47.142 146.874 45.572 146.606 45.167 C 146.619 45.226 146.627 45.287 146.615 45.347 C 146.525 45.818 146.149 46.992 145.897 47.391 C 145.841 47.479 145.742 47.543 145.657 47.6 C 145.657 47.583 145.659 47.566 145.658 47.549 C 145.655 47.182 144.877 44.944 144.616 44.674 C 144.774 44.649 144.905 44.619 145.039 44.713 C 145.224 45.169 145.764 46.503 145.725 46.922 Z M 137.503 44.674 C 137.598 44.658 137.739 44.621 137.832 44.647 C 137.9 44.666 137.912 44.692 137.94 44.751 C 138.095 45.086 138.685 46.678 138.589 46.946 C 138.596 46.937 138.604 46.927 138.611 46.919 C 138.898 46.562 139.426 44.921 139.444 44.442 C 139.519 44.5 139.612 44.565 139.668 44.642 C 139.837 44.878 140.433 46.655 140.4 46.937 C 140.749 46.375 140.873 45.623 141.095 45.001 C 141.162 44.813 141.246 44.721 141.421 44.636 L 141.51 44.683 C 141.514 44.824 141.466 44.848 141.379 44.955 C 141.41 45.309 140.843 46.823 140.636 47.174 C 140.557 47.307 140.499 47.378 140.347 47.415 C 140.068 46.84 139.86 45.603 139.497 45.177 C 139.488 45.168 139.479 45.159 139.471 45.149 C 139.488 45.227 139.503 45.293 139.49 45.374 C 139.428 45.796 139.016 47.025 138.784 47.391 C 138.729 47.478 138.636 47.542 138.552 47.6 C 138.552 47.588 138.553 47.576 138.553 47.564 C 138.533 47.158 137.785 44.962 137.503 44.674 Z M 65.812 44.673 C 66.246 44.607 67.122 44.55 67.528 44.696 C 67.555 44.706 67.581 44.717 67.606 44.729 C 67.632 44.742 67.657 44.755 67.68 44.77 C 67.705 44.785 67.728 44.801 67.751 44.818 C 67.773 44.835 67.795 44.853 67.816 44.872 C 67.837 44.891 67.857 44.911 67.876 44.932 C 67.894 44.954 67.912 44.976 67.929 44.998 C 67.946 45.021 67.961 45.045 67.976 45.069 C 67.99 45.094 68.004 45.119 68.016 45.145 C 68.026 45.168 68.036 45.192 68.045 45.216 C 68.053 45.24 68.06 45.265 68.066 45.29 C 68.072 45.315 68.077 45.34 68.081 45.365 C 68.084 45.391 68.087 45.416 68.088 45.442 C 68.088 45.468 68.088 45.493 68.087 45.519 C 68.085 45.545 68.082 45.57 68.078 45.595 C 68.073 45.621 68.068 45.646 68.061 45.671 C 68.054 45.695 68.046 45.72 68.037 45.744 C 67.916 46.054 67.679 46.125 67.4 46.247 C 67.362 46.488 67.989 47.007 68.084 47.297 C 68.099 47.343 68.079 47.358 68.059 47.399 L 67.805 47.398 C 67.55 47.059 67.268 46.558 66.923 46.32 L 66.111 46.32 C 66.132 46.354 66.15 46.389 66.166 46.425 C 66.255 46.638 66.248 47.207 66.163 47.423 C 66.105 47.465 66.123 47.469 66.044 47.458 C 66.011 47.429 65.931 47.378 65.911 47.344 C 65.709 47.01 66.082 45.226 65.812 44.673 Z M 66.127 44.954 C 66.246 45.204 66.269 45.641 66.187 45.908 C 66.171 45.96 66.151 45.994 66.122 46.04 C 66.51 46.046 67.191 46.142 67.514 45.912 L 67.551 45.855 C 67.679 45.756 67.81 45.588 67.82 45.418 C 67.826 45.323 67.759 45.231 67.695 45.168 C 67.378 44.858 66.612 44.902 66.199 44.945 C 66.175 44.947 66.151 44.951 66.127 44.954 Z M 153.361 44.674 C 153.765 44.604 154.306 44.597 154.716 44.625 C 154.979 44.643 155.232 44.744 155.398 44.959 C 155.506 45.098 155.566 45.269 155.533 45.445 C 155.496 45.643 155.371 45.788 155.215 45.903 C 155.161 45.942 155.18 45.914 155.166 45.987 C 155.298 46.077 155.448 46.167 155.563 46.276 C 155.65 46.36 155.707 46.456 155.707 46.58 C 155.707 46.723 155.65 46.821 155.558 46.924 C 155.56 46.933 155.563 46.943 155.563 46.952 C 155.566 47.033 155.523 47.104 155.466 47.158 C 155.057 47.546 153.895 47.404 153.353 47.397 C 153.381 47.356 153.406 47.313 153.42 47.265 C 153.516 46.943 153.497 44.919 153.361 44.674 Z M 153.682 46.193 C 153.799 46.412 153.821 46.74 153.747 46.979 C 153.731 47.029 153.706 47.075 153.679 47.118 C 154.046 47.122 154.839 47.22 155.127 47.014 L 155.152 46.976 C 155.295 46.863 155.351 46.776 155.425 46.613 C 155.413 46.488 155.402 46.442 155.298 46.356 C 154.977 46.087 154.173 46.113 153.781 46.172 C 153.748 46.177 153.715 46.185 153.682 46.193 Z M 153.683 44.955 C 153.8 45.209 153.825 45.524 153.723 45.79 C 153.71 45.823 153.703 45.833 153.685 45.867 C 154.027 45.872 154.692 45.966 154.979 45.755 L 155.018 45.686 C 155.153 45.598 155.218 45.494 155.302 45.361 C 155.27 45.209 155.251 45.167 155.118 45.078 C 154.781 44.854 154.071 44.883 153.683 44.955 Z M 112.745 44.617 C 112.758 44.615 112.772 44.613 112.786 44.611 C 113.227 44.542 113.627 44.575 113.995 44.851 C 114.014 44.865 114.033 44.88 114.051 44.896 C 114.07 44.911 114.088 44.927 114.106 44.944 C 114.123 44.96 114.14 44.977 114.157 44.995 C 114.174 45.012 114.19 45.029 114.206 45.048 C 114.222 45.066 114.238 45.084 114.253 45.103 C 114.268 45.122 114.282 45.141 114.296 45.161 C 114.311 45.181 114.324 45.201 114.337 45.221 C 114.35 45.242 114.362 45.262 114.375 45.283 C 114.387 45.304 114.398 45.325 114.409 45.347 C 114.42 45.368 114.431 45.39 114.44 45.412 C 114.45 45.434 114.459 45.457 114.468 45.479 C 114.477 45.502 114.485 45.525 114.493 45.548 C 114.5 45.571 114.507 45.594 114.514 45.617 C 114.52 45.64 114.526 45.664 114.531 45.687 C 114.537 45.711 114.541 45.735 114.545 45.759 C 114.549 45.782 114.553 45.806 114.556 45.83 C 114.604 46.204 114.517 46.61 114.284 46.909 C 114.061 47.194 113.755 47.358 113.402 47.404 C 113.392 47.41 113.383 47.417 113.373 47.422 C 113.21 47.506 112.851 47.46 112.682 47.412 C 112.364 47.323 112.104 47.013 111.957 46.731 C 111.768 46.368 111.718 45.939 111.845 45.547 C 112.003 45.059 112.302 44.836 112.745 44.617 Z M 112.818 44.899 C 112.493 45.082 112.261 45.253 112.156 45.627 C 112.149 45.649 112.144 45.672 112.138 45.694 C 112.133 45.717 112.129 45.74 112.124 45.763 C 112.12 45.785 112.117 45.808 112.114 45.831 C 112.111 45.854 112.109 45.877 112.107 45.9 C 112.105 45.924 112.104 45.947 112.104 45.97 C 112.103 45.993 112.103 46.016 112.104 46.04 C 112.104 46.063 112.106 46.086 112.108 46.109 C 112.109 46.132 112.111 46.155 112.114 46.178 C 112.117 46.201 112.121 46.224 112.125 46.247 C 112.129 46.27 112.134 46.292 112.139 46.315 C 112.145 46.338 112.151 46.36 112.157 46.382 C 112.163 46.405 112.17 46.427 112.178 46.449 C 112.185 46.47 112.193 46.492 112.202 46.514 C 112.211 46.535 112.22 46.557 112.23 46.578 C 112.239 46.599 112.25 46.619 112.26 46.64 C 112.271 46.66 112.282 46.681 112.294 46.701 C 112.407 46.893 112.579 47.064 112.801 47.119 C 112.947 47.154 113.207 47.19 113.347 47.123 C 113.653 47.065 113.885 46.939 114.065 46.676 C 114.243 46.417 114.287 46.081 114.221 45.777 C 114.217 45.757 114.212 45.738 114.207 45.719 C 114.202 45.7 114.197 45.681 114.191 45.662 C 114.185 45.643 114.178 45.624 114.171 45.605 C 114.164 45.587 114.157 45.568 114.149 45.55 C 114.141 45.532 114.133 45.514 114.124 45.496 C 114.116 45.478 114.106 45.461 114.097 45.443 C 114.087 45.426 114.077 45.409 114.066 45.392 C 114.056 45.375 114.045 45.359 114.033 45.342 C 114.022 45.326 114.01 45.31 113.998 45.294 C 113.986 45.279 113.974 45.263 113.961 45.248 C 113.948 45.233 113.935 45.218 113.921 45.204 C 113.907 45.19 113.893 45.176 113.879 45.162 C 113.865 45.148 113.85 45.135 113.835 45.122 C 113.82 45.109 113.805 45.097 113.789 45.085 C 113.773 45.072 113.757 45.061 113.741 45.049 C 113.725 45.038 113.708 45.027 113.692 45.017 C 113.418 44.847 113.126 44.855 112.818 44.899 Z" fill="var(--token-5197bf6c-818c-4eab-85f8-6f703842b3bf, rgb(10, 11, 10))"></path><path d="M 128.536 24.863 C 128.697 24.851 128.865 24.836 129.017 24.902 C 129.168 24.968 129.275 25.116 129.319 25.272 C 129.472 25.815 129.412 33.585 129.366 34.607 C 129.357 34.819 129.362 35.105 129.256 35.291 C 129.174 35.435 129.044 35.462 128.896 35.497 C 128.827 35.519 128.775 35.522 128.702 35.515 C 128.536 35.498 128.406 35.448 128.304 35.306 C 128.178 35.131 128.18 34.892 128.168 34.685 C 128.063 32.775 128.154 30.804 128.156 28.889 C 128.157 27.881 128.058 26.29 128.183 25.363 C 128.215 25.119 128.354 25.001 128.536 24.863 Z M 121.913 24.863 C 122.068 24.843 122.273 24.803 122.416 24.876 C 122.569 24.954 122.648 25.117 122.699 25.274 C 122.836 25.696 122.833 26.67 122.628 27.071 C 123.179 26.577 123.127 25.669 124.022 25.121 C 124.528 24.811 125.197 24.809 125.756 24.945 C 126.152 25.041 126.676 25.244 126.884 25.626 C 126.953 25.752 126.969 25.884 126.919 26.02 C 126.831 26.259 126.623 26.359 126.41 26.463 C 125.747 26.217 125.01 25.985 124.318 26.269 C 123.498 26.605 123.192 27.652 123.064 28.458 C 123.016 28.757 123.004 29.11 122.879 29.388 C 122.874 29.399 122.869 29.409 122.864 29.42 C 122.878 29.451 122.893 29.486 122.901 29.519 C 122.992 29.908 122.896 30.552 122.895 30.964 C 122.893 32.248 122.987 33.604 122.879 34.881 C 122.866 35.029 122.83 35.206 122.735 35.323 C 122.64 35.44 122.486 35.509 122.338 35.522 C 122.171 35.535 121.985 35.487 121.857 35.375 C 121.675 35.217 121.672 34.86 121.666 34.636 C 121.62 32.814 121.683 30.981 121.679 29.158 C 121.676 27.965 121.561 26.686 121.681 25.502 C 121.707 25.245 121.734 25.056 121.913 24.863 Z M 159.689 24.863 C 159.723 24.861 159.758 24.858 159.792 24.857 C 160.991 24.798 162.142 25.074 163.049 25.9 C 163.94 26.713 164.467 28.059 164.511 29.259 C 164.522 29.542 164.497 29.923 164.28 30.133 C 164.137 30.27 163.887 30.299 163.699 30.318 C 162.907 30.399 162.058 30.342 161.26 30.341 L 156.684 30.336 C 157.101 30.971 156.642 32.211 157.828 33.53 C 158.411 34.179 159.117 34.474 159.983 34.513 C 160.805 34.549 161.704 34.281 162.308 33.702 C 162.491 33.528 162.797 33.19 162.804 32.929 C 163.032 32.739 163.068 32.434 163.223 32.193 C 163.344 32.003 163.568 31.879 163.786 31.839 C 163.854 31.827 163.961 31.833 164.02 31.874 C 164.16 31.972 164.211 32.092 164.238 32.257 C 164.331 32.818 164.003 33.422 163.683 33.856 C 163.077 34.677 162.104 35.298 161.092 35.447 C 159.823 35.633 158.419 35.474 157.37 34.681 C 156.293 33.867 155.77 32.617 155.591 31.306 C 155.37 29.693 155.575 27.805 156.587 26.477 C 157.376 25.441 158.438 25.025 159.689 24.863 Z M 159.583 25.876 C 158.618 26.132 157.858 26.587 157.339 27.477 C 157.009 28.046 156.93 28.98 156.744 29.251 C 156.737 29.26 156.731 29.27 156.725 29.279 C 156.704 29.309 156.708 29.303 156.683 29.334 L 163.176 29.334 C 163.323 29.011 163.057 28.095 162.931 27.762 C 162.651 27.023 162.103 26.421 161.38 26.104 C 160.807 25.852 160.197 25.813 159.583 25.876 Z M 140.523 20.981 C 140.654 20.97 140.775 20.968 140.903 20.997 C 141.038 21.028 141.142 21.094 141.21 21.218 C 141.307 21.393 141.31 21.61 141.318 21.804 C 141.378 23.194 141.414 34.758 141.23 35.243 C 141.189 35.349 141.109 35.429 141.006 35.475 C 140.852 35.544 140.657 35.531 140.503 35.466 C 139.864 35.198 140.262 34.287 140.057 33.779 C 140.052 33.766 140.046 33.753 140.041 33.74 C 140.036 33.78 140.033 33.81 140.012 33.845 C 139.529 34.646 138.377 35.196 137.495 35.392 C 135.79 35.772 134.846 35.409 133.433 34.504 C 133.413 34.405 132.689 33.518 132.561 33.295 C 132.285 32.809 132.101 32.27 131.994 31.722 C 131.67 30.066 131.783 28.115 132.747 26.679 C 132.784 26.623 132.823 26.567 132.863 26.513 C 132.903 26.459 132.944 26.406 132.986 26.353 C 133.029 26.301 133.073 26.25 133.118 26.2 C 133.163 26.15 133.209 26.101 133.257 26.054 C 133.304 26.006 133.353 25.96 133.403 25.915 C 133.453 25.869 133.503 25.825 133.555 25.783 C 133.608 25.74 133.661 25.699 133.715 25.659 C 133.769 25.619 133.824 25.58 133.88 25.543 C 133.936 25.506 133.993 25.47 134.051 25.436 C 134.108 25.402 134.167 25.369 134.226 25.337 C 134.286 25.306 134.346 25.276 134.406 25.248 C 134.468 25.22 134.529 25.193 134.592 25.168 C 134.654 25.142 134.717 25.119 134.78 25.097 C 134.844 25.074 134.907 25.054 134.971 25.035 C 135.036 25.016 135.101 24.999 135.166 24.984 C 135.231 24.968 135.297 24.954 135.363 24.942 C 136.639 24.7 138.044 24.913 139.124 25.659 C 139.424 25.866 139.977 26.351 140.047 26.728 C 140.363 26.04 139.899 22.479 140.169 21.407 C 140.226 21.183 140.333 21.09 140.523 20.981 Z M 135.955 25.876 C 134.959 26.141 134.264 26.553 133.728 27.479 C 133.013 28.715 132.913 30.429 133.285 31.79 C 133.545 32.741 134.097 33.603 134.964 34.101 C 135.488 34.401 136.4 34.676 137.005 34.488 C 137.024 34.482 137.047 34.47 137.064 34.461 C 137.846 34.42 138.613 34.002 139.131 33.425 C 139.999 32.46 140.187 31.025 140.113 29.771 C 140.045 28.623 139.665 27.485 138.784 26.703 C 138.009 26.015 137.029 25.794 136.024 25.869 C 136.001 25.871 135.977 25.874 135.955 25.876 Z M 71.881 23.625 C 73.003 23.482 74.168 23.611 75.205 24.077 C 76.25 24.546 77.143 25.372 77.545 26.465 C 77.788 27.128 77.908 28.049 77.459 28.654 C 76.809 29.53 71.465 31.041 71.19 31.648 L 71.249 31.779 C 71.463 31.973 71.814 32.08 72.084 32.174 C 73.434 32.644 74.008 31.833 75.071 31.329 C 75.412 31.167 75.821 31.118 76.178 31.255 C 76.576 31.407 76.958 31.873 77.124 32.26 C 77.187 32.405 77.211 32.531 77.154 32.684 C 77.177 32.73 77.199 32.773 77.21 32.825 C 77.263 33.08 77.166 33.391 77.029 33.605 C 76.52 34.398 75.166 35.037 74.284 35.235 C 72.684 35.594 70.961 35.358 69.57 34.466 C 69.53 34.441 69.491 34.415 69.452 34.389 C 69.414 34.362 69.375 34.335 69.337 34.308 C 69.299 34.281 69.261 34.253 69.224 34.224 C 69.186 34.196 69.149 34.167 69.112 34.138 C 69.075 34.109 69.039 34.079 69.003 34.049 C 68.966 34.019 68.931 33.989 68.896 33.957 C 68.86 33.927 68.825 33.895 68.791 33.863 C 68.756 33.831 68.722 33.799 68.688 33.766 C 68.655 33.734 68.621 33.7 68.589 33.667 C 68.555 33.633 68.523 33.599 68.491 33.565 C 68.459 33.531 68.427 33.496 68.396 33.461 C 68.365 33.425 68.334 33.39 68.303 33.354 C 68.273 33.318 68.243 33.282 68.214 33.245 C 68.184 33.209 68.155 33.171 68.126 33.134 C 68.098 33.097 68.07 33.059 68.043 33.021 C 68.015 32.983 67.988 32.944 67.961 32.906 C 67.934 32.867 67.908 32.828 67.883 32.788 C 67.857 32.749 67.831 32.709 67.806 32.669 C 67.782 32.629 67.758 32.589 67.734 32.548 C 67.71 32.507 67.687 32.467 67.664 32.425 C 67.642 32.384 67.619 32.343 67.598 32.301 C 67.576 32.259 67.554 32.217 67.534 32.175 C 67.513 32.132 67.493 32.09 67.473 32.047 C 67.454 32.004 67.435 31.961 67.416 31.918 C 67.398 31.875 67.38 31.831 67.362 31.787 C 67.345 31.744 67.328 31.7 67.311 31.656 C 67.295 31.611 67.279 31.567 67.264 31.522 C 67.248 31.478 67.233 31.433 67.219 31.388 C 67.205 31.343 67.191 31.298 67.178 31.253 C 67.165 31.208 67.153 31.162 67.141 31.117 C 67.128 31.071 67.117 31.025 67.106 30.98 C 67.095 30.934 67.085 30.888 67.075 30.842 C 66.735 29.258 67 27.556 67.877 26.191 C 68.821 24.722 70.218 23.981 71.881 23.625 Z M 72.275 26.72 C 71.503 26.985 70.746 27.426 70.365 28.187 C 70.26 28.395 70.193 28.606 70.271 28.835 C 70.383 28.941 70.429 28.981 70.594 28.981 C 70.863 28.981 71.375 28.681 71.603 28.529 C 71.976 28.419 73.982 27.646 74.134 27.378 C 74.197 27.267 74.179 27.229 74.156 27.111 C 73.938 26.833 73.575 26.756 73.242 26.714 C 73.081 26.695 72.92 26.686 72.759 26.687 C 72.597 26.688 72.436 26.699 72.275 26.72 Z M 147.979 24.863 C 148.99 24.798 150.008 24.983 150.875 25.527 C 151.241 25.757 151.926 26.287 152.027 26.724 C 152.251 26.168 151.889 25.469 152.305 24.979 C 152.489 24.885 152.645 24.811 152.857 24.865 C 152.952 24.889 153.116 24.972 153.167 25.061 C 153.287 25.271 153.305 25.553 153.32 25.79 C 153.405 27.132 153.331 28.521 153.328 29.868 C 153.326 31.596 153.38 33.334 153.299 35.06 C 153.278 35.506 153.239 35.942 153.135 36.377 C 152.9 37.37 152.384 38.175 151.504 38.715 C 150.223 39.499 148.32 39.66 146.882 39.294 C 146.825 39.279 146.768 39.264 146.712 39.247 C 146.655 39.23 146.599 39.211 146.543 39.192 C 146.487 39.172 146.432 39.151 146.378 39.128 C 146.323 39.106 146.269 39.082 146.215 39.057 C 146.162 39.031 146.109 39.005 146.057 38.977 C 146.005 38.949 145.953 38.92 145.903 38.89 C 145.852 38.859 145.802 38.828 145.753 38.795 C 145.703 38.762 145.655 38.728 145.608 38.693 C 145.56 38.657 145.513 38.621 145.468 38.583 C 145.422 38.546 145.377 38.507 145.333 38.467 C 145.289 38.428 145.247 38.387 145.205 38.345 C 145.163 38.303 145.122 38.26 145.082 38.216 C 145.043 38.172 145.004 38.127 144.967 38.081 C 144.929 38.035 144.892 37.989 144.857 37.941 C 144.822 37.893 144.788 37.845 144.756 37.796 C 144.722 37.746 144.691 37.696 144.66 37.645 C 144.466 37.312 144.31 36.878 144.415 36.49 C 144.462 36.321 144.546 36.251 144.69 36.169 C 144.876 36.151 145.103 36.191 145.249 36.32 C 145.363 36.421 145.467 36.612 145.48 36.763 C 145.481 36.772 145.481 36.781 145.481 36.791 C 146.04 37.271 145.997 37.8 146.905 38.195 C 147.888 38.62 149.309 38.541 150.293 38.143 C 150.948 37.878 151.505 37.434 151.78 36.766 C 152.033 36.152 152.269 34.331 152.021 33.728 C 152.017 33.849 151.94 33.954 151.87 34.049 C 151.303 34.82 150.255 35.31 149.332 35.452 C 148.108 35.64 146.788 35.461 145.774 34.704 C 144.685 33.891 144.113 32.551 143.928 31.231 C 143.704 29.637 143.98 27.843 144.965 26.537 C 145.753 25.49 146.708 25.041 147.979 24.863 Z M 148.057 25.876 C 147.028 26.146 146.293 26.512 145.735 27.477 C 145.01 28.731 144.943 30.502 145.313 31.878 C 145.558 32.787 146.064 33.637 146.898 34.111 C 147.467 34.434 148.38 34.638 149.038 34.489 C 149.954 34.36 150.706 33.986 151.272 33.23 C 152.113 32.107 152.25 30.556 152.048 29.204 C 151.892 28.17 151.419 27.119 150.568 26.482 C 149.825 25.927 148.956 25.802 148.057 25.876 Z M 92.454 14.567 C 92.47 14.565 92.485 14.562 92.5 14.56 C 92.633 14.539 92.736 14.545 92.862 14.598 C 93.681 14.943 94.481 15.38 95.281 15.772 L 99.905 18.039 C 100.609 18.384 102.839 19.369 103.301 19.737 C 103.401 19.817 103.551 20.032 103.551 20.161 C 103.551 20.413 103.389 20.751 103.285 20.983 C 102.934 21.765 100.274 27.164 99.943 27.487 C 100.21 27.724 103.226 33.815 103.496 34.547 C 103.575 34.76 103.56 34.965 103.464 35.168 C 103.392 35.322 103.062 35.484 102.909 35.57 C 101.468 36.378 99.929 37.067 98.449 37.803 C 97.419 38.315 96.34 38.964 95.264 39.352 C 95.061 39.582 93.394 40.334 93.011 40.503 C 92.82 40.586 92.654 40.631 92.453 40.552 C 92.348 40.421 92.27 40.258 92.348 40.089 C 92.55 39.647 96.867 35.562 97.592 34.852 C 97.993 34.459 98.536 34.03 98.844 33.567 C 98.925 33.446 98.944 33.401 98.903 33.26 C 98.783 32.854 98.406 32.422 98.169 32.066 C 97.69 31.348 95.488 28.203 95.415 27.685 C 95.382 27.457 95.442 27.223 95.533 27.016 C 95.979 26.005 98.887 22.4 98.935 21.81 C 98.928 21.708 98.894 21.659 98.828 21.581 C 98.371 21.03 97.779 20.529 97.268 20.026 L 93.993 16.814 C 93.613 16.443 92.423 15.451 92.275 14.987 C 92.271 14.815 92.363 14.703 92.454 14.567 Z M 80.805 19.8 C 80.935 19.782 81.066 19.774 81.197 19.776 C 81.603 19.781 82.047 19.909 82.333 20.212 C 83.06 20.979 82.782 23.086 82.767 24.105 C 82.763 24.318 82.751 24.555 82.909 24.72 C 83.064 24.713 83.787 24.208 84.021 24.101 C 84.055 24.085 84.09 24.07 84.124 24.055 C 84.159 24.04 84.193 24.026 84.228 24.012 C 84.263 23.998 84.298 23.985 84.333 23.972 C 84.369 23.959 84.404 23.946 84.44 23.934 C 84.475 23.922 84.511 23.91 84.547 23.899 C 84.583 23.888 84.619 23.877 84.654 23.867 C 84.691 23.856 84.727 23.846 84.763 23.837 C 84.799 23.828 84.836 23.819 84.873 23.81 C 84.909 23.802 84.946 23.793 84.982 23.786 C 85.019 23.778 85.056 23.771 85.093 23.764 C 85.13 23.758 85.167 23.751 85.204 23.745 C 85.241 23.74 85.278 23.734 85.316 23.729 C 85.353 23.724 85.39 23.72 85.427 23.716 C 85.464 23.712 85.502 23.709 85.539 23.706 C 85.577 23.703 85.614 23.7 85.652 23.698 C 85.689 23.696 85.727 23.694 85.764 23.693 C 85.802 23.692 85.839 23.691 85.877 23.691 C 85.914 23.691 85.952 23.691 85.989 23.692 C 86.027 23.692 86.064 23.693 86.102 23.695 C 86.139 23.697 86.177 23.699 86.214 23.701 C 86.252 23.704 86.289 23.707 86.327 23.71 C 86.364 23.714 86.401 23.718 86.439 23.722 C 86.476 23.727 86.513 23.731 86.55 23.737 C 86.587 23.742 86.624 23.748 86.661 23.754 C 86.698 23.76 86.735 23.767 86.772 23.774 C 86.809 23.781 86.846 23.789 86.882 23.797 C 86.919 23.805 86.955 23.814 86.992 23.823 C 87.029 23.832 87.065 23.841 87.101 23.851 C 87.137 23.861 87.173 23.871 87.209 23.882 C 87.245 23.893 87.281 23.904 87.317 23.916 C 87.352 23.927 87.388 23.939 87.423 23.952 C 87.459 23.965 87.494 23.978 87.529 23.991 C 87.573 24.008 87.617 24.026 87.661 24.044 C 87.705 24.062 87.748 24.081 87.791 24.101 C 87.835 24.12 87.878 24.14 87.92 24.16 C 87.963 24.18 88.006 24.201 88.048 24.223 C 88.09 24.244 88.132 24.266 88.174 24.289 C 88.216 24.311 88.257 24.334 88.298 24.358 C 88.339 24.381 88.38 24.405 88.421 24.43 C 88.462 24.454 88.502 24.479 88.542 24.505 C 88.582 24.53 88.621 24.556 88.661 24.582 C 88.7 24.609 88.739 24.636 88.778 24.663 C 88.817 24.691 88.855 24.719 88.893 24.747 C 88.931 24.775 88.968 24.804 89.006 24.834 C 89.043 24.863 89.08 24.893 89.117 24.923 C 89.154 24.953 89.19 24.984 89.226 25.015 C 89.261 25.046 89.297 25.077 89.332 25.109 C 89.367 25.141 89.402 25.174 89.436 25.206 C 89.47 25.239 89.504 25.273 89.537 25.306 C 89.571 25.34 89.604 25.374 89.637 25.408 C 89.669 25.443 89.701 25.478 89.733 25.513 C 89.765 25.548 89.797 25.584 89.828 25.62 C 89.858 25.656 89.889 25.692 89.919 25.729 C 89.949 25.766 89.979 25.803 90.008 25.841 C 90.037 25.878 90.066 25.916 90.094 25.954 C 90.122 25.992 90.149 26.031 90.177 26.07 C 90.204 26.109 90.231 26.148 90.257 26.188 C 90.284 26.227 90.31 26.267 90.335 26.307 C 90.36 26.347 90.385 26.388 90.409 26.429 C 90.434 26.469 90.458 26.511 90.481 26.552 C 90.504 26.593 90.527 26.635 90.549 26.677 C 90.572 26.719 90.594 26.761 90.615 26.804 C 90.637 26.846 90.657 26.889 90.677 26.932 C 90.698 26.975 90.717 27.018 90.737 27.062 C 91.341 28.408 91.436 30.104 90.907 31.493 C 90.541 32.457 89.699 33.842 88.725 34.285 C 88.721 34.293 88.717 34.301 88.712 34.309 C 88.471 34.693 87.402 35.038 86.963 35.148 C 85.18 35.596 84.152 35.013 82.676 34.119 C 82.666 34.195 82.643 34.263 82.614 34.334 C 82.472 34.682 82.167 34.996 81.82 35.135 C 81.41 35.3 80.965 35.325 80.554 35.147 C 80.217 35.001 79.812 34.638 79.691 34.281 C 79.463 33.61 79.588 28.558 79.588 27.511 C 79.589 25.487 79.52 23.436 79.601 21.416 C 79.609 21.198 79.612 20.941 79.706 20.742 C 79.943 20.238 80.297 19.99 80.805 19.8 Z M 85.199 26.832 C 84.42 26.965 83.731 27.273 83.261 27.942 C 82.857 28.517 82.709 29.263 82.835 29.953 C 82.843 29.996 82.852 30.039 82.862 30.082 C 82.871 30.125 82.882 30.167 82.894 30.21 C 82.906 30.252 82.92 30.294 82.933 30.336 C 82.947 30.377 82.963 30.418 82.979 30.459 C 82.995 30.5 83.012 30.54 83.03 30.58 C 83.048 30.621 83.067 30.66 83.087 30.699 C 83.107 30.738 83.128 30.777 83.149 30.815 C 83.171 30.853 83.194 30.89 83.218 30.927 C 83.242 30.964 83.266 31.001 83.291 31.036 C 83.317 31.072 83.343 31.107 83.37 31.141 C 83.397 31.176 83.425 31.21 83.454 31.243 C 83.483 31.276 83.513 31.308 83.543 31.34 C 83.573 31.371 83.605 31.402 83.637 31.432 C 83.668 31.462 83.701 31.491 83.734 31.52 C 83.768 31.548 83.802 31.576 83.836 31.603 C 83.871 31.629 83.906 31.655 83.942 31.68 C 84.391 31.991 85.011 32.188 85.559 32.144 C 86.35 32.026 87.01 31.757 87.507 31.091 C 87.533 31.056 87.559 31.02 87.583 30.983 C 87.608 30.947 87.632 30.909 87.654 30.872 C 87.677 30.834 87.699 30.795 87.719 30.757 C 87.74 30.718 87.76 30.678 87.779 30.638 C 87.798 30.598 87.816 30.558 87.833 30.517 C 87.85 30.477 87.866 30.435 87.881 30.394 C 87.896 30.352 87.91 30.31 87.922 30.268 C 87.935 30.226 87.947 30.183 87.958 30.14 C 87.969 30.097 87.979 30.054 87.987 30.011 C 87.996 29.968 88.004 29.924 88.01 29.88 C 88.017 29.837 88.022 29.793 88.026 29.749 C 88.031 29.705 88.034 29.661 88.036 29.617 C 88.038 29.572 88.039 29.528 88.039 29.484 C 88.039 29.44 88.038 29.396 88.036 29.352 C 88.034 29.307 88.031 29.263 88.026 29.219 C 88.022 29.175 88.017 29.132 88.01 29.088 C 88.004 29.045 87.997 29.002 87.989 28.959 C 87.98 28.916 87.971 28.874 87.961 28.831 C 87.951 28.789 87.939 28.747 87.927 28.705 C 87.915 28.664 87.901 28.622 87.887 28.581 C 87.872 28.54 87.857 28.499 87.84 28.459 C 87.824 28.419 87.806 28.379 87.788 28.34 C 87.77 28.3 87.751 28.261 87.73 28.223 C 87.71 28.184 87.689 28.146 87.667 28.109 C 87.644 28.071 87.621 28.035 87.597 27.998 C 87.573 27.962 87.549 27.926 87.523 27.891 C 87.497 27.856 87.471 27.822 87.443 27.788 C 87.416 27.755 87.388 27.721 87.358 27.689 C 87.329 27.657 87.3 27.625 87.269 27.594 C 87.238 27.564 87.207 27.534 87.175 27.504 C 87.143 27.475 87.111 27.447 87.077 27.419 C 87.043 27.391 87.009 27.364 86.975 27.338 C 86.468 26.964 85.825 26.79 85.199 26.832 Z M 109.452 21.206 C 110.266 21.162 111.096 21.195 111.912 21.194 C 113.315 21.194 114.956 20.997 116.283 21.529 C 117.11 21.86 117.793 22.466 118.144 23.298 C 118.493 24.127 118.538 25.184 118.2 26.018 C 117.859 26.863 117.193 27.51 116.365 27.864 C 117.116 28.055 117.871 28.476 118.362 29.082 C 118.95 29.809 119.158 30.751 119.064 31.67 C 119.012 32.186 118.848 33.091 118.441 33.424 C 118.434 33.474 118.43 33.51 118.407 33.556 C 118.091 34.194 117.361 34.648 116.722 34.907 C 116.278 35.086 115.812 35.189 115.336 35.238 C 114.547 35.318 109.518 35.375 109.019 35.162 C 108.942 35.027 108.901 34.898 108.872 34.745 C 108.731 34.017 108.797 33.215 108.797 32.473 L 108.797 28.798 L 108.805 23.882 C 108.807 23.27 108.757 22.64 108.79 22.031 C 108.802 21.832 108.841 21.607 108.962 21.443 C 109.09 21.269 109.255 21.241 109.452 21.206 Z M 110.069 28.633 C 110.171 28.859 110.224 33.78 110.113 34.082 C 110.102 34.112 110.08 34.144 110.065 34.17 L 113.072 34.174 C 113.815 34.174 114.58 34.213 115.314 34.089 C 115.797 34.007 116.362 33.857 116.72 33.504 C 116.767 33.458 116.807 33.42 116.831 33.359 C 117.218 33.132 117.476 32.603 117.586 32.181 C 117.779 31.444 117.706 30.6 117.314 29.939 C 116.931 29.293 116.286 28.886 115.568 28.709 C 114.904 28.546 110.766 28.522 110.069 28.633 Z M 110.065 22.444 C 110.193 22.712 110.219 26.983 110.114 27.262 C 110.098 27.305 110.08 27.343 110.055 27.381 C 111.374 27.384 113.747 27.51 114.942 27.316 C 115.367 27.248 115.946 27.1 116.243 26.758 C 116.278 26.717 116.29 26.685 116.309 26.635 C 116.664 26.429 116.86 26.001 116.963 25.616 C 117.136 24.972 117.142 24.192 116.794 23.604 C 116.458 23.039 115.848 22.717 115.229 22.565 C 114.309 22.338 111.07 22.339 110.065 22.444 Z M 48.589 19.782 C 49.006 19.761 49.384 19.791 49.756 19.998 C 49.996 20.131 50.23 20.334 50.362 20.579 C 50.803 21.396 50.992 22.52 51.242 23.416 L 52.673 28.549 C 53.354 26.781 53.942 24.96 54.569 23.171 C 54.83 22.424 55.062 21.637 55.384 20.915 C 55.6 20.43 55.902 20.068 56.41 19.881 C 56.889 19.704 57.457 19.743 57.917 19.96 C 58.211 20.099 58.414 20.301 58.576 20.583 C 59.04 21.388 59.3 22.429 59.608 23.308 L 61.46 28.572 C 61.764 27.184 62.224 25.796 62.606 24.425 C 62.926 23.279 63.185 22.051 63.594 20.936 C 63.676 20.712 63.785 20.519 63.944 20.342 C 64.268 19.982 64.721 19.792 65.2 19.771 C 65.667 19.751 66.12 19.903 66.464 20.227 C 66.766 20.513 67.056 21.026 67.064 21.453 C 67.075 22.004 65.641 26.782 65.365 27.06 C 65.45 27.318 63.448 33.6 63.133 34.321 C 62.957 34.724 62.673 35.001 62.26 35.158 C 61.834 35.32 61.277 35.317 60.862 35.122 C 60.527 34.965 60.26 34.681 60.082 34.359 C 59.71 33.688 59.446 32.64 59.184 31.896 C 58.477 29.893 57.787 27.883 57.057 25.889 C 56.429 27.772 55.735 29.638 55.075 31.51 C 54.772 32.37 54.468 33.638 54.009 34.391 C 53.743 34.828 53.341 35.143 52.842 35.261 C 52.431 35.358 52.022 35.305 51.664 35.076 C 51.393 34.903 51.15 34.645 51.013 34.353 C 50.708 33.702 50.528 32.972 50.314 32.286 L 49.252 28.898 L 47.88 24.511 C 47.616 23.667 47.304 22.812 47.115 21.948 C 47.008 21.463 47.11 20.974 47.383 20.559 C 47.671 20.121 48.086 19.883 48.589 19.782 Z M 21.141 1.501 C 21.294 1.501 21.447 1.504 21.6 1.51 L 21.6 1.511 L 21.725 1.557 L 21.611 1.624 C 21.671 3.351 21.625 5.094 21.625 6.823 C 21.696 6.785 21.772 6.74 21.848 6.713 C 22.088 6.628 22.223 6.707 22.441 6.809 C 26.213 8.589 29.941 10.48 33.686 12.317 L 36.88 13.883 C 37.475 14.175 38.166 14.445 38.702 14.834 C 38.844 14.937 38.975 15.164 39.026 15.332 C 39.111 15.613 38.964 16.011 38.863 16.269 C 38.4 17.453 37.701 18.627 37.127 19.766 L 33.517 26.929 C 34.728 29.529 36.076 32.083 37.353 34.653 C 37.867 35.688 38.511 36.768 38.91 37.849 C 39.018 38.142 39.139 38.49 38.994 38.788 C 38.845 39.094 38.539 39.317 38.254 39.482 C 37.102 40.149 35.826 40.693 34.631 41.284 L 28.227 44.478 L 24.443 46.368 C 23.748 46.718 23.019 47.164 22.284 47.41 C 22.05 47.488 21.894 47.43 21.681 47.323 L 21.654 47.309 C 21.522 47.982 21.623 50.335 21.623 51.151 L 21.625 60.723 C 21.463 60.729 21.32 60.746 21.171 60.668 C 21.034 60.147 21.139 56.402 21.141 55.544 C 21.082 55.578 21.021 55.609 20.96 55.638 C 20.769 55.728 20.691 55.737 20.49 55.662 C 19.7 55.363 18.919 54.902 18.161 54.523 L 13.615 52.254 L 7.624 49.275 C 6.599 48.765 5.522 48.292 4.532 47.721 C 4.295 47.585 3.872 47.321 3.772 47.049 C 3.688 46.818 3.717 46.481 3.795 46.253 C 3.965 45.753 4.257 45.269 4.497 44.8 C 4.818 44.173 5.122 43.539 5.436 42.908 L 9.267 35.186 C 8.851 34.253 8.344 33.341 7.884 32.427 L 5.121 26.953 C 4.771 26.259 3.896 24.766 3.749 24.093 C 3.709 23.91 3.741 23.703 3.801 23.527 C 3.887 23.278 4.051 23.088 4.271 22.949 C 4.872 22.57 5.584 22.282 6.224 21.968 L 10.1 20.076 L 20.318 15.054 C 20.587 14.924 20.77 14.886 21.057 14.992 L 21.107 15.011 C 21.227 14.766 21.141 2.89 21.141 1.501 Z M 21.625 7.766 L 21.625 46.424 C 24.321 43.796 27.044 41.174 29.684 38.489 C 30.15 38.041 31.674 36.746 31.841 36.247 C 31.859 35.364 27.162 29.193 26.468 27.643 C 26.343 27.365 26.257 27.071 26.312 26.764 C 26.474 25.872 27.302 24.93 27.809 24.188 C 28.34 23.41 31.807 18.545 31.855 18.061 C 31.876 17.849 31.749 17.744 31.611 17.601 C 30.638 16.591 29.609 15.625 28.61 14.64 L 21.625 7.765 Z M 21.111 16.047 L 14.369 22.694 C 13.309 23.736 12.155 24.754 11.165 25.859 C 11.062 25.975 10.933 26.083 10.933 26.25 C 10.93 26.983 15.543 32.974 16.245 34.363 C 16.386 34.642 16.51 34.973 16.485 35.292 C 16.42 36.118 15.373 37.417 14.903 38.131 L 12.34 42.023 C 11.925 42.653 11.428 43.297 11.078 43.964 C 11.005 44.104 10.902 44.314 10.946 44.474 C 11.074 44.942 12.753 46.385 13.194 46.836 C 15.843 49.441 18.527 52.02 21.141 54.662 L 21.14 24.91 L 21.145 18.532 C 21.145 17.948 21.246 16.538 21.111 16.047 Z" fill="var(--token-5197bf6c-818c-4eab-85f8-6f703842b3bf, rgb(10, 11, 10))"></path></svg>',
+                                                svgContentId: 8691687535,
+                                              },
+                                            },
+                                            children: e(s1, {
+                                              className: "framer-1mblgp0",
+                                              "data-framer-name": "WEB_2_",
+                                              layout: "position",
+                                              name: "WEB_2_",
+                                              opacity: 1,
+                                              svg: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 293 105"><path d="M 115.421 74.461 C 115.648 74.416 115.825 74.408 116.053 74.44 C 116.16 75.145 116.236 78.485 115.931 79.037 L 115.667 79.051 C 115.185 78.347 115.864 75.46 115.421 74.461 Z" fill="var(--token-5197bf6c-818c-4eab-85f8-6f703842b3bf, rgb(10, 11, 10))"></path><path d="M 282.51 33.777 C 282.64 33.765 282.729 33.792 282.853 33.826 C 283.185 34.181 283.687 34.796 283.78 35.281 C 284.205 34.874 284.821 34.055 284.915 33.46 C 285.273 34.096 285.306 35.656 285.134 36.374 C 285.114 36.458 285.058 36.463 284.988 36.506 C 284.788 36.018 284.999 35.439 284.741 34.968 C 284.731 34.952 284.721 34.936 284.711 34.92 C 284.796 34.774 284.826 34.669 284.849 34.502 C 284.456 34.688 284.131 35.465 283.749 35.784 C 283.749 35.762 283.752 35.741 283.75 35.719 C 283.702 35.318 283.034 34.514 282.707 34.287 C 282.713 34.303 282.719 34.318 282.725 34.334 C 282.734 34.36 282.742 34.387 282.751 34.414 C 282.774 34.483 282.797 34.552 282.815 34.624 C 282.885 34.904 282.966 36.24 282.826 36.475 L 282.627 36.456 C 282.395 35.627 282.679 34.71 282.524 33.856 Z" fill="var(--token-5197bf6c-818c-4eab-85f8-6f703842b3bf, rgb(10, 11, 10))"></path><path d="M 181.482 74.462 C 182.532 74.25 184.076 74.328 185.147 74.441 L 185.262 74.586 L 185.221 74.782 C 184.85 75.001 183.982 74.889 183.527 74.886 C 183.592 74.992 183.647 75.105 183.671 75.228 C 183.776 75.777 183.82 77.045 183.53 77.511 C 183.676 77.732 183.693 77.954 183.71 78.213 C 183.731 78.548 183.7 78.855 183.471 79.118 C 182.7 78.616 183.506 75.756 182.999 74.886 C 182.636 74.892 182.087 74.978 181.75 74.844 C 181.577 74.776 181.558 74.625 181.482 74.462 Z M 197.099 74.462 C 197.897 74.324 200.177 74.248 200.892 74.539 L 200.907 74.681 C 200.508 75.046 199.702 74.9 199.187 74.886 C 199.251 74.992 199.306 75.105 199.33 75.228 C 199.436 75.777 199.479 77.045 199.189 77.511 C 199.217 77.554 199.228 77.567 199.253 77.617 C 199.4 77.904 199.433 78.424 199.319 78.725 C 199.239 78.935 199.122 79.056 198.922 79.135 C 198.486 78.594 199.15 75.745 198.638 74.886 C 198.296 74.892 197.796 74.967 197.471 74.87 C 197.227 74.798 197.214 74.677 197.099 74.462 Z M 103.659 74.403 C 104.732 74.396 105.811 74.347 106.874 74.514 L 106.819 74.514 L 107.034 74.719 L 107.187 74.646 L 107.028 74.565 L 106.95 74.75 C 106.125 75.004 105.044 74.895 104.182 74.886 L 104.182 76.533 L 106.222 76.533 C 106.372 76.539 106.523 76.562 106.672 76.578 L 106.711 76.812 L 106.584 76.951 C 105.889 77.143 104.911 77.008 104.182 77.007 C 104.191 77.645 104.294 78.477 104.029 79.068 L 103.892 79.071 C 103.411 78.405 103.656 75.302 103.659 74.403 Z M 120.224 74.367 C 120.3 74.352 120.377 74.34 120.455 74.331 C 121.199 74.239 121.887 74.34 122.48 74.819 C 122.625 74.936 122.668 74.938 122.688 75.128 C 122.138 75.541 121.302 74.572 120.565 74.781 C 120.079 74.919 119.636 75.316 119.392 75.752 C 119.117 76.242 119.023 76.85 119.188 77.393 C 119.337 77.879 119.67 78.214 120.113 78.448 C 120.463 78.633 120.831 78.734 121.22 78.612 C 121.239 78.61 121.258 78.606 121.277 78.604 C 121.751 78.549 122.043 78.267 122.454 78.051 C 122.622 78.206 122.648 78.233 122.707 78.453 C 122.64 78.595 122.582 78.667 122.446 78.747 C 121.821 79.117 120.916 79.219 120.222 79.017 C 119.646 78.849 119.087 78.489 118.801 77.942 C 118.469 77.303 118.531 76.499 118.751 75.834 C 119.003 75.072 119.538 74.716 120.224 74.367 Z M 150.751 74.367 C 151.252 74.285 151.781 74.266 152.274 74.402 C 152.322 74.416 152.37 74.432 152.417 74.45 C 152.464 74.468 152.509 74.488 152.554 74.511 C 152.599 74.534 152.643 74.559 152.686 74.586 C 152.728 74.612 152.769 74.641 152.809 74.672 C 152.849 74.703 152.887 74.736 152.924 74.771 C 152.96 74.806 152.994 74.842 153.028 74.88 C 153.061 74.918 153.092 74.958 153.121 74.999 C 153.15 75.04 153.177 75.083 153.202 75.126 L 153.154 75.289 C 152.481 75.446 152.046 74.603 151.097 74.816 C 151.066 74.823 151.035 74.83 151.005 74.839 C 150.974 74.847 150.944 74.857 150.914 74.867 C 150.884 74.877 150.854 74.888 150.824 74.899 C 150.795 74.911 150.766 74.924 150.737 74.937 C 150.708 74.95 150.679 74.964 150.651 74.978 C 150.623 74.993 150.595 75.008 150.568 75.024 C 150.54 75.041 150.513 75.057 150.487 75.075 C 150.461 75.092 150.435 75.11 150.409 75.129 C 150.383 75.148 150.358 75.167 150.334 75.188 C 150.309 75.208 150.285 75.228 150.261 75.25 C 150.238 75.271 150.215 75.293 150.193 75.315 C 150.17 75.338 150.148 75.361 150.126 75.385 C 150.106 75.409 150.085 75.433 150.065 75.457 C 150.045 75.482 150.026 75.507 150.007 75.533 C 149.988 75.559 149.97 75.585 149.953 75.612 C 149.935 75.638 149.919 75.666 149.903 75.693 C 149.886 75.722 149.87 75.752 149.854 75.782 C 149.839 75.812 149.824 75.842 149.81 75.873 C 149.796 75.904 149.783 75.935 149.77 75.966 C 149.758 75.998 149.747 76.03 149.736 76.061 C 149.725 76.093 149.715 76.126 149.706 76.158 C 149.696 76.191 149.688 76.223 149.68 76.256 C 149.672 76.289 149.665 76.322 149.659 76.356 C 149.653 76.389 149.648 76.422 149.643 76.456 C 149.639 76.489 149.635 76.523 149.633 76.557 C 149.63 76.59 149.627 76.624 149.626 76.658 C 149.625 76.692 149.625 76.725 149.625 76.759 C 149.626 76.793 149.627 76.827 149.629 76.861 C 149.632 76.894 149.635 76.928 149.638 76.962 C 149.642 76.995 149.647 77.029 149.652 77.062 C 149.657 77.095 149.664 77.129 149.671 77.162 C 149.678 77.195 149.686 77.228 149.694 77.26 C 149.839 77.793 150.15 78.204 150.634 78.472 C 150.964 78.655 151.369 78.725 151.733 78.613 C 152.285 78.552 152.658 78.08 153.124 78.049 C 153.142 78.119 153.128 78.154 153.109 78.226 C 153.017 78.56 152.724 78.832 152.431 78.998 C 151.962 79.263 151.393 79.272 150.887 79.116 C 150.222 78.91 149.638 78.479 149.323 77.845 C 149.305 77.808 149.288 77.77 149.272 77.733 C 149.256 77.695 149.241 77.657 149.226 77.618 C 149.212 77.579 149.199 77.541 149.186 77.501 C 149.174 77.462 149.163 77.423 149.153 77.383 C 149.142 77.343 149.133 77.303 149.125 77.263 C 149.117 77.222 149.109 77.182 149.103 77.141 C 149.097 77.101 149.091 77.06 149.087 77.019 C 149.083 76.978 149.079 76.937 149.077 76.896 C 149.075 76.855 149.074 76.814 149.074 76.773 C 149.073 76.732 149.074 76.691 149.076 76.65 C 149.077 76.608 149.08 76.567 149.084 76.527 C 149.088 76.486 149.093 76.445 149.098 76.404 C 149.104 76.363 149.111 76.323 149.119 76.282 C 149.127 76.242 149.136 76.202 149.146 76.162 C 149.155 76.122 149.166 76.082 149.178 76.043 C 149.189 76.004 149.202 75.965 149.216 75.926 C 149.499 75.125 150.01 74.719 150.751 74.367 Z M 156.862 74.367 C 157.289 74.304 157.66 74.288 158.088 74.357 C 158.53 74.429 159.01 74.586 159.277 74.976 C 159.326 75.049 159.283 75.125 159.267 75.208 C 158.708 75.499 157.993 74.546 157.009 74.84 C 156.598 74.963 156.258 75.276 156.052 75.648 C 155.769 76.157 155.678 76.788 155.839 77.352 C 155.981 77.849 156.338 78.243 156.789 78.485 C 157.123 78.664 157.528 78.722 157.891 78.611 C 158.412 78.545 158.641 78.204 159.1 78.064 C 159.265 78.185 159.278 78.204 159.347 78.397 C 159.164 78.611 158.949 78.761 158.703 78.892 C 158.668 78.911 158.632 78.929 158.595 78.946 C 158.559 78.963 158.522 78.979 158.484 78.994 C 158.447 79.009 158.409 79.023 158.372 79.036 C 158.334 79.049 158.295 79.062 158.257 79.073 C 158.218 79.084 158.18 79.095 158.14 79.104 C 158.101 79.113 158.062 79.122 158.023 79.129 C 157.983 79.137 157.943 79.143 157.903 79.149 C 157.864 79.154 157.824 79.159 157.784 79.162 C 157.744 79.166 157.704 79.168 157.664 79.169 C 157.623 79.171 157.583 79.172 157.543 79.171 C 157.503 79.171 157.463 79.169 157.423 79.167 C 157.383 79.164 157.343 79.161 157.303 79.156 C 157.263 79.152 157.223 79.146 157.183 79.14 C 157.143 79.133 157.104 79.126 157.065 79.118 C 157.026 79.109 156.987 79.1 156.947 79.089 C 156.909 79.079 156.87 79.068 156.832 79.056 C 156.242 78.862 155.698 78.392 155.425 77.832 C 155.144 77.254 155.122 76.561 155.335 75.957 C 155.617 75.159 156.122 74.726 156.862 74.367 Z" fill="var(--token-5197bf6c-818c-4eab-85f8-6f703842b3bf, rgb(10, 11, 10))"></path><path d="M 217.281 36.255 C 217.688 36.167 218.068 36.095 218.461 36.276 C 218.793 36.428 219.091 36.742 219.216 37.087 C 219.329 37.398 219.324 37.72 219.171 38.018 C 218.994 38.361 218.708 38.566 218.348 38.677 C 218.228 38.76 218.194 38.768 218.051 38.784 C 217.7 38.824 217.456 38.817 217.173 38.569 C 216.854 38.29 216.695 37.805 216.691 37.389 C 216.686 36.882 216.951 36.592 217.281 36.255 Z" fill="var(--token-5197bf6c-818c-4eab-85f8-6f703842b3bf, rgb(10, 11, 10))"></path><path d="M 134.935 74.367 C 135.106 74.342 135.278 74.326 135.45 74.32 C 136.059 74.299 136.47 74.496 136.904 74.904 L 136.896 75.043 C 136.483 75.116 136.034 74.849 135.613 74.814 C 135.291 74.788 134.915 74.838 134.668 75.069 C 134.516 75.212 134.425 75.414 134.431 75.624 C 134.454 76.373 136.471 76.56 137.011 77.082 C 137.186 77.251 137.297 77.447 137.298 77.697 C 137.299 78.029 137.1 78.461 136.87 78.697 C 136.481 79.097 135.958 79.113 135.435 79.135 C 135.351 79.124 135.268 79.112 135.185 79.097 C 134.624 78.994 134.222 78.801 133.894 78.321 L 133.932 78.183 C 134.264 78.172 134.502 78.368 134.791 78.499 C 135.215 78.692 135.8 78.746 136.232 78.553 C 136.464 78.45 136.647 78.266 136.715 78.013 C 136.974 77.06 134.484 76.913 134.012 76.103 C 133.866 75.852 133.857 75.526 133.955 75.256 C 134.125 74.783 134.509 74.575 134.935 74.367 Z M 173.896 74.367 C 174.345 74.283 174.788 74.344 175.227 74.457 C 175.563 74.544 175.818 74.611 175.999 74.916 L 175.928 75.072 C 175.516 75.198 174.794 74.866 174.341 74.829 C 174.013 74.802 173.733 74.882 173.491 75.115 C 173.296 75.302 173.273 75.377 173.266 75.63 C 173.709 76.381 175.104 76.49 175.803 77.012 C 176.036 77.185 176.261 77.442 176.282 77.747 C 176.305 78.086 176.072 78.425 175.85 78.659 C 175.445 79.085 174.937 79.118 174.381 79.135 C 174.297 79.124 174.214 79.111 174.131 79.096 C 173.563 78.992 173.146 78.791 172.814 78.308 L 172.861 78.181 C 173.266 78.175 173.56 78.446 173.928 78.574 C 174.331 78.714 174.884 78.721 175.263 78.508 C 175.45 78.403 175.594 78.238 175.647 78.026 C 175.932 76.88 173.43 77.051 172.969 76.127 C 172.834 75.858 172.829 75.493 172.931 75.209 C 173.095 74.747 173.484 74.56 173.896 74.367 Z M 168.353 74.367 C 168.912 74.297 169.449 74.314 169.98 74.535 C 170.22 74.635 170.305 74.72 170.404 74.954 L 170.281 75.203 C 169.92 75.279 169.42 74.79 168.987 74.767 C 168.659 74.75 168.297 74.83 168.062 75.074 C 167.86 75.284 167.81 75.437 167.817 75.711 C 168.178 76.388 169.603 76.489 170.219 76.973 C 170.461 77.162 170.637 77.431 170.664 77.743 C 170.688 78.021 170.606 78.376 170.424 78.588 C 170.056 79.016 169.507 79.089 168.98 79.135 C 168.713 79.112 168.46 79.078 168.203 78.993 C 167.867 78.882 167.355 78.715 167.185 78.379 L 167.255 78.207 C 167.931 78.097 168.631 78.776 169.376 78.665 C 169.718 78.613 169.969 78.353 170.163 78.086 C 170.254 76.983 167.845 76.983 167.362 75.953 C 167.26 75.734 167.269 75.498 167.353 75.274 C 167.539 74.78 167.901 74.581 168.353 74.367 Z M 251.717 74.462 C 252.755 74.278 254.084 74.35 255.135 74.415 C 255.234 74.611 255.215 74.616 255.164 74.819 C 254.295 75.025 253.151 74.882 252.248 74.873 C 252.287 74.934 252.318 74.986 252.337 75.057 C 252.451 75.485 252.428 76.091 252.224 76.483 C 252.819 76.477 253.415 76.465 254.01 76.467 C 254.324 76.468 254.697 76.461 254.931 76.7 L 254.92 76.886 C 254.6 77.106 253.067 76.957 252.608 76.955 L 252.444 76.991 C 252.2 77.463 252.527 78.095 252.236 78.602 C 253.214 78.599 254.214 78.551 255.19 78.617 C 255.303 78.812 255.278 78.814 255.227 79.024 C 254.133 79.226 252.828 79.081 251.705 79.075 C 251.753 79.005 251.794 78.931 251.818 78.85 C 251.981 78.306 251.949 74.876 251.717 74.462 Z M 203.08 74.462 C 203.237 74.429 203.391 74.426 203.552 74.42 C 203.651 74.52 203.704 74.609 203.741 74.747 C 203.86 75.193 203.791 76.031 203.563 76.433 L 206.256 76.433 C 206.607 75.84 206.288 75.16 206.496 74.548 C 206.54 74.416 206.556 74.426 206.68 74.368 C 206.854 74.549 206.922 74.666 206.949 74.929 C 207.014 75.589 207.139 78.635 206.773 79.07 L 206.51 79.033 C 206.209 78.396 206.634 77.605 206.248 76.955 L 203.563 76.955 C 203.571 76.972 203.578 76.99 203.587 77.007 C 203.656 77.148 203.71 77.27 203.723 77.428 C 203.761 77.902 203.862 78.773 203.547 79.14 L 203.443 79.133 C 203.4 79.102 203.27 79.03 203.246 78.991 C 202.936 78.483 203.477 75.364 203.08 74.462 Z M 225.187 74.462 C 226.097 74.313 227.219 74.361 228.142 74.412 C 228.375 74.425 228.578 74.439 228.735 74.615 C 228.713 74.639 228.693 74.664 228.671 74.687 C 228.277 75.069 226.341 74.879 225.728 74.873 C 225.766 74.934 225.799 74.986 225.817 75.057 C 225.93 75.483 225.907 76.09 225.71 76.483 C 226.496 76.468 227.37 76.391 228.138 76.585 C 228.284 76.622 228.36 76.621 228.439 76.757 C 227.775 77.07 226.886 76.965 226.17 76.955 L 225.922 77.003 C 225.697 77.5 226.007 78.099 225.716 78.602 C 226.645 78.605 227.846 78.411 228.726 78.708 L 228.764 79.001 L 228.792 78.735 L 228.719 79.011 C 227.585 79.203 226.326 79.081 225.174 79.075 C 225.222 79.005 225.262 78.931 225.287 78.85 C 225.45 78.305 225.418 74.877 225.187 74.462 Z M 209.446 74.462 C 210.234 74.331 212.134 74.277 212.897 74.428 C 212.948 74.618 212.947 74.646 212.888 74.833 C 212.002 75.011 210.913 74.882 209.999 74.873 C 210.038 74.934 210.07 74.986 210.089 75.057 C 210.201 75.483 210.178 76.09 209.982 76.483 L 211.445 76.468 C 211.754 76.467 212.449 76.404 212.661 76.617 L 212.651 76.845 C 212.318 77.107 210.838 76.956 210.345 76.955 L 210.204 76.99 C 209.937 77.436 210.277 78.099 209.987 78.602 C 210.949 78.607 212.035 78.482 212.978 78.636 C 213.035 78.806 213.031 78.825 212.984 78.999 C 212.078 79.261 210.423 79.08 209.436 79.075 C 209.487 78.991 209.531 78.904 209.558 78.808 C 209.71 78.263 209.681 74.876 209.446 74.462 Z M 161.495 74.462 C 162.036 74.365 164.622 74.266 164.993 74.488 C 165.008 74.68 165.021 74.698 164.913 74.868 C 163.968 74.925 163.001 74.878 162.054 74.873 C 162.092 74.934 162.124 74.986 162.143 75.057 C 162.255 75.482 162.232 76.09 162.038 76.483 C 162.736 76.471 163.47 76.418 164.165 76.481 C 164.413 76.504 164.581 76.546 164.742 76.741 L 164.687 76.918 C 163.988 77.056 163.116 76.958 162.396 76.955 L 162.255 76.992 C 161.992 77.441 162.332 78.099 162.042 78.602 C 162.788 78.608 163.537 78.567 164.285 78.579 C 164.567 78.584 164.898 78.567 165.095 78.777 C 165.076 78.864 165.083 78.922 165.012 78.985 C 164.737 79.235 162.016 79.079 161.485 79.075 C 161.538 78.991 161.581 78.904 161.608 78.808 C 161.76 78.263 161.731 74.875 161.495 74.462 Z M 222.037 78.154 C 222.557 77.289 221.775 75.254 222.259 74.436 C 222.438 74.41 222.5 74.412 222.662 74.492 C 222.68 74.615 222.697 74.74 222.704 74.864 C 222.741 75.501 222.844 78.693 222.502 79.07 C 221.898 79.033 219.922 75.814 219.156 75.246 C 219.345 75.758 219.401 78.306 219.206 78.797 C 219.125 78.999 219.095 79.005 218.911 79.09 C 218.856 79.06 218.78 79.053 218.747 79 C 218.546 78.684 218.953 75.317 218.62 74.518 C 218.613 74.499 218.603 74.481 218.595 74.462 C 218.827 74.416 219.002 74.404 219.236 74.446 C 219.728 74.919 221.927 77.614 222.038 78.154 Z M 98.832 74.302 L 99.168 74.356 C 99.62 74.711 101.128 78.322 101.365 79.032 C 101.223 79.112 101.09 79.068 100.938 79.041 C 100.628 78.757 100.474 78.224 100.311 77.84 L 99.357 77.836 L 97.77 77.836 C 97.551 78.379 97.404 78.783 96.892 79.118 L 96.768 79.042 C 96.972 78.024 98.335 75.396 98.832 74.302 Z M 99.028 75.035 L 97.976 77.364 L 99.072 77.364 L 100.107 77.362 C 99.779 76.623 99.483 75.693 99.028 75.035 Z M 126.681 74.367 C 126.856 74.36 127.034 74.368 127.21 74.37 C 127.869 75.342 128.413 76.805 128.863 77.904 C 128.991 78.217 129.252 78.776 129.118 79.098 C 128.64 78.791 128.461 78.34 128.22 77.847 C 127.915 77.783 127.465 77.839 127.145 77.836 L 125.597 77.836 C 125.604 77.877 125.62 77.945 125.619 77.991 C 125.607 78.281 125.303 78.865 125.111 79.077 L 124.864 79.046 C 124.57 78.564 126.576 75.215 126.681 74.367 Z M 126.835 75.129 C 126.849 75.59 126.209 76.957 125.885 77.288 C 125.847 77.327 125.839 77.332 125.802 77.364 L 126.861 77.364 L 127.973 77.359 C 127.81 76.638 127.458 75.884 127.09 75.246 Z M 144.622 74.367 L 145.088 74.362 C 145.58 74.711 146.975 78.267 147.304 79.036 L 147.253 79.066 C 146.436 78.996 146.708 78.433 146.207 77.975 C 145.945 77.736 145.482 77.82 145.15 77.836 L 143.579 77.836 C 143.62 78.065 143.473 78.414 143.379 78.623 C 143.279 78.847 143.127 78.984 142.902 79.071 L 142.8 78.982 C 142.712 77.74 144.523 75.726 144.622 74.367 Z M 144.808 75.129 C 144.769 75.693 144.179 76.975 143.779 77.364 L 144.96 77.364 C 145.252 77.37 145.692 77.433 145.963 77.343 C 145.976 77.21 146.002 77.193 145.928 77.076 C 145.606 76.565 145.347 75.315 144.808 75.129 Z M 244.569 78.27 C 244.581 78.258 244.594 78.246 244.607 78.232 C 245.011 77.797 245.967 74.706 245.953 74.07 C 246.085 74.168 246.246 74.277 246.345 74.409 C 246.609 74.757 247.651 77.836 247.567 78.236 C 248.231 77.472 248.433 75.938 248.784 74.978 C 248.894 74.677 249.035 74.535 249.318 74.405 L 249.473 74.503 C 249.452 74.769 249.364 74.835 249.199 75.034 C 249.217 75.121 249.231 75.216 249.221 75.304 C 249.135 76.024 248.286 78.333 247.904 78.983 C 247.8 79.159 247.624 79.298 247.463 79.419 C 247.468 78.642 246.515 75.984 246.061 75.299 C 246.082 75.399 246.096 75.501 246.076 75.602 C 245.924 76.401 245.286 78.388 244.86 79.064 C 244.765 79.214 244.597 79.323 244.453 79.419 C 244.454 79.39 244.456 79.361 244.455 79.332 C 244.45 78.711 243.133 74.92 242.691 74.462 C 242.958 74.421 243.181 74.37 243.407 74.529 C 243.72 75.302 244.635 77.56 244.569 78.27 Z M 230.644 74.462 C 230.804 74.437 231.044 74.373 231.201 74.417 C 231.316 74.45 231.336 74.494 231.383 74.594 C 231.645 75.161 232.646 77.857 232.483 78.31 C 232.495 78.295 232.508 78.279 232.52 78.264 C 233.006 77.66 233.9 74.881 233.931 74.069 C 234.058 74.168 234.215 74.278 234.31 74.409 C 234.597 74.808 235.606 77.818 235.549 78.295 C 236.142 77.344 236.35 76.07 236.726 75.017 C 236.84 74.698 236.983 74.543 237.279 74.399 L 237.429 74.478 C 237.437 74.718 237.355 74.757 237.208 74.939 C 237.261 75.539 236.301 78.103 235.949 78.697 C 235.816 78.922 235.718 79.043 235.46 79.105 C 234.988 78.131 234.635 76.036 234.02 75.315 C 234.006 75.299 233.991 75.284 233.976 75.268 C 234.005 75.4 234.03 75.511 234.01 75.648 C 233.903 76.364 233.206 78.445 232.813 79.064 C 232.72 79.212 232.562 79.321 232.42 79.419 C 232.42 79.398 232.422 79.377 232.421 79.357 C 232.388 78.67 231.121 74.951 230.644 74.462 Z M 109.224 74.461 C 109.96 74.35 111.443 74.254 112.131 74.5 C 112.176 74.517 112.22 74.536 112.263 74.557 C 112.307 74.577 112.349 74.6 112.389 74.625 C 112.43 74.65 112.47 74.677 112.508 74.706 C 112.546 74.735 112.583 74.766 112.618 74.798 C 112.654 74.831 112.687 74.865 112.72 74.901 C 112.751 74.936 112.781 74.974 112.81 75.012 C 112.838 75.051 112.865 75.091 112.889 75.133 C 112.914 75.174 112.936 75.216 112.957 75.26 C 112.975 75.299 112.991 75.339 113.006 75.38 C 113.02 75.421 113.033 75.463 113.043 75.506 C 113.053 75.548 113.061 75.59 113.068 75.634 C 113.073 75.677 113.077 75.72 113.079 75.764 C 113.08 75.807 113.079 75.851 113.077 75.894 C 113.074 75.937 113.069 75.981 113.062 76.023 C 113.054 76.066 113.045 76.109 113.033 76.151 C 113.022 76.193 113.008 76.234 112.993 76.275 C 112.788 76.799 112.387 76.92 111.914 77.126 C 111.849 77.534 112.912 78.413 113.073 78.905 C 113.099 78.983 113.064 79.008 113.03 79.078 L 112.6 79.076 C 112.168 78.502 111.691 77.653 111.106 77.25 L 109.731 77.25 C 109.766 77.308 109.797 77.367 109.824 77.429 C 109.975 77.79 109.963 78.752 109.819 79.119 C 109.721 79.19 109.751 79.196 109.618 79.178 C 109.561 79.129 109.427 79.043 109.392 78.984 C 109.051 78.419 109.682 75.398 109.224 74.461 Z M 109.758 74.937 C 109.96 75.36 109.998 76.101 109.86 76.552 C 109.832 76.641 109.799 76.699 109.75 76.777 C 110.407 76.787 111.56 76.95 112.107 76.559 L 112.169 76.463 C 112.386 76.295 112.609 76.011 112.626 75.723 C 112.635 75.562 112.523 75.407 112.414 75.299 C 111.876 74.774 110.58 74.849 109.88 74.921 C 109.839 74.925 109.798 74.932 109.758 74.937 Z M 257.502 74.462 C 258.186 74.345 259.102 74.332 259.797 74.379 C 260.242 74.41 260.669 74.581 260.952 74.946 C 261.134 75.181 261.236 75.47 261.18 75.769 C 261.118 76.104 260.905 76.349 260.641 76.544 C 260.55 76.611 260.582 76.563 260.559 76.687 C 260.781 76.839 261.035 76.991 261.23 77.177 C 261.378 77.318 261.475 77.48 261.475 77.692 C 261.475 77.933 261.377 78.098 261.223 78.274 C 261.226 78.289 261.231 78.305 261.231 78.321 C 261.236 78.458 261.162 78.579 261.067 78.67 C 260.374 79.327 258.406 79.086 257.487 79.075 C 257.535 79.005 257.577 78.931 257.6 78.85 C 257.764 78.305 257.731 74.878 257.502 74.462 Z M 258.045 77.035 C 258.243 77.407 258.281 77.961 258.155 78.367 C 258.128 78.451 258.085 78.528 258.039 78.602 C 258.661 78.609 260.004 78.774 260.492 78.426 L 260.534 78.361 C 260.777 78.17 260.872 78.022 260.997 77.747 C 260.976 77.535 260.958 77.457 260.782 77.311 C 260.238 76.856 258.876 76.9 258.213 77 C 258.157 77.009 258.101 77.023 258.045 77.035 Z M 258.046 74.939 C 258.245 75.369 258.286 75.902 258.114 76.353 C 258.092 76.41 258.081 76.425 258.05 76.483 C 258.629 76.492 259.755 76.651 260.241 76.294 L 260.308 76.177 C 260.537 76.028 260.647 75.852 260.788 75.626 C 260.735 75.368 260.702 75.298 260.476 75.148 C 259.907 74.768 258.703 74.817 258.046 74.939 Z M 188.712 74.367 C 188.735 74.363 188.758 74.359 188.781 74.356 C 189.528 74.239 190.205 74.295 190.829 74.762 C 190.861 74.787 190.893 74.812 190.925 74.839 C 190.956 74.865 190.986 74.892 191.017 74.92 C 191.046 74.948 191.075 74.976 191.104 75.006 C 191.132 75.035 191.16 75.065 191.187 75.096 C 191.214 75.126 191.241 75.158 191.266 75.19 C 191.291 75.222 191.316 75.255 191.34 75.288 C 191.364 75.321 191.387 75.355 191.408 75.39 C 191.43 75.424 191.452 75.459 191.472 75.495 C 191.493 75.53 191.512 75.566 191.53 75.603 C 191.549 75.639 191.567 75.676 191.583 75.713 C 191.6 75.751 191.616 75.789 191.631 75.827 C 191.645 75.865 191.659 75.904 191.672 75.942 C 191.685 75.981 191.697 76.021 191.708 76.06 C 191.719 76.099 191.729 76.139 191.738 76.179 C 191.747 76.219 191.755 76.259 191.761 76.3 C 191.768 76.34 191.774 76.381 191.779 76.421 C 191.861 77.054 191.714 77.741 191.318 78.248 C 190.941 78.73 190.423 79.008 189.825 79.087 C 189.808 79.097 189.792 79.108 189.775 79.117 C 189.499 79.26 188.891 79.181 188.605 79.1 C 188.068 78.949 187.626 78.424 187.378 77.946 C 187.058 77.331 186.972 76.605 187.187 75.941 C 187.456 75.115 187.963 74.737 188.712 74.367 Z M 188.835 74.843 C 188.286 75.154 187.892 75.443 187.714 76.077 C 187.703 76.115 187.694 76.153 187.685 76.191 C 187.676 76.229 187.668 76.268 187.661 76.306 C 187.654 76.345 187.649 76.384 187.644 76.423 C 187.639 76.462 187.635 76.501 187.632 76.54 C 187.629 76.579 187.627 76.618 187.626 76.658 C 187.625 76.697 187.625 76.736 187.626 76.775 C 187.627 76.815 187.63 76.854 187.633 76.893 C 187.635 76.932 187.639 76.971 187.644 77.01 C 187.649 77.049 187.655 77.088 187.662 77.127 C 187.669 77.165 187.677 77.204 187.687 77.242 C 187.696 77.28 187.705 77.318 187.716 77.356 C 187.727 77.394 187.739 77.431 187.751 77.468 C 187.764 77.505 187.778 77.542 187.793 77.579 C 187.807 77.615 187.823 77.651 187.839 77.687 C 187.856 77.722 187.873 77.757 187.891 77.792 C 187.909 77.827 187.928 77.861 187.948 77.895 C 188.141 78.221 188.431 78.511 188.808 78.603 C 189.055 78.663 189.494 78.724 189.732 78.611 C 190.25 78.512 190.642 78.299 190.948 77.853 C 191.249 77.415 191.324 76.845 191.212 76.331 C 191.205 76.298 191.197 76.265 191.189 76.233 C 191.18 76.2 191.171 76.168 191.161 76.136 C 191.151 76.104 191.14 76.072 191.127 76.04 C 191.116 76.009 191.104 75.977 191.091 75.947 C 191.077 75.916 191.063 75.885 191.048 75.855 C 191.033 75.825 191.018 75.795 191.001 75.766 C 190.985 75.736 190.968 75.707 190.95 75.679 C 190.933 75.65 190.914 75.622 190.894 75.595 C 190.875 75.567 190.856 75.54 190.835 75.514 C 190.814 75.487 190.793 75.461 190.771 75.435 C 190.75 75.41 190.727 75.385 190.704 75.361 C 190.681 75.336 190.657 75.313 190.633 75.289 C 190.609 75.266 190.584 75.244 190.558 75.222 C 190.533 75.2 190.507 75.179 190.48 75.158 C 190.454 75.138 190.427 75.118 190.4 75.099 C 190.372 75.079 190.344 75.061 190.315 75.043 C 189.852 74.756 189.357 74.769 188.835 74.843 Z" fill="var(--token-5197bf6c-818c-4eab-85f8-6f703842b3bf, rgb(10, 11, 10))"></path><path d="M 217.551 42.067 C 217.824 42.046 218.109 42.021 218.366 42.133 C 218.621 42.244 218.802 42.494 218.877 42.758 C 219.137 43.678 219.035 56.837 218.958 58.569 C 218.943 58.927 218.95 59.412 218.771 59.727 C 218.633 59.97 218.412 60.017 218.162 60.075 C 218.044 60.113 217.957 60.117 217.833 60.105 C 217.551 60.078 217.332 59.993 217.158 59.753 C 216.945 59.456 216.948 59.051 216.929 58.7 C 216.75 55.467 216.905 52.128 216.907 48.884 C 216.909 47.178 216.742 44.483 216.954 42.913 C 217.008 42.5 217.243 42.3 217.551 42.067 Z M 206.335 42.067 C 206.596 42.033 206.944 41.965 207.186 42.088 C 207.445 42.22 207.579 42.496 207.665 42.762 C 207.897 43.477 207.893 45.127 207.546 45.805 C 208.479 44.969 208.391 43.431 209.907 42.503 C 210.764 41.978 211.897 41.974 212.844 42.205 C 213.514 42.368 214.402 42.711 214.754 43.358 C 214.87 43.572 214.897 43.795 214.813 44.025 C 214.663 44.431 214.312 44.599 213.951 44.776 C 212.828 44.359 211.58 43.967 210.408 44.447 C 209.019 45.017 208.501 46.789 208.284 48.154 C 208.203 48.662 208.183 49.258 207.971 49.729 C 207.963 49.748 207.953 49.766 207.945 49.785 C 207.968 49.837 207.994 49.895 208.007 49.951 C 208.162 50.61 207.999 51.701 207.998 52.399 C 207.995 54.574 208.154 56.87 207.97 59.033 C 207.948 59.282 207.887 59.583 207.727 59.78 C 207.567 59.978 207.305 60.096 207.055 60.117 C 206.771 60.141 206.456 60.059 206.239 59.869 C 205.931 59.602 205.926 58.997 205.917 58.617 C 205.838 55.532 205.945 52.428 205.939 49.341 C 205.934 47.32 205.739 45.153 205.941 43.148 C 205.985 42.714 206.031 42.393 206.335 42.067 Z M 270.313 42.067 C 270.371 42.062 270.43 42.059 270.488 42.056 C 272.519 41.957 274.469 42.423 276.004 43.823 C 277.513 45.199 278.406 47.479 278.481 49.511 C 278.499 49.99 278.457 50.636 278.088 50.992 C 277.848 51.223 277.424 51.272 277.106 51.305 C 275.763 51.442 274.326 51.345 272.974 51.344 L 265.225 51.335 C 265.93 52.411 265.153 54.511 267.162 56.745 C 268.149 57.843 269.344 58.343 270.811 58.409 C 272.203 58.471 273.726 58.016 274.75 57.036 C 275.059 56.74 275.577 56.168 275.589 55.726 C 275.975 55.405 276.037 54.888 276.298 54.48 C 276.503 54.159 276.883 53.948 277.252 53.881 C 277.368 53.86 277.548 53.87 277.649 53.94 C 277.886 54.106 277.972 54.309 278.018 54.589 C 278.175 55.538 277.62 56.562 277.078 57.296 C 276.051 58.686 274.403 59.739 272.69 59.99 C 270.54 60.306 268.163 60.037 266.385 58.693 C 264.562 57.315 263.676 55.197 263.373 52.977 C 262.999 50.246 263.346 47.049 265.06 44.8 C 266.396 43.045 268.195 42.341 270.313 42.067 Z M 270.134 43.782 C 268.5 44.215 267.212 44.986 266.334 46.494 C 265.774 47.457 265.641 49.039 265.326 49.498 C 265.315 49.513 265.304 49.53 265.293 49.546 C 265.259 49.596 265.265 49.586 265.222 49.639 L 276.219 49.639 C 276.469 49.091 276.017 47.541 275.804 46.976 C 275.33 45.724 274.402 44.705 273.178 44.168 C 272.207 43.742 271.175 43.675 270.134 43.782 Z M 237.853 35.492 C 238.075 35.473 238.279 35.47 238.496 35.519 C 238.726 35.572 238.901 35.684 239.017 35.893 C 239.181 36.19 239.185 36.557 239.2 36.887 C 239.302 39.24 239.363 58.825 239.05 59.645 C 238.982 59.824 238.845 59.96 238.672 60.038 C 238.411 60.155 238.08 60.133 237.82 60.024 C 236.738 59.569 237.41 58.026 237.064 57.166 C 237.055 57.144 237.045 57.122 237.036 57.1 C 237.028 57.168 237.024 57.219 236.988 57.279 C 236.17 58.635 234.218 59.565 232.726 59.898 C 229.837 60.541 228.239 59.926 225.845 58.394 C 225.812 58.226 224.585 56.724 224.369 56.346 C 223.9 55.523 223.59 54.61 223.409 53.683 C 222.86 50.877 223.051 47.573 224.683 45.141 C 224.746 45.046 224.812 44.953 224.879 44.861 C 224.947 44.769 225.017 44.679 225.089 44.59 C 225.161 44.502 225.235 44.416 225.311 44.331 C 225.388 44.246 225.466 44.164 225.546 44.083 C 225.627 44.002 225.709 43.924 225.794 43.847 C 225.878 43.771 225.965 43.696 226.052 43.624 C 226.141 43.552 226.231 43.482 226.323 43.414 C 226.414 43.347 226.507 43.281 226.602 43.218 C 226.697 43.155 226.793 43.095 226.891 43.037 C 226.989 42.979 227.088 42.923 227.189 42.87 C 227.289 42.817 227.391 42.766 227.494 42.718 C 227.597 42.67 227.702 42.625 227.807 42.582 C 227.913 42.539 228.019 42.499 228.127 42.462 C 228.234 42.424 228.342 42.39 228.451 42.358 C 228.56 42.326 228.67 42.297 228.781 42.27 C 228.891 42.244 229.002 42.22 229.114 42.2 C 231.275 41.791 233.654 42.151 235.484 43.414 C 235.992 43.765 236.929 44.587 237.048 45.224 C 237.582 44.06 236.797 38.029 237.254 36.214 C 237.35 35.835 237.532 35.676 237.853 35.492 Z M 230.116 43.782 C 228.429 44.232 227.253 44.929 226.345 46.496 C 225.133 48.589 224.965 51.493 225.595 53.798 C 226.035 55.408 226.97 56.868 228.439 57.711 C 229.326 58.22 230.87 58.685 231.894 58.366 C 231.927 58.356 231.966 58.335 231.995 58.321 C 233.32 58.251 234.618 57.544 235.496 56.567 C 236.965 54.933 237.284 52.502 237.158 50.379 C 237.044 48.434 236.4 46.506 234.909 45.183 C 233.595 44.018 231.936 43.644 230.234 43.77 C 230.194 43.773 230.155 43.778 230.116 43.782 Z M 121.598 39.97 C 123.499 39.728 125.472 39.946 127.228 40.735 C 128.998 41.529 130.51 42.928 131.19 44.78 C 131.603 45.901 131.805 47.461 131.045 48.486 C 129.944 49.97 120.894 52.529 120.428 53.558 L 120.527 53.779 C 120.891 54.107 121.484 54.288 121.942 54.448 C 124.229 55.244 125.201 53.87 127.001 53.017 C 127.579 52.743 128.271 52.659 128.876 52.891 C 129.549 53.149 130.197 53.939 130.479 54.593 C 130.584 54.839 130.625 55.053 130.528 55.311 C 130.568 55.39 130.605 55.463 130.623 55.55 C 130.713 55.983 130.55 56.509 130.318 56.871 C 129.455 58.214 127.161 59.297 125.669 59.632 C 122.959 60.241 120.04 59.84 117.684 58.33 C 117.617 58.287 117.551 58.243 117.485 58.198 C 117.419 58.154 117.354 58.108 117.289 58.062 C 117.225 58.015 117.161 57.968 117.098 57.92 C 117.034 57.872 116.971 57.824 116.908 57.774 C 116.846 57.725 116.785 57.675 116.723 57.624 C 116.662 57.573 116.602 57.521 116.542 57.468 C 116.482 57.416 116.423 57.363 116.364 57.309 C 116.306 57.255 116.248 57.2 116.191 57.144 C 116.134 57.089 116.078 57.033 116.022 56.976 C 115.966 56.919 115.911 56.862 115.856 56.804 C 115.802 56.745 115.748 56.686 115.695 56.627 C 115.643 56.567 115.591 56.507 115.539 56.446 C 115.488 56.386 115.437 56.324 115.387 56.262 C 115.337 56.2 115.288 56.137 115.239 56.074 C 115.191 56.01 115.144 55.947 115.097 55.882 C 115.05 55.818 115.004 55.753 114.959 55.687 C 114.914 55.621 114.87 55.555 114.826 55.488 C 114.783 55.422 114.74 55.354 114.697 55.286 C 114.656 55.219 114.615 55.15 114.574 55.082 C 114.534 55.013 114.495 54.943 114.457 54.873 C 114.418 54.804 114.381 54.733 114.344 54.663 C 114.307 54.592 114.271 54.521 114.236 54.449 C 114.2 54.377 114.166 54.305 114.133 54.233 C 114.1 54.16 114.067 54.087 114.036 54.014 C 114.005 53.941 113.975 53.867 113.945 53.793 C 113.915 53.719 113.887 53.645 113.859 53.57 C 113.831 53.495 113.804 53.42 113.778 53.344 C 113.752 53.269 113.726 53.193 113.702 53.117 C 113.678 53.041 113.655 52.965 113.633 52.888 C 113.611 52.811 113.59 52.735 113.57 52.657 C 113.549 52.58 113.529 52.503 113.511 52.425 C 113.493 52.347 113.475 52.27 113.459 52.191 C 112.883 49.509 113.332 46.628 114.817 44.316 C 116.415 41.828 118.781 40.573 121.598 39.97 Z M 122.266 45.211 C 120.957 45.66 119.675 46.406 119.03 47.696 C 118.854 48.049 118.74 48.406 118.872 48.793 C 119.061 48.973 119.14 49.04 119.418 49.04 C 119.874 49.041 120.741 48.533 121.127 48.275 C 121.76 48.089 125.157 46.779 125.415 46.325 C 125.521 46.138 125.49 46.074 125.451 45.874 C 125.082 45.403 124.467 45.271 123.903 45.2 C 123.631 45.168 123.358 45.153 123.085 45.155 C 122.81 45.157 122.537 45.175 122.266 45.211 Z M 250.482 42.067 C 252.193 41.957 253.918 42.27 255.386 43.191 C 256.005 43.581 257.165 44.478 257.337 45.218 C 257.717 44.277 257.104 43.093 257.808 42.263 C 258.119 42.104 258.383 41.978 258.743 42.07 C 258.904 42.111 259.182 42.251 259.267 42.402 C 259.471 42.758 259.501 43.236 259.527 43.637 C 259.671 45.91 259.545 48.261 259.541 50.543 C 259.537 53.47 259.628 56.412 259.491 59.335 C 259.456 60.091 259.389 60.829 259.214 61.566 C 258.816 63.247 257.941 64.611 256.451 65.525 C 254.282 66.854 251.059 67.127 248.624 66.505 C 248.526 66.481 248.43 66.455 248.334 66.426 C 248.238 66.397 248.143 66.366 248.049 66.333 C 247.955 66.299 247.861 66.263 247.769 66.225 C 247.676 66.187 247.584 66.147 247.494 66.104 C 247.404 66.061 247.314 66.016 247.226 65.969 C 247.137 65.922 247.05 65.873 246.964 65.821 C 246.878 65.77 246.794 65.716 246.71 65.661 C 246.627 65.605 246.545 65.547 246.465 65.488 C 246.384 65.428 246.305 65.366 246.228 65.303 C 246.15 65.239 246.074 65.173 246 65.106 C 245.926 65.039 245.853 64.97 245.783 64.898 C 245.712 64.827 245.643 64.755 245.575 64.68 C 245.508 64.606 245.443 64.53 245.379 64.452 C 245.315 64.375 245.254 64.295 245.194 64.215 C 245.135 64.134 245.077 64.052 245.022 63.968 C 244.965 63.885 244.912 63.8 244.861 63.713 C 244.532 63.15 244.267 62.415 244.446 61.757 C 244.524 61.471 244.666 61.353 244.911 61.214 C 245.225 61.184 245.61 61.251 245.857 61.47 C 246.051 61.641 246.227 61.963 246.249 62.219 C 246.25 62.235 246.25 62.251 246.251 62.266 C 247.196 63.079 247.124 63.977 248.662 64.644 C 250.326 65.365 252.733 65.232 254.399 64.557 C 255.509 64.108 256.454 63.355 256.919 62.224 C 257.347 61.185 257.747 58.101 257.327 57.08 C 257.32 57.285 257.189 57.462 257.071 57.623 C 256.111 58.929 254.336 59.759 252.773 60 C 250.699 60.318 248.464 60.015 246.746 58.733 C 244.901 57.356 243.934 55.086 243.62 52.85 C 243.241 50.151 243.708 47.113 245.376 44.901 C 246.711 43.129 248.328 42.367 250.482 42.067 Z M 250.614 43.782 C 248.871 44.239 247.626 44.86 246.681 46.493 C 245.453 48.616 245.339 51.616 245.966 53.947 C 246.381 55.485 247.238 56.925 248.651 57.728 C 249.614 58.275 251.16 58.621 252.274 58.369 C 253.826 58.15 255.1 57.516 256.058 56.236 C 257.483 54.334 257.715 51.708 257.372 49.418 C 257.108 47.666 256.307 45.887 254.865 44.809 C 253.608 43.868 252.136 43.657 250.614 43.782 Z M 156.442 24.63 C 156.468 24.626 156.494 24.621 156.52 24.617 C 156.745 24.582 156.92 24.592 157.133 24.681 C 158.52 25.266 159.874 26.007 161.23 26.67 L 169.062 30.509 C 170.254 31.093 174.031 32.762 174.813 33.385 C 174.982 33.52 175.236 33.885 175.235 34.103 C 175.235 34.531 174.961 35.102 174.785 35.495 C 174.191 36.819 169.686 45.963 169.125 46.509 C 169.577 46.912 174.686 57.227 175.142 58.467 C 175.276 58.828 175.251 59.174 175.089 59.519 C 174.966 59.779 174.407 60.054 174.148 60.198 C 171.708 61.567 169.101 62.734 166.595 63.981 C 164.851 64.848 163.022 65.947 161.2 66.605 C 160.856 66.993 158.034 68.268 157.384 68.554 C 157.062 68.695 156.781 68.77 156.44 68.636 C 156.262 68.414 156.13 68.139 156.261 67.852 C 156.603 67.104 163.916 60.186 165.144 58.983 C 165.823 58.317 166.743 57.591 167.264 56.808 C 167.4 56.602 167.434 56.526 167.363 56.288 C 167.161 55.599 166.523 54.867 166.12 54.264 C 165.31 53.049 161.58 47.723 161.456 46.845 C 161.401 46.46 161.503 46.063 161.657 45.712 C 162.412 44.001 167.337 37.895 167.417 36.896 C 167.407 36.723 167.348 36.64 167.237 36.508 C 166.462 35.575 165.461 34.726 164.594 33.874 L 159.048 28.435 C 158.404 27.807 156.389 26.127 156.139 25.341 C 156.132 25.049 156.287 24.861 156.442 24.63 Z M 136.713 33.491 C 136.933 33.461 137.154 33.447 137.375 33.452 C 138.064 33.46 138.816 33.677 139.301 34.189 C 140.531 35.488 140.06 39.056 140.034 40.782 C 140.029 41.143 140.008 41.545 140.276 41.823 C 140.538 41.812 141.762 40.957 142.159 40.775 C 142.217 40.749 142.275 40.723 142.333 40.698 C 142.392 40.673 142.451 40.649 142.51 40.625 C 142.569 40.602 142.628 40.579 142.688 40.557 C 142.748 40.535 142.808 40.514 142.868 40.493 C 142.928 40.473 142.988 40.453 143.05 40.434 C 143.11 40.415 143.171 40.397 143.232 40.379 C 143.293 40.362 143.354 40.345 143.416 40.329 C 143.477 40.313 143.539 40.298 143.601 40.283 C 143.663 40.269 143.725 40.255 143.787 40.242 C 143.85 40.229 143.912 40.217 143.975 40.205 C 144.037 40.194 144.1 40.184 144.162 40.174 C 144.225 40.164 144.289 40.155 144.352 40.146 C 144.414 40.138 144.477 40.131 144.54 40.124 C 144.604 40.117 144.667 40.111 144.731 40.106 C 144.794 40.101 144.857 40.097 144.921 40.093 C 144.984 40.09 145.048 40.087 145.112 40.085 C 145.175 40.083 145.238 40.082 145.302 40.081 C 145.365 40.081 145.429 40.081 145.493 40.082 C 145.557 40.084 145.62 40.086 145.683 40.088 C 145.747 40.091 145.81 40.095 145.874 40.099 C 145.937 40.103 146 40.108 146.064 40.114 C 146.127 40.12 146.19 40.127 146.254 40.134 C 146.317 40.142 146.38 40.15 146.442 40.159 C 146.505 40.168 146.568 40.178 146.631 40.188 C 146.693 40.199 146.756 40.21 146.818 40.223 C 146.881 40.235 146.943 40.248 147.005 40.261 C 147.067 40.275 147.129 40.289 147.191 40.305 C 147.253 40.32 147.314 40.336 147.376 40.352 C 147.437 40.369 147.498 40.387 147.558 40.405 C 147.62 40.423 147.681 40.442 147.741 40.462 C 147.801 40.482 147.861 40.502 147.921 40.524 C 147.981 40.545 148.041 40.567 148.1 40.59 C 148.175 40.619 148.25 40.649 148.324 40.68 C 148.398 40.711 148.472 40.742 148.545 40.775 C 148.618 40.808 148.691 40.841 148.763 40.876 C 148.836 40.91 148.908 40.946 148.979 40.982 C 149.051 41.019 149.122 41.056 149.193 41.094 C 149.263 41.132 149.333 41.171 149.403 41.21 C 149.473 41.25 149.542 41.291 149.611 41.332 C 149.68 41.374 149.748 41.416 149.816 41.459 C 149.883 41.502 149.951 41.546 150.017 41.591 C 150.084 41.636 150.15 41.682 150.216 41.728 C 150.281 41.775 150.346 41.822 150.411 41.87 C 150.475 41.918 150.538 41.967 150.601 42.016 C 150.664 42.066 150.727 42.116 150.79 42.167 C 150.852 42.219 150.913 42.271 150.974 42.323 C 151.034 42.376 151.094 42.429 151.154 42.483 C 151.213 42.538 151.272 42.592 151.33 42.648 C 151.388 42.704 151.445 42.76 151.501 42.817 C 151.558 42.874 151.615 42.932 151.67 42.99 C 151.725 43.048 151.779 43.107 151.833 43.167 C 151.887 43.227 151.941 43.287 151.993 43.348 C 152.046 43.409 152.097 43.471 152.148 43.533 C 152.199 43.595 152.249 43.658 152.298 43.722 C 152.348 43.785 152.396 43.85 152.444 43.914 C 152.492 43.979 152.538 44.044 152.585 44.11 C 152.631 44.176 152.676 44.243 152.721 44.309 C 152.766 44.376 152.81 44.444 152.853 44.512 C 152.896 44.58 152.938 44.649 152.979 44.718 C 153.02 44.787 153.06 44.857 153.1 44.927 C 153.139 44.997 153.178 45.067 153.216 45.138 C 153.254 45.209 153.291 45.281 153.328 45.353 C 153.363 45.425 153.399 45.497 153.433 45.57 C 153.467 45.643 153.5 45.716 153.533 45.79 C 154.557 48.071 154.718 50.942 153.822 53.294 C 153.201 54.926 151.775 57.273 150.126 58.022 C 150.119 58.036 150.112 58.05 150.105 58.063 C 149.695 58.713 147.885 59.298 147.142 59.485 C 144.122 60.244 142.381 59.256 139.882 57.743 C 139.864 57.87 139.825 57.986 139.777 58.105 C 139.536 58.695 139.02 59.226 138.431 59.463 C 137.736 59.742 136.983 59.784 136.288 59.483 C 135.716 59.235 135.031 58.62 134.825 58.016 C 134.44 56.88 134.651 48.324 134.651 46.55 C 134.652 43.124 134.536 39.65 134.673 36.229 C 134.687 35.86 134.692 35.425 134.851 35.087 C 135.252 34.234 135.852 33.813 136.713 33.491 Z M 144.155 45.402 C 142.836 45.627 141.667 46.148 140.872 47.28 C 140.187 48.255 139.937 49.517 140.15 50.687 C 140.163 50.76 140.178 50.833 140.196 50.905 C 140.212 50.978 140.23 51.05 140.25 51.121 C 140.271 51.193 140.293 51.264 140.317 51.334 C 140.341 51.405 140.366 51.475 140.394 51.544 C 140.421 51.613 140.45 51.681 140.481 51.749 C 140.511 51.817 140.543 51.884 140.576 51.95 C 140.611 52.016 140.646 52.082 140.683 52.146 C 140.72 52.211 140.759 52.274 140.799 52.337 C 140.839 52.399 140.88 52.461 140.923 52.521 C 140.966 52.582 141.011 52.641 141.057 52.699 C 141.103 52.758 141.15 52.815 141.199 52.871 C 141.248 52.927 141.298 52.981 141.35 53.035 C 141.401 53.088 141.454 53.14 141.508 53.191 C 141.562 53.242 141.617 53.292 141.674 53.34 C 141.73 53.388 141.788 53.435 141.846 53.48 C 141.905 53.525 141.965 53.569 142.025 53.612 C 142.786 54.137 143.836 54.471 144.764 54.396 C 146.104 54.197 147.221 53.741 148.063 52.614 C 148.107 52.554 148.151 52.493 148.192 52.431 C 148.234 52.369 148.274 52.306 148.313 52.242 C 148.351 52.178 148.388 52.113 148.423 52.047 C 148.458 51.981 148.492 51.915 148.524 51.847 C 148.556 51.78 148.587 51.711 148.615 51.642 C 148.644 51.573 148.671 51.503 148.696 51.433 C 148.722 51.362 148.745 51.292 148.767 51.22 C 148.789 51.148 148.809 51.076 148.827 51.004 C 148.846 50.931 148.862 50.858 148.877 50.785 C 148.891 50.711 148.904 50.638 148.915 50.564 C 148.926 50.49 148.935 50.415 148.943 50.341 C 148.95 50.266 148.955 50.192 148.959 50.117 C 148.963 50.042 148.965 49.967 148.965 49.892 C 148.965 49.818 148.963 49.743 148.959 49.668 C 148.956 49.593 148.95 49.519 148.943 49.444 C 148.935 49.37 148.926 49.295 148.915 49.221 C 148.905 49.148 148.893 49.075 148.879 49.003 C 148.865 48.931 148.849 48.859 148.832 48.787 C 148.814 48.715 148.795 48.644 148.774 48.574 C 148.753 48.503 148.731 48.433 148.706 48.363 C 148.681 48.294 148.655 48.225 148.627 48.157 C 148.6 48.088 148.57 48.021 148.539 47.954 C 148.508 47.887 148.476 47.821 148.442 47.756 C 148.407 47.691 148.371 47.627 148.334 47.563 C 148.296 47.5 148.257 47.438 148.216 47.376 C 148.176 47.315 148.134 47.254 148.09 47.195 C 148.046 47.136 148.002 47.077 147.955 47.02 C 147.909 46.963 147.861 46.907 147.811 46.853 C 147.762 46.798 147.712 46.744 147.66 46.692 C 147.608 46.64 147.555 46.589 147.502 46.539 C 147.447 46.49 147.392 46.442 147.335 46.395 C 147.278 46.348 147.22 46.303 147.161 46.259 C 146.303 45.624 145.214 45.331 144.155 45.402 Z M 185.23 35.873 C 186.609 35.798 188.015 35.854 189.396 35.853 C 191.772 35.853 194.552 35.519 196.8 36.42 C 198.199 36.98 199.357 38.006 199.951 39.416 C 200.542 40.819 200.618 42.609 200.046 44.023 C 199.468 45.454 198.341 46.549 196.938 47.149 C 198.21 47.471 199.489 48.185 200.32 49.212 C 201.316 50.443 201.668 52.037 201.51 53.595 C 201.421 54.468 201.144 56.001 200.454 56.564 C 200.442 56.65 200.435 56.71 200.396 56.788 C 199.862 57.868 198.625 58.638 197.543 59.076 C 196.79 59.38 196.001 59.554 195.196 59.636 C 193.858 59.773 185.341 59.868 184.497 59.508 C 184.366 59.279 184.296 59.061 184.247 58.802 C 184.009 57.569 184.121 56.21 184.12 54.955 L 184.121 48.73 L 184.134 40.405 C 184.138 39.369 184.053 38.301 184.11 37.271 C 184.128 36.933 184.195 36.551 184.399 36.274 C 184.616 35.979 184.897 35.932 185.231 35.873 Z M 186.276 48.45 C 186.448 48.833 186.537 57.168 186.35 57.68 C 186.332 57.729 186.294 57.785 186.268 57.828 L 191.361 57.834 C 192.619 57.835 193.914 57.901 195.159 57.691 C 195.976 57.553 196.933 57.297 197.539 56.701 C 197.619 56.623 197.687 56.558 197.727 56.454 C 198.383 56.07 198.819 55.175 199.007 54.46 C 199.333 53.212 199.21 51.782 198.546 50.663 C 197.896 49.569 196.805 48.879 195.589 48.58 C 194.463 48.304 187.456 48.262 186.276 48.45 Z M 186.268 37.97 C 186.484 38.424 186.53 45.657 186.351 46.13 C 186.324 46.203 186.293 46.266 186.252 46.331 C 188.486 46.336 192.503 46.549 194.528 46.221 C 195.248 46.105 196.229 45.855 196.732 45.275 C 196.791 45.206 196.81 45.152 196.843 45.068 C 197.445 44.719 197.777 43.993 197.951 43.342 C 198.244 42.252 198.254 40.93 197.664 39.934 C 197.096 38.977 196.062 38.432 195.014 38.174 C 193.456 37.79 187.97 37.791 186.268 37.969 Z M 82.15 33.462 C 82.857 33.426 83.496 33.477 84.127 33.827 C 84.534 34.053 84.93 34.397 85.154 34.811 C 85.9 36.194 86.22 38.099 86.643 39.615 L 89.066 48.308 C 90.221 45.314 91.216 42.231 92.277 39.201 C 92.72 37.936 93.112 36.604 93.658 35.38 C 94.024 34.56 94.536 33.946 95.396 33.629 C 96.207 33.329 97.168 33.396 97.948 33.763 C 98.447 33.999 98.791 34.34 99.065 34.817 C 99.85 36.182 100.29 37.944 100.812 39.433 L 103.949 48.348 C 104.463 45.997 105.242 43.646 105.89 41.325 C 106.431 39.384 106.87 37.304 107.563 35.416 C 107.702 35.037 107.886 34.709 108.156 34.409 C 108.704 33.8 109.472 33.479 110.282 33.443 C 111.074 33.408 111.841 33.666 112.423 34.215 C 112.936 34.699 113.427 35.568 113.441 36.292 C 113.459 37.224 111.03 45.316 110.563 45.786 C 110.707 46.223 107.315 56.863 106.782 58.083 C 106.483 58.767 106.004 59.236 105.304 59.502 C 104.582 59.777 103.639 59.771 102.937 59.441 C 102.368 59.174 101.917 58.694 101.615 58.148 C 100.986 57.012 100.538 55.237 100.094 53.978 C 98.897 50.585 97.729 47.181 96.491 43.803 C 95.429 46.993 94.252 50.152 93.135 53.323 C 92.622 54.78 92.106 56.927 91.329 58.203 C 90.878 58.942 90.198 59.475 89.353 59.676 C 88.657 59.841 87.965 59.75 87.357 59.362 C 86.899 59.069 86.487 58.633 86.255 58.138 C 85.739 57.035 85.434 55.799 85.071 54.638 L 83.273 48.9 L 80.949 41.47 C 80.502 40.04 79.973 38.592 79.653 37.13 C 79.473 36.308 79.646 35.481 80.108 34.777 C 80.595 34.035 81.299 33.633 82.15 33.462 Z M 35.663 2.501 C 35.922 2.502 36.181 2.507 36.44 2.516 L 36.44 2.518 L 36.651 2.596 L 36.459 2.709 C 36.561 5.635 36.483 8.587 36.483 11.515 C 36.603 11.451 36.731 11.374 36.86 11.329 C 37.266 11.185 37.495 11.318 37.864 11.492 C 44.252 14.505 50.567 17.708 56.91 20.819 L 62.319 23.472 C 63.327 23.966 64.497 24.423 65.405 25.082 C 65.645 25.256 65.868 25.641 65.954 25.926 C 66.098 26.4 65.849 27.074 65.678 27.512 C 64.894 29.516 63.709 31.506 62.737 33.434 L 56.623 45.565 C 58.675 49.969 60.958 54.294 63.12 58.646 C 63.991 60.4 65.081 62.229 65.758 64.06 C 65.941 64.555 66.145 65.144 65.899 65.649 C 65.648 66.167 65.129 66.545 64.646 66.825 C 62.695 67.954 60.534 68.875 58.51 69.876 L 47.664 75.286 L 41.254 78.486 C 40.078 79.079 38.843 79.834 37.599 80.25 C 37.203 80.382 36.938 80.285 36.577 80.103 L 36.531 80.079 C 36.307 81.219 36.479 85.204 36.48 86.586 L 36.483 102.796 C 36.207 102.807 35.966 102.835 35.714 102.704 C 35.481 101.821 35.66 95.479 35.663 94.027 C 35.562 94.083 35.46 94.136 35.356 94.185 C 35.033 94.337 34.9 94.354 34.561 94.225 C 33.222 93.719 31.9 92.939 30.615 92.297 L 22.916 88.454 L 12.77 83.409 C 11.033 82.545 9.21 81.744 7.532 80.777 C 7.132 80.546 6.416 80.099 6.247 79.639 C 6.103 79.248 6.152 78.677 6.284 78.291 C 6.573 77.445 7.067 76.625 7.473 75.831 C 8.017 74.769 8.533 73.695 9.063 72.626 L 15.552 59.549 C 14.848 57.968 13.989 56.424 13.21 54.877 L 8.532 45.606 C 7.938 44.43 6.456 41.901 6.208 40.762 C 6.14 40.452 6.194 40.102 6.295 39.804 C 6.44 39.382 6.719 39.061 7.091 38.825 C 8.109 38.182 9.315 37.695 10.399 37.163 L 16.963 33.96 L 34.269 25.455 C 34.725 25.235 35.035 25.169 35.521 25.35 L 35.606 25.382 C 35.808 24.967 35.663 4.854 35.663 2.501 Z M 36.483 13.111 L 36.483 78.581 C 41.049 74.129 45.661 69.69 50.131 65.143 C 50.921 64.383 53.502 62.19 53.785 61.346 C 53.816 59.849 45.86 49.399 44.684 46.775 C 44.473 46.303 44.327 45.805 44.421 45.286 C 44.694 43.776 46.097 42.181 46.956 40.923 C 47.855 39.606 53.727 31.367 53.808 30.546 C 53.844 30.187 53.63 30.01 53.395 29.767 C 51.747 28.058 50.004 26.421 48.312 24.753 L 36.483 13.111 Z M 35.612 27.137 L 24.193 38.393 C 22.398 40.157 20.444 41.882 18.767 43.753 C 18.592 43.949 18.375 44.133 18.374 44.415 C 18.37 45.657 26.182 55.802 27.371 58.154 C 27.61 58.627 27.819 59.188 27.777 59.728 C 27.667 61.128 25.893 63.328 25.098 64.536 L 20.758 71.127 C 20.054 72.195 19.212 73.285 18.62 74.415 C 18.496 74.651 18.321 75.007 18.396 75.279 C 18.613 76.071 21.456 78.515 22.203 79.279 C 26.689 83.691 31.237 88.059 35.663 92.532 L 35.661 42.146 L 35.669 31.344 C 35.67 30.355 35.84 27.967 35.612 27.137 Z" fill="var(--token-5197bf6c-818c-4eab-85f8-6f703842b3bf, rgb(10, 11, 10))"></path></svg>',
+                                              svgContentId: 9766041804,
+                                              withExternalLayout: !0,
+                                            }),
+                                          }),
+                                        }),
+                                        e(h, {
+                                          breakpoint: i,
+                                          overrides: {
+                                            Q1XUigOVv: {
+                                              svg: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 213 120"><path d="M 114.998 50.987 C 116.048 50.898 117.131 50.951 118.183 50.997 C 118.147 51.838 118.441 52.99 118.174 53.776 L 117.962 53.868 C 116.879 53.877 115.795 53.872 114.712 53.854 C 114.793 52.954 114.766 52.046 114.809 51.143 Z M 95.941 50.96 C 97.068 50.913 98.204 50.949 99.331 50.956 C 99.4 51.904 99.413 52.9 99.329 53.848 C 98.178 53.814 97.013 53.87 95.862 53.887 C 95.848 52.95 95.751 51.878 95.941 50.96 Z" fill="var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10)) /* {&quot;name&quot;:&quot;Text color&quot;} */"></path><g><defs><linearGradient id="idss9948497010_2g23978082" x1="0" x2="1" y1="0.09180475344329453" y2="0.9081952465567055"><stop offset="0" stop-color="rgb(52,251,86)" stop-opacity="1"></stop><stop offset="1" stop-color="rgb(27,245,168)" stop-opacity="1"></stop></linearGradient></defs><path d="M 45.912 46.929 C 46.424 46.913 46.936 46.903 47.449 46.898 C 47.798 46.897 48.503 46.919 48.76 47.197 C 49.415 47.905 49.239 54.13 49.233 55.404 C 48.314 55.453 47.367 55.443 46.451 55.349 C 46.36 54.488 46.398 53.598 46.397 52.732 L 46.401 49.478 C 44.529 49.465 42.316 49.744 40.491 49.324 C 40.433 48.693 40.272 47.735 40.477 47.141 C 41.442 46.736 44.702 46.936 45.912 46.929 Z" fill="url(#idss9948497010_2g23978082)"></path></g><path d="M 37.105 58.627 C 41.644 58.584 46.228 58.699 50.762 58.547 C 50.799 59.472 50.832 60.402 50.723 61.323 C 48.126 61.406 45.516 61.352 42.918 61.348 C 41.186 61.346 39.409 61.429 37.682 61.331 C 37.091 61.263 36.479 61.256 35.884 61.209 L 35.836 61.021 C 35.749 61.137 35.801 61.086 35.678 61.173 L 35.767 61.101 L 35.6 61.111 C 35.729 61.177 36.024 61.071 36.21 61.054 C 36.766 60.606 37.341 59.645 37.441 58.928 Z" fill="rgb(26,244,166)"></path><path d="M 115.275 55.557 C 116.271 55.542 117.269 55.562 118.265 55.569 C 118.16 57.267 118.558 66.237 118.035 67.027 L 117.758 67.037 C 116.761 67.054 115.769 67.058 114.772 67.016 C 114.784 65.897 114.641 56.048 114.812 55.756 C 114.887 55.627 115.13 55.598 115.275 55.557 Z" fill="var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10)) /* {&quot;name&quot;:&quot;Text color&quot;} */"></path><g><defs><linearGradient id="idss9948497010_5g1407131783" x1="0" x2="1" y1="0.10443422025759014" y2="0.8955657797424099"><stop offset="0" stop-color="rgb(55,252,79)" stop-opacity="1"></stop><stop offset="1" stop-color="rgb(29,245,162)" stop-opacity="1"></stop></linearGradient></defs><path d="M 22.908 64.6 L 25.718 64.55 C 25.885 66.472 25.778 68.464 25.771 70.394 C 27.211 70.265 28.836 70.06 30.274 70.157 C 30.69 70.185 31.127 70.297 31.4 70.638 C 31.91 71.275 31.698 72.145 31.603 72.884 C 30.799 73.162 24.808 72.971 23.614 72.894 L 22.878 71.994 C 22.715 69.587 22.764 67.006 22.908 64.6 Z" fill="url(#idss9948497010_5g1407131783)"></path></g><g><defs><linearGradient id="idss9948497010_6g192450788" x1="0" x2="1" y1="0.03131026666174547" y2="0.9686897333382545"><stop offset="0" stop-color="rgba(16,241,208,0.988)" stop-opacity="0.988"></stop><stop offset="1" stop-color="rgba(0,239,251,0.988)" stop-opacity="0.988"></stop></linearGradient></defs><path d="M 47.595 64.302 C 47.65 64.297 47.705 64.293 47.761 64.291 C 47.79 64.29 47.819 64.29 47.847 64.289 C 48.354 64.27 48.795 64.426 49.272 64.574 C 49.363 66.625 49.343 68.73 49.339 70.784 C 49.337 71.396 49.29 72.084 48.808 72.525 C 47.92 73.336 43.316 72.982 41.888 72.978 C 41.419 72.974 40.941 72.924 40.472 72.897 C 40.452 72.315 40.404 71.726 40.399 71.144 C 40.398 70.953 40.419 70.664 40.564 70.53 C 41.164 69.973 45.39 70.215 46.378 70.274 C 46.411 68.394 46.409 66.515 46.373 64.636 Z" fill="url(#idss9948497010_6g192450788)"></path></g><path d="M 97.078 55.57 L 99.382 55.554 C 99.294 56.955 99.569 66.461 99.383 66.876 C 99.355 66.938 99.299 66.983 99.257 67.037 L 98.865 67.032 C 97.856 67.101 96.848 67.057 95.84 67.005 C 95.835 63.221 95.736 59.408 95.88 55.628 Z" fill="var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10)) /* {&quot;name&quot;:&quot;Text color&quot;} */"></path><path d="M 24.286 46.788 C 25.778 46.699 30.127 46.642 31.425 46.915 C 31.499 46.998 31.568 47.084 31.616 47.186 C 31.828 47.638 31.776 48.817 31.601 49.28 C 31.08 49.676 26.782 49.523 25.715 49.579 L 25.709 51.006 C 25.76 52.107 25.935 53.296 25.886 54.391 C 25.874 54.672 25.79 54.967 25.569 55.156 C 24.982 55.657 23.496 55.419 22.752 55.381 C 23.018 53.673 22.377 48.317 23.019 47.326 C 23.263 46.948 23.886 46.874 24.286 46.788 Z" fill="rgba(66,252,61,0.988)"></path><path d="M 21.326 58.734 C 22.997 58.418 25.037 58.631 26.748 58.635 L 37.105 58.627 L 37.441 58.928 C 37.341 59.645 36.766 60.606 36.21 61.054 C 36.024 61.071 35.729 61.177 35.6 61.111 L 35.767 61.101 L 35.678 61.173 C 35.801 61.086 35.748 61.137 35.836 61.021 L 35.884 61.209 C 36.479 61.256 37.091 61.263 37.682 61.331 C 35.424 61.389 33.159 61.318 30.901 61.303 L 21.327 61.303 Z" fill="rgb(66,252,61)"></path><path d="M 90.541 50.97 C 91.635 50.935 92.733 50.959 93.827 50.966 L 93.848 61.866 C 93.849 63.532 93.92 65.212 93.877 66.876 L 93.681 67.022 C 92.556 67.02 91.445 67.082 90.32 66.985 C 90.419 64.601 90.358 62.195 90.361 59.808 C 90.365 56.924 90.418 54.031 90.361 51.149 Z M 121.935 51.926 C 122.816 51.878 123.591 51.816 124.431 52.145 C 124.581 52.847 124.745 54.987 124.43 55.556 C 125.134 55.54 125.828 55.53 126.532 55.58 C 126.552 55.638 126.579 55.703 126.594 55.764 C 126.737 56.333 126.802 57.408 126.485 57.921 C 125.851 58.001 125.205 57.963 124.567 57.948 C 124.691 59.307 124.033 63.308 124.953 64.234 C 125.326 64.61 126.085 64.574 126.584 64.607 C 126.724 65.155 126.8 66.212 126.654 66.752 C 126.584 67.011 126.522 67.008 126.297 67.136 C 126.281 67.147 126.265 67.159 126.247 67.169 C 125.587 67.514 123.722 67.275 123.028 67.04 C 119.585 65.871 122.057 60.136 120.969 58.07 C 120.958 58.051 120.947 58.032 120.937 58.012 L 119.608 57.901 C 119.552 57.128 119.582 56.364 119.61 55.591 C 120.089 55.597 120.568 55.591 121.047 55.575 C 121.359 54.654 121.198 53.134 121.111 52.16 C 121.403 52.112 121.66 52.028 121.935 51.926 Z M 160.233 55.26 C 160.452 55.232 160.674 55.206 160.894 55.203 C 162.406 55.181 164.059 55.807 165.117 56.884 C 165.882 57.663 166.28 58.575 166.265 59.667 C 165.403 59.858 164.082 59.735 163.197 59.659 C 163.006 59.268 162.747 58.743 162.438 58.441 C 162.031 58.044 161.332 57.954 160.788 57.974 C 160.239 57.996 159.744 58.208 159.371 58.616 C 158.634 59.423 158.594 60.651 158.636 61.686 C 158.674 62.643 158.877 63.607 159.618 64.275 C 160.251 64.845 160.833 64.838 161.646 64.798 C 162.01 64.642 162.316 64.437 162.578 64.136 C 162.861 63.811 163.103 63.312 163.067 62.875 L 164.924 62.838 C 165.391 62.824 165.857 62.851 166.323 62.872 C 166.345 63.029 166.356 63.187 166.357 63.346 C 166.357 63.505 166.346 63.663 166.324 63.82 C 166.303 63.978 166.27 64.133 166.227 64.285 C 166.183 64.438 166.129 64.587 166.065 64.732 C 165.596 65.813 164.637 66.622 163.548 67.035 C 162.021 67.614 159.852 67.591 158.363 66.917 C 156.995 66.297 155.798 65.102 155.268 63.684 C 154.727 62.234 154.779 60.215 155.42 58.806 C 156.066 57.387 157.433 56.033 158.932 55.537 C 159.336 55.404 159.758 55.441 160.166 55.287 C 160.188 55.279 160.211 55.269 160.233 55.26 Z M 186.702 55.26 C 187.581 55.106 188.582 55.233 189.379 55.644 C 190.317 56.128 190.949 56.978 191.255 57.98 C 191.589 59.072 191.805 66.312 191.425 67.019 C 190.231 67.081 189.038 67.066 187.846 66.974 C 187.855 66.957 187.864 66.94 187.872 66.923 C 188.246 66.216 188.047 64.1 188.045 63.216 C 188.042 62.086 188.188 59.537 187.343 58.695 C 187.326 58.678 187.311 58.658 187.292 58.643 C 186.665 58.127 185.671 58.374 184.95 58.487 C 184.831 58.716 184.641 58.842 184.441 58.996 C 183.658 60.931 184.771 65.646 183.9 66.96 C 182.741 67.075 181.57 67.054 180.407 67.059 C 180.688 66.386 180.658 56.257 180.399 55.567 C 181.488 55.554 182.591 55.506 183.677 55.603 C 183.886 55.878 183.819 56.532 183.871 56.892 L 184.018 56.95 C 184.472 56.753 184.684 56.289 185.088 56.03 C 185.585 55.712 186.2 55.585 186.702 55.26 Z M 133.552 63.019 C 134.247 62.17 135.374 57.146 135.904 55.747 C 136.057 55.615 136.13 55.605 136.324 55.576 C 136.866 55.495 139.08 55.418 139.446 55.694 C 139.246 56.8 136.891 64.184 136.423 64.775 C 136.45 64.856 136.46 64.867 136.458 64.967 C 136.451 65.294 135.222 68.32 134.99 68.769 C 134.786 69.161 134.537 69.532 134.223 69.844 C 132.89 71.172 130.425 70.778 128.705 70.758 C 129.091 70.168 128.919 68.856 128.845 68.172 C 129.491 68.199 130.106 68.173 130.749 68.113 C 130.885 68.049 131.013 67.969 131.129 67.874 C 131.385 67.669 131.604 67.448 131.645 67.104 C 131.801 65.798 128.76 58.944 128.194 57.158 C 128.052 56.711 127.784 56.142 127.834 55.674 C 128.16 55.544 128.643 55.584 128.996 55.573 C 129.723 55.548 130.694 55.409 131.365 55.732 C 131.741 56.545 133.671 62.455 133.552 63.019 Z M 172.266 55.26 C 173.832 55.098 175.721 55.338 177.001 56.317 C 177.136 56.419 177.263 56.53 177.382 56.651 C 177.501 56.772 177.61 56.901 177.709 57.038 C 177.808 57.175 177.897 57.318 177.975 57.469 C 178.054 57.619 178.12 57.774 178.175 57.934 C 178.976 60.236 178.348 64.31 178.727 67.009 C 177.732 67.02 176.059 67.351 175.193 66.851 C 175.002 66.588 175.025 66.487 175.02 66.173 C 174.653 66.003 173.224 67.315 172.143 67.436 C 170.531 67.618 169.25 66.963 168.034 65.99 C 168.041 65.907 168.033 65.864 168.001 65.787 C 167.659 64.96 167.479 63.846 167.653 62.962 C 168.265 59.841 172.784 60.929 174.551 59.71 C 174.776 59.556 174.957 59.344 174.991 59.064 C 175.031 58.731 174.846 58.39 174.636 58.144 C 174.315 57.769 173.862 57.681 173.397 57.659 C 171.829 57.586 171.972 58.418 171.05 59.233 C 171.034 59.247 171.017 59.261 171 59.275 C 170.018 59.459 168.877 59.305 167.881 59.239 C 168.059 58.935 168.136 58.585 168.248 58.252 C 168.687 56.95 169.625 55.985 170.958 55.597 C 171.374 55.476 171.826 55.491 172.216 55.288 C 172.233 55.279 172.249 55.27 172.266 55.26 Z M 174.348 61.823 C 173.397 62.124 171.531 62.448 171.011 63.363 C 170.864 63.624 170.862 63.89 170.952 64.171 C 171.078 64.563 171.32 64.787 171.628 65.035 C 172.46 65.21 173.424 65.319 174.179 64.823 C 174.626 64.53 174.871 64.05 174.962 63.532 C 175.049 63.04 175.066 62.312 174.968 61.823 C 174.752 61.723 174.574 61.78 174.348 61.823 Z M 82.124 55.227 L 82.178 55.222 C 83.817 55.099 85.707 55.707 86.943 56.787 C 88.052 57.756 88.753 59.216 88.853 60.681 C 88.977 62.502 88.68 64.004 87.431 65.406 C 86.423 66.538 85.175 67.309 83.645 67.391 C 82.099 67.428 80.772 67.42 79.401 66.578 C 78.034 65.74 77.018 64.448 76.652 62.874 C 76.289 61.314 76.53 59.596 77.385 58.235 C 78.554 56.376 80.06 55.682 82.124 55.227 Z M 81.888 57.952 C 81.271 58.16 80.903 58.609 80.614 59.18 C 80.041 60.313 80.021 61.88 80.437 63.065 C 80.694 63.8 81.171 64.52 81.902 64.849 C 82.367 65.058 82.922 65.047 83.417 64.969 C 84.165 64.684 84.509 64.302 84.844 63.576 C 85.377 62.42 85.45 60.79 84.995 59.598 C 84.73 58.905 84.256 58.36 83.573 58.06 C 83.07 57.839 82.423 57.9 81.888 57.952 Z M 66.26 50.856 C 68.654 50.688 71.386 50.574 73.33 52.243 C 74.369 53.134 74.641 54.248 74.73 55.551 C 73.542 55.498 72.336 55.535 71.145 55.524 C 70.73 54.731 70.34 54.343 69.603 53.86 C 69.012 53.822 68.398 53.766 67.807 53.79 C 67.312 53.809 66.683 53.981 66.35 54.374 C 66.144 54.617 66.136 55.017 66.152 55.322 C 66.167 55.598 66.2 55.949 66.401 56.156 C 67.4 57.188 72.115 57.309 73.948 58.972 C 74.795 59.74 75.429 60.958 75.463 62.111 C 75.499 63.376 74.933 64.753 74.055 65.657 C 72.958 66.787 71.363 67.367 69.813 67.393 C 67.605 67.433 65.427 67.516 63.61 66.024 C 62.691 65.269 61.757 64.104 61.667 62.869 C 61.648 62.61 61.636 62.436 61.808 62.233 C 63.06 62.13 64.343 62.196 65.599 62.207 C 65.773 62.96 65.995 63.413 66.512 63.991 C 67.864 64.442 68.895 64.876 70.282 64.233 C 70.69 64.043 71.107 63.778 71.262 63.332 C 71.406 62.919 71.436 62.367 71.227 61.975 C 70.635 60.859 66.678 60.212 65.395 59.763 C 64.149 59.327 63.04 58.597 62.465 57.366 C 61.988 56.343 61.998 55.155 62.379 54.103 C 63.067 52.204 64.581 51.623 66.26 50.856 Z M 144.442 50.885 C 145.894 50.75 147.599 50.636 149.027 50.98 C 150.37 51.303 151.978 52.118 152.701 53.335 C 153.068 53.952 153.26 54.811 153.092 55.514 C 151.976 55.392 150.654 55.534 149.521 55.525 C 149.466 55.196 149.288 54.888 149.075 54.638 C 148.554 54.027 147.711 53.803 146.939 53.755 C 146.245 53.713 145.368 53.776 144.837 54.287 C 144.808 54.315 144.78 54.345 144.754 54.376 C 144.728 54.407 144.703 54.439 144.68 54.473 C 144.658 54.507 144.636 54.541 144.617 54.577 C 144.598 54.613 144.58 54.649 144.565 54.687 C 144.549 54.725 144.536 54.763 144.524 54.802 C 144.513 54.841 144.503 54.88 144.495 54.92 C 144.488 54.96 144.482 55 144.479 55.04 C 144.475 55.081 144.474 55.122 144.474 55.162 C 144.476 55.452 144.558 56.022 144.773 56.229 C 145.593 57.016 150.628 57.291 152.628 59.226 C 153.453 60.025 153.858 61.031 153.864 62.177 C 153.865 62.258 153.863 62.339 153.86 62.419 C 153.857 62.5 153.852 62.58 153.844 62.661 C 153.837 62.741 153.828 62.821 153.816 62.901 C 153.805 62.981 153.792 63.061 153.776 63.14 C 153.761 63.219 153.744 63.298 153.725 63.376 C 153.705 63.455 153.684 63.533 153.661 63.61 C 153.638 63.687 153.612 63.764 153.585 63.84 C 153.559 63.916 153.53 63.991 153.499 64.066 C 153.468 64.141 153.435 64.214 153.401 64.287 C 153.366 64.36 153.33 64.432 153.291 64.503 C 153.253 64.574 153.213 64.645 153.172 64.714 C 153.13 64.783 153.086 64.851 153.041 64.918 C 152.996 64.985 152.95 65.05 152.901 65.115 C 152.853 65.179 152.803 65.243 152.751 65.304 C 152.699 65.367 152.646 65.427 152.592 65.486 C 152.537 65.546 152.481 65.604 152.423 65.66 C 151.154 66.923 149.618 67.417 147.867 67.398 C 146.351 67.426 144.869 67.443 143.438 66.859 C 142.19 66.35 140.887 65.344 140.357 64.068 C 140.169 63.616 139.912 62.756 140.109 62.292 C 140.772 61.986 142.912 62.19 143.735 62.204 C 144.31 62.905 144.304 63.676 145.221 64.113 C 146.236 64.597 147.548 64.694 148.604 64.292 C 149.059 64.118 149.528 63.824 149.715 63.35 C 149.879 62.931 149.75 62.349 149.59 61.945 C 149.115 60.501 142.648 60.475 141.018 57.804 C 140.45 56.873 140.295 55.617 140.556 54.564 C 140.802 53.57 141.616 52.285 142.536 51.798 C 143.136 51.48 143.794 51.278 144.377 50.926 C 144.399 50.912 144.42 50.899 144.442 50.885 Z M 109.373 50.974 C 110.496 50.956 111.614 50.932 112.736 51.005 C 112.604 56.332 112.74 61.703 112.743 67.035 C 111.605 67.063 110.467 67.053 109.329 67.004 C 109.336 66.646 109.397 66.178 109.274 65.842 C 108.756 66.049 108.38 66.631 107.917 66.95 C 106.93 67.63 105.287 67.455 104.17 67.244 C 103.689 67.05 103.245 66.808 102.839 66.483 C 101.575 65.469 101.08 64.095 100.911 62.525 C 100.713 60.694 100.95 58.563 102.144 57.094 C 102.955 56.096 104.164 55.332 105.461 55.214 C 106.938 55.079 108.078 55.904 109.158 56.791 C 109.565 55.033 109.027 52.387 109.373 50.974 Z M 105.974 58.064 C 105.181 58.604 104.826 59.206 104.64 60.152 C 104.419 61.272 104.458 62.835 105.12 63.815 C 105.399 64.228 105.814 64.502 106.309 64.586 C 106.77 64.664 107.337 64.592 107.804 64.554 C 108.603 64.064 108.996 63.42 109.211 62.508 C 109.462 61.444 109.373 60.022 108.789 59.074 C 108.498 58.602 107.996 58.189 107.449 58.063 C 106.999 57.96 106.434 58.024 105.974 58.064 Z" fill="var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10)) /* {&quot;name&quot;:&quot;Text color&quot;} */"></path></svg>',
+                                              svgContentId: 9948497010,
+                                            },
+                                            XWGQJU3bM: {
+                                              svg: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 203 114"><path d="M 109.599 48.438 C 110.6 48.353 111.632 48.404 112.634 48.447 C 112.601 49.246 112.88 50.34 112.626 51.087 L 112.424 51.175 C 111.391 51.183 110.359 51.178 109.326 51.161 C 109.404 50.306 109.378 49.443 109.419 48.586 Z M 91.437 48.412 C 92.51 48.368 93.593 48.402 94.668 48.408 C 94.733 49.309 94.745 50.255 94.665 51.156 C 93.568 51.124 92.459 51.176 91.361 51.192 C 91.349 50.302 91.255 49.284 91.437 48.412 Z" fill="var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10)) /* {&quot;name&quot;:&quot;Text color&quot;} */"></path><g><defs><linearGradient id="idss10709013806_2g23978082" x1="0" x2="1" y1="0.09180475344329453" y2="0.9081952465567055"><stop offset="0" stop-color="rgb(52,251,86)" stop-opacity="1"></stop><stop offset="1" stop-color="rgb(27,245,168)" stop-opacity="1"></stop></linearGradient></defs><path d="M 43.757 44.582 C 44.245 44.567 44.733 44.558 45.221 44.553 C 45.554 44.552 46.226 44.573 46.471 44.837 C 47.095 45.51 46.927 51.424 46.922 52.634 C 46.046 52.681 45.143 52.671 44.27 52.582 C 44.183 51.764 44.219 50.918 44.219 50.095 L 44.223 47.004 C 42.438 46.992 40.33 47.257 38.59 46.858 C 38.534 46.258 38.382 45.348 38.576 44.784 C 39.496 44.4 42.604 44.59 43.757 44.582 Z" fill="url(#idss10709013806_2g23978082)"></path></g><path d="M 35.363 55.696 C 39.689 55.655 44.058 55.764 48.379 55.62 C 48.414 56.498 48.445 57.382 48.341 58.257 C 45.867 58.336 43.379 58.284 40.903 58.281 C 39.253 58.279 37.559 58.357 35.913 58.264 C 35.35 58.2 34.766 58.193 34.199 58.149 L 34.153 57.97 C 34.07 58.08 34.12 58.032 34.003 58.114 L 34.088 58.046 L 33.929 58.055 C 34.052 58.118 34.333 58.018 34.51 58.002 C 35.04 57.576 35.588 56.662 35.683 55.982 Z" fill="rgb(26,244,166)"></path><path d="M 109.863 52.779 C 110.812 52.765 111.763 52.784 112.712 52.791 C 112.612 54.403 112.992 62.925 112.494 63.676 L 112.23 63.685 C 111.279 63.701 110.334 63.705 109.384 63.665 C 109.395 62.602 109.259 53.246 109.422 52.968 C 109.493 52.846 109.725 52.819 109.863 52.779 Z" fill="var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10)) /* {&quot;name&quot;:&quot;Text color&quot;} */"></path><g><defs><linearGradient id="idss10709013806_5g1407131783" x1="0" x2="1" y1="0.10443422025759014" y2="0.8955657797424099"><stop offset="0" stop-color="rgb(55,252,79)" stop-opacity="1"></stop><stop offset="1" stop-color="rgb(29,245,162)" stop-opacity="1"></stop></linearGradient></defs><path d="M 21.833 61.37 L 24.51 61.322 C 24.669 63.148 24.568 65.041 24.562 66.875 C 25.933 66.751 27.483 66.557 28.852 66.649 C 29.25 66.675 29.665 66.782 29.926 67.106 C 30.412 67.711 30.21 68.538 30.119 69.24 C 29.353 69.503 23.644 69.322 22.506 69.25 L 21.804 68.394 C 21.649 66.108 21.695 63.656 21.833 61.37 Z" fill="url(#idss10709013806_5g1407131783)"></path></g><g><defs><linearGradient id="idss10709013806_6g192450788" x1="0" x2="1" y1="0.03131026666174547" y2="0.9686897333382545"><stop offset="0" stop-color="rgba(16,241,208,0.988)" stop-opacity="0.988"></stop><stop offset="1" stop-color="rgba(0,239,251,0.988)" stop-opacity="0.988"></stop></linearGradient></defs><path d="M 45.36 61.087 C 45.413 61.082 45.466 61.078 45.519 61.077 C 45.546 61.076 45.574 61.075 45.601 61.074 C 46.084 61.056 46.504 61.204 46.959 61.346 C 47.045 63.293 47.026 65.293 47.022 67.245 C 47.021 67.826 46.976 68.48 46.516 68.899 C 45.67 69.669 41.282 69.333 39.921 69.329 C 39.474 69.325 39.019 69.278 38.572 69.252 C 38.553 68.699 38.507 68.14 38.502 67.587 C 38.501 67.405 38.521 67.131 38.659 67.003 C 39.232 66.474 43.259 66.704 44.201 66.76 C 44.232 64.975 44.23 63.189 44.196 61.404 Z" fill="url(#idss10709013806_6g192450788)"></path></g><path d="M 92.52 52.791 L 94.716 52.777 C 94.633 54.107 94.894 63.138 94.717 63.532 C 94.691 63.591 94.637 63.634 94.597 63.685 L 94.224 63.68 C 93.262 63.746 92.301 63.704 91.34 63.654 C 91.336 60.06 91.242 56.437 91.379 52.846 Z" fill="var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10)) /* {&quot;name&quot;:&quot;Text color&quot;} */"></path><path d="M 23.146 44.449 C 24.567 44.364 28.713 44.31 29.95 44.569 C 30.021 44.648 30.086 44.73 30.132 44.827 C 30.334 45.256 30.284 46.376 30.117 46.816 C 29.621 47.192 25.525 47.047 24.508 47.1 L 24.502 48.456 C 24.551 49.501 24.717 50.631 24.671 51.671 C 24.659 51.939 24.579 52.219 24.369 52.398 C 23.809 52.874 22.393 52.648 21.684 52.612 C 21.938 50.989 21.327 45.901 21.939 44.959 C 22.171 44.601 22.764 44.531 23.146 44.449 Z" fill="rgba(66,252,61,0.988)"></path><path d="M 20.325 55.798 C 21.917 55.497 23.862 55.7 25.493 55.703 L 35.363 55.696 L 35.683 55.982 C 35.588 56.662 35.04 57.576 34.51 58.002 C 34.333 58.018 34.052 58.118 33.929 58.055 L 34.088 58.046 L 34.003 58.114 C 34.12 58.032 34.07 58.08 34.153 57.97 L 34.199 58.149 C 34.766 58.193 35.35 58.2 35.913 58.264 C 33.761 58.32 31.602 58.252 29.45 58.238 L 20.326 58.238 Z" fill="rgb(66,252,61)"></path><path d="M 86.29 48.422 C 87.333 48.389 88.379 48.411 89.422 48.417 L 89.442 58.773 C 89.443 60.356 89.511 61.951 89.47 63.532 L 89.283 63.671 C 88.21 63.669 87.152 63.727 86.08 63.636 C 86.174 61.371 86.116 59.086 86.119 56.817 C 86.122 54.078 86.173 51.33 86.119 48.591 Z M 116.211 49.33 C 117.05 49.284 117.788 49.225 118.59 49.537 C 118.732 50.204 118.888 52.238 118.588 52.778 C 119.259 52.763 119.921 52.753 120.591 52.801 C 120.611 52.856 120.636 52.918 120.651 52.976 C 120.786 53.516 120.849 54.537 120.547 55.025 C 119.942 55.101 119.327 55.065 118.719 55.051 C 118.837 56.342 118.21 60.143 119.087 61.023 C 119.442 61.379 120.165 61.345 120.641 61.377 C 120.775 61.897 120.847 62.902 120.708 63.414 C 120.641 63.66 120.582 63.657 120.368 63.779 C 120.352 63.789 120.337 63.801 120.32 63.81 C 119.691 64.138 117.914 63.911 117.252 63.688 C 113.971 62.578 116.326 57.129 115.289 55.167 C 115.28 55.148 115.269 55.13 115.259 55.112 L 113.992 55.006 C 113.939 54.272 113.968 53.546 113.994 52.812 C 114.451 52.817 114.908 52.812 115.364 52.796 C 115.661 51.922 115.508 50.477 115.425 49.552 C 115.703 49.506 115.948 49.427 116.211 49.33 Z M 152.711 52.497 C 152.919 52.471 153.131 52.445 153.341 52.443 C 154.782 52.422 156.357 53.016 157.365 54.04 C 158.094 54.78 158.473 55.646 158.459 56.683 C 157.638 56.865 156.379 56.748 155.535 56.676 C 155.353 56.305 155.106 55.806 154.811 55.519 C 154.424 55.142 153.758 55.056 153.239 55.076 C 152.716 55.096 152.244 55.297 151.889 55.685 C 151.187 56.452 151.148 57.618 151.188 58.601 C 151.225 59.511 151.418 60.426 152.125 61.061 C 152.728 61.603 153.282 61.596 154.057 61.558 C 154.404 61.41 154.696 61.215 154.946 60.929 C 155.215 60.621 155.446 60.146 155.411 59.731 L 157.181 59.697 C 157.626 59.683 158.07 59.709 158.514 59.729 C 158.535 59.878 158.546 60.028 158.546 60.179 C 158.547 60.33 158.536 60.48 158.516 60.629 C 158.495 60.779 158.464 60.926 158.422 61.071 C 158.381 61.216 158.33 61.358 158.269 61.496 C 157.821 62.522 156.908 63.291 155.87 63.684 C 154.414 64.233 152.347 64.211 150.928 63.571 C 149.624 62.982 148.483 61.847 147.979 60.5 C 147.463 59.123 147.512 57.204 148.123 55.866 C 148.739 54.517 150.041 53.231 151.47 52.76 C 151.855 52.634 152.257 52.669 152.646 52.523 C 152.668 52.515 152.689 52.506 152.711 52.497 Z M 177.937 52.497 C 178.775 52.35 179.729 52.472 180.488 52.862 C 181.382 53.322 181.984 54.129 182.276 55.081 C 182.594 56.119 182.8 62.997 182.438 63.668 C 181.3 63.727 180.163 63.713 179.027 63.626 C 179.036 63.609 179.044 63.593 179.052 63.577 C 179.408 62.906 179.219 60.895 179.216 60.055 C 179.213 58.982 179.353 56.56 178.548 55.76 C 178.532 55.744 178.517 55.725 178.499 55.711 C 177.902 55.221 176.954 55.456 176.267 55.562 C 176.153 55.78 175.972 55.899 175.782 56.046 C 175.036 57.884 176.096 62.364 175.266 63.612 C 174.162 63.721 173.046 63.701 171.937 63.706 C 172.205 63.067 172.177 53.444 171.929 52.788 C 172.968 52.776 174.019 52.731 175.054 52.823 C 175.253 53.084 175.189 53.705 175.238 54.047 L 175.379 54.102 C 175.812 53.915 176.013 53.475 176.398 53.229 C 176.872 52.926 177.458 52.806 177.937 52.497 Z M 127.282 59.868 C 127.944 59.061 129.018 54.289 129.524 52.96 C 129.669 52.834 129.739 52.825 129.923 52.797 C 130.44 52.72 132.55 52.647 132.899 52.909 C 132.709 53.96 130.464 60.975 130.018 61.536 C 130.044 61.614 130.053 61.624 130.051 61.718 C 130.045 62.029 128.874 64.904 128.652 65.33 C 128.458 65.703 128.22 66.055 127.921 66.352 C 126.651 67.614 124.302 67.24 122.663 67.221 C 123.03 66.66 122.867 65.413 122.796 64.764 C 123.411 64.789 123.997 64.764 124.61 64.707 C 124.74 64.647 124.862 64.571 124.973 64.48 C 125.216 64.285 125.425 64.076 125.465 63.749 C 125.613 62.508 122.715 55.996 122.175 54.3 C 122.04 53.875 121.784 53.335 121.832 52.89 C 122.143 52.767 122.603 52.805 122.94 52.794 C 123.633 52.771 124.558 52.638 125.198 52.946 C 125.556 53.718 127.395 59.332 127.282 59.868 Z M 164.178 52.497 C 165.671 52.344 167.471 52.571 168.691 53.501 C 168.82 53.598 168.941 53.704 169.054 53.819 C 169.167 53.933 169.271 54.056 169.366 54.186 C 169.461 54.316 169.545 54.453 169.62 54.595 C 169.694 54.738 169.758 54.886 169.81 55.038 C 170.573 57.224 169.975 61.095 170.336 63.659 C 169.388 63.669 167.793 63.984 166.968 63.508 C 166.786 63.259 166.807 63.163 166.803 62.865 C 166.453 62.703 165.091 63.949 164.061 64.065 C 162.525 64.237 161.304 63.615 160.145 62.69 C 160.152 62.612 160.144 62.571 160.113 62.498 C 159.788 61.712 159.616 60.654 159.782 59.813 C 160.366 56.849 164.673 57.883 166.356 56.725 C 166.57 56.578 166.743 56.377 166.775 56.111 C 166.813 55.795 166.638 55.471 166.437 55.237 C 166.131 54.881 165.7 54.797 165.257 54.776 C 163.762 54.706 163.898 55.497 163.019 56.271 C 163.004 56.285 162.988 56.298 162.972 56.311 C 162.036 56.486 160.948 56.34 159.999 56.277 C 160.169 55.988 160.242 55.656 160.349 55.34 C 160.768 54.102 161.661 53.186 162.932 52.817 C 163.329 52.702 163.759 52.717 164.131 52.524 C 164.147 52.515 164.162 52.506 164.178 52.497 Z M 166.162 58.732 C 165.257 59.018 163.478 59.326 162.983 60.195 C 162.842 60.443 162.84 60.696 162.926 60.962 C 163.047 61.335 163.277 61.548 163.57 61.783 C 164.363 61.949 165.282 62.053 166.002 61.582 C 166.427 61.303 166.661 60.848 166.748 60.356 C 166.831 59.888 166.847 59.197 166.754 58.732 C 166.548 58.637 166.378 58.691 166.162 58.732 Z M 78.268 52.466 L 78.32 52.461 C 79.882 52.344 81.683 52.922 82.862 53.948 C 83.919 54.868 84.586 56.255 84.681 57.647 C 84.799 59.376 84.517 60.804 83.327 62.136 C 82.366 63.211 81.176 63.943 79.718 64.021 C 78.244 64.057 76.98 64.049 75.673 63.25 C 74.371 62.453 73.402 61.226 73.053 59.73 C 72.707 58.249 72.937 56.616 73.752 55.324 C 74.866 53.557 76.302 52.898 78.268 52.466 Z M 78.044 55.054 C 77.455 55.252 77.104 55.678 76.829 56.221 C 76.284 57.297 76.264 58.786 76.661 59.912 C 76.906 60.61 77.36 61.294 78.057 61.607 C 78.5 61.806 79.029 61.795 79.501 61.72 C 80.214 61.45 80.542 61.087 80.861 60.397 C 81.369 59.299 81.439 57.751 81.004 56.618 C 80.752 55.96 80.3 55.442 79.65 55.157 C 79.17 54.947 78.554 55.005 78.044 55.054 Z M 63.149 48.313 C 65.43 48.154 68.035 48.045 69.887 49.631 C 70.877 50.478 71.137 51.535 71.222 52.774 C 70.09 52.723 68.94 52.758 67.805 52.748 C 67.409 51.995 67.038 51.626 66.335 51.167 C 65.772 51.131 65.187 51.077 64.624 51.1 C 64.152 51.119 63.552 51.282 63.235 51.655 C 63.038 51.886 63.031 52.266 63.046 52.556 C 63.06 52.819 63.092 53.152 63.283 53.349 C 64.236 54.329 68.729 54.444 70.476 56.023 C 71.283 56.753 71.888 57.91 71.92 59.006 C 71.955 60.207 71.415 61.515 70.579 62.374 C 69.533 63.447 68.012 63.999 66.535 64.023 C 64.431 64.061 62.355 64.14 60.624 62.723 C 59.748 62.005 58.858 60.899 58.771 59.725 C 58.753 59.48 58.742 59.314 58.906 59.122 C 60.099 59.023 61.322 59.086 62.519 59.097 C 62.685 59.812 62.896 60.243 63.389 60.792 C 64.677 61.22 65.661 61.632 66.983 61.021 C 67.372 60.841 67.768 60.589 67.916 60.165 C 68.053 59.773 68.082 59.249 67.883 58.876 C 67.318 57.816 63.548 57.202 62.324 56.775 C 61.138 56.361 60.08 55.667 59.533 54.497 C 59.078 53.526 59.087 52.398 59.45 51.398 C 60.106 49.594 61.549 49.042 63.149 48.313 Z M 137.66 48.341 C 139.044 48.212 140.669 48.104 142.031 48.431 C 143.31 48.738 144.843 49.512 145.532 50.668 C 145.881 51.254 146.065 52.07 145.904 52.739 C 144.841 52.623 143.581 52.758 142.501 52.748 C 142.449 52.436 142.279 52.144 142.076 51.906 C 141.58 51.326 140.776 51.113 140.041 51.068 C 139.379 51.027 138.543 51.087 138.037 51.573 C 138.009 51.6 137.983 51.628 137.958 51.657 C 137.933 51.687 137.91 51.718 137.888 51.749 C 137.866 51.781 137.846 51.814 137.828 51.848 C 137.809 51.882 137.793 51.917 137.778 51.953 C 137.763 51.988 137.75 52.025 137.739 52.062 C 137.728 52.099 137.719 52.136 137.711 52.174 C 137.704 52.212 137.699 52.25 137.696 52.288 C 137.692 52.327 137.691 52.366 137.692 52.404 C 137.693 52.679 137.771 53.221 137.976 53.418 C 138.757 54.165 143.556 54.426 145.462 56.265 C 146.249 57.024 146.634 57.98 146.64 59.068 C 146.641 59.145 146.64 59.222 146.637 59.298 C 146.634 59.375 146.629 59.451 146.622 59.528 C 146.615 59.604 146.606 59.68 146.595 59.756 C 146.584 59.832 146.572 59.908 146.557 59.983 C 146.542 60.058 146.526 60.133 146.507 60.208 C 146.489 60.282 146.469 60.356 146.447 60.43 C 146.425 60.503 146.401 60.576 146.375 60.648 C 146.349 60.72 146.322 60.792 146.292 60.863 C 146.263 60.934 146.232 61.004 146.199 61.073 C 146.166 61.142 146.131 61.211 146.095 61.278 C 146.058 61.346 146.02 61.412 145.98 61.478 C 145.941 61.544 145.899 61.608 145.856 61.672 C 145.813 61.735 145.769 61.798 145.723 61.859 C 145.676 61.92 145.629 61.98 145.58 62.039 C 145.53 62.098 145.48 62.156 145.428 62.212 C 145.376 62.269 145.322 62.324 145.267 62.377 C 144.057 63.577 142.594 64.046 140.925 64.028 C 139.48 64.054 138.068 64.071 136.704 63.516 C 135.515 63.032 134.273 62.077 133.767 60.865 C 133.588 60.435 133.344 59.619 133.531 59.178 C 134.163 58.887 136.203 59.081 136.987 59.094 C 137.535 59.759 137.529 60.492 138.403 60.907 C 139.37 61.367 140.621 61.46 141.628 61.077 C 142.061 60.913 142.508 60.633 142.686 60.183 C 142.843 59.785 142.72 59.231 142.567 58.848 C 142.115 57.476 135.951 57.451 134.398 54.914 C 133.856 54.029 133.708 52.836 133.957 51.836 C 134.192 50.891 134.967 49.671 135.844 49.208 C 136.416 48.906 137.043 48.714 137.599 48.379 C 137.619 48.367 137.64 48.354 137.66 48.341 Z M 104.238 48.426 C 105.309 48.408 106.374 48.385 107.443 48.454 C 107.318 53.515 107.447 58.618 107.45 63.683 C 106.365 63.71 105.28 63.7 104.196 63.654 C 104.203 63.314 104.261 62.869 104.144 62.55 C 103.65 62.747 103.291 63.299 102.851 63.602 C 101.91 64.248 100.344 64.082 99.279 63.882 C 98.821 63.697 98.397 63.468 98.011 63.159 C 96.806 62.196 96.335 60.891 96.173 59.399 C 95.985 57.66 96.21 55.635 97.348 54.24 C 98.122 53.291 99.274 52.565 100.51 52.453 C 101.917 52.325 103.004 53.109 104.033 53.952 C 104.421 52.281 103.909 49.768 104.238 48.426 Z M 100.998 55.161 C 100.242 55.674 99.905 56.245 99.727 57.145 C 99.517 58.209 99.554 59.694 100.185 60.624 C 100.451 61.017 100.847 61.276 101.318 61.356 C 101.758 61.431 102.298 61.362 102.743 61.327 C 103.505 60.861 103.879 60.249 104.084 59.382 C 104.323 58.372 104.238 57.021 103.681 56.12 C 103.404 55.672 102.926 55.279 102.404 55.16 C 101.975 55.062 101.437 55.123 100.998 55.161 Z" fill="var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10)) /* {&quot;name&quot;:&quot;Text color&quot;} */"></path></svg>',
+                                              svgContentId: 10709013806,
+                                            },
+                                          },
+                                          children: e(s1, {
+                                            className: "framer-1an7n43",
+                                            "data-framer-name": "SolidityScan",
+                                            layout: "position",
+                                            name: "SolidityScan",
+                                            opacity: 1,
+                                            svg: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 349 196"><path d="M 188.424 83.279 C 190.144 83.133 191.919 83.221 193.642 83.295 C 193.584 84.669 194.065 86.55 193.628 87.834 L 193.281 87.985 C 191.505 87.998 189.73 87.99 187.955 87.961 C 188.088 86.491 188.044 85.008 188.114 83.534 Z M 157.199 83.235 C 159.045 83.158 160.906 83.217 162.754 83.227 C 162.867 84.777 162.887 86.404 162.75 87.952 C 160.864 87.897 158.956 87.987 157.069 88.015 C 157.047 86.484 156.887 84.733 157.199 83.235 Z" fill="var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10)) /* {&quot;name&quot;:&quot;Text color&quot;} */"></path><g><defs><linearGradient id="idss12556386956_2g23978082" x1="0" x2="1" y1="0.09180475344329453" y2="0.9081952465567055"><stop offset="0" stop-color="rgb(52,251,86)" stop-opacity="1"></stop><stop offset="1" stop-color="rgb(27,245,168)" stop-opacity="1"></stop></linearGradient></defs><path d="M 75.227 76.65 C 76.066 76.625 76.905 76.608 77.744 76.6 C 78.317 76.598 79.473 76.635 79.894 77.089 C 80.967 78.245 80.678 88.413 80.668 90.494 C 79.162 90.574 77.611 90.557 76.11 90.404 C 75.96 88.997 76.022 87.544 76.021 86.129 L 76.028 80.814 C 72.96 80.793 69.335 81.249 66.344 80.562 C 66.249 79.532 65.986 77.967 66.321 76.998 C 67.902 76.336 73.245 76.663 75.227 76.65 Z" fill="url(#idss12556386956_2g23978082)"></path></g><path d="M 60.797 95.758 C 68.233 95.688 75.745 95.875 83.174 95.627 C 83.234 97.138 83.287 98.656 83.109 100.161 C 78.854 100.297 74.578 100.208 70.321 100.202 C 67.484 100.199 64.571 100.334 61.742 100.174 C 60.774 100.063 59.77 100.052 58.796 99.975 L 58.717 99.667 C 58.574 99.858 58.659 99.774 58.458 99.915 L 58.605 99.798 L 58.331 99.814 C 58.543 99.923 59.025 99.75 59.33 99.722 C 60.241 98.99 61.183 97.42 61.347 96.249 Z" fill="rgb(26,244,166)"></path><path d="M 188.878 90.743 C 190.51 90.719 192.145 90.752 193.776 90.763 C 193.604 93.536 194.257 108.187 193.4 109.478 L 192.947 109.494 C 191.312 109.521 189.688 109.527 188.054 109.46 C 188.073 107.632 187.839 91.545 188.119 91.068 C 188.242 90.857 188.64 90.811 188.878 90.743 Z" fill="var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10)) /* {&quot;name&quot;:&quot;Text color&quot;} */"></path><g><defs><linearGradient id="idss12556386956_5g1407131783" x1="0" x2="1" y1="0.10443422025759014" y2="0.8955657797424099"><stop offset="0" stop-color="rgb(55,252,79)" stop-opacity="1"></stop><stop offset="1" stop-color="rgb(29,245,162)" stop-opacity="1"></stop></linearGradient></defs><path d="M 37.535 105.514 L 42.138 105.432 C 42.412 108.571 42.237 111.825 42.226 114.977 C 44.585 114.766 47.248 114.432 49.603 114.589 C 50.286 114.635 51.001 114.819 51.449 115.376 C 52.285 116.415 51.937 117.837 51.781 119.044 C 50.464 119.497 40.648 119.186 38.692 119.061 L 37.486 117.59 C 37.219 113.659 37.299 109.443 37.535 105.514 Z" fill="url(#idss12556386956_5g1407131783)"></path></g><g><defs><linearGradient id="idss12556386956_6g192450788" x1="0" x2="1" y1="0.03131026666174547" y2="0.9686897333382545"><stop offset="0" stop-color="rgba(16,241,208,0.988)" stop-opacity="0.988"></stop><stop offset="1" stop-color="rgba(0,239,251,0.988)" stop-opacity="0.988"></stop></linearGradient></defs><path d="M 77.984 105.027 C 78.074 105.019 78.165 105.012 78.256 105.009 C 78.303 105.008 78.35 105.007 78.398 105.005 C 79.227 104.974 79.951 105.228 80.732 105.471 C 80.881 108.82 80.848 112.259 80.841 115.614 C 80.839 116.614 80.762 117.738 79.971 118.457 C 78.517 119.781 70.973 119.204 68.633 119.197 C 67.864 119.19 67.082 119.11 66.314 119.066 C 66.28 118.114 66.201 117.153 66.194 116.202 C 66.191 115.89 66.226 115.419 66.464 115.199 C 67.448 114.289 74.372 114.684 75.99 114.78 C 76.044 111.711 76.041 108.641 75.982 105.572 Z" fill="url(#idss12556386956_6g192450788)"></path></g><path d="M 159.061 90.764 L 162.837 90.739 C 162.694 93.026 163.143 108.552 162.839 109.23 C 162.793 109.332 162.701 109.405 162.633 109.493 L 161.99 109.485 C 160.338 109.599 158.685 109.527 157.033 109.441 C 157.025 103.261 156.864 97.033 157.099 90.859 Z" fill="var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10)) /* {&quot;name&quot;:&quot;Text color&quot;} */"></path><path d="M 39.793 76.421 C 42.237 76.274 49.364 76.182 51.49 76.628 C 51.612 76.763 51.725 76.905 51.803 77.07 C 52.15 77.808 52.065 79.735 51.777 80.491 C 50.925 81.138 43.882 80.888 42.134 80.978 L 42.124 83.31 C 42.208 85.108 42.494 87.05 42.415 88.838 C 42.394 89.298 42.256 89.779 41.895 90.087 C 40.933 90.907 38.498 90.518 37.279 90.456 C 37.715 87.666 36.665 78.918 37.717 77.298 C 38.117 76.682 39.136 76.562 39.793 76.421 Z" fill="rgba(66,252,61,0.988)"></path><path d="M 34.943 95.933 C 37.68 95.415 41.023 95.765 43.827 95.77 L 60.797 95.758 L 61.347 96.249 C 61.183 97.42 60.241 98.99 59.33 99.722 C 59.025 99.75 58.543 99.923 58.331 99.814 L 58.605 99.798 L 58.458 99.915 C 58.659 99.774 58.574 99.858 58.717 99.667 L 58.796 99.975 C 59.77 100.052 60.774 100.063 61.742 100.174 C 58.043 100.269 54.331 100.153 50.63 100.128 L 34.944 100.128 Z" fill="rgb(66,252,61)"></path><path d="M 148.351 83.252 C 150.143 83.194 151.942 83.234 153.736 83.244 L 153.769 101.048 C 153.772 103.769 153.888 106.513 153.817 109.23 L 153.496 109.47 C 151.652 109.466 149.833 109.567 147.99 109.409 C 148.151 105.514 148.052 101.586 148.057 97.686 C 148.063 92.976 148.149 88.251 148.056 83.543 Z M 199.791 84.813 C 201.233 84.734 202.503 84.633 203.881 85.17 C 204.126 86.316 204.394 89.812 203.879 90.741 C 205.032 90.716 206.169 90.699 207.322 90.781 C 207.356 90.875 207.399 90.982 207.424 91.081 C 207.658 92.01 207.765 93.766 207.246 94.605 C 206.206 94.736 205.148 94.673 204.102 94.648 C 204.305 96.868 203.229 103.404 204.735 104.916 C 205.347 105.529 206.59 105.471 207.407 105.525 C 207.638 106.42 207.761 108.147 207.522 109.028 C 207.407 109.451 207.307 109.446 206.938 109.655 C 206.91 109.673 206.884 109.694 206.855 109.709 C 205.775 110.273 202.718 109.883 201.581 109.498 C 195.94 107.59 199.989 98.221 198.207 94.848 C 198.19 94.816 198.172 94.785 198.154 94.754 L 195.977 94.571 C 195.885 93.309 195.934 92.062 195.981 90.799 C 196.766 90.808 197.55 90.799 198.335 90.772 C 198.846 89.269 198.582 86.785 198.44 85.195 C 198.918 85.116 199.339 84.979 199.791 84.813 Z M 262.542 90.258 C 262.9 90.213 263.264 90.169 263.625 90.164 C 266.102 90.128 268.81 91.151 270.544 92.911 C 271.797 94.182 272.449 95.672 272.425 97.456 C 271.013 97.768 268.848 97.567 267.398 97.444 C 267.084 96.805 266.66 95.946 266.154 95.453 C 265.488 94.806 264.343 94.658 263.451 94.692 C 262.551 94.726 261.741 95.073 261.129 95.74 C 259.922 97.057 259.856 99.063 259.924 100.753 C 259.987 102.317 260.32 103.891 261.534 104.982 C 262.572 105.914 263.524 105.902 264.857 105.837 C 265.453 105.582 265.955 105.247 266.384 104.755 C 266.848 104.225 267.244 103.409 267.185 102.696 L 270.228 102.636 C 270.992 102.612 271.756 102.657 272.519 102.691 C 272.556 102.948 272.574 103.206 272.575 103.465 C 272.575 103.725 272.558 103.983 272.522 104.24 C 272.486 104.497 272.433 104.75 272.362 104.999 C 272.291 105.249 272.203 105.492 272.098 105.729 C 271.328 107.494 269.758 108.816 267.973 109.491 C 265.471 110.436 261.916 110.398 259.478 109.298 C 257.235 108.286 255.275 106.333 254.407 104.017 C 253.52 101.65 253.605 98.351 254.655 96.051 C 255.714 93.732 257.953 91.521 260.409 90.711 C 261.071 90.493 261.762 90.554 262.432 90.302 C 262.468 90.288 262.505 90.273 262.542 90.258 Z M 305.911 90.259 C 307.352 90.006 308.992 90.214 310.297 90.886 C 311.834 91.676 312.869 93.064 313.371 94.7 C 313.918 96.485 314.272 108.31 313.649 109.465 C 311.693 109.566 309.739 109.542 307.786 109.391 C 307.8 109.363 307.814 109.335 307.829 109.307 C 308.44 108.154 308.115 104.697 308.111 103.253 C 308.106 101.407 308.346 97.243 306.961 95.869 C 306.934 95.84 306.908 95.808 306.877 95.783 C 305.851 94.941 304.221 95.345 303.041 95.528 C 302.845 95.903 302.534 96.108 302.206 96.36 C 300.924 99.52 302.746 107.223 301.319 109.367 C 299.421 109.556 297.502 109.522 295.596 109.53 C 296.057 108.431 296.008 91.887 295.583 90.759 C 297.368 90.738 299.175 90.661 300.955 90.818 C 301.297 91.267 301.187 92.336 301.272 92.923 L 301.513 93.018 C 302.258 92.697 302.604 91.939 303.266 91.516 C 304.081 90.996 305.089 90.789 305.911 90.259 Z M 218.824 102.931 C 219.963 101.544 221.809 93.339 222.678 91.054 C 222.929 90.838 223.048 90.821 223.366 90.774 C 224.254 90.642 227.882 90.516 228.481 90.966 C 228.155 92.773 224.295 104.834 223.529 105.799 C 223.573 105.932 223.589 105.95 223.586 106.112 C 223.574 106.646 221.562 111.59 221.18 112.322 C 220.846 112.963 220.438 113.568 219.923 114.079 C 217.739 116.248 213.701 115.605 210.884 115.572 C 211.515 114.608 211.234 112.465 211.112 111.348 C 212.17 111.391 213.178 111.349 214.232 111.251 C 214.455 111.147 214.664 111.016 214.855 110.861 C 215.273 110.526 215.633 110.165 215.7 109.604 C 215.955 107.469 210.973 96.274 210.045 93.357 C 209.813 92.627 209.373 91.699 209.455 90.934 C 209.99 90.722 210.781 90.787 211.36 90.769 C 212.551 90.728 214.141 90.501 215.241 91.029 C 215.857 92.357 219.019 102.009 218.824 102.931 Z M 282.257 90.258 C 284.823 89.994 287.918 90.385 290.016 91.985 C 290.238 92.151 290.446 92.333 290.64 92.53 C 290.834 92.727 291.013 92.938 291.176 93.162 C 291.339 93.386 291.484 93.62 291.612 93.865 C 291.74 94.111 291.849 94.365 291.94 94.626 C 293.252 98.385 292.222 105.04 292.844 109.448 C 291.213 109.466 288.472 110.007 287.053 109.189 C 286.74 108.761 286.777 108.596 286.77 108.083 C 286.168 107.805 283.827 109.948 282.056 110.146 C 279.414 110.443 277.316 109.373 275.323 107.783 C 275.335 107.648 275.321 107.579 275.269 107.452 C 274.71 106.102 274.414 104.283 274.699 102.837 C 275.702 97.741 283.107 99.518 286.001 97.527 C 286.369 97.274 286.667 96.929 286.722 96.472 C 286.787 95.927 286.485 95.371 286.14 94.969 C 285.615 94.357 284.873 94.212 284.111 94.177 C 281.542 94.056 281.775 95.416 280.265 96.747 C 280.238 96.77 280.211 96.792 280.184 96.815 C 278.574 97.117 276.704 96.865 275.073 96.757 C 275.365 96.261 275.491 95.689 275.674 95.146 C 276.394 93.018 277.93 91.442 280.114 90.809 C 280.796 90.611 281.537 90.636 282.175 90.304 C 282.203 90.29 282.23 90.274 282.257 90.258 Z M 285.668 100.977 C 284.111 101.47 281.053 101.999 280.202 103.493 C 279.96 103.919 279.957 104.354 280.105 104.812 C 280.312 105.452 280.707 105.819 281.211 106.223 C 282.575 106.509 284.155 106.688 285.392 105.878 C 286.124 105.399 286.525 104.616 286.675 103.77 C 286.818 102.965 286.845 101.777 286.685 100.977 C 286.331 100.814 286.039 100.907 285.668 100.977 Z M 134.559 90.204 L 134.648 90.197 C 137.334 89.994 140.431 90.988 142.457 92.752 C 144.274 94.334 145.422 96.719 145.585 99.112 C 145.788 102.086 145.302 104.54 143.256 106.83 C 141.605 108.679 139.559 109.938 137.052 110.071 C 134.518 110.133 132.346 110.12 130.098 108.745 C 127.859 107.375 126.193 105.265 125.593 102.694 C 124.999 100.147 125.394 97.34 126.795 95.118 C 128.71 92.081 131.179 90.948 134.559 90.204 Z M 134.173 94.655 C 133.162 94.995 132.559 95.728 132.086 96.66 C 131.148 98.511 131.115 101.07 131.796 103.006 C 132.218 104.206 132.998 105.382 134.196 105.92 C 134.958 106.262 135.867 106.244 136.679 106.115 C 137.904 105.651 138.468 105.027 139.017 103.84 C 139.89 101.953 140.01 99.291 139.264 97.343 C 138.83 96.212 138.053 95.321 136.935 94.831 C 136.11 94.47 135.05 94.57 134.173 94.655 Z M 108.567 83.064 C 112.489 82.791 116.966 82.604 120.151 85.33 C 121.853 86.786 122.299 88.604 122.445 90.733 C 120.499 90.646 118.522 90.707 116.571 90.69 C 115.891 89.394 115.252 88.76 114.044 87.972 C 113.077 87.909 112.07 87.817 111.102 87.856 C 110.291 87.889 109.26 88.169 108.715 88.81 C 108.376 89.208 108.363 89.861 108.39 90.359 C 108.414 90.811 108.468 91.384 108.797 91.722 C 110.435 93.407 118.16 93.605 121.164 96.321 C 122.551 97.575 123.591 99.565 123.646 101.448 C 123.706 103.513 122.778 105.763 121.34 107.24 C 119.542 109.085 116.928 110.033 114.388 110.075 C 110.77 110.141 107.202 110.276 104.225 107.839 C 102.719 106.605 101.189 104.703 101.041 102.686 C 101.01 102.264 100.99 101.978 101.272 101.648 C 103.323 101.479 105.426 101.586 107.484 101.605 C 107.768 102.835 108.132 103.575 108.979 104.519 C 111.194 105.256 112.884 105.963 115.157 104.913 C 115.826 104.604 116.508 104.17 116.762 103.442 C 116.998 102.768 117.047 101.867 116.706 101.225 C 115.735 99.404 109.252 98.347 107.149 97.613 C 105.109 96.901 103.291 95.709 102.349 93.697 C 101.567 92.027 101.584 90.087 102.208 88.368 C 103.335 85.266 105.816 84.318 108.567 83.064 Z M 236.667 83.113 C 239.046 82.891 241.84 82.706 244.181 83.267 C 246.38 83.794 249.015 85.126 250.2 87.114 C 250.801 88.122 251.117 89.524 250.84 90.674 C 249.012 90.474 246.846 90.706 244.99 90.69 C 244.9 90.153 244.608 89.651 244.259 89.242 C 243.406 88.245 242.025 87.878 240.759 87.8 C 239.622 87.731 238.185 87.834 237.315 88.669 C 237.267 88.715 237.222 88.764 237.179 88.814 C 237.136 88.865 237.096 88.918 237.059 88.973 C 237.021 89.027 236.987 89.084 236.955 89.143 C 236.923 89.201 236.895 89.261 236.869 89.322 C 236.844 89.383 236.822 89.446 236.803 89.51 C 236.784 89.573 236.768 89.637 236.755 89.703 C 236.743 89.768 236.734 89.833 236.728 89.899 C 236.722 89.966 236.72 90.032 236.721 90.098 C 236.724 90.572 236.857 91.503 237.211 91.841 C 238.553 93.125 246.803 93.575 250.08 96.737 C 251.432 98.041 252.095 99.685 252.105 101.556 C 252.107 101.688 252.105 101.82 252.099 101.951 C 252.094 102.083 252.085 102.215 252.074 102.346 C 252.062 102.477 252.046 102.608 252.028 102.739 C 252.009 102.869 251.988 102.999 251.962 103.129 C 251.937 103.258 251.909 103.387 251.877 103.515 C 251.846 103.643 251.811 103.77 251.773 103.896 C 251.735 104.023 251.694 104.148 251.649 104.272 C 251.605 104.396 251.558 104.519 251.507 104.641 C 251.457 104.763 251.403 104.884 251.347 105.003 C 251.29 105.122 251.23 105.239 251.168 105.355 C 251.105 105.472 251.04 105.586 250.971 105.699 C 250.903 105.812 250.832 105.923 250.758 106.032 C 250.684 106.141 250.607 106.249 250.528 106.354 C 250.449 106.459 250.367 106.563 250.282 106.664 C 250.197 106.765 250.11 106.864 250.021 106.961 C 249.931 107.058 249.839 107.153 249.745 107.245 C 247.665 109.307 245.149 110.115 242.281 110.083 C 239.796 110.128 237.368 110.157 235.023 109.203 C 232.978 108.371 230.843 106.729 229.975 104.645 C 229.667 103.906 229.246 102.502 229.569 101.744 C 230.654 101.244 234.161 101.577 235.509 101.6 C 236.452 102.744 236.441 104.003 237.944 104.718 C 239.607 105.509 241.757 105.668 243.488 105.01 C 244.233 104.727 245.002 104.247 245.307 103.472 C 245.577 102.788 245.366 101.836 245.103 101.177 C 244.325 98.818 233.729 98.776 231.058 94.413 C 230.127 92.893 229.873 90.841 230.3 89.122 C 230.704 87.497 232.037 85.399 233.544 84.603 C 234.528 84.084 235.606 83.754 236.561 83.178 C 236.597 83.157 236.632 83.134 236.667 83.113 Z M 179.208 83.258 C 181.048 83.227 182.879 83.189 184.717 83.308 C 184.502 92.009 184.724 100.781 184.729 109.49 C 182.864 109.536 180.999 109.519 179.135 109.441 C 179.146 108.856 179.246 108.09 179.045 107.542 C 178.196 107.881 177.58 108.83 176.822 109.351 C 175.205 110.462 172.512 110.176 170.682 109.832 C 169.894 109.514 169.166 109.12 168.501 108.589 C 166.43 106.933 165.62 104.689 165.342 102.124 C 165.018 99.134 165.406 95.653 167.362 93.254 C 168.692 91.624 170.672 90.376 172.798 90.182 C 175.217 89.962 177.086 91.31 178.855 92.759 C 179.521 89.887 178.641 85.566 179.208 83.258 Z M 173.638 94.838 C 172.338 95.72 171.757 96.703 171.452 98.249 C 171.091 100.078 171.154 102.631 172.238 104.231 C 172.696 104.906 173.377 105.353 174.187 105.49 C 174.943 105.618 175.872 105.5 176.637 105.439 C 177.946 104.639 178.589 103.586 178.942 102.096 C 179.353 100.359 179.207 98.036 178.25 96.488 C 177.774 95.717 176.952 95.041 176.055 94.836 C 175.317 94.668 174.392 94.773 173.638 94.838 Z" fill="var(--token-a2dcd121-2c82-4bf9-a79c-151a2036ba02, rgb(10, 11, 10)) /* {&quot;name&quot;:&quot;Text color&quot;} */"></path></svg>',
+                                            svgContentId: 12556386956,
+                                            withExternalLayout: !0,
+                                          }),
+                                        }),
+                                      ],
+                                    }),
+                                  ],
+                                }),
+                              }),
+                            }),
+                          ],
+                        }),
+                        q() &&
+                        e(S, {
+                          __framer__loop: R,
+                          __framer__loopEffectEnabled: !0,
+                          __framer__loopRepeatDelay: 0,
+                          __framer__loopRepeatType: "mirror",
+                          __framer__loopTransition: m1,
+                          __perspectiveFX: !1,
+                          __targetOpacity: 1,
+                          background: {
+                            alt: "",
+                            fit: "fill",
+                            intrinsicHeight: 388.8,
+                            intrinsicWidth: 464,
+                            loading: "lazy",
+                            pixelHeight: 486,
+                            pixelWidth: 580,
+                            sizes: "191px",
+                            src: "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512",
+                            srcSet:
+                              "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512 512w,https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png 994w",
+                          },
+                          className:
+                            "framer-1phovde hidden-180ph05 hidden-xp04m8",
+                          "data-framer-name": "Block",
+                          drag: !0,
+                          dragMomentum: !1,
+                          dragSnapToOrigin: !0,
+                          dragTransition: E,
+                          name: "Block",
+                          onMouseDown: P,
+                          style: { rotate: 20 },
+                        }),
+                        p() &&
+                        e(S, {
+                          __framer__loop: R,
+                          __framer__loopEffectEnabled: !0,
+                          __framer__loopRepeatDelay: 0,
+                          __framer__loopRepeatType: "mirror",
+                          __framer__loopTransition: m1,
+                          __perspectiveFX: !1,
+                          __targetOpacity: 1,
+                          background: {
+                            alt: "",
+                            fit: "fill",
+                            intrinsicHeight: 388.8,
+                            intrinsicWidth: 464,
+                            loading: "lazy",
+                            pixelHeight: 486,
+                            pixelWidth: 580,
+                            sizes: "191px",
+                            src: "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512",
+                            srcSet:
+                              "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512 512w,https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png 994w",
+                          },
+                          className:
+                            "framer-19sohj4 hidden-1tai7yd hidden-180ph05 hidden-xp04m8",
+                          "data-framer-name": "Block",
+                          drag: !0,
+                          dragMomentum: !1,
+                          dragSnapToOrigin: !0,
+                          dragTransition: E,
+                          name: "Block",
+                          onMouseDown: P,
+                          style: { rotate: -26 },
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+                e(h, {
+                  breakpoint: i,
+                  overrides: { Q1XUigOVv: { __targetOpacity: 0.46 } },
+                  children: e(q5, {
+                    __framer__animate: { transition: T2 },
+                    __framer__animateOnce: !1,
+                    __framer__enter: Z2,
+                    __framer__exit: P5,
+                    __framer__styleAppearEffectEnabled: !0,
+                    __framer__threshold: 0.5,
+                    __perspectiveFX: !1,
+                    __targetOpacity: 1,
+                    className: "framer-ivhii5",
+                    "data-framer-name": "Grid Line Background",
+                    name: "Grid Line Background",
+                    style: { transformPerspective: 1200 },
+                    children: e(h, {
+                      breakpoint: i,
+                      overrides: { Q1XUigOVv: { width: "265.625vw" } },
+                      children: e(M, {
+                        width: "100vw",
+                        children: e(M2, {
+                          __framer__animate: { transition: X2 },
+                          __framer__animateOnce: !0,
+                          __framer__enter: Z2,
+                          __framer__exit: Z5,
+                          __framer__styleAppearEffectEnabled: !0,
+                          __framer__threshold: 0.5,
+                          __perspectiveFX: !1,
+                          __targetOpacity: 1,
+                          className: "framer-1c2rrj0-container",
+                          style: { transformPerspective: 1200 },
+                          children: e(Y1, {
+                            height: "100%",
+                            id: "vTfCa1FSD",
+                            layoutId: "vTfCa1FSD",
+                            style: { height: "100%", width: "100%" },
+                            variant: "Rt_NTmuIz",
+                            width: "100%",
+                          }),
+                        }),
+                      }),
+                    }),
+                  }),
+                }),
+                e(h, {
+                  breakpoint: i,
+                  overrides: {
+                    Q1XUigOVv: { width: "100vw" },
+                    XWGQJU3bM: { width: "100vw" },
+                  },
+                  children: e(M, {
+                    width: "1248px",
+                    children: e($, {
+                      className: "framer-szu5q-container",
+                      children: e(h, {
+                        breakpoint: i,
+                        overrides: {
+                          Q1XUigOVv: { variant: "k2EEDG6yC" },
+                          XWGQJU3bM: { variant: "qD82lUNa5" },
+                        },
+                        children: e(G1, {
+                          height: "100%",
+                          id: "VZcPKh5Cw",
+                          layoutId: "VZcPKh5Cw",
+                          style: { width: "100%" },
+                          variant: "e6HBFILgg",
+                          width: "100%",
+                        }),
+                      }),
+                    }),
+                  }),
+                }),
+              ],
+            }),
+            e("div", { className: O(S2, ...w), id: "overlay" }),
+          ],
+        }),
+      })
+    );
+  }),
+  T5 = [
+    "@supports (aspect-ratio: 1) { body { --framer-aspect-ratio-supported: auto; } }",
+    `.${O1.bodyClassName}-framer-ui7q0 { background: var(--token-7d27c033-cb66-44c8-bf4e-e66d9f19511b, rgb(255, 255, 255)) /* {"name":"Background"} */; }`,
+    ".framer-ui7q0.framer-lux5qc, .framer-ui7q0 .framer-lux5qc { display: block; }",
+    ".framer-ui7q0.framer-72rtr7 { align-content: center; align-items: center; background-color: var(--token-7d27c033-cb66-44c8-bf4e-e66d9f19511b, #ffffff); display: flex; flex-direction: column; flex-wrap: nowrap; gap: 0px; height: min-content; justify-content: flex-start; overflow: hidden; padding: 0px; position: relative; width: 1519px; }",
+    ".framer-ui7q0 .framer-117ms87-container { flex: none; height: auto; left: 50%; max-width: 1280px; position: fixed; top: 0px; transform: translateX(-50%); width: 100%; z-index: 10; }",
+    ".framer-ui7q0 .framer-hw1qfl { align-content: center; align-items: center; display: flex; flex: none; flex-direction: column; flex-wrap: nowrap; gap: 0px; height: min-content; justify-content: center; overflow: hidden; padding: 0px; position: relative; width: 100%; z-index: 1; }",
+    ".framer-ui7q0 .framer-av2csc-container { flex: none; height: auto; max-width: 1280px; position: relative; width: 83%; z-index: 10; }",
+    ".framer-ui7q0 .framer-1n81jq3 { flex: none; height: 949px; left: calc(50.00000000000002% - 1216px / 2); overflow: visible; position: absolute; top: -662px; width: 1216px; z-index: 0; }",
+    ".framer-ui7q0 .framer-1v5s4c7 { flex: none; height: 968px; left: -64px; opacity: 0.4; overflow: visible; position: absolute; right: -74px; top: -120px; }",
+    ".framer-ui7q0 .framer-bkigbe { -webkit-filter: blur(169.4630889892578px); background-color: var(--token-683467f2-96b0-424a-962f-8ef95192a805, rgba(68, 113, 227, 0)); border-bottom-left-radius: 100%; border-bottom-right-radius: 100%; border-top-left-radius: 100%; border-top-right-radius: 100%; filter: blur(169.4630889892578px); flex: none; height: 922px; left: calc(49.99999549223409% - 922px / 2); position: absolute; top: 0px; width: 922px; }",
+    ".framer-ui7q0 .framer-dld4a3 { -webkit-filter: blur(169.4630889892578px); background-color: var(--token-e6d6bcc5-5555-47a5-9b22-c5cc2c9fe40b, rgba(255, 217, 120, 0)); border-bottom-left-radius: 100%; border-bottom-right-radius: 100%; border-top-left-radius: 100%; border-top-right-radius: 100%; bottom: 0px; filter: blur(169.4630889892578px); flex: none; height: 725px; left: calc(49.99999549223409% - 725px / 2); opacity: 0.6; position: absolute; width: 725px; }",
+    ".framer-ui7q0 .framer-171to5k { align-content: center; align-items: center; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 0px; height: min-content; justify-content: center; max-width: 1280px; overflow: visible; padding: 8px 32px 8px 32px; position: relative; width: 100%; }",
+    ".framer-ui7q0 .framer-19lzdxx { align-content: center; align-items: center; display: flex; flex: 1 0 0px; flex-direction: row; flex-wrap: nowrap; gap: 0px; height: min-content; justify-content: flex-start; max-width: 1280px; overflow: visible; padding: 0px; position: relative; width: 1px; }",
+    ".framer-ui7q0 .framer-3qczc4 { align-content: flex-start; align-items: flex-start; display: flex; flex: 1 0 0px; flex-direction: column; flex-wrap: nowrap; gap: 32px; height: min-content; justify-content: flex-start; overflow: visible; padding: 0px; position: relative; width: 1px; z-index: 1; }",
+    ".framer-ui7q0 .framer-kz8x7m, .framer-ui7q0 .framer-vzji2j { align-content: flex-start; align-items: flex-start; display: flex; flex: none; flex-direction: column; flex-wrap: nowrap; gap: 24px; height: min-content; justify-content: flex-start; overflow: visible; padding: 0px; position: relative; width: 100%; }",
+    ".framer-ui7q0 .framer-1257qf2-container, .framer-ui7q0 .framer-1j1qadg-container, .framer-ui7q0 .framer-1y324kx-container, .framer-ui7q0 .framer-1bclzx5-container, .framer-ui7q0 .framer-4m2yj1-container, .framer-ui7q0 .framer-yfl9o5-container { flex: none; height: auto; position: relative; width: auto; }",
+    ".framer-ui7q0 .framer-1j1lpgd, .framer-ui7q0 .framer-jwq1a0, .framer-ui7q0 .framer-d50tri { flex: none; height: auto; position: relative; white-space: pre-wrap; width: 100%; word-break: break-word; word-wrap: break-word; }",
+    ".framer-ui7q0 .framer-pvzydo { align-content: center; align-items: center; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 10px; height: 84px; justify-content: flex-start; overflow: hidden; padding: 0px; position: relative; width: 100%; }",
+    ".framer-ui7q0 .framer-1ncsbu9 { flex: none; height: auto; max-width: 580px; position: relative; white-space: pre-wrap; width: 580px; word-break: break-word; word-wrap: break-word; }",
+    ".framer-ui7q0 .framer-1ock6vn { align-content: center; align-items: center; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 20px; height: min-content; justify-content: flex-start; overflow: hidden; padding: 0px; position: relative; width: 100%; }",
+    ".framer-ui7q0 .framer-h9qa6p-container, .framer-ui7q0 .framer-vt2qhm-container { flex: none; height: auto; position: relative; width: auto; z-index: 2; }",
+    ".framer-ui7q0 .framer-v5ef1j { flex: none; height: 588px; overflow: visible; position: relative; width: 581px; z-index: 0; }",
+    ".framer-ui7q0 .framer-i7bazi { flex: none; height: 366px; overflow: visible; position: absolute; right: -379px; top: calc(50.00000000000002% - 366px / 2); width: 935px; }",
+    ".framer-ui7q0 .framer-15o9xad { flex: none; height: 397px; position: absolute; right: -57px; top: calc(48.90710382513663% - 397px / 2); width: 772px; }",
+    ".framer-ui7q0 .framer-1fug4zx { background-color: rgba(0, 0, 0, 0); flex: none; height: 349px; left: -594px; opacity: 0.38; position: absolute; top: calc(49.18032786885248% - 349px / 2); width: 601px; }",
+    ".framer-ui7q0 .framer-16le7zk { --border-bottom-width: 1px; --border-color: var(--token-f95fb56e-4771-4c58-8209-85424335f200, rgba(255, 255, 255, 0.14)); --border-left-width: 1px; --border-right-width: 1px; --border-style: solid; --border-top-width: 1px; -webkit-backdrop-filter: blur(3px); align-content: center; align-items: center; backdrop-filter: blur(3px); background-color: var(--token-04385c6a-b457-45ee-a038-29ff13480ba8, rgba(255, 255, 255, 0.09)); border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; border-top-left-radius: 20px; border-top-right-radius: 20px; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 10px; height: 220px; justify-content: center; left: 0px; overflow: hidden; padding: 0px; position: absolute; top: calc(47.81096260416337% - 220px / 2); width: 220px; will-change: var(--framer-will-change-override, transform); }",
+    ".framer-ui7q0 .framer-1ujfmr4 { -webkit-filter: blur(18.5px); background-color: var(--token-7049cce7-715e-45a0-a41e-932274474306, #09e308); border-bottom-left-radius: 39px; border-bottom-right-radius: 39px; border-top-left-radius: 39px; border-top-right-radius: 39px; filter: blur(18.5px); flex: none; height: 59px; position: absolute; right: -12px; top: calc(51.81818181818184% - 59px / 2); width: 26px; z-index: 1; }",
+    ".framer-ui7q0 .framer-cm59nh { -webkit-filter: blur(18.5px); background-color: var(--token-bf824105-d7d5-474a-9629-86627c46ddec, #000000); border-bottom-left-radius: 39px; border-bottom-right-radius: 39px; border-top-left-radius: 39px; border-top-right-radius: 39px; filter: blur(18.5px); flex: none; height: 60px; left: -12px; opacity: 0.38; position: absolute; top: calc(51.36363636363639% - 60px / 2); width: 26px; z-index: 1; }",
+    ".framer-ui7q0 .framer-1oxlnpr { flex: none; height: 77px; position: relative; width: 82px; }",
+    ".framer-ui7q0 .framer-13iqdum-container { flex: none; height: 100%; left: calc(50.00000000000002% - 100% / 2); position: absolute; top: calc(50.00000000000002% - 100% / 2); width: 100%; z-index: 1; }",
+    ".framer-ui7q0 .framer-1rndu0q { aspect-ratio: 1.1934156378600822 / 1; bottom: 342px; cursor: grab; flex: none; height: var(--framer-aspect-ratio-supported, 91px); left: 360px; overflow: visible; position: absolute; width: 108px; z-index: 1; }",
+    ".framer-ui7q0 .framer-j125pk { aspect-ratio: 1.1934156378600822 / 1; bottom: 30px; cursor: grab; flex: none; height: var(--framer-aspect-ratio-supported, 117px); left: 268px; overflow: visible; position: absolute; width: 140px; z-index: 1; }",
+    ".framer-ui7q0 .framer-1xqsn5e { aspect-ratio: 1 / 1; cursor: grab; flex: none; height: var(--framer-aspect-ratio-supported, 186px); left: 212px; overflow: visible; position: absolute; top: -59px; width: 186px; z-index: 1; }",
+    ".framer-ui7q0 .framer-1vr5n4q { aspect-ratio: 1 / 1; bottom: -4px; cursor: grab; flex: none; height: var(--framer-aspect-ratio-supported, 188px); left: 471px; overflow: visible; position: absolute; width: 188px; z-index: 1; }",
+    ".framer-ui7q0 .framer-1bwcu5b { -webkit-filter: brightness(0.92); aspect-ratio: 1 / 1; cursor: grab; filter: brightness(0.92); flex: none; height: var(--framer-aspect-ratio-supported, 126px); left: 47%; overflow: visible; position: absolute; top: 21px; transform: translateX(-50%); width: 126px; z-index: 1; }",
+    ".framer-ui7q0 .framer-v0lpej { aspect-ratio: 1 / 1; bottom: -67px; cursor: grab; flex: none; height: var(--framer-aspect-ratio-supported, 140px); left: 49%; overflow: visible; position: absolute; transform: translateX(-50%); width: 140px; z-index: 1; }",
+    ".framer-ui7q0 .framer-1c3liat { aspect-ratio: 1 / 1; cursor: grab; flex: none; height: var(--framer-aspect-ratio-supported, 140px); left: 493px; overflow: visible; position: absolute; top: -40px; width: 140px; z-index: 1; }",
+    ".framer-ui7q0 .framer-1rnky7f { aspect-ratio: 1 / 1; bottom: 91px; cursor: grab; flex: none; height: var(--framer-aspect-ratio-supported, 133px); left: 49%; overflow: visible; position: absolute; transform: translateX(-50%); width: 133px; z-index: 1; }",
+    ".framer-ui7q0 .framer-15hed9b { align-content: center; align-items: center; display: flex; flex: none; flex-direction: column; flex-wrap: nowrap; gap: 0px; height: min-content; justify-content: center; overflow: visible; padding: 25px 0px 0px 0px; position: relative; width: 100%; }",
+    ".framer-ui7q0 .framer-6oh9yv { --border-bottom-width: 0px; --border-color: var(--token-eeeebe0f-b246-4d8c-a158-74908ab2e2e3, #d9d9d9); --border-left-width: 0px; --border-right-width: 0px; --border-style: dashed; --border-top-width: 1px; align-content: center; align-items: center; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 138px; height: 156px; justify-content: center; overflow: visible; padding: 52px 0px 52px 0px; position: relative; width: min-content; }",
+    ".framer-ui7q0 .framer-dz9mo0 { flex: none; height: 61px; position: relative; width: 126px; }",
+    ".framer-ui7q0 .framer-u4bibj { flex: none; height: 67px; position: relative; width: 166px; }",
+    ".framer-ui7q0 .framer-1nbfb6t { flex: none; height: 79px; overflow: hidden; position: relative; width: 221px; }",
+    ".framer-ui7q0 .framer-3nfr41 { background-color: rgba(196, 16, 16, 0); flex: none; height: 79px; left: calc(49.77375565610862% - 221px / 2); position: absolute; top: calc(49.36708860759496% - 79px / 2); width: 221px; }",
+    ".framer-ui7q0 .framer-128m11y { --border-bottom-width: 1px; --border-color: var(--token-eeeebe0f-b246-4d8c-a158-74908ab2e2e3, #d9d9d9); --border-left-width: 0px; --border-right-width: 0px; --border-style: dashed; --border-top-width: 1px; align-content: center; align-items: center; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 138px; height: min-content; justify-content: center; overflow: visible; padding: 52px 0px 52px 0px; position: relative; width: min-content; }",
+    ".framer-ui7q0 .framer-8e1bmi, .framer-ui7q0 .framer-m9k93s, .framer-ui7q0 .framer-g9zb2a, .framer-ui7q0 .framer-13rryyb { align-content: center; align-items: center; display: flex; flex: none; flex-direction: column; flex-wrap: nowrap; gap: 6px; height: min-content; justify-content: center; overflow: visible; padding: 0px; position: relative; width: min-content; }",
+    ".framer-ui7q0 .framer-1na77cf, .framer-ui7q0 .framer-1ghxpl6, .framer-ui7q0 .framer-1e679xj, .framer-ui7q0 .framer-19d5gbk { align-content: center; align-items: center; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 0px; height: min-content; justify-content: center; overflow: hidden; padding: 0px; position: relative; width: min-content; }",
+    ".framer-ui7q0 .framer-ayti8r, .framer-ui7q0 .framer-sfjvbl, .framer-ui7q0 .framer-wapf38, .framer-ui7q0 .framer-1vmj7ye, .framer-ui7q0 .framer-dv03z3, .framer-ui7q0 .framer-1yxc21a, .framer-ui7q0 .framer-imx0dn, .framer-ui7q0 .framer-1dnqelm { --framer-paragraph-spacing: 0px; flex: none; height: auto; position: relative; white-space: pre; width: auto; }",
+    ".framer-ui7q0 .framer-1212kh8 { flex: none; height: 449px; overflow: visible; position: relative; width: 1520px; }",
+    ".framer-ui7q0 .framer-136vdzm { -webkit-user-select: none; flex: none; height: auto; left: 50%; pointer-events: auto; position: absolute; top: 96px; transform: translateX(-50%); user-select: none; white-space: pre; width: auto; }",
+    ".framer-ui7q0 .framer-ozew3n { -webkit-user-select: none; flex: none; height: auto; left: 50%; pointer-events: auto; position: absolute; top: 187px; transform: translateX(-50%); user-select: none; white-space: pre; width: auto; }",
+    ".framer-ui7q0 .framer-1akw1mh { -webkit-user-select: none; flex: none; height: auto; left: 50%; pointer-events: auto; position: absolute; top: 128px; transform: translateX(-50%); user-select: none; white-space: pre; width: auto; }",
+    ".framer-ui7q0 .framer-p2hyij { align-content: center; align-items: center; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 30px; height: 82px; justify-content: center; left: 50%; overflow: hidden; padding: 0px; position: absolute; top: 265px; transform: translateX(-50%); width: min-content; }",
+    ".framer-ui7q0 .framer-1ganoji, .framer-ui7q0 .framer-1bzvu20, .framer-ui7q0 .framer-nfpc8u, .framer-ui7q0 .framer-1wa5cgn, .framer-ui7q0 .framer-s2d6gu, .framer-ui7q0 .framer-12f53rz, .framer-ui7q0 .framer-1izs7jp, .framer-ui7q0 .framer-1iup5ag { aspect-ratio: 1 / 1; flex: none; height: var(--framer-aspect-ratio-supported, 80px); position: relative; width: 80px; }",
+    ".framer-ui7q0 .framer-7wfos3, .framer-ui7q0 .framer-12anijm { aspect-ratio: 0.9984639016897082 / 1; flex: none; height: var(--framer-aspect-ratio-supported, 73px); overflow: visible; position: relative; width: 72px; }",
+    ".framer-ui7q0 .framer-14q7ajt { display: grid; flex: none; gap: 9px; grid-auto-rows: min-content; grid-template-columns: repeat(9, minmax(50px, 1fr)); grid-template-rows: repeat(2, min-content); height: min-content; justify-content: center; left: 50%; overflow: hidden; padding: 0px; position: absolute; top: 251px; transform: translateX(-50%); width: min-content; }",
+    ".framer-ui7q0 .framer-1qj26li, .framer-ui7q0 .framer-1tsrdml, .framer-ui7q0 .framer-roczm4, .framer-ui7q0 .framer-1apo83n, .framer-ui7q0 .framer-1py3vzg, .framer-ui7q0 .framer-15fnzvr, .framer-ui7q0 .framer-10w9r2f, .framer-ui7q0 .framer-13t7dvm, .framer-ui7q0 .framer-1q2b1s6 { align-self: start; aspect-ratio: 1 / 1; flex: none; height: var(--framer-aspect-ratio-supported, 80px); justify-self: start; position: relative; width: 100%; }",
+    ".framer-ui7q0 .framer-1quyz1w, .framer-ui7q0 .framer-ps4c9d { align-content: center; align-items: center; display: flex; flex: none; flex-direction: column; flex-wrap: nowrap; gap: 52px; height: min-content; justify-content: center; max-width: 1280px; overflow: visible; padding: 0px 32px 40px 32px; position: relative; width: 83%; }",
+    ".framer-ui7q0 .framer-17sbmwn { align-content: center; align-items: center; display: flex; flex: none; flex-direction: column; flex-wrap: nowrap; gap: 5px; height: min-content; justify-content: center; overflow: hidden; padding: 0px; position: relative; width: 100%; }",
+    ".framer-ui7q0 .framer-evb4ej, .framer-ui7q0 .framer-1swkq8r, .framer-ui7q0 .framer-1q7idue { align-content: center; align-items: center; display: flex; flex: none; flex-direction: column; flex-wrap: nowrap; gap: 0px; height: min-content; justify-content: center; overflow: visible; padding: 0px; position: relative; width: 100%; }",
+    ".framer-ui7q0 .framer-o9dqnn, .framer-ui7q0 .framer-1zuw21 { --framer-link-text-color: #0099ff; --framer-link-text-decoration: underline; --framer-paragraph-spacing: 0px; flex: none; height: auto; position: relative; white-space: pre; width: auto; }",
+    ".framer-ui7q0 .framer-3u8mf7, .framer-ui7q0 .framer-1a8nohw { --framer-link-text-color: #0099ff; --framer-link-text-decoration: underline; --framer-paragraph-spacing: 0px; flex: none; height: auto; position: relative; white-space: pre-wrap; width: 100%; word-break: break-word; word-wrap: break-word; }",
+    ".framer-ui7q0 .framer-1t2etvs { aspect-ratio: 1.1934156378600822 / 1; flex: none; height: var(--framer-aspect-ratio-supported, 224px); left: -169px; overflow: visible; position: absolute; top: 51px; width: 267px; z-index: 1; }",
+    ".framer-ui7q0 .framer-vn9x9r { aspect-ratio: 1.1934156378600822 / 1; flex: none; height: var(--framer-aspect-ratio-supported, 97px); left: 101px; overflow: visible; position: absolute; top: 26px; width: 115px; z-index: 1; }",
+    ".framer-ui7q0 .framer-k7ney { display: grid; flex: none; gap: 14px; grid-auto-rows: minmax(0, 1fr); grid-template-columns: repeat(5, minmax(50px, 1fr)); grid-template-rows: repeat(2, minmax(0, 1fr)); height: min-content; justify-content: center; max-width: 1200px; overflow: visible; padding: 0px; position: relative; width: 100%; }",
+    ".framer-ui7q0 .framer-85eg8i, .framer-ui7q0 .framer-hanm0d, .framer-ui7q0 .framer-1az6435, .framer-ui7q0 .framer-1kndl8r, .framer-ui7q0 .framer-1ao794p, .framer-ui7q0 .framer-yksecg, .framer-ui7q0 .framer-j97575, .framer-ui7q0 .framer-1cbmlvx, .framer-ui7q0 .framer-18nxhsg { --border-bottom-width: 1px; --border-color: rgba(255, 255, 255, 0.05); --border-left-width: 1px; --border-right-width: 1px; --border-style: solid; --border-top-width: 1px; align-content: center; align-items: center; align-self: start; background-color: var(--token-089902dc-7814-4806-9ea4-082cfc96df83, #f0f0f0); border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; border-top-left-radius: 20px; border-top-right-radius: 20px; display: flex; flex: none; flex-direction: column; flex-wrap: nowrap; gap: 28px; height: 100%; justify-content: center; justify-self: start; overflow: hidden; padding: 40px 47px 40px 47px; position: relative; width: min-content; will-change: var(--framer-will-change-override, transform); }",
+    ".framer-ui7q0 .framer-1cgjt3l, .framer-ui7q0 .framer-103iyjy, .framer-ui7q0 .framer-1wrd7lh, .framer-ui7q0 .framer-17ja6ah, .framer-ui7q0 .framer-dsy09z, .framer-ui7q0 .framer-no6vp4, .framer-ui7q0 .framer-15vfdwb, .framer-ui7q0 .framer-qronkf, .framer-ui7q0 .framer-14m5wfj, .framer-ui7q0 .framer-zt38q9, .framer-ui7q0 .framer-mefgcn, .framer-ui7q0 .framer-13n63cz, .framer-ui7q0 .framer-18wsno1, .framer-ui7q0 .framer-3z2pae, .framer-ui7q0 .framer-1rcm3a7, .framer-ui7q0 .framer-1t5ujc8, .framer-ui7q0 .framer-14kr3zv, .framer-ui7q0 .framer-1mn93zs, .framer-ui7q0 .framer-3gi99x, .framer-ui7q0 .framer-3ufw93 { align-content: center; align-items: center; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 10px; height: min-content; justify-content: center; overflow: hidden; padding: 0px; position: relative; width: min-content; }",
+    ".framer-ui7q0 .framer-ofz8mk, .framer-ui7q0 .framer-1j6jvka, .framer-ui7q0 .framer-fxt8lq, .framer-ui7q0 .framer-1g115jf, .framer-ui7q0 .framer-8ev09z, .framer-ui7q0 .framer-ippcvq, .framer-ui7q0 .framer-1cqrde5, .framer-ui7q0 .framer-1cf802q, .framer-ui7q0 .framer-801utb, .framer-ui7q0 .framer-487djs { aspect-ratio: 1 / 1; flex: none; height: var(--framer-aspect-ratio-supported, 100px); overflow: visible; position: relative; width: 100px; }",
+    ".framer-ui7q0 .framer-1p2mdfk, .framer-ui7q0 .framer-10mqin3, .framer-ui7q0 .framer-19e7f19, .framer-ui7q0 .framer-etxgq9, .framer-ui7q0 .framer-hr81mf, .framer-ui7q0 .framer-1fo6chx, .framer-ui7q0 .framer-ji4ooq, .framer-ui7q0 .framer-z64c7b, .framer-ui7q0 .framer-1ys60h9, .framer-ui7q0 .framer-rtwtso { --framer-link-text-color: #0099ff; --framer-link-text-decoration: underline; --framer-paragraph-spacing: 0px; flex: none; height: auto; position: relative; white-space: pre-wrap; width: 132px; word-break: break-word; word-wrap: break-word; }",
+    ".framer-ui7q0 .framer-bzz9hc { --border-bottom-width: 1px; --border-color: rgba(255, 255, 255, 0.05); --border-left-width: 1px; --border-right-width: 1px; --border-style: solid; --border-top-width: 1px; align-content: center; align-items: center; align-self: start; background-color: var(--token-089902dc-7814-4806-9ea4-082cfc96df83, #f0f0f0); border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; border-top-left-radius: 20px; border-top-right-radius: 20px; display: flex; flex: none; flex-direction: column; flex-wrap: nowrap; gap: 12px; height: 100%; justify-content: center; justify-self: start; overflow: hidden; padding: 40px 47px 40px 47px; position: relative; width: min-content; will-change: var(--framer-will-change-override, transform); }",
+    ".framer-ui7q0 .framer-1i2xjtq { aspect-ratio: 1.1934156378600822 / 1; flex: none; height: var(--framer-aspect-ratio-supported, 210px); overflow: visible; position: absolute; right: -168px; top: -38px; width: 251px; z-index: 1; }",
+    ".framer-ui7q0 .framer-1hmt24w { aspect-ratio: 1.1934156378600822 / 1; bottom: 28px; flex: none; height: var(--framer-aspect-ratio-supported, 127px); left: -96px; overflow: visible; position: absolute; width: 151px; z-index: 1; }",
+    ".framer-ui7q0 .framer-1yyjn0n { align-content: center; align-items: center; display: flex; flex: none; flex-direction: column; flex-wrap: nowrap; gap: 11px; height: min-content; justify-content: center; overflow: hidden; padding: 0px; position: relative; width: 100%; }",
+    ".framer-ui7q0 .framer-1goigrv { -webkit-user-select: none; flex: none; height: auto; pointer-events: auto; position: relative; user-select: none; white-space: pre-wrap; width: 100%; word-break: break-word; word-wrap: break-word; }",
+    ".framer-ui7q0 .framer-1pybend { -webkit-user-select: none; flex: none; height: auto; pointer-events: auto; position: relative; user-select: none; white-space: pre; width: auto; }",
+    ".framer-ui7q0 .framer-17ve921 { align-content: center; align-items: center; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 32px; height: min-content; justify-content: center; max-width: 1200px; overflow: visible; padding: 0px; position: relative; width: 100%; }",
+    ".framer-ui7q0 .framer-1ywqqkv { --border-bottom-width: 1px; --border-color: rgba(255, 255, 255, 0.05); --border-left-width: 1px; --border-right-width: 1px; --border-style: solid; --border-top-width: 1px; align-content: center; align-items: center; background-color: var(--token-089902dc-7814-4806-9ea4-082cfc96df83, #e8e8e8); border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; border-top-left-radius: 20px; border-top-right-radius: 20px; display: flex; flex: 1 0 0px; flex-direction: column; flex-wrap: nowrap; gap: 12px; height: min-content; justify-content: center; overflow: hidden; padding: 40px 44.5px 40px 44.5px; position: relative; width: 1px; will-change: var(--framer-will-change-override, transform); }",
+    ".framer-ui7q0 .framer-1htcnl0, .framer-ui7q0 .framer-5jwtqe, .framer-ui7q0 .framer-1y5eqjf, .framer-ui7q0 .framer-h54jv5, .framer-ui7q0 .framer-ymwhmt, .framer-ui7q0 .framer-1hgk5pb, .framer-ui7q0 .framer-1fkiv3s { align-content: center; align-items: center; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 10px; height: min-content; justify-content: center; overflow: hidden; padding: 0px; position: relative; width: 100%; }",
+    ".framer-ui7q0 .framer-vsjwt6, .framer-ui7q0 .framer-nnubj1, .framer-ui7q0 .framer-xizh7q { --framer-link-text-color: #0099ff; --framer-link-text-decoration: underline; --framer-paragraph-spacing: 0px; flex: 1 0 0px; height: auto; position: relative; white-space: pre-wrap; width: 1px; word-break: break-word; word-wrap: break-word; }",
+    ".framer-ui7q0 .framer-qsr8w2, .framer-ui7q0 .framer-1g7cas4, .framer-ui7q0 .framer-1xb2h12 { flex: 1 0 0px; height: auto; position: relative; white-space: pre-wrap; width: 1px; word-break: break-word; word-wrap: break-word; }",
+    ".framer-ui7q0 .framer-125nsv8, .framer-ui7q0 .framer-1silq0f { --border-bottom-width: 1px; --border-color: rgba(255, 255, 255, 0.05); --border-left-width: 1px; --border-right-width: 1px; --border-style: solid; --border-top-width: 1px; align-content: center; align-items: center; align-self: stretch; background-color: var(--token-089902dc-7814-4806-9ea4-082cfc96df83, #f0f0f0); border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; border-top-left-radius: 20px; border-top-right-radius: 20px; display: flex; flex: 1 0 0px; flex-direction: column; flex-wrap: nowrap; gap: 12px; height: auto; justify-content: center; overflow: hidden; padding: 40px 44.5px 40px 44.5px; position: relative; width: 1px; will-change: var(--framer-will-change-override, transform); }",
+    ".framer-ui7q0 .framer-19qgbj8 { align-content: center; align-items: center; display: flex; flex: none; flex-direction: column; flex-wrap: nowrap; gap: 80px; height: min-content; justify-content: center; max-width: 1280px; overflow: visible; padding: 64px 32px 40px 32px; position: relative; width: 100%; }",
+    ".framer-ui7q0 .framer-tdirjv { flex: none; height: 939px; left: calc(50.00000000000002% - 1216px / 2); overflow: visible; position: absolute; top: calc(50.00000000000002% - 939px / 2); width: 1216px; z-index: 0; }",
+    ".framer-ui7q0 .framer-1fmf1ij { flex: none; height: 968px; left: -64px; opacity: 0.4; overflow: visible; position: absolute; top: 0px; width: 1354px; }",
+    ".framer-ui7q0 .framer-1jebix { -webkit-filter: blur(169.4630889892578px); background-color: var(--token-70b4281f-dbaa-49f5-8ecf-d4c22542a274, #09e308); border-bottom-left-radius: 100%; border-bottom-right-radius: 100%; border-top-left-radius: 100%; border-top-right-radius: 100%; bottom: 0px; filter: blur(169.4630889892578px); flex: none; height: 787px; left: 135px; position: absolute; width: 787px; }",
+    ".framer-ui7q0 .framer-1pwz3yr { -webkit-filter: blur(169.4630889892578px); background-color: #ffffff; border-bottom-left-radius: 100%; border-bottom-right-radius: 100%; border-top-left-radius: 100%; border-top-right-radius: 100%; filter: blur(169.4630889892578px); flex: none; height: 725px; left: 629px; opacity: 0.6; position: absolute; top: 243px; width: 725px; }",
+    ".framer-ui7q0 .framer-otapak { align-content: center; align-items: center; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 32px; height: min-content; justify-content: center; overflow: visible; padding: 0px; position: relative; width: 100%; }",
+    ".framer-ui7q0 .framer-1rxbt53 { --border-bottom-width: 1px; --border-color: rgba(255, 255, 255, 0.05); --border-left-width: 1px; --border-right-width: 1px; --border-style: solid; --border-top-width: 1px; -webkit-backdrop-filter: blur(5px); align-content: center; align-items: center; backdrop-filter: blur(5px); background-color: var(--token-089902dc-7814-4806-9ea4-082cfc96df83, #f0f0f0); border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; border-top-left-radius: 20px; border-top-right-radius: 20px; display: flex; flex: none; flex-direction: column; flex-wrap: nowrap; gap: 24px; height: min-content; justify-content: center; overflow: visible; padding: 40px 44.5px 40px 44.5px; position: relative; scroll-margin-top: 125px; width: 620px; z-index: 2; }",
+    ".framer-ui7q0 .framer-1vjbwqe { align-content: center; align-items: center; display: flex; flex: none; flex-direction: column; flex-wrap: nowrap; gap: 40px; height: min-content; justify-content: center; overflow: hidden; padding: 0px; position: relative; width: 100%; }",
+    ".framer-ui7q0 .framer-1vzfukf { align-content: center; align-items: center; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 31px; height: 60px; justify-content: center; overflow: hidden; padding: 0px; position: relative; width: 519px; }",
+    ".framer-ui7q0 .framer-1md35q4 { aspect-ratio: 1.3615635179153094 / 1; flex: none; height: var(--framer-aspect-ratio-supported, 61px); position: relative; width: 83px; }",
+    ".framer-ui7q0 .framer-9j50vb { flex: none; height: 103%; max-width: 720px; position: relative; white-space: pre-wrap; width: auto; word-break: break-word; word-wrap: break-word; }",
+    ".framer-ui7q0 .framer-1r9duzb { flex: none; height: auto; max-width: 590px; position: relative; white-space: pre-wrap; width: 448px; word-break: break-word; word-wrap: break-word; }",
+    ".framer-ui7q0 .framer-ea1y6q { aspect-ratio: 1.1934156378600822 / 1; bottom: 88px; flex: none; height: var(--framer-aspect-ratio-supported, 223px); left: 887px; overflow: visible; position: absolute; width: 267px; z-index: 2; }",
+    ".framer-ui7q0 .framer-1tmpjox { aspect-ratio: 1.1934156378600822 / 1; flex: none; height: var(--framer-aspect-ratio-supported, 187px); left: 117px; overflow: visible; position: absolute; top: 65px; width: 223px; z-index: 2; }",
+    ".framer-ui7q0 .framer-1wizzeq { aspect-ratio: 1.1934156378600822 / 1; flex: none; height: var(--framer-aspect-ratio-supported, 83px); left: 117px; overflow: visible; position: absolute; top: 50%; transform: translateY(-50%); width: 99px; z-index: 1; }",
+    ".framer-ui7q0 .framer-tr3om3 { aspect-ratio: 1.1934156378600822 / 1; flex: none; height: var(--framer-aspect-ratio-supported, 129px); overflow: visible; position: absolute; right: -11px; top: -201px; width: 153px; z-index: 1; }",
+    ".framer-ui7q0 .framer-57siy4 { aspect-ratio: 1.1934156378600822 / 1; bottom: -600px; flex: none; height: var(--framer-aspect-ratio-supported, 240px); left: -107px; overflow: visible; position: absolute; width: 286px; z-index: 1; }",
+    ".framer-ui7q0 .framer-1cuukxv { aspect-ratio: 1.1934156378600822 / 1; bottom: 20px; flex: none; left: 1%; overflow: visible; position: absolute; top: 1079px; transform: translateX(-50%); width: var(--framer-aspect-ratio-supported, 179px); z-index: 1; }",
+    ".framer-ui7q0 .framer-yhu483 { align-content: center; align-items: center; display: flex; flex: none; flex-direction: column; flex-wrap: nowrap; gap: 82px; height: min-content; justify-content: center; max-width: 1280px; overflow: visible; padding: 80px 32px 40px 32px; position: relative; width: 100%; }",
+    ".framer-ui7q0 .framer-1qkab9s { align-content: flex-start; align-items: flex-start; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 0px; height: min-content; justify-content: center; max-width: 1200px; overflow: visible; padding: 0px 0px 10px 0px; position: relative; width: 100%; }",
+    ".framer-ui7q0 .framer-apeq29 { align-content: flex-start; align-items: flex-start; display: flex; flex: none; flex-direction: column; flex-wrap: nowrap; gap: 16px; height: min-content; justify-content: center; overflow: hidden; padding: 0px 40px 0px 0px; position: relative; width: 41%; }",
+    ".framer-ui7q0 .framer-4jl14v { align-content: flex-end; align-items: flex-end; display: flex; flex: none; flex-direction: column; flex-wrap: nowrap; gap: 16px; height: min-content; justify-content: flex-end; overflow: hidden; padding: 0px; position: relative; width: 59%; }",
+    ".framer-ui7q0 .framer-1z0rjbm-container { flex: none; height: auto; position: relative; scroll-margin-top: 200px; width: 100%; }",
+    ".framer-ui7q0 .framer-1aboqt0 { --border-bottom-width: 1px; --border-color: rgba(255, 255, 255, 0.05); --border-left-width: 1px; --border-right-width: 1px; --border-style: solid; --border-top-width: 1px; align-content: center; align-items: center; background-color: var(--token-089902dc-7814-4806-9ea4-082cfc96df83, #f0f0f0); border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; border-top-left-radius: 20px; border-top-right-radius: 20px; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 70px; height: min-content; justify-content: flex-start; overflow: hidden; padding: 40px 30px 40px 30px; position: relative; width: 100%; will-change: var(--framer-will-change-override, transform); }",
+    ".framer-ui7q0 .framer-i8rgto { align-content: center; align-items: center; display: flex; flex: 1 0 0px; flex-direction: column; flex-wrap: nowrap; gap: 32px; height: min-content; justify-content: flex-start; overflow: visible; padding: 0px; position: relative; width: 1px; }",
+    ".framer-ui7q0 .framer-m0m4x2 { align-content: flex-start; align-items: flex-start; display: flex; flex: none; flex-direction: column; flex-wrap: nowrap; gap: 34px; height: min-content; justify-content: flex-start; overflow: visible; padding: 0px; position: relative; width: 100%; }",
+    ".framer-ui7q0 .framer-vjpm0g { align-content: center; align-items: center; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 0px; height: min-content; justify-content: center; overflow: visible; padding: 0px; position: relative; width: 100%; }",
+    ".framer-ui7q0 .framer-q10wg7 { background-color: rgba(0, 0, 0, 0); flex: none; height: 66px; position: relative; width: 317px; }",
+    ".framer-ui7q0 .framer-1p1d0l6 { align-content: center; align-items: center; display: flex; flex: none; flex-direction: row; flex-wrap: nowrap; gap: 10px; height: 110px; justify-content: center; overflow: hidden; padding: 0px 17px 0px 52px; position: relative; width: min-content; }",
+    ".framer-ui7q0 .framer-1mblgp0 { background-color: rgba(196, 16, 16, 0); flex: none; height: 105px; position: relative; width: 293px; }",
+    ".framer-ui7q0 .framer-1an7n43 { flex: none; height: 196px; position: relative; width: 349px; }",
+    ".framer-ui7q0 .framer-1phovde { aspect-ratio: 1.1934156378600822 / 1; flex: none; height: var(--framer-aspect-ratio-supported, 160px); left: -60px; overflow: visible; position: absolute; top: 0px; width: 191px; z-index: 1; }",
+    ".framer-ui7q0 .framer-19sohj4 { aspect-ratio: 1.1934156378600822 / 1; flex: none; height: var(--framer-aspect-ratio-supported, 160px); overflow: visible; position: absolute; right: -56px; top: 514px; width: 191px; z-index: 1; }",
+    ".framer-ui7q0 .framer-ivhii5 { flex: none; height: 20%; left: calc(50.00000000000002% - 100% / 2); overflow: hidden; position: absolute; top: calc(8.917664304910845% - 19.545565599804544% / 2); width: 100%; z-index: 0; }",
+    ".framer-ui7q0 .framer-1c2rrj0-container { flex: none; height: 720px; left: 0px; position: absolute; right: 0px; top: 0px; z-index: 1; }",
+    ".framer-ui7q0 .framer-szu5q-container { flex: none; height: auto; position: relative; width: 1248px; }",
+    "@supports (background: -webkit-named-image(i)) and (not (scale:1)) { .framer-ui7q0.framer-72rtr7, .framer-ui7q0 .framer-hw1qfl, .framer-ui7q0 .framer-171to5k, .framer-ui7q0 .framer-19lzdxx, .framer-ui7q0 .framer-3qczc4, .framer-ui7q0 .framer-kz8x7m, .framer-ui7q0 .framer-vzji2j, .framer-ui7q0 .framer-pvzydo, .framer-ui7q0 .framer-1ock6vn, .framer-ui7q0 .framer-16le7zk, .framer-ui7q0 .framer-15hed9b, .framer-ui7q0 .framer-6oh9yv, .framer-ui7q0 .framer-128m11y, .framer-ui7q0 .framer-8e1bmi, .framer-ui7q0 .framer-1na77cf, .framer-ui7q0 .framer-m9k93s, .framer-ui7q0 .framer-1ghxpl6, .framer-ui7q0 .framer-g9zb2a, .framer-ui7q0 .framer-1e679xj, .framer-ui7q0 .framer-13rryyb, .framer-ui7q0 .framer-19d5gbk, .framer-ui7q0 .framer-p2hyij, .framer-ui7q0 .framer-1quyz1w, .framer-ui7q0 .framer-17sbmwn, .framer-ui7q0 .framer-evb4ej, .framer-ui7q0 .framer-85eg8i, .framer-ui7q0 .framer-1cgjt3l, .framer-ui7q0 .framer-103iyjy, .framer-ui7q0 .framer-bzz9hc, .framer-ui7q0 .framer-1wrd7lh, .framer-ui7q0 .framer-17ja6ah, .framer-ui7q0 .framer-hanm0d, .framer-ui7q0 .framer-dsy09z, .framer-ui7q0 .framer-no6vp4, .framer-ui7q0 .framer-1az6435, .framer-ui7q0 .framer-15vfdwb, .framer-ui7q0 .framer-qronkf, .framer-ui7q0 .framer-1kndl8r, .framer-ui7q0 .framer-14m5wfj, .framer-ui7q0 .framer-zt38q9, .framer-ui7q0 .framer-1ao794p, .framer-ui7q0 .framer-mefgcn, .framer-ui7q0 .framer-13n63cz, .framer-ui7q0 .framer-yksecg, .framer-ui7q0 .framer-18wsno1, .framer-ui7q0 .framer-3z2pae, .framer-ui7q0 .framer-j97575, .framer-ui7q0 .framer-1rcm3a7, .framer-ui7q0 .framer-1t5ujc8, .framer-ui7q0 .framer-1cbmlvx, .framer-ui7q0 .framer-14kr3zv, .framer-ui7q0 .framer-1mn93zs, .framer-ui7q0 .framer-18nxhsg, .framer-ui7q0 .framer-3gi99x, .framer-ui7q0 .framer-3ufw93, .framer-ui7q0 .framer-ps4c9d, .framer-ui7q0 .framer-1yyjn0n, .framer-ui7q0 .framer-17ve921, .framer-ui7q0 .framer-1ywqqkv, .framer-ui7q0 .framer-1htcnl0, .framer-ui7q0 .framer-5jwtqe, .framer-ui7q0 .framer-125nsv8, .framer-ui7q0 .framer-1y5eqjf, .framer-ui7q0 .framer-h54jv5, .framer-ui7q0 .framer-1silq0f, .framer-ui7q0 .framer-ymwhmt, .framer-ui7q0 .framer-1hgk5pb, .framer-ui7q0 .framer-1swkq8r, .framer-ui7q0 .framer-19qgbj8, .framer-ui7q0 .framer-otapak, .framer-ui7q0 .framer-1rxbt53, .framer-ui7q0 .framer-1vjbwqe, .framer-ui7q0 .framer-1vzfukf, .framer-ui7q0 .framer-1fkiv3s, .framer-ui7q0 .framer-1q7idue, .framer-ui7q0 .framer-yhu483, .framer-ui7q0 .framer-1qkab9s, .framer-ui7q0 .framer-apeq29, .framer-ui7q0 .framer-4jl14v, .framer-ui7q0 .framer-1aboqt0, .framer-ui7q0 .framer-i8rgto, .framer-ui7q0 .framer-m0m4x2, .framer-ui7q0 .framer-vjpm0g, .framer-ui7q0 .framer-1p1d0l6 { gap: 0px; } .framer-ui7q0.framer-72rtr7 > *, .framer-ui7q0 .framer-hw1qfl > *, .framer-ui7q0 .framer-15hed9b > *, .framer-ui7q0 .framer-evb4ej > *, .framer-ui7q0 .framer-1swkq8r > *, .framer-ui7q0 .framer-1q7idue > * { margin: 0px; margin-bottom: calc(0px / 2); margin-top: calc(0px / 2); } .framer-ui7q0.framer-72rtr7 > :first-child, .framer-ui7q0 .framer-hw1qfl > :first-child, .framer-ui7q0 .framer-3qczc4 > :first-child, .framer-ui7q0 .framer-kz8x7m > :first-child, .framer-ui7q0 .framer-vzji2j > :first-child, .framer-ui7q0 .framer-15hed9b > :first-child, .framer-ui7q0 .framer-8e1bmi > :first-child, .framer-ui7q0 .framer-m9k93s > :first-child, .framer-ui7q0 .framer-g9zb2a > :first-child, .framer-ui7q0 .framer-13rryyb > :first-child, .framer-ui7q0 .framer-1quyz1w > :first-child, .framer-ui7q0 .framer-17sbmwn > :first-child, .framer-ui7q0 .framer-evb4ej > :first-child, .framer-ui7q0 .framer-85eg8i > :first-child, .framer-ui7q0 .framer-bzz9hc > :first-child, .framer-ui7q0 .framer-hanm0d > :first-child, .framer-ui7q0 .framer-1az6435 > :first-child, .framer-ui7q0 .framer-1kndl8r > :first-child, .framer-ui7q0 .framer-1ao794p > :first-child, .framer-ui7q0 .framer-yksecg > :first-child, .framer-ui7q0 .framer-j97575 > :first-child, .framer-ui7q0 .framer-1cbmlvx > :first-child, .framer-ui7q0 .framer-18nxhsg > :first-child, .framer-ui7q0 .framer-ps4c9d > :first-child, .framer-ui7q0 .framer-1yyjn0n > :first-child, .framer-ui7q0 .framer-1ywqqkv > :first-child, .framer-ui7q0 .framer-125nsv8 > :first-child, .framer-ui7q0 .framer-1silq0f > :first-child, .framer-ui7q0 .framer-1swkq8r > :first-child, .framer-ui7q0 .framer-19qgbj8 > :first-child, .framer-ui7q0 .framer-1rxbt53 > :first-child, .framer-ui7q0 .framer-1vjbwqe > :first-child, .framer-ui7q0 .framer-1q7idue > :first-child, .framer-ui7q0 .framer-yhu483 > :first-child, .framer-ui7q0 .framer-apeq29 > :first-child, .framer-ui7q0 .framer-4jl14v > :first-child, .framer-ui7q0 .framer-i8rgto > :first-child, .framer-ui7q0 .framer-m0m4x2 > :first-child { margin-top: 0px; } .framer-ui7q0.framer-72rtr7 > :last-child, .framer-ui7q0 .framer-hw1qfl > :last-child, .framer-ui7q0 .framer-3qczc4 > :last-child, .framer-ui7q0 .framer-kz8x7m > :last-child, .framer-ui7q0 .framer-vzji2j > :last-child, .framer-ui7q0 .framer-15hed9b > :last-child, .framer-ui7q0 .framer-8e1bmi > :last-child, .framer-ui7q0 .framer-m9k93s > :last-child, .framer-ui7q0 .framer-g9zb2a > :last-child, .framer-ui7q0 .framer-13rryyb > :last-child, .framer-ui7q0 .framer-1quyz1w > :last-child, .framer-ui7q0 .framer-17sbmwn > :last-child, .framer-ui7q0 .framer-evb4ej > :last-child, .framer-ui7q0 .framer-85eg8i > :last-child, .framer-ui7q0 .framer-bzz9hc > :last-child, .framer-ui7q0 .framer-hanm0d > :last-child, .framer-ui7q0 .framer-1az6435 > :last-child, .framer-ui7q0 .framer-1kndl8r > :last-child, .framer-ui7q0 .framer-1ao794p > :last-child, .framer-ui7q0 .framer-yksecg > :last-child, .framer-ui7q0 .framer-j97575 > :last-child, .framer-ui7q0 .framer-1cbmlvx > :last-child, .framer-ui7q0 .framer-18nxhsg > :last-child, .framer-ui7q0 .framer-ps4c9d > :last-child, .framer-ui7q0 .framer-1yyjn0n > :last-child, .framer-ui7q0 .framer-1ywqqkv > :last-child, .framer-ui7q0 .framer-125nsv8 > :last-child, .framer-ui7q0 .framer-1silq0f > :last-child, .framer-ui7q0 .framer-1swkq8r > :last-child, .framer-ui7q0 .framer-19qgbj8 > :last-child, .framer-ui7q0 .framer-1rxbt53 > :last-child, .framer-ui7q0 .framer-1vjbwqe > :last-child, .framer-ui7q0 .framer-1q7idue > :last-child, .framer-ui7q0 .framer-yhu483 > :last-child, .framer-ui7q0 .framer-apeq29 > :last-child, .framer-ui7q0 .framer-4jl14v > :last-child, .framer-ui7q0 .framer-i8rgto > :last-child, .framer-ui7q0 .framer-m0m4x2 > :last-child { margin-bottom: 0px; } .framer-ui7q0 .framer-171to5k > *, .framer-ui7q0 .framer-19lzdxx > *, .framer-ui7q0 .framer-1na77cf > *, .framer-ui7q0 .framer-1ghxpl6 > *, .framer-ui7q0 .framer-1e679xj > *, .framer-ui7q0 .framer-19d5gbk > *, .framer-ui7q0 .framer-1qkab9s > *, .framer-ui7q0 .framer-vjpm0g > * { margin: 0px; margin-left: calc(0px / 2); margin-right: calc(0px / 2); } .framer-ui7q0 .framer-171to5k > :first-child, .framer-ui7q0 .framer-19lzdxx > :first-child, .framer-ui7q0 .framer-pvzydo > :first-child, .framer-ui7q0 .framer-1ock6vn > :first-child, .framer-ui7q0 .framer-16le7zk > :first-child, .framer-ui7q0 .framer-6oh9yv > :first-child, .framer-ui7q0 .framer-128m11y > :first-child, .framer-ui7q0 .framer-1na77cf > :first-child, .framer-ui7q0 .framer-1ghxpl6 > :first-child, .framer-ui7q0 .framer-1e679xj > :first-child, .framer-ui7q0 .framer-19d5gbk > :first-child, .framer-ui7q0 .framer-p2hyij > :first-child, .framer-ui7q0 .framer-1cgjt3l > :first-child, .framer-ui7q0 .framer-103iyjy > :first-child, .framer-ui7q0 .framer-1wrd7lh > :first-child, .framer-ui7q0 .framer-17ja6ah > :first-child, .framer-ui7q0 .framer-dsy09z > :first-child, .framer-ui7q0 .framer-no6vp4 > :first-child, .framer-ui7q0 .framer-15vfdwb > :first-child, .framer-ui7q0 .framer-qronkf > :first-child, .framer-ui7q0 .framer-14m5wfj > :first-child, .framer-ui7q0 .framer-zt38q9 > :first-child, .framer-ui7q0 .framer-mefgcn > :first-child, .framer-ui7q0 .framer-13n63cz > :first-child, .framer-ui7q0 .framer-18wsno1 > :first-child, .framer-ui7q0 .framer-3z2pae > :first-child, .framer-ui7q0 .framer-1rcm3a7 > :first-child, .framer-ui7q0 .framer-1t5ujc8 > :first-child, .framer-ui7q0 .framer-14kr3zv > :first-child, .framer-ui7q0 .framer-1mn93zs > :first-child, .framer-ui7q0 .framer-3gi99x > :first-child, .framer-ui7q0 .framer-3ufw93 > :first-child, .framer-ui7q0 .framer-17ve921 > :first-child, .framer-ui7q0 .framer-1htcnl0 > :first-child, .framer-ui7q0 .framer-5jwtqe > :first-child, .framer-ui7q0 .framer-1y5eqjf > :first-child, .framer-ui7q0 .framer-h54jv5 > :first-child, .framer-ui7q0 .framer-ymwhmt > :first-child, .framer-ui7q0 .framer-1hgk5pb > :first-child, .framer-ui7q0 .framer-otapak > :first-child, .framer-ui7q0 .framer-1vzfukf > :first-child, .framer-ui7q0 .framer-1fkiv3s > :first-child, .framer-ui7q0 .framer-1qkab9s > :first-child, .framer-ui7q0 .framer-1aboqt0 > :first-child, .framer-ui7q0 .framer-vjpm0g > :first-child, .framer-ui7q0 .framer-1p1d0l6 > :first-child { margin-left: 0px; } .framer-ui7q0 .framer-171to5k > :last-child, .framer-ui7q0 .framer-19lzdxx > :last-child, .framer-ui7q0 .framer-pvzydo > :last-child, .framer-ui7q0 .framer-1ock6vn > :last-child, .framer-ui7q0 .framer-16le7zk > :last-child, .framer-ui7q0 .framer-6oh9yv > :last-child, .framer-ui7q0 .framer-128m11y > :last-child, .framer-ui7q0 .framer-1na77cf > :last-child, .framer-ui7q0 .framer-1ghxpl6 > :last-child, .framer-ui7q0 .framer-1e679xj > :last-child, .framer-ui7q0 .framer-19d5gbk > :last-child, .framer-ui7q0 .framer-p2hyij > :last-child, .framer-ui7q0 .framer-1cgjt3l > :last-child, .framer-ui7q0 .framer-103iyjy > :last-child, .framer-ui7q0 .framer-1wrd7lh > :last-child, .framer-ui7q0 .framer-17ja6ah > :last-child, .framer-ui7q0 .framer-dsy09z > :last-child, .framer-ui7q0 .framer-no6vp4 > :last-child, .framer-ui7q0 .framer-15vfdwb > :last-child, .framer-ui7q0 .framer-qronkf > :last-child, .framer-ui7q0 .framer-14m5wfj > :last-child, .framer-ui7q0 .framer-zt38q9 > :last-child, .framer-ui7q0 .framer-mefgcn > :last-child, .framer-ui7q0 .framer-13n63cz > :last-child, .framer-ui7q0 .framer-18wsno1 > :last-child, .framer-ui7q0 .framer-3z2pae > :last-child, .framer-ui7q0 .framer-1rcm3a7 > :last-child, .framer-ui7q0 .framer-1t5ujc8 > :last-child, .framer-ui7q0 .framer-14kr3zv > :last-child, .framer-ui7q0 .framer-1mn93zs > :last-child, .framer-ui7q0 .framer-3gi99x > :last-child, .framer-ui7q0 .framer-3ufw93 > :last-child, .framer-ui7q0 .framer-17ve921 > :last-child, .framer-ui7q0 .framer-1htcnl0 > :last-child, .framer-ui7q0 .framer-5jwtqe > :last-child, .framer-ui7q0 .framer-1y5eqjf > :last-child, .framer-ui7q0 .framer-h54jv5 > :last-child, .framer-ui7q0 .framer-ymwhmt > :last-child, .framer-ui7q0 .framer-1hgk5pb > :last-child, .framer-ui7q0 .framer-otapak > :last-child, .framer-ui7q0 .framer-1vzfukf > :last-child, .framer-ui7q0 .framer-1fkiv3s > :last-child, .framer-ui7q0 .framer-1qkab9s > :last-child, .framer-ui7q0 .framer-1aboqt0 > :last-child, .framer-ui7q0 .framer-vjpm0g > :last-child, .framer-ui7q0 .framer-1p1d0l6 > :last-child { margin-right: 0px; } .framer-ui7q0 .framer-3qczc4 > *, .framer-ui7q0 .framer-i8rgto > * { margin: 0px; margin-bottom: calc(32px / 2); margin-top: calc(32px / 2); } .framer-ui7q0 .framer-kz8x7m > *, .framer-ui7q0 .framer-vzji2j > *, .framer-ui7q0 .framer-1rxbt53 > * { margin: 0px; margin-bottom: calc(24px / 2); margin-top: calc(24px / 2); } .framer-ui7q0 .framer-pvzydo > *, .framer-ui7q0 .framer-16le7zk > *, .framer-ui7q0 .framer-1cgjt3l > *, .framer-ui7q0 .framer-103iyjy > *, .framer-ui7q0 .framer-1wrd7lh > *, .framer-ui7q0 .framer-17ja6ah > *, .framer-ui7q0 .framer-dsy09z > *, .framer-ui7q0 .framer-no6vp4 > *, .framer-ui7q0 .framer-15vfdwb > *, .framer-ui7q0 .framer-qronkf > *, .framer-ui7q0 .framer-14m5wfj > *, .framer-ui7q0 .framer-zt38q9 > *, .framer-ui7q0 .framer-mefgcn > *, .framer-ui7q0 .framer-13n63cz > *, .framer-ui7q0 .framer-18wsno1 > *, .framer-ui7q0 .framer-3z2pae > *, .framer-ui7q0 .framer-1rcm3a7 > *, .framer-ui7q0 .framer-1t5ujc8 > *, .framer-ui7q0 .framer-14kr3zv > *, .framer-ui7q0 .framer-1mn93zs > *, .framer-ui7q0 .framer-3gi99x > *, .framer-ui7q0 .framer-3ufw93 > *, .framer-ui7q0 .framer-1htcnl0 > *, .framer-ui7q0 .framer-5jwtqe > *, .framer-ui7q0 .framer-1y5eqjf > *, .framer-ui7q0 .framer-h54jv5 > *, .framer-ui7q0 .framer-ymwhmt > *, .framer-ui7q0 .framer-1hgk5pb > *, .framer-ui7q0 .framer-1fkiv3s > *, .framer-ui7q0 .framer-1p1d0l6 > * { margin: 0px; margin-left: calc(10px / 2); margin-right: calc(10px / 2); } .framer-ui7q0 .framer-1ock6vn > * { margin: 0px; margin-left: calc(20px / 2); margin-right: calc(20px / 2); } .framer-ui7q0 .framer-6oh9yv > *, .framer-ui7q0 .framer-128m11y > * { margin: 0px; margin-left: calc(138px / 2); margin-right: calc(138px / 2); } .framer-ui7q0 .framer-8e1bmi > *, .framer-ui7q0 .framer-m9k93s > *, .framer-ui7q0 .framer-g9zb2a > *, .framer-ui7q0 .framer-13rryyb > * { margin: 0px; margin-bottom: calc(6px / 2); margin-top: calc(6px / 2); } .framer-ui7q0 .framer-p2hyij > * { margin: 0px; margin-left: calc(30px / 2); margin-right: calc(30px / 2); } .framer-ui7q0 .framer-1quyz1w > *, .framer-ui7q0 .framer-ps4c9d > * { margin: 0px; margin-bottom: calc(52px / 2); margin-top: calc(52px / 2); } .framer-ui7q0 .framer-17sbmwn > * { margin: 0px; margin-bottom: calc(5px / 2); margin-top: calc(5px / 2); } .framer-ui7q0 .framer-85eg8i > *, .framer-ui7q0 .framer-hanm0d > *, .framer-ui7q0 .framer-1az6435 > *, .framer-ui7q0 .framer-1kndl8r > *, .framer-ui7q0 .framer-1ao794p > *, .framer-ui7q0 .framer-yksecg > *, .framer-ui7q0 .framer-j97575 > *, .framer-ui7q0 .framer-1cbmlvx > *, .framer-ui7q0 .framer-18nxhsg > * { margin: 0px; margin-bottom: calc(28px / 2); margin-top: calc(28px / 2); } .framer-ui7q0 .framer-bzz9hc > *, .framer-ui7q0 .framer-1ywqqkv > *, .framer-ui7q0 .framer-125nsv8 > *, .framer-ui7q0 .framer-1silq0f > * { margin: 0px; margin-bottom: calc(12px / 2); margin-top: calc(12px / 2); } .framer-ui7q0 .framer-1yyjn0n > * { margin: 0px; margin-bottom: calc(11px / 2); margin-top: calc(11px / 2); } .framer-ui7q0 .framer-17ve921 > *, .framer-ui7q0 .framer-otapak > * { margin: 0px; margin-left: calc(32px / 2); margin-right: calc(32px / 2); } .framer-ui7q0 .framer-19qgbj8 > * { margin: 0px; margin-bottom: calc(80px / 2); margin-top: calc(80px / 2); } .framer-ui7q0 .framer-1vjbwqe > * { margin: 0px; margin-bottom: calc(40px / 2); margin-top: calc(40px / 2); } .framer-ui7q0 .framer-1vzfukf > * { margin: 0px; margin-left: calc(31px / 2); margin-right: calc(31px / 2); } .framer-ui7q0 .framer-yhu483 > * { margin: 0px; margin-bottom: calc(82px / 2); margin-top: calc(82px / 2); } .framer-ui7q0 .framer-apeq29 > *, .framer-ui7q0 .framer-4jl14v > * { margin: 0px; margin-bottom: calc(16px / 2); margin-top: calc(16px / 2); } .framer-ui7q0 .framer-1aboqt0 > * { margin: 0px; margin-left: calc(70px / 2); margin-right: calc(70px / 2); } .framer-ui7q0 .framer-m0m4x2 > * { margin: 0px; margin-bottom: calc(34px / 2); margin-top: calc(34px / 2); } }",
+    "@media (min-width: 1519px) { .framer-ui7q0 .hidden-72rtr7 { display: none !important; } }",
+    `@media (min-width: 1280px) and (max-width: 1518px) { .framer-ui7q0 .hidden-1tai7yd { display: none !important; } .${O1.bodyClassName}-framer-ui7q0 { background: var(--token-7d27c033-cb66-44c8-bf4e-e66d9f19511b, rgb(255, 255, 255)) /* {"name":"Background"} */; } .framer-ui7q0.framer-72rtr7 { width: 1280px; } .framer-ui7q0 .framer-av2csc-container, .framer-ui7q0 .framer-1212kh8 { width: 100%; } .framer-ui7q0 .framer-171to5k { padding: 8px 64px 8px 64px; } .framer-ui7q0 .framer-p2hyij { gap: 14px; } .framer-ui7q0 .framer-ea1y6q { height: var(--framer-aspect-ratio-supported, 224px); } .framer-ui7q0 .framer-57siy4 { left: -143px; } .framer-ui7q0 .framer-yhu483 { padding: 88px 32px 40px 32px; } .framer-ui7q0 .framer-1phovde { bottom: 350px; left: -60px; top: unset; } @supports (background: -webkit-named-image(i)) and (not (scale:1)) { .framer-ui7q0 .framer-p2hyij { gap: 0px; } .framer-ui7q0 .framer-p2hyij > * { margin: 0px; margin-left: calc(14px / 2); margin-right: calc(14px / 2); } .framer-ui7q0 .framer-p2hyij > :first-child { margin-left: 0px; } .framer-ui7q0 .framer-p2hyij > :last-child { margin-right: 0px; } }}`,
+    `@media (min-width: 768px) and (max-width: 1279px) { .framer-ui7q0 .hidden-180ph05 { display: none !important; } .${O1.bodyClassName}-framer-ui7q0 { background: var(--token-7d27c033-cb66-44c8-bf4e-e66d9f19511b, rgb(255, 255, 255)) /* {"name":"Background"} */; } .framer-ui7q0.framer-72rtr7 { width: 768px; } .framer-ui7q0 .framer-171to5k { padding: 107px 32px 8px 32px; } .framer-ui7q0 .framer-19lzdxx { flex-direction: column; } .framer-ui7q0 .framer-3qczc4 { flex: none; width: 100%; } .framer-ui7q0 .framer-6oh9yv { gap: 58px; padding: 20px 0px 20px 0px; width: 90%; } .framer-ui7q0 .framer-128m11y { --border-top-width: 0px; gap: 28px; padding: 20px 0px 20px 0px; width: 90%; } .framer-ui7q0 .framer-1212kh8 { height: 378px; width: 100%; } .framer-ui7q0 .framer-1qj26li, .framer-ui7q0 .framer-1tsrdml, .framer-ui7q0 .framer-roczm4, .framer-ui7q0 .framer-1apo83n, .framer-ui7q0 .framer-1py3vzg, .framer-ui7q0 .framer-15fnzvr, .framer-ui7q0 .framer-10w9r2f, .framer-ui7q0 .framer-13t7dvm, .framer-ui7q0 .framer-1q2b1s6 { height: var(--framer-aspect-ratio-supported, 50px); } .framer-ui7q0 .framer-ps4c9d { width: 95%; } .framer-ui7q0 .framer-1i2xjtq { height: var(--framer-aspect-ratio-supported, 142px); right: -69px; top: -88px; width: 170px; } .framer-ui7q0 .framer-1hmt24w { bottom: unset; left: -76px; top: 48%; transform: translateY(-50%); } .framer-ui7q0 .framer-17ve921 { flex-direction: column; flex-wrap: wrap; gap: 24px; } .framer-ui7q0 .framer-1ywqqkv { flex: none; width: 54%; } .framer-ui7q0 .framer-125nsv8 { align-self: unset; flex: none; height: min-content; width: 53%; } .framer-ui7q0 .framer-1silq0f { align-self: unset; flex: none; height: min-content; width: 54%; } .framer-ui7q0 .framer-19qgbj8 { padding: 48px 32px 40px 32px; } .framer-ui7q0 .framer-1vzfukf { gap: 26px; } .framer-ui7q0 .framer-9j50vb { height: 75%; } .framer-ui7q0 .framer-1r9duzb, .framer-ui7q0 .framer-szu5q-container { width: 100%; } .framer-ui7q0 .framer-ea1y6q { height: var(--framer-aspect-ratio-supported, 224px); } .framer-ui7q0 .framer-1tmpjox { left: -112px; top: -107px; } .framer-ui7q0 .framer-1wizzeq { height: var(--framer-aspect-ratio-supported, 116px); left: unset; right: -69px; top: 44px; transform: unset; width: 138px; } .framer-ui7q0 .framer-tr3om3 { height: var(--framer-aspect-ratio-supported, 128px); } .framer-ui7q0 .framer-1qkab9s { flex-direction: column; flex-wrap: wrap; gap: 46px; max-width: 768px; width: 90%; } .framer-ui7q0 .framer-apeq29 { align-content: center; align-items: center; gap: 8px; padding: 0px; width: 100%; } .framer-ui7q0 .framer-4jl14v { justify-content: flex-start; width: 100%; } .framer-ui7q0 .framer-1aboqt0 { flex-direction: column; gap: 48px; } .framer-ui7q0 .framer-i8rgto { flex: none; order: 0; width: 100%; } .framer-ui7q0 .framer-m0m4x2 { align-content: center; align-items: center; gap: 22px; } .framer-ui7q0 .framer-vjpm0g { width: min-content; } .framer-ui7q0 .framer-q10wg7 { height: 41px; width: 195px; } .framer-ui7q0 .framer-1p1d0l6 { justify-content: flex-end; padding: 8px; width: 211px; } .framer-ui7q0 .framer-1mblgp0 { height: 62px; width: 173px; } .framer-ui7q0 .framer-1an7n43 { height: 114px; width: 203px; } .framer-ui7q0 .framer-ivhii5 { height: 100%; top: calc(8.917664304910845% - 100% / 2); } @supports (background: -webkit-named-image(i)) and (not (scale:1)) { .framer-ui7q0 .framer-19lzdxx, .framer-ui7q0 .framer-6oh9yv, .framer-ui7q0 .framer-128m11y, .framer-ui7q0 .framer-17ve921, .framer-ui7q0 .framer-1vzfukf, .framer-ui7q0 .framer-1qkab9s, .framer-ui7q0 .framer-apeq29, .framer-ui7q0 .framer-1aboqt0, .framer-ui7q0 .framer-m0m4x2 { gap: 0px; } .framer-ui7q0 .framer-19lzdxx > * { margin: 0px; margin-bottom: calc(0px / 2); margin-top: calc(0px / 2); } .framer-ui7q0 .framer-19lzdxx > :first-child, .framer-ui7q0 .framer-17ve921 > :first-child, .framer-ui7q0 .framer-1qkab9s > :first-child, .framer-ui7q0 .framer-apeq29 > :first-child, .framer-ui7q0 .framer-1aboqt0 > :first-child, .framer-ui7q0 .framer-m0m4x2 > :first-child { margin-top: 0px; } .framer-ui7q0 .framer-19lzdxx > :last-child, .framer-ui7q0 .framer-17ve921 > :last-child, .framer-ui7q0 .framer-1qkab9s > :last-child, .framer-ui7q0 .framer-apeq29 > :last-child, .framer-ui7q0 .framer-1aboqt0 > :last-child, .framer-ui7q0 .framer-m0m4x2 > :last-child { margin-bottom: 0px; } .framer-ui7q0 .framer-6oh9yv > * { margin: 0px; margin-left: calc(58px / 2); margin-right: calc(58px / 2); } .framer-ui7q0 .framer-6oh9yv > :first-child, .framer-ui7q0 .framer-128m11y > :first-child, .framer-ui7q0 .framer-1vzfukf > :first-child { margin-left: 0px; } .framer-ui7q0 .framer-6oh9yv > :last-child, .framer-ui7q0 .framer-128m11y > :last-child, .framer-ui7q0 .framer-1vzfukf > :last-child { margin-right: 0px; } .framer-ui7q0 .framer-128m11y > * { margin: 0px; margin-left: calc(28px / 2); margin-right: calc(28px / 2); } .framer-ui7q0 .framer-17ve921 > * { margin: 0px; margin-bottom: calc(24px / 2); margin-top: calc(24px / 2); } .framer-ui7q0 .framer-1vzfukf > * { margin: 0px; margin-left: calc(26px / 2); margin-right: calc(26px / 2); } .framer-ui7q0 .framer-1qkab9s > * { margin: 0px; margin-bottom: calc(46px / 2); margin-top: calc(46px / 2); } .framer-ui7q0 .framer-apeq29 > * { margin: 0px; margin-bottom: calc(8px / 2); margin-top: calc(8px / 2); } .framer-ui7q0 .framer-1aboqt0 > * { margin: 0px; margin-bottom: calc(48px / 2); margin-top: calc(48px / 2); } .framer-ui7q0 .framer-m0m4x2 > * { margin: 0px; margin-bottom: calc(22px / 2); margin-top: calc(22px / 2); } }}`,
+    `@media (max-width: 767px) { .framer-ui7q0 .hidden-xp04m8 { display: none !important; } .${O1.bodyClassName}-framer-ui7q0 { background: var(--token-7d27c033-cb66-44c8-bf4e-e66d9f19511b, rgb(255, 255, 255)) /* {"name":"Background"} */; } .framer-ui7q0.framer-72rtr7 { gap: 24px; width: 320px; } .framer-ui7q0 .framer-171to5k { flex-direction: column; padding: 79px 16px 8px 16px; } .framer-ui7q0 .framer-19lzdxx { flex: none; flex-direction: column; width: 100%; } .framer-ui7q0 .framer-3qczc4 { flex: none; width: 100%; } .framer-ui7q0 .framer-kz8x7m { gap: 11px; } .framer-ui7q0 .framer-vzji2j, .framer-ui7q0 .framer-1vjbwqe { gap: 14px; } .framer-ui7q0 .framer-pvzydo { height: min-content; justify-content: center; padding: 0px 0px 9px 0px; } .framer-ui7q0 .framer-1ncsbu9 { flex: 1 0 0px; width: 1px; } .framer-ui7q0 .framer-1ock6vn { flex-direction: column; gap: 9px; } .framer-ui7q0 .framer-1j1qadg-container { order: 0; width: 100%; } .framer-ui7q0 .framer-h9qa6p-container, .framer-ui7q0 .framer-1r9duzb { order: 1; width: 100%; } .framer-ui7q0 .framer-6oh9yv { flex-direction: column; gap: 46px; height: min-content; padding: 55px 0px 55px 0px; width: 90%; } .framer-ui7q0 .framer-128m11y { flex-direction: column; gap: 46px; padding: 44px 0px 44px 0px; width: 90%; } .framer-ui7q0 .framer-1quyz1w { gap: 2px; padding: 0px 16px 32px 16px; width: 100%; } .framer-ui7q0 .framer-17sbmwn { order: 0; padding: 0px 0px 30px 0px; } .framer-ui7q0 .framer-o9dqnn, .framer-ui7q0 .framer-1zuw21, .framer-ui7q0 .framer-1pybend { white-space: pre-wrap; width: 95%; word-break: break-word; word-wrap: break-word; } .framer-ui7q0 .framer-k7ney { gap: 17px; grid-template-columns: repeat(2, minmax(50px, 1fr)); order: 3; } .framer-ui7q0 .framer-85eg8i, .framer-ui7q0 .framer-hanm0d, .framer-ui7q0 .framer-1az6435, .framer-ui7q0 .framer-1kndl8r, .framer-ui7q0 .framer-1ao794p, .framer-ui7q0 .framer-yksecg, .framer-ui7q0 .framer-j97575, .framer-ui7q0 .framer-1cbmlvx, .framer-ui7q0 .framer-18nxhsg { gap: 12px; padding: 25px 0px 25px 0px; width: 100%; } .framer-ui7q0 .framer-ofz8mk, .framer-ui7q0 .framer-1j6jvka, .framer-ui7q0 .framer-fxt8lq, .framer-ui7q0 .framer-1g115jf, .framer-ui7q0 .framer-8ev09z, .framer-ui7q0 .framer-ippcvq, .framer-ui7q0 .framer-1cqrde5, .framer-ui7q0 .framer-1cf802q, .framer-ui7q0 .framer-801utb, .framer-ui7q0 .framer-487djs { height: var(--framer-aspect-ratio-supported, 65px); width: 65px; } .framer-ui7q0 .framer-bzz9hc { padding: 25px 0px 25px 0px; width: 100%; } .framer-ui7q0 .framer-ps4c9d { gap: 2px; padding: 0px 16px 0px 16px; width: 100%; } .framer-ui7q0 .framer-1yyjn0n { gap: 4px; order: 2; padding: 0px 0px 30px 0px; } .framer-ui7q0 .framer-17ve921 { flex-wrap: wrap; gap: 22px; order: 3; } .framer-ui7q0 .framer-1ywqqkv, .framer-ui7q0 .framer-125nsv8, .framer-ui7q0 .framer-1silq0f { flex: none; gap: 7px; padding: 20px; width: 100%; } .framer-ui7q0 .framer-19qgbj8 { gap: 16px; padding: 0px 16px 40px 16px; } .framer-ui7q0 .framer-1rxbt53 { padding: 33px 20px 40px 20px; width: 100%; } .framer-ui7q0 .framer-1vzfukf { flex-direction: column; gap: 18px; height: min-content; order: 0; width: 100%; } .framer-ui7q0 .framer-1md35q4 { height: var(--framer-aspect-ratio-supported, 38px); width: 52px; } .framer-ui7q0 .framer-9j50vb { height: auto; } .framer-ui7q0 .framer-yhu483 { gap: 32px; padding: 0px 16px 16px 16px; } .framer-ui7q0 .framer-1qkab9s { flex-wrap: wrap; gap: 43px; order: 2; } .framer-ui7q0 .framer-apeq29 { align-content: center; align-items: center; gap: 11px; padding: 0px; width: 100%; } .framer-ui7q0 .framer-4jl14v, .framer-ui7q0 .framer-szu5q-container { width: 100%; } .framer-ui7q0 .framer-1z0rjbm-container { order: 0; } .framer-ui7q0 .framer-1aboqt0 { flex-direction: column; order: 3; padding: 40px 24px 8px 24px; } .framer-ui7q0 .framer-i8rgto { flex: none; order: 0; width: 100%; } .framer-ui7q0 .framer-vjpm0g { flex-direction: column; gap: 25px; padding: 19px 0px 0px 0px; } .framer-ui7q0 .framer-q10wg7 { height: 40px; width: 192px; } .framer-ui7q0 .framer-1p1d0l6 { height: min-content; padding: 39px 0px 0px 0px; } .framer-ui7q0 .framer-1mblgp0 { height: 65px; width: 181px; } .framer-ui7q0 .framer-1an7n43 { height: 120px; width: 213px; } .framer-ui7q0 .framer-ivhii5 { height: 10%; left: calc(50.00000000000002% - 265.625% / 2); opacity: 0.46; top: calc(4.129161308758416% - 10.01571653093299% / 2); width: 266%; } .framer-ui7q0 .framer-1c2rrj0-container { height: 637px; } @supports (background: -webkit-named-image(i)) and (not (scale:1)) { .framer-ui7q0.framer-72rtr7, .framer-ui7q0 .framer-171to5k, .framer-ui7q0 .framer-19lzdxx, .framer-ui7q0 .framer-kz8x7m, .framer-ui7q0 .framer-vzji2j, .framer-ui7q0 .framer-1ock6vn, .framer-ui7q0 .framer-6oh9yv, .framer-ui7q0 .framer-128m11y, .framer-ui7q0 .framer-1quyz1w, .framer-ui7q0 .framer-k7ney, .framer-ui7q0 .framer-85eg8i, .framer-ui7q0 .framer-hanm0d, .framer-ui7q0 .framer-1az6435, .framer-ui7q0 .framer-1kndl8r, .framer-ui7q0 .framer-1ao794p, .framer-ui7q0 .framer-yksecg, .framer-ui7q0 .framer-j97575, .framer-ui7q0 .framer-1cbmlvx, .framer-ui7q0 .framer-18nxhsg, .framer-ui7q0 .framer-ps4c9d, .framer-ui7q0 .framer-1yyjn0n, .framer-ui7q0 .framer-17ve921, .framer-ui7q0 .framer-1ywqqkv, .framer-ui7q0 .framer-125nsv8, .framer-ui7q0 .framer-1silq0f, .framer-ui7q0 .framer-19qgbj8, .framer-ui7q0 .framer-1vjbwqe, .framer-ui7q0 .framer-1vzfukf, .framer-ui7q0 .framer-yhu483, .framer-ui7q0 .framer-1qkab9s, .framer-ui7q0 .framer-apeq29, .framer-ui7q0 .framer-1aboqt0, .framer-ui7q0 .framer-vjpm0g { gap: 0px; } .framer-ui7q0.framer-72rtr7 > * { margin: 0px; margin-bottom: calc(24px / 2); margin-top: calc(24px / 2); } .framer-ui7q0.framer-72rtr7 > :first-child, .framer-ui7q0 .framer-171to5k > :first-child, .framer-ui7q0 .framer-19lzdxx > :first-child, .framer-ui7q0 .framer-kz8x7m > :first-child, .framer-ui7q0 .framer-vzji2j > :first-child, .framer-ui7q0 .framer-1ock6vn > :first-child, .framer-ui7q0 .framer-6oh9yv > :first-child, .framer-ui7q0 .framer-128m11y > :first-child, .framer-ui7q0 .framer-1quyz1w > :first-child, .framer-ui7q0 .framer-85eg8i > :first-child, .framer-ui7q0 .framer-hanm0d > :first-child, .framer-ui7q0 .framer-1az6435 > :first-child, .framer-ui7q0 .framer-1kndl8r > :first-child, .framer-ui7q0 .framer-1ao794p > :first-child, .framer-ui7q0 .framer-yksecg > :first-child, .framer-ui7q0 .framer-j97575 > :first-child, .framer-ui7q0 .framer-1cbmlvx > :first-child, .framer-ui7q0 .framer-18nxhsg > :first-child, .framer-ui7q0 .framer-ps4c9d > :first-child, .framer-ui7q0 .framer-1yyjn0n > :first-child, .framer-ui7q0 .framer-1ywqqkv > :first-child, .framer-ui7q0 .framer-125nsv8 > :first-child, .framer-ui7q0 .framer-1silq0f > :first-child, .framer-ui7q0 .framer-19qgbj8 > :first-child, .framer-ui7q0 .framer-1vjbwqe > :first-child, .framer-ui7q0 .framer-1vzfukf > :first-child, .framer-ui7q0 .framer-yhu483 > :first-child, .framer-ui7q0 .framer-apeq29 > :first-child, .framer-ui7q0 .framer-1aboqt0 > :first-child, .framer-ui7q0 .framer-vjpm0g > :first-child { margin-top: 0px; } .framer-ui7q0.framer-72rtr7 > :last-child, .framer-ui7q0 .framer-171to5k > :last-child, .framer-ui7q0 .framer-19lzdxx > :last-child, .framer-ui7q0 .framer-kz8x7m > :last-child, .framer-ui7q0 .framer-vzji2j > :last-child, .framer-ui7q0 .framer-1ock6vn > :last-child, .framer-ui7q0 .framer-6oh9yv > :last-child, .framer-ui7q0 .framer-128m11y > :last-child, .framer-ui7q0 .framer-1quyz1w > :last-child, .framer-ui7q0 .framer-85eg8i > :last-child, .framer-ui7q0 .framer-hanm0d > :last-child, .framer-ui7q0 .framer-1az6435 > :last-child, .framer-ui7q0 .framer-1kndl8r > :last-child, .framer-ui7q0 .framer-1ao794p > :last-child, .framer-ui7q0 .framer-yksecg > :last-child, .framer-ui7q0 .framer-j97575 > :last-child, .framer-ui7q0 .framer-1cbmlvx > :last-child, .framer-ui7q0 .framer-18nxhsg > :last-child, .framer-ui7q0 .framer-ps4c9d > :last-child, .framer-ui7q0 .framer-1yyjn0n > :last-child, .framer-ui7q0 .framer-1ywqqkv > :last-child, .framer-ui7q0 .framer-125nsv8 > :last-child, .framer-ui7q0 .framer-1silq0f > :last-child, .framer-ui7q0 .framer-19qgbj8 > :last-child, .framer-ui7q0 .framer-1vjbwqe > :last-child, .framer-ui7q0 .framer-1vzfukf > :last-child, .framer-ui7q0 .framer-yhu483 > :last-child, .framer-ui7q0 .framer-apeq29 > :last-child, .framer-ui7q0 .framer-1aboqt0 > :last-child, .framer-ui7q0 .framer-vjpm0g > :last-child { margin-bottom: 0px; } .framer-ui7q0 .framer-171to5k > *, .framer-ui7q0 .framer-19lzdxx > * { margin: 0px; margin-bottom: calc(0px / 2); margin-top: calc(0px / 2); } .framer-ui7q0 .framer-kz8x7m > *, .framer-ui7q0 .framer-apeq29 > * { margin: 0px; margin-bottom: calc(11px / 2); margin-top: calc(11px / 2); } .framer-ui7q0 .framer-vzji2j > *, .framer-ui7q0 .framer-1vjbwqe > * { margin: 0px; margin-bottom: calc(14px / 2); margin-top: calc(14px / 2); } .framer-ui7q0 .framer-1ock6vn > * { margin: 0px; margin-bottom: calc(9px / 2); margin-top: calc(9px / 2); } .framer-ui7q0 .framer-6oh9yv > *, .framer-ui7q0 .framer-128m11y > * { margin: 0px; margin-bottom: calc(46px / 2); margin-top: calc(46px / 2); } .framer-ui7q0 .framer-1quyz1w > *, .framer-ui7q0 .framer-ps4c9d > * { margin: 0px; margin-bottom: calc(2px / 2); margin-top: calc(2px / 2); } .framer-ui7q0 .framer-k7ney > *, .framer-ui7q0 .framer-k7ney > :first-child, .framer-ui7q0 .framer-k7ney > :last-child { margin: 0px; } .framer-ui7q0 .framer-85eg8i > *, .framer-ui7q0 .framer-hanm0d > *, .framer-ui7q0 .framer-1az6435 > *, .framer-ui7q0 .framer-1kndl8r > *, .framer-ui7q0 .framer-1ao794p > *, .framer-ui7q0 .framer-yksecg > *, .framer-ui7q0 .framer-j97575 > *, .framer-ui7q0 .framer-1cbmlvx > *, .framer-ui7q0 .framer-18nxhsg > * { margin: 0px; margin-bottom: calc(12px / 2); margin-top: calc(12px / 2); } .framer-ui7q0 .framer-1yyjn0n > * { margin: 0px; margin-bottom: calc(4px / 2); margin-top: calc(4px / 2); } .framer-ui7q0 .framer-17ve921 > * { margin: 0px; margin-left: calc(22px / 2); margin-right: calc(22px / 2); } .framer-ui7q0 .framer-17ve921 > :first-child, .framer-ui7q0 .framer-1qkab9s > :first-child { margin-left: 0px; } .framer-ui7q0 .framer-17ve921 > :last-child, .framer-ui7q0 .framer-1qkab9s > :last-child { margin-right: 0px; } .framer-ui7q0 .framer-1ywqqkv > *, .framer-ui7q0 .framer-125nsv8 > *, .framer-ui7q0 .framer-1silq0f > * { margin: 0px; margin-bottom: calc(7px / 2); margin-top: calc(7px / 2); } .framer-ui7q0 .framer-19qgbj8 > * { margin: 0px; margin-bottom: calc(16px / 2); margin-top: calc(16px / 2); } .framer-ui7q0 .framer-1vzfukf > * { margin: 0px; margin-bottom: calc(18px / 2); margin-top: calc(18px / 2); } .framer-ui7q0 .framer-yhu483 > * { margin: 0px; margin-bottom: calc(32px / 2); margin-top: calc(32px / 2); } .framer-ui7q0 .framer-1qkab9s > * { margin: 0px; margin-left: calc(43px / 2); margin-right: calc(43px / 2); } .framer-ui7q0 .framer-1aboqt0 > * { margin: 0px; margin-bottom: calc(70px / 2); margin-top: calc(70px / 2); } .framer-ui7q0 .framer-vjpm0g > * { margin: 0px; margin-bottom: calc(25px / 2); margin-top: calc(25px / 2); } }}`,
+    ...I2,
+    ...v2,
+    ...k2,
+    '.framer-ui7q0[data-border="true"]::after, .framer-ui7q0 [data-border="true"]::after { content: ""; border-width: var(--border-top-width, 0) var(--border-right-width, 0) var(--border-bottom-width, 0) var(--border-left-width, 0); border-color: var(--border-color, none); border-style: var(--border-style, none); width: 100%; height: 100%; position: absolute; box-sizing: border-box; left: 0; top: 0; border-radius: inherit; pointer-events: none; }',
+  ],
+  J1 = e1(W5, T5, "framer-ui7q0"),
+  i6 = J1;
+J1.displayName = "Home";
+J1.defaultProps = { height: 4223, width: 1519 };
+r1(
+  J1,
+  [
+    {
+      explicitInter: !0,
+      fonts: [
+        {
+          family: "Inter",
+          source: "framer",
+          style: "normal",
+          unicodeRange:
+            "U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F",
+          url: "https://framerusercontent.com/assets/5vvr9Vy74if2I6bQbJvbw7SY1pQ.woff2",
+          weight: "400",
+        },
+        {
+          family: "Inter",
+          source: "framer",
+          style: "normal",
+          unicodeRange: "U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116",
+          url: "https://framerusercontent.com/assets/EOr0mi4hNtlgWNn9if640EZzXCo.woff2",
+          weight: "400",
+        },
+        {
+          family: "Inter",
+          source: "framer",
+          style: "normal",
+          unicodeRange: "U+1F00-1FFF",
+          url: "https://framerusercontent.com/assets/Y9k9QrlZAqio88Klkmbd8VoMQc.woff2",
+          weight: "400",
+        },
+        {
+          family: "Inter",
+          source: "framer",
+          style: "normal",
+          unicodeRange: "U+0370-03FF",
+          url: "https://framerusercontent.com/assets/OYrD2tBIBPvoJXiIHnLoOXnY9M.woff2",
+          weight: "400",
+        },
+        {
+          family: "Inter",
+          source: "framer",
+          style: "normal",
+          unicodeRange:
+            "U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF",
+          url: "https://framerusercontent.com/assets/JeYwfuaPfZHQhEG8U5gtPDZ7WQ.woff2",
+          weight: "400",
+        },
+        {
+          family: "Inter",
+          source: "framer",
+          style: "normal",
+          unicodeRange:
+            "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD",
+          url: "https://framerusercontent.com/assets/vQyevYAyHtARFwPqUzQGpnDs.woff2",
+          weight: "400",
+        },
+        {
+          family: "Inter",
+          source: "framer",
+          style: "normal",
+          unicodeRange:
+            "U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB",
+          url: "https://framerusercontent.com/assets/b6Y37FthZeALduNqHicBT6FutY.woff2",
+          weight: "400",
+        },
+        {
+          family: "Plus Jakarta Sans",
+          source: "google",
+          style: "normal",
+          url: "https://fonts.gstatic.com/s/plusjakartasans/v8/LDIbaomQNQcsA88c7O9yZ4KMCoOg4IA6-91aHEjcWuA_m07NTxXUEKi4Rw.woff2",
+          weight: "500",
+        },
+        {
+          family: "Plus Jakarta Sans",
+          source: "google",
+          style: "normal",
+          url: "https://fonts.gstatic.com/s/plusjakartasans/v8/LDIbaomQNQcsA88c7O9yZ4KMCoOg4IA6-91aHEjcWuA_qU7NTxXUEKi4Rw.woff2",
+          weight: "400",
+        },
+        {
+          family: "Inter",
+          source: "framer",
+          style: "normal",
+          unicodeRange:
+            "U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F",
+          url: "https://framerusercontent.com/assets/DpPBYI0sL4fYLgAkX8KXOPVt7c.woff2",
+          weight: "700",
+        },
+        {
+          family: "Inter",
+          source: "framer",
+          style: "normal",
+          unicodeRange: "U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116",
+          url: "https://framerusercontent.com/assets/4RAEQdEOrcnDkhHiiCbJOw92Lk.woff2",
+          weight: "700",
+        },
+        {
+          family: "Inter",
+          source: "framer",
+          style: "normal",
+          unicodeRange: "U+1F00-1FFF",
+          url: "https://framerusercontent.com/assets/1K3W8DizY3v4emK8Mb08YHxTbs.woff2",
+          weight: "700",
+        },
+        {
+          family: "Inter",
+          source: "framer",
+          style: "normal",
+          unicodeRange: "U+0370-03FF",
+          url: "https://framerusercontent.com/assets/tUSCtfYVM1I1IchuyCwz9gDdQ.woff2",
+          weight: "700",
+        },
+        {
+          family: "Inter",
+          source: "framer",
+          style: "normal",
+          unicodeRange:
+            "U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF",
+          url: "https://framerusercontent.com/assets/VgYFWiwsAC5OYxAycRXXvhze58.woff2",
+          weight: "700",
+        },
+        {
+          family: "Inter",
+          source: "framer",
+          style: "normal",
+          unicodeRange:
+            "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD",
+          url: "https://framerusercontent.com/assets/DXD0Q7LSl7HEvDzucnyLnGBHM.woff2",
+          weight: "700",
+        },
+        {
+          family: "Inter",
+          source: "framer",
+          style: "normal",
+          unicodeRange:
+            "U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB",
+          url: "https://framerusercontent.com/assets/GIryZETIX4IFypco5pYZONKhJIo.woff2",
+          weight: "700",
+        },
+        {
+          family: "Inter",
+          source: "framer",
+          style: "normal",
+          unicodeRange:
+            "U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F",
+          url: "https://framerusercontent.com/assets/5A3Ce6C9YYmCjpQx9M4inSaKU.woff2",
+          weight: "500",
+        },
+        {
+          family: "Inter",
+          source: "framer",
+          style: "normal",
+          unicodeRange: "U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116",
+          url: "https://framerusercontent.com/assets/Qx95Xyt0Ka3SGhinnbXIGpEIyP4.woff2",
+          weight: "500",
+        },
+        {
+          family: "Inter",
+          source: "framer",
+          style: "normal",
+          unicodeRange: "U+1F00-1FFF",
+          url: "https://framerusercontent.com/assets/6mJuEAguuIuMog10gGvH5d3cl8.woff2",
+          weight: "500",
+        },
+        {
+          family: "Inter",
+          source: "framer",
+          style: "normal",
+          unicodeRange: "U+0370-03FF",
+          url: "https://framerusercontent.com/assets/xYYWaj7wCU5zSQH0eXvSaS19wo.woff2",
+          weight: "500",
+        },
+        {
+          family: "Inter",
+          source: "framer",
+          style: "normal",
+          unicodeRange:
+            "U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF",
+          url: "https://framerusercontent.com/assets/otTaNuNpVK4RbdlT7zDDdKvQBA.woff2",
+          weight: "500",
+        },
+        {
+          family: "Inter",
+          source: "framer",
+          style: "normal",
+          unicodeRange:
+            "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD",
+          url: "https://framerusercontent.com/assets/d3tHnaQIAeqiE5hGcRw4mmgWYU.woff2",
+          weight: "500",
+        },
+        {
+          family: "Inter",
+          source: "framer",
+          style: "normal",
+          unicodeRange:
+            "U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB",
+          url: "https://framerusercontent.com/assets/DolVirEGb34pEXEp8t8FQBSK4.woff2",
+          weight: "500",
+        },
+        {
+          family: "Space Grotesk",
+          source: "google",
+          style: "normal",
+          url: "https://fonts.gstatic.com/s/spacegrotesk/v16/V8mQoQDjQSkFtoMM3T6r8E7mF71Q-gOoraIAEj4PVksmNsFjTDJK.woff2",
+          weight: "700",
+        },
+        {
+          family: "Inter",
+          source: "google",
+          style: "normal",
+          url: "https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuGKYMZ1rib2Bg-4.woff2",
+          weight: "600",
+        },
+        {
+          family: "Inter",
+          source: "google",
+          style: "normal",
+          url: "https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYMZ1rib2Bg-4.woff2",
+          weight: "700",
+        },
+        {
+          family: "Plus Jakarta Sans",
+          source: "fontshare",
+          style: "normal",
+          url: "https://framerusercontent.com/third-party-assets/fontshare/wf/TX2N2Q6ZO2LBO34H72H5RVJTBQFGU4GV/ZICVNTLTT4V7CCIJPWNY363N6LIP2AET/OUUAK2X2MEGEKC6ULA4CFSBY4PE5EGPV.woff2",
+          weight: "400",
+        },
+        {
+          family: "Plus Jakarta Sans",
+          source: "fontshare",
+          style: "normal",
+          url: "https://framerusercontent.com/third-party-assets/fontshare/wf/3U7D2WJULAFN5UCDE2DSKFPDTJNUSRPY/XTZGHUDFURQVBRVTOPX7XHP5YBIQJL2U/FVNNCZHGTHUOM3RCJDOO45QMBIJISVEG.woff2",
+          weight: "500",
+        },
+        {
+          family: "Plus Jakarta Sans",
+          source: "google",
+          style: "normal",
+          url: "https://fonts.gstatic.com/s/plusjakartasans/v8/LDIbaomQNQcsA88c7O9yZ4KMCoOg4IA6-91aHEjcWuA_d0nNTxXUEKi4Rw.woff2",
+          weight: "600",
+        },
+        {
+          family: "Plus Jakarta Sans",
+          source: "google",
+          style: "normal",
+          url: "https://fonts.gstatic.com/s/plusjakartasans/v8/LDIbaomQNQcsA88c7O9yZ4KMCoOg4IA6-91aHEjcWuA_TknNTxXUEKi4Rw.woff2",
+          weight: "700",
+        },
+      ],
+    },
+    ...h5,
+    ...u5,
+    ...g5,
+    ...x5,
+    ...b5,
+    ...y5,
+    ...v5,
+    ...w5,
+    ...k5,
+    ...Z1(F2),
+    ...Z1(y2),
+    ...Z1(q2),
+  ],
+  { supportsExplicitInterCodegen: !0 },
+);
+var n6 = {
+  exports: {
+    Props: { type: "tsType", annotations: { framerContractVersion: "1" } },
+    default: {
+      type: "reactComponent",
+      name: "FrameraugiA20Il",
+      slots: [],
+      annotations: {
+        framerImmutableVariables: "true",
+        framerIntrinsicHeight: "4223",
+        framerComponentViewportWidth: "true",
+        framerContractVersion: "1",
+        framerIntrinsicWidth: "1519",
+        framerResponsiveScreen: "",
+        framerCanvasComponentVariantDetails:
+          '{"propertyName":"variant","data":{"default":{"layout":["fixed","auto"]},"jeCnrh3kk":{"layout":["fixed","auto"]},"XWGQJU3bM":{"layout":["fixed","auto"]},"Q1XUigOVv":{"layout":["fixed","auto"]}}}',
+        framerDisplayContentsDiv: "false",
+      },
+    },
+    __FramerMetadata__: { type: "variable" },
+  },
+};
+export { n6 as __FramerMetadata__, i6 as default };
+//# sourceMappingURL=vEoHfDGED7c7tvLKnc2CM7qjdLXPvfkg_AkkBWE7tcY.F2XJGKRK.mjs.map
