@@ -6278,3 +6278,9 @@
         .ssr-variant {
             display: contents
         }
+
+        .form-head{
+            font-size: 24px !important;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }

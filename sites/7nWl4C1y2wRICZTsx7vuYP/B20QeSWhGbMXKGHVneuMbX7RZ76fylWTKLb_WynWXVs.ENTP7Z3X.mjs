@@ -185,135 +185,135 @@ var Be = { delay: 0, duration: 0.2, ease: [0.44, 0, 0.56, 1], type: "tween" },
             ),
             children: [
               k() &&
-                e(h, {
-                  __fromCanvasComponent: !0,
-                  children: e(r, {
-                    children: e(u.p, {
-                      style: {
-                        "--font-selector": "SW50ZXItU2VtaUJvbGQ=",
-                        "--framer-font-family":
-                          '"Inter", "Inter Placeholder", sans-serif',
-                        "--framer-font-size": "14px",
-                        "--framer-font-weight": "600",
-                        "--framer-line-height": "140%",
-                        "--framer-text-color":
-                          "var(--extracted-r6o4lv, var(--token-7d27c033-cb66-44c8-bf4e-e66d9f19511b, rgb(10, 11, 10)))",
-                      },
-                      children: "Submit",
-                    }),
+              e(h, {
+                __fromCanvasComponent: !0,
+                children: e(r, {
+                  children: e(u.p, {
+                    style: {
+                      "--font-selector": "SW50ZXItU2VtaUJvbGQ=",
+                      "--framer-font-family":
+                        '"Inter", "Inter Placeholder", sans-serif',
+                      "--framer-font-size": "14px",
+                      "--framer-font-weight": "600",
+                      "--framer-line-height": "140%",
+                      "--framer-text-color":
+                        "var(--extracted-r6o4lv, var(--token-7d27c033-cb66-44c8-bf4e-e66d9f19511b, rgb(10, 11, 10)))",
+                    },
+                    children: "Submit",
                   }),
-                  className: "framer-14rxotz",
-                  fonts: ["Inter-SemiBold"],
+                }),
+                className: "framer-14rxotz",
+                fonts: ["Inter-SemiBold"],
+                layoutDependency: g,
+                layoutId: "FFLkv8Qbg",
+                style: {
+                  "--extracted-r6o4lv":
+                    "var(--token-7d27c033-cb66-44c8-bf4e-e66d9f19511b, rgb(10, 11, 10))",
+                  "--framer-link-text-color": "rgb(0, 153, 255)",
+                  "--framer-link-text-decoration": "underline",
+                },
+                variants: {
+                  elqDKMwrr: { "--extracted-r6o4lv": "rgb(255, 255, 255)" },
+                  F9XpOM3s1: { "--extracted-r6o4lv": "rgb(255, 34, 68)" },
+                },
+                verticalAlignment: "top",
+                withExternalLayout: !0,
+                ...Ue(
+                  {
+                    elqDKMwrr: {
+                      children: e(r, {
+                        children: e(u.p, {
+                          style: {
+                            "--font-selector": "SW50ZXItU2VtaUJvbGQ=",
+                            "--framer-font-family":
+                              '"Inter", "Inter Placeholder", sans-serif',
+                            "--framer-font-size": "14px",
+                            "--framer-font-weight": "600",
+                            "--framer-text-color":
+                              "var(--extracted-r6o4lv, rgb(255, 255, 255))",
+                          },
+                          children: "Thank you",
+                        }),
+                      }),
+                    },
+                    F9XpOM3s1: {
+                      children: e(r, {
+                        children: e(u.p, {
+                          style: {
+                            "--font-selector": "SW50ZXItU2VtaUJvbGQ=",
+                            "--framer-font-family":
+                              '"Inter", "Inter Placeholder", sans-serif',
+                            "--framer-font-size": "14px",
+                            "--framer-font-weight": "600",
+                            "--framer-text-color":
+                              "var(--extracted-r6o4lv, rgb(255, 34, 68))",
+                          },
+                          children: "Something went wrong",
+                        }),
+                      }),
+                    },
+                  },
+                  t,
+                  w,
+                ),
+              }),
+              Ce() &&
+              e(u.div, {
+                className: "framer-sh67jg",
+                "data-framer-name": "Spinner",
+                layoutDependency: g,
+                layoutId: "WBXBW0CFY",
+                style: {
+                  mask: "url('https://framerusercontent.com/images/pGiXYozQ3mE4cilNOItfe2L2fUA.svg') alpha no-repeat center / cover add",
+                  WebkitMask:
+                    "url('https://framerusercontent.com/images/pGiXYozQ3mE4cilNOItfe2L2fUA.svg') alpha no-repeat center / cover add",
+                },
+                children: e(Xe, {
+                  __framer__loop: Oe,
+                  __framer__loopEffectEnabled: !0,
+                  __framer__loopRepeatDelay: 0,
+                  __framer__loopRepeatType: "loop",
+                  __framer__loopTransition: je,
+                  __perspectiveFX: !1,
+                  __smartComponentFX: !0,
+                  __targetOpacity: 1,
+                  className: "framer-htujon",
+                  "data-framer-name": "Conic",
                   layoutDependency: g,
-                  layoutId: "FFLkv8Qbg",
+                  layoutId: "HOhC72Ttu",
                   style: {
-                    "--extracted-r6o4lv":
-                      "var(--token-7d27c033-cb66-44c8-bf4e-e66d9f19511b, rgb(10, 11, 10))",
-                    "--framer-link-text-color": "rgb(0, 153, 255)",
-                    "--framer-link-text-decoration": "underline",
+                    background:
+                      "conic-gradient(from 180deg at 50% 50%, #4cf 0deg, #4cf 360deg)",
+                    backgroundColor: "rgb(68, 204, 255)",
+                    mask: "none",
+                    WebkitMask: "none",
                   },
                   variants: {
-                    elqDKMwrr: { "--extracted-r6o4lv": "rgb(255, 255, 255)" },
-                    F9XpOM3s1: { "--extracted-r6o4lv": "rgb(255, 34, 68)" },
-                  },
-                  verticalAlignment: "top",
-                  withExternalLayout: !0,
-                  ...Ue(
-                    {
-                      elqDKMwrr: {
-                        children: e(r, {
-                          children: e(u.p, {
-                            style: {
-                              "--font-selector": "SW50ZXItU2VtaUJvbGQ=",
-                              "--framer-font-family":
-                                '"Inter", "Inter Placeholder", sans-serif',
-                              "--framer-font-size": "14px",
-                              "--framer-font-weight": "600",
-                              "--framer-text-color":
-                                "var(--extracted-r6o4lv, rgb(255, 255, 255))",
-                            },
-                            children: "Thank you",
-                          }),
-                        }),
-                      },
-                      F9XpOM3s1: {
-                        children: e(r, {
-                          children: e(u.p, {
-                            style: {
-                              "--font-selector": "SW50ZXItU2VtaUJvbGQ=",
-                              "--framer-font-family":
-                                '"Inter", "Inter Placeholder", sans-serif',
-                              "--framer-font-size": "14px",
-                              "--framer-font-weight": "600",
-                              "--framer-text-color":
-                                "var(--extracted-r6o4lv, rgb(255, 34, 68))",
-                            },
-                            children: "Something went wrong",
-                          }),
-                        }),
-                      },
-                    },
-                    t,
-                    w,
-                  ),
-                }),
-              Ce() &&
-                e(u.div, {
-                  className: "framer-sh67jg",
-                  "data-framer-name": "Spinner",
-                  layoutDependency: g,
-                  layoutId: "WBXBW0CFY",
-                  style: {
-                    mask: "url('https://framerusercontent.com/images/pGiXYozQ3mE4cilNOItfe2L2fUA.svg') alpha no-repeat center / cover add",
-                    WebkitMask:
-                      "url('https://framerusercontent.com/images/pGiXYozQ3mE4cilNOItfe2L2fUA.svg') alpha no-repeat center / cover add",
-                  },
-                  children: e(Xe, {
-                    __framer__loop: Oe,
-                    __framer__loopEffectEnabled: !0,
-                    __framer__loopRepeatDelay: 0,
-                    __framer__loopRepeatType: "loop",
-                    __framer__loopTransition: je,
-                    __perspectiveFX: !1,
-                    __smartComponentFX: !0,
-                    __targetOpacity: 1,
-                    className: "framer-htujon",
-                    "data-framer-name": "Conic",
-                    layoutDependency: g,
-                    layoutId: "HOhC72Ttu",
-                    style: {
+                    HGlUMDtuc: {
                       background:
-                        "conic-gradient(from 180deg at 50% 50%, #4cf 0deg, #4cf 360deg)",
-                      backgroundColor: "rgb(68, 204, 255)",
-                      mask: "none",
-                      WebkitMask: "none",
+                        "conic-gradient(from 0deg at 50% 50%, rgba(255, 255, 255, 0) 7.208614864864882deg, rgb(255, 255, 255) 342deg)",
+                      backgroundColor: "rgba(0, 0, 0, 0)",
+                      mask: "url('https://framerusercontent.com/images/pGiXYozQ3mE4cilNOItfe2L2fUA.svg') alpha no-repeat center / cover add",
+                      WebkitMask:
+                        "url('https://framerusercontent.com/images/pGiXYozQ3mE4cilNOItfe2L2fUA.svg') alpha no-repeat center / cover add",
                     },
-                    variants: {
-                      HGlUMDtuc: {
-                        background:
-                          "conic-gradient(from 0deg at 50% 50%, rgba(255, 255, 255, 0) 7.208614864864882deg, rgb(255, 255, 255) 342deg)",
-                        backgroundColor: "rgba(0, 0, 0, 0)",
-                        mask: "url('https://framerusercontent.com/images/pGiXYozQ3mE4cilNOItfe2L2fUA.svg') alpha no-repeat center / cover add",
-                        WebkitMask:
-                          "url('https://framerusercontent.com/images/pGiXYozQ3mE4cilNOItfe2L2fUA.svg') alpha no-repeat center / cover add",
-                      },
+                  },
+                  children: e(u.div, {
+                    className: "framer-1hp2r58",
+                    "data-framer-name": "Rounding",
+                    layoutDependency: g,
+                    layoutId: "FC_Q8Sa8d",
+                    style: {
+                      backgroundColor: "rgb(255, 255, 255)",
+                      borderBottomLeftRadius: 1,
+                      borderBottomRightRadius: 1,
+                      borderTopLeftRadius: 1,
+                      borderTopRightRadius: 1,
                     },
-                    children: e(u.div, {
-                      className: "framer-1hp2r58",
-                      "data-framer-name": "Rounding",
-                      layoutDependency: g,
-                      layoutId: "FC_Q8Sa8d",
-                      style: {
-                        backgroundColor: "rgb(255, 255, 255)",
-                        borderBottomLeftRadius: 1,
-                        borderBottomRightRadius: 1,
-                        borderTopLeftRadius: 1,
-                        borderTopRightRadius: 1,
-                      },
-                      transformTemplate: Pe,
-                    }),
+                    transformTemplate: Pe,
                   }),
                 }),
+              }),
             ],
           }),
         }),
@@ -422,11 +422,11 @@ var Qe = b(L),
   er = b(Y),
   rr = b(K);
 var ar = {
-    cSiNaMWWS: "(min-width: 1280px) and (max-width: 1535px)",
-    jaUOdyaYI: "(min-width: 768px) and (max-width: 1279px)",
-    KaoLEF3tJ: "(min-width: 1536px)",
-    u9lN1f6AR: "(max-width: 767px)",
-  },
+  cSiNaMWWS: "(min-width: 1280px) and (max-width: 1535px)",
+  jaUOdyaYI: "(min-width: 768px) and (max-width: 1279px)",
+  KaoLEF3tJ: "(min-width: 1536px)",
+  u9lN1f6AR: "(max-width: 767px)",
+},
   tr = () => typeof document < "u",
   ke = "framer-ulmdA",
   nr = {
@@ -636,6 +636,8 @@ var ar = {
                                     u9lN1f6AR: {
                                       children: e(r, {
                                         children: e("h1", {
+                                          className:
+                                            "form-head",
                                           style: {
                                             "--font-selector":
                                               "R0Y7UGx1cyBKYWthcnRhIFNhbnMtNjAw",
@@ -662,7 +664,7 @@ var ar = {
                                     children: e(r, {
                                       children: e("h1", {
                                         className:
-                                          "framer-styles-preset-rp61ro",
+                                          "framer-styles-preset-rp61ro form-head",
                                         "data-styles-preset": "fOTtXmCE4",
                                         style: {
                                           "--framer-text-color":
@@ -769,32 +771,10 @@ var ar = {
                                   }),
                                 }),
                                 w() &&
-                                  e(i, {
-                                    breakpoint: t,
-                                    overrides: {
-                                      jaUOdyaYI: {
-                                        background: {
-                                          alt: "",
-                                          fit: "fill",
-                                          intrinsicHeight: 388.8,
-                                          intrinsicWidth: 464,
-                                          pixelHeight: 486,
-                                          pixelWidth: 580,
-                                          sizes: "260px",
-                                          src: "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512",
-                                          srcSet:
-                                            "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512 512w,https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png 994w",
-                                        },
-                                      },
-                                    },
-                                    children: e(G, {
-                                      __framer__loop: Q,
-                                      __framer__loopEffectEnabled: !0,
-                                      __framer__loopRepeatDelay: 0,
-                                      __framer__loopRepeatType: "mirror",
-                                      __framer__loopTransition: Z,
-                                      __perspectiveFX: !1,
-                                      __targetOpacity: 1,
+                                e(i, {
+                                  breakpoint: t,
+                                  overrides: {
+                                    jaUOdyaYI: {
                                       background: {
                                         alt: "",
                                         fit: "fill",
@@ -802,50 +782,50 @@ var ar = {
                                         intrinsicWidth: 464,
                                         pixelHeight: 486,
                                         pixelWidth: 580,
+                                        sizes: "260px",
                                         src: "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512",
                                         srcSet:
                                           "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512 512w,https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png 994w",
                                       },
-                                      className:
-                                        "framer-1l9zczx hidden-1tfptxz hidden-1bt2x41 hidden-1aqljja",
-                                      "data-framer-name": "Block",
-                                      drag: !0,
-                                      dragMomentum: !1,
-                                      dragSnapToOrigin: !0,
-                                      dragTransition: J,
-                                      name: "Block",
-                                      onMouseDown: $,
-                                      style: { rotate: -369 },
-                                      whileTap: ee,
-                                    }),
+                                    },
+                                  },
+                                  children: e(G, {
+                                    __framer__loop: Q,
+                                    __framer__loopEffectEnabled: !0,
+                                    __framer__loopRepeatDelay: 0,
+                                    __framer__loopRepeatType: "mirror",
+                                    __framer__loopTransition: Z,
+                                    __perspectiveFX: !1,
+                                    __targetOpacity: 1,
+                                    background: {
+                                      alt: "",
+                                      fit: "fill",
+                                      intrinsicHeight: 388.8,
+                                      intrinsicWidth: 464,
+                                      pixelHeight: 486,
+                                      pixelWidth: 580,
+                                      src: "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512",
+                                      srcSet:
+                                        "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512 512w,https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png 994w",
+                                    },
+                                    className:
+                                      "framer-1l9zczx hidden-1tfptxz hidden-1bt2x41 hidden-1aqljja",
+                                    "data-framer-name": "Block",
+                                    drag: !0,
+                                    dragMomentum: !1,
+                                    dragSnapToOrigin: !0,
+                                    dragTransition: J,
+                                    name: "Block",
+                                    onMouseDown: $,
+                                    style: { rotate: -369 },
+                                    whileTap: ee,
                                   }),
+                                }),
                                 w() &&
-                                  e(i, {
-                                    breakpoint: t,
-                                    overrides: {
-                                      jaUOdyaYI: {
-                                        background: {
-                                          alt: "",
-                                          fit: "fill",
-                                          intrinsicHeight: 388.8,
-                                          intrinsicWidth: 464,
-                                          pixelHeight: 486,
-                                          pixelWidth: 580,
-                                          sizes: "132px",
-                                          src: "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512",
-                                          srcSet:
-                                            "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512 512w,https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png 994w",
-                                        },
-                                      },
-                                    },
-                                    children: e(G, {
-                                      __framer__loop: Q,
-                                      __framer__loopEffectEnabled: !0,
-                                      __framer__loopRepeatDelay: 0,
-                                      __framer__loopRepeatType: "mirror",
-                                      __framer__loopTransition: Z,
-                                      __perspectiveFX: !1,
-                                      __targetOpacity: 1,
+                                e(i, {
+                                  breakpoint: t,
+                                  overrides: {
+                                    jaUOdyaYI: {
                                       background: {
                                         alt: "",
                                         fit: "fill",
@@ -853,50 +833,50 @@ var ar = {
                                         intrinsicWidth: 464,
                                         pixelHeight: 486,
                                         pixelWidth: 580,
+                                        sizes: "132px",
                                         src: "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512",
                                         srcSet:
                                           "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512 512w,https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png 994w",
                                       },
-                                      className:
-                                        "framer-1d4tsit hidden-1tfptxz hidden-1bt2x41 hidden-1aqljja",
-                                      "data-framer-name": "Block",
-                                      drag: !0,
-                                      dragMomentum: !1,
-                                      dragSnapToOrigin: !0,
-                                      dragTransition: J,
-                                      name: "Block",
-                                      onMouseDown: $,
-                                      style: { rotate: -483 },
-                                      whileTap: ee,
-                                    }),
+                                    },
+                                  },
+                                  children: e(G, {
+                                    __framer__loop: Q,
+                                    __framer__loopEffectEnabled: !0,
+                                    __framer__loopRepeatDelay: 0,
+                                    __framer__loopRepeatType: "mirror",
+                                    __framer__loopTransition: Z,
+                                    __perspectiveFX: !1,
+                                    __targetOpacity: 1,
+                                    background: {
+                                      alt: "",
+                                      fit: "fill",
+                                      intrinsicHeight: 388.8,
+                                      intrinsicWidth: 464,
+                                      pixelHeight: 486,
+                                      pixelWidth: 580,
+                                      src: "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512",
+                                      srcSet:
+                                        "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512 512w,https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png 994w",
+                                    },
+                                    className:
+                                      "framer-1d4tsit hidden-1tfptxz hidden-1bt2x41 hidden-1aqljja",
+                                    "data-framer-name": "Block",
+                                    drag: !0,
+                                    dragMomentum: !1,
+                                    dragSnapToOrigin: !0,
+                                    dragTransition: J,
+                                    name: "Block",
+                                    onMouseDown: $,
+                                    style: { rotate: -483 },
+                                    whileTap: ee,
                                   }),
+                                }),
                                 w() &&
-                                  e(i, {
-                                    breakpoint: t,
-                                    overrides: {
-                                      jaUOdyaYI: {
-                                        background: {
-                                          alt: "",
-                                          fit: "fill",
-                                          intrinsicHeight: 388.8,
-                                          intrinsicWidth: 464,
-                                          pixelHeight: 486,
-                                          pixelWidth: 580,
-                                          sizes: "239px",
-                                          src: "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512",
-                                          srcSet:
-                                            "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512 512w,https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png 994w",
-                                        },
-                                      },
-                                    },
-                                    children: e(G, {
-                                      __framer__loop: Q,
-                                      __framer__loopEffectEnabled: !0,
-                                      __framer__loopRepeatDelay: 0,
-                                      __framer__loopRepeatType: "mirror",
-                                      __framer__loopTransition: Z,
-                                      __perspectiveFX: !1,
-                                      __targetOpacity: 1,
+                                e(i, {
+                                  breakpoint: t,
+                                  overrides: {
+                                    jaUOdyaYI: {
                                       background: {
                                         alt: "",
                                         fit: "fill",
@@ -904,23 +884,45 @@ var ar = {
                                         intrinsicWidth: 464,
                                         pixelHeight: 486,
                                         pixelWidth: 580,
+                                        sizes: "239px",
                                         src: "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512",
                                         srcSet:
                                           "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512 512w,https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png 994w",
                                       },
-                                      className:
-                                        "framer-8sc5ge hidden-1tfptxz hidden-1bt2x41 hidden-1aqljja",
-                                      "data-framer-name": "Block",
-                                      drag: !0,
-                                      dragMomentum: !1,
-                                      dragSnapToOrigin: !0,
-                                      dragTransition: J,
-                                      name: "Block",
-                                      onMouseDown: $,
-                                      style: { rotate: -582 },
-                                      whileTap: ee,
-                                    }),
+                                    },
+                                  },
+                                  children: e(G, {
+                                    __framer__loop: Q,
+                                    __framer__loopEffectEnabled: !0,
+                                    __framer__loopRepeatDelay: 0,
+                                    __framer__loopRepeatType: "mirror",
+                                    __framer__loopTransition: Z,
+                                    __perspectiveFX: !1,
+                                    __targetOpacity: 1,
+                                    background: {
+                                      alt: "",
+                                      fit: "fill",
+                                      intrinsicHeight: 388.8,
+                                      intrinsicWidth: 464,
+                                      pixelHeight: 486,
+                                      pixelWidth: 580,
+                                      src: "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512",
+                                      srcSet:
+                                        "https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png?scale-down-to=512 512w,https://framerusercontent.com/images/KXywEnyh0ECWhT6VdpadeB4No9c.png 994w",
+                                    },
+                                    className:
+                                      "framer-8sc5ge hidden-1tfptxz hidden-1bt2x41 hidden-1aqljja",
+                                    "data-framer-name": "Block",
+                                    drag: !0,
+                                    dragMomentum: !1,
+                                    dragSnapToOrigin: !0,
+                                    dragTransition: J,
+                                    name: "Block",
+                                    onMouseDown: $,
+                                    style: { rotate: -582 },
+                                    whileTap: ee,
                                   }),
+                                }),
                               ],
                             }),
                           }),
@@ -1185,6 +1187,7 @@ var ar = {
                                   }),
                                 ],
                               }),
+
                               s("label", {
                                 className: "framer-1ewryul",
                                 children: [
@@ -1266,49 +1269,11 @@ var ar = {
                                       withExternalLayout: !0,
                                     }),
                                   }),
-                                  e(ge, {
-                                    className: "framer-33oy76",
-                                    defaultValue: "",
-                                    inputName: "Location",
-                                    required: !0,
-                                    selectOptions: [
-                                      {
-                                        disabled: !0,
-                                        title: "Select\u2026",
-                                        type: "option",
-                                        value: "",
-                                      },
-                                      {
-                                        title: "Ethereum",
-                                        type: "option",
-                                        value: "Ethereum",
-                                      },
-                                      {
-                                        title: "Solana",
-                                        type: "option",
-                                        value: "Solana",
-                                      },
-                                      {
-                                        title: "Polygon",
-                                        type: "option",
-                                        value: "Polygon",
-                                      },
-                                      {
-                                        title: "Arbitrum",
-                                        type: "option",
-                                        value: "Arbitrum",
-                                      },
-                                      {
-                                        title: "Not Sure",
-                                        type: "option",
-                                        value: "Not Sure",
-                                      },
-                                      {
-                                        title: "Other",
-                                        type: "option",
-                                        value: "Other",
-                                      },
-                                    ],
+                                  e(R, {
+                                    className: "framer-75vppn",
+                                    inputName: "URL",
+                                    placeholder: "Polygon, Solana, etc.",
+                                    type: "text",
                                   }),
                                 ],
                               }),

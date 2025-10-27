@@ -4669,7 +4669,7 @@ NavigationContainer [data-framer-component-type=NavigationContainer]>*,
     pointer-events: auto;
     position: relative;
     user-select: none;
-    white-space: pre;
+    /* white-space: pre; */
     width: auto
 }
 
@@ -4790,6 +4790,30 @@ NavigationContainer [data-framer-component-type=NavigationContainer]>*,
     width: 1px;
     will-change: var(--framer-will-change-override, transform)
 }
+.service-card {
+  transition: all 0.3s ease;
+  transform: scale(1);
+  cursor: pointer;
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+}
+
+.service-card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+  z-index: 10;
+}
+
+.about-us{
+    border: #a1a1aa 1px solid;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    /* background-color: #f9f9f9; */
+     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+     background: #000;
+}
 
 .framer-ui7q0 .framer-19qgbj8 {
     align-content: center;
@@ -4818,7 +4842,12 @@ NavigationContainer [data-framer-component-type=NavigationContainer]>*,
     width: 1216px;
     z-index: 0
 }
-
+.wrapper{
+    display: flex !important;
+    flex-wrap: wrap !important;
+    width: 100% !important;
+    height: auto !important;
+}
 .framer-ui7q0 .framer-1fmf1ij {
     flex: none;
     height: 968px;

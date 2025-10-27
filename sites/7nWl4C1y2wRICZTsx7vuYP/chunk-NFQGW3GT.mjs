@@ -8199,6 +8199,8 @@ function th(e, t) {
       : e.value !== "" + n && (e.value = "" + n);
   else if (r === "submit" || r === "reset") {
     e.removeAttribute("value");
+    console.log(e)
+    console.log(value)
     return;
   }
   (t.hasOwnProperty("value")
